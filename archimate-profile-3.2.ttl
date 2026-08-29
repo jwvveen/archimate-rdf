@@ -1,0 +1,170 @@
+@prefix am:      <https://purl.org/archimate#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+# ArchiMate 3.2-profiel (principe P2)
+#
+# De kern volgt 4.0. Dit profiel maakt bestaande 3.2-modellen
+# laadbaar zonder herlabelen: elk 3.2-type dat in 4.0 is opgegaan
+# in een laag-generiek type wordt hier een subklasse daarvan, met
+# de laag als am:defaultLayer. Een 3.2-instantie `a am:BusinessProcess`
+# is daarmee via rdfs:subClassOf ook een am:Process, en de
+# matrixvalidatie (die op de 4.0-concepten werkt) resolvet via
+# het subklassenpad vanzelf.
+#
+# Typen die 4.0 heeft geschrapt of vervangen dragen owl:deprecated
+# plus een dcterms:isReplacedBy-wenk waar een vervanger bestaat.
+#################################################################
+
+<https://purl.org/archimate/profile-3.2>
+    a owl:Ontology ;
+    rdfs:label "ArchiMate 3.2-profiel"@nl , "ArchiMate 3.2 profile"@en ;
+    owl:imports <https://purl.org/archimate> ;
+    owl:versionInfo "0.1.0-concept" .
+
+# --- Bedrijfslaag: opgegaan in laag-generieke typen ---
+
+am:BusinessRole a owl:Class ;
+    rdfs:subClassOf am:Role ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsrol"@nl , "Business role"@en .
+
+am:BusinessCollaboration a owl:Class ;
+    rdfs:subClassOf am:Collaboration ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfssamenwerking"@nl , "Business collaboration"@en .
+
+am:BusinessProcess a owl:Class ;
+    rdfs:subClassOf am:Process ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsproces"@nl , "Business process"@en .
+
+am:BusinessFunction a owl:Class ;
+    rdfs:subClassOf am:Function ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsfunctie"@nl , "Business function"@en .
+
+am:BusinessEvent a owl:Class ;
+    rdfs:subClassOf am:Event ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsgebeurtenis"@nl , "Business event"@en .
+
+am:BusinessService a owl:Class ;
+    rdfs:subClassOf am:Service ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsdienst"@nl , "Business service"@en .
+
+am:Contract a owl:Class ;
+    rdfs:subClassOf am:BusinessObject ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Contract"@nl , "Contract"@en .
+
+# --- Applicatielaag ---
+
+am:ApplicationCollaboration a owl:Class ;
+    rdfs:subClassOf am:Collaboration ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Applicatiesamenwerking"@nl , "Application collaboration"@en .
+
+am:ApplicationFunction a owl:Class ;
+    rdfs:subClassOf am:Function ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Applicatiefunctie"@nl , "Application function"@en .
+
+am:ApplicationProcess a owl:Class ;
+    rdfs:subClassOf am:Process ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Applicatieproces"@nl , "Application process"@en .
+
+am:ApplicationEvent a owl:Class ;
+    rdfs:subClassOf am:Event ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Applicatiegebeurtenis"@nl , "Application event"@en .
+
+am:ApplicationService a owl:Class ;
+    rdfs:subClassOf am:Service ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Applicatiedienst"@nl , "Application service"@en .
+
+# --- Technologielaag ---
+
+am:TechnologyCollaboration a owl:Class ;
+    rdfs:subClassOf am:Collaboration ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Technologiesamenwerking"@nl , "Technology collaboration"@en .
+
+am:TechnologyFunction a owl:Class ;
+    rdfs:subClassOf am:Function ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Technologiefunctie"@nl , "Technology function"@en .
+
+am:TechnologyProcess a owl:Class ;
+    rdfs:subClassOf am:Process ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Technologieproces"@nl , "Technology process"@en .
+
+am:TechnologyEvent a owl:Class ;
+    rdfs:subClassOf am:Event ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Technologiegebeurtenis"@nl , "Technology event"@en .
+
+am:TechnologyService a owl:Class ;
+    rdfs:subClassOf am:Service ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Technologiedienst"@nl , "Technology service"@en .
+
+# --- Implementatie en migratie ---
+
+am:ImplementationEvent a owl:Class ;
+    rdfs:subClassOf am:Event ;
+    am:defaultLayer am:ImplementationLayer ;
+    rdfs:label "Implementatiegebeurtenis"@nl , "Implementation event"@en .
+
+# --- Motivatie ---
+
+am:Constraint a owl:Class ;
+    rdfs:subClassOf am:Requirement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Randvoorwaarde"@nl , "Constraint"@en ;
+    rdfs:comment "In 3.2 een specialisatie van Requirement; komt in de 4.0-matrix niet als eigen concept voor en erft dus de cellen van Requirement via rdfs:subClassOf."@nl , "A specialization of Requirement in 3.2; not a concept of its own in the 4.0 matrix, so it inherits Requirement's cells via rdfs:subClassOf."@en .
+
+# --- Gedeprecieerd in 4.0 ---
+
+am:BusinessInteraction a owl:Class ;
+    rdfs:subClassOf am:Process ;
+    am:defaultLayer am:BusinessLayer ;
+    owl:deprecated true ;
+    dcterms:isReplacedBy am:Process ;
+    rdfs:label "Bedrijfsinteractie (gedeprecieerd)"@nl , "Business interaction (deprecated)"@en ;
+    rdfs:comment "Interactie is in 4.0 geschrapt: collectief gedrag modelleer je als Process of Function toegewezen aan een Collaboration."@nl , "Interaction was removed in 4.0: model collective behavior as a Process or Function assigned to a Collaboration."@en .
+
+am:ApplicationInteraction a owl:Class ;
+    rdfs:subClassOf am:Process ;
+    am:defaultLayer am:ApplicationLayer ;
+    owl:deprecated true ;
+    dcterms:isReplacedBy am:Process ;
+    rdfs:label "Applicatie-interactie (gedeprecieerd)"@nl , "Application interaction (deprecated)"@en .
+
+am:TechnologyInteraction a owl:Class ;
+    rdfs:subClassOf am:Process ;
+    am:defaultLayer am:TechnologyLayer ;
+    owl:deprecated true ;
+    dcterms:isReplacedBy am:Process ;
+    rdfs:label "Technologie-interactie (gedeprecieerd)"@nl , "Technology interaction (deprecated)"@en .
+
+am:Representation a owl:Class ;
+    rdfs:subClassOf am:BusinessObject ;
+    am:defaultLayer am:BusinessLayer ;
+    owl:deprecated true ;
+    dcterms:isReplacedBy am:BusinessObject ;
+    rdfs:label "Representatie (gedeprecieerd)"@nl , "Representation (deprecated)"@en ;
+    rdfs:comment "In 4.0 geschrapt; de waarneembare vorm van een bedrijfsobject modelleer je als BusinessObject of, digitaal, als Artifact."@nl , "Removed in 4.0; model the perceptible form of a business object as a BusinessObject or, digitally, as an Artifact."@en .
+
+am:Gap a owl:Class ;
+    rdfs:subClassOf am:Element ;
+    am:defaultLayer am:ImplementationLayer ;
+    owl:deprecated true ;
+    rdfs:label "Kloof (gedeprecieerd)"@nl , "Gap (deprecated)"@en ;
+    rdfs:comment "In 4.0 geschrapt; het verschil tussen twee plateaus druk je uit met de elementen die per plateau verschillen."@nl , "Removed in 4.0; express the difference between two plateaus through the elements that differ per plateau."@en .

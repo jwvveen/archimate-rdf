@@ -1,0 +1,669 @@
+@prefix am:   <https://purl.org/archimate#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# GEGENEREERD BESTAND; niet met de hand bewerken.
+# Bron: sources/begrippenxl-archimate.ttl (BegrippenXL-begrippenkader ArchiMate, 2023)
+# Generator: scripts/generate_skos_ttl.py, 2026-08-29
+# 104 klassen geannoteerd; overgeslagen (geen tegenhanger): ExternalActiveStructureElement, ExternalBehaviorElement, InternalActiveStructureElement, InternalBehaviorElement, StrategyBehaviorElement, StructureElement.
+#
+# SKOS-annotatiemodule. De Nederlandse definities zijn gecureerd in
+# de generator (spec-conform); de bron levert de Engelse
+# specificatiezinnen, de toelichtingen en de iconen. De zeven
+# laag-generieke 4.0-typen komen volledig uit de generator.
+
+<https://purl.org/archimate/skos>
+    a owl:Ontology ;
+    rdfs:label "ArchiMate SKOS-annotaties"@nl , "ArchiMate SKOS annotations"@en ;
+    dcterms:source "BegrippenXL-begrippenkader ArchiMate (www.begrippenxl.nl/archimate)" ;
+    owl:versionInfo "0.2.0-concept" .
+
+am:Access
+    skos:definition "De toegangsrelatie drukt uit dat gedrag een passief structuurelement waarneemt of erop inwerkt, bijvoorbeeld lezend of schrijvend."@nl ;
+    skos:definition "The access relationship models the ability of behavior and active structure elements to observe or act upon passive structure elements."@en ;
+    skos:scopeNote "De AccessRelationship kan worden gebruikt om de relatie tussen deze objecten te modelleren en de impact van veranderingen op deze relaties te begrijpen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AccessRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/AccessRelationship> .
+
+am:ActiveStructureElement
+    skos:definition "Een actief structuurelement is een element dat gedrag kan uitvoeren."@nl ;
+    skos:definition "An active structure element is an element that can perform behavior."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> .
+
+am:Aggregation
+    skos:definition "De aggregatierelatie drukt uit dat een element een of meer andere concepten groepeert."@nl ;
+    skos:definition "The aggregation relationship indicates that an element consists of one or more other concepts."@en ;
+    skos:scopeNote "Bijvoorbeeld, een auto kan worden beschouwd als een aggregatie van verschillende geaggregeerde elementen, zoals wielen, een motor, een carrosserie, enzovoort. De relatie tussen de auto en zijn componenten wordt aangeduid met een AggregationRelationship."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AggregationRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/AggregationRelationship> .
+
+am:AndJunction
+    skos:definition "Een en-junction: alle inkomende of uitgaande relaties gelden gezamenlijk."@nl ;
+    skos:definition "An and-junction is used to explicitly express that several elements together participate in the relationship."@en ;
+    skos:scopeNote "Een AndJunction wordt meestal aangeduid met een cirkel die is verdeeld in twee of meer secties en waar de pijlen van de verschillende elementen samenkomen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Junction_And.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/AndJunction> .
+
+am:ApplicationCollaboration
+    skos:definition "Een applicatiesamenwerking is een geheel van twee of meer applicatiecomponenten dat gezamenlijk applicatiegedrag uitvoert."@nl ;
+    skos:definition "An application collaboration represents an aggregate of two or more application components that work together to perform collective application behavior."@en ;
+    skos:scopeNote "Een 'Application Collaboration' kan bijvoorbeeld een groep applicaties vertegenwoordigen die samenwerken om een specifieke bedrijfsfunctie uit te voeren, zoals een klantrelatiebeheersysteem. Het kan ook een groep applicaties zijn die samenwerken om een gemeenschappelijk technisch doel te bereiken, zoals een applicatieplatform of -framework.\nIn het ArchiMate-model kan een 'Application Collaboration' worden verbonden met andere elementen, zoals 'Application Components' en 'Application Services', om de relaties tussen deze elementen te specificeren en het gedrag van de applicaties in de samenwerking te beschrijven. Dit helpt bij het begrijpen van de rol van de verschillende applicaties in de omgeving en bij het identificeren van de afhankelijkheden tussen hen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Collaboration.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationCollaboration> .
+
+am:ApplicationComponent
+    skos:definition "Een applicatiecomponent is een modulaire, vervangbare inkapseling van applicatiefunctionaliteit, uitgelijnd met de implementatiestructuur. Hij kapselt zijn gedrag en gegevens in en stelt diensten beschikbaar via interfaces."@nl ;
+    skos:definition "An application component represents an encapsulation of application functionality aligned to implementation structure, which is modular and replaceable. It encapsulates its behavior and data, exposes services, and makes them available through interfaces."@en ;
+    skos:scopeNote "Een 'Application Component' kan bijvoorbeeld een stuk software zijn dat specifieke taken uitvoert, zoals een login-systeem, een rapportgenerator of een betaalmodule. Het kan ook een module of bibliotheek zijn die wordt gebruikt door andere software om bepaalde functies te bieden, zoals een beveiligingsmodule of een grafische gebruikersinterface-bibliotheek.\nIn het ArchiMate-model kan een 'Application Component' worden verbonden met andere elementen, zoals 'Application Services', 'Application Interfaces' en 'Data Objects', om de functies die het biedt en de relaties tussen deze elementen te specificeren. Dit helpt bij het begrijpen van de rol van het 'Application Component' in de applicatieomgeving en bij het identificeren van de afhankelijkheden tussen de verschillende componenten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Component.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationComponent> .
+
+am:ApplicationEvent
+    skos:definition "Een applicatiegebeurtenis is een toestandsverandering op applicatieniveau."@nl ;
+    skos:definition "An application event is an application behavior element that denotes a state change."@en ;
+    skos:scopeNote "Een 'Application Event' wordt meestal geactiveerd door een andere gebeurtenis of actie in de applicatie, zoals het invoeren van gegevens door een gebruiker, een timer die afloopt of een signaal van een andere applicatie. Het kan vervolgens worden verwerkt door een of meer 'Application Components' die zijn ontworpen om te reageren op dat specifieke type gebeurtenis.\nIn het ArchiMate-model kan een 'Application Event' worden verbonden met andere elementen, zoals 'Application Components', 'Application Services' en 'Data Objects', om de functies die het biedt en de relaties tussen deze elementen te specificeren. Dit helpt bij het begrijpen van de rol van het 'Application Event' in de applicatieomgeving en bij het identificeren van de afhankelijkheden tussen de verschillende componenten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationEvent> .
+
+am:ApplicationFunction
+    skos:definition "Een applicatiefunctie is geautomatiseerd gedrag dat door een applicatiecomponent kan worden uitgevoerd."@nl ;
+    skos:definition "An application function represents automated behavior that can be performed by an application component."@en ;
+    skos:scopeNote "Een ApplicationFunction kan deel uitmaken van een of meer ApplicationComponents en kan afhankelijk zijn van andere ApplicationFunctions. Een voorbeeld van een ApplicationFunction is 'Verwerken van betalingen' in een e-commerce applicatie."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Function.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationFunction> .
+
+am:ApplicationInteraction
+    skos:definition "Een applicatie-interactie is een eenheid van gezamenlijk applicatiegedrag, uitgevoerd door (een samenwerking van) twee of meer applicatiecomponenten."@nl ;
+    skos:definition "An application interaction represents a unit of collective application behavior performed by (a collaboration of) two or more application components."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld de uitwisseling van gegevens zijn tussen verschillende applicatiecomponenten of de communicatie tussen een gebruiker en een applicatie. Een ApplicationInteraction kan ook de uitwisseling van informatie tussen verschillende applicaties vertegenwoordigen, bijvoorbeeld de integratie van gegevens tussen een e-commerce applicatie en een voorraadbeheersysteem."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interaction.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInteraction> .
+
+am:ApplicationInterface
+    skos:definition "Een applicatie-interface is een toegangspunt waar applicatiediensten beschikbaar worden gesteld aan een gebruiker, een andere applicatiecomponent of een knooppunt."@nl ;
+    skos:definition "An application interface represents a point of access where application services are made available to a user, another application component, or a node."@en ;
+    skos:scopeNote "Een ApplicationInterface kan ook gebruikt worden om de integratie tussen verschillende applicaties te modelleren, waarbij het de punten vertegenwoordigt waar de ene applicatie gegevens of informatie kan uitwisselen met een andere applicatie.\nEen voorbeeld van een ApplicationInterface kan de REST API zijn die wordt aangeboden door een bepaalde applicatiecomponent om gegevens uit te wisselen met een andere component."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interface.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInterface> .
+
+am:ApplicationProcess
+    skos:definition "Een applicatieproces is een reeks applicatiegedragingen die een specifiek resultaat bereikt."@nl ;
+    skos:definition "An application process represents a sequence of application behaviors that achieves a specific outcome."@en ;
+    skos:scopeNote "Een ApplicationProcess kan bijvoorbeeld de verwerking van gegevens in een applicatie vertegenwoordigen, zoals het verwerken van orders of het genereren van facturen. Het kan ook betrekking hebben op de logica achter de gebruikersinterface van de applicatie, zoals het validatieproces van invoergegevens.\nApplicationProcesses kunnen worden toegewezen aan ApplicationComponents, waardoor de relaties tussen de processen en de componenten die ze uitvoeren worden gemodelleerd."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Process.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationProcess> .
+
+am:ApplicationService
+    skos:definition "Een applicatiedienst is expliciet gedefinieerd, extern zichtbaar applicatiegedrag."@nl ;
+    skos:definition "An application service represents an explicitly defined exposed application behavior."@en ;
+    skos:scopeNote "Een ApplicationService kan bijvoorbeeld het versturen van e-mails vanuit een applicatie vertegenwoordigen, het ophalen van gegevens van een database of het verwerken van betalingen.\nApplicationServices kunnen worden toegewezen aan ApplicationComponents, wat betekent dat de relatie tussen de service en de component die de service aanbiedt wordt gemodelleerd. Daarnaast kunnen ApplicationServices ook worden toegewezen aan BusinessServices, waardoor de relatie tussen de services die worden aangeboden door de applicatie en de services die worden gevraagd door de business worden gemodelleerd."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Service.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ApplicationService> .
+
+am:Artifact
+    skos:definition "Een artefact is een stuk gegevens dat wordt gebruikt of geproduceerd in een softwareontwikkelproces of door inzet en beheer van een IT-systeem."@nl ;
+    skos:definition "An artifact represents a piece of data that is used or produced in a software development process, or by deployment and operation of an IT system."@en ;
+    skos:scopeNote "Artifacts kunnen onder andere fysieke documenten, softwarebestanden, gegevensrecords en andere soortgelijke items omvatten. Ze worden vaak gebruikt om de invoer en uitvoer van een proces te vertegenwoordigen, evenals de opslag van gegevens of informatie."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Artifact.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Artifact> .
+
+am:Assessment
+    skos:definition "Een beoordeling is een uitkomst van een analyse van de stand van zaken rond een of meer drijfveren."@nl ;
+    skos:definition "An assessment represents the result of an analysis of the state of affairs of the enterprise with respect to some driver."@en ;
+    skos:scopeNote "Een assessment kan bijvoorbeeld gericht zijn op het beoordelen van de kwaliteit van de IT-infrastructuur of op het identificeren van beveiligingsrisico's. Het doel van een assessment is om inzicht te krijgen in de huidige situatie en om te bepalen welke stappen er moeten worden genomen om verbeteringen aan te brengen.\nBinnen het ArchiMate framework kunnen assessments worden uitgevoerd door middel van het modelleren van de huidige toestand (as-is) en de gewenste toestand (to-be), en door het identificeren van de 'gaps' tussen deze toestanden. Het modelleren van assessments kan helpen bij het visualiseren en communiceren van de resultaten van de analyse en het bieden van inzicht in de acties die moeten worden genomen om de gewenste toestand te bereiken."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Assessment.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Assessment> .
+
+am:Assignment
+    skos:definition "De toewijzingsrelatie drukt de verdeling van verantwoordelijkheid uit: welk actief element voert gedrag uit, of welke actor vervult een rol."@nl ;
+    skos:definition "The assignment relationship expresses the allocation of responsibility, performance of behavior, or execution."@en ;
+    skos:scopeNote "Het AssignmentRelationship wordt weergegeven met een pijl die van het toewijzende element naar het toegewezen element wijst."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AssignmentRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/AssignmentRelationship> .
+
+am:Association
+    skos:definition "De associatierelatie drukt een niet nader getypeerde samenhang tussen concepten uit."@nl ;
+    skos:definition "An association relationship models an unspecified relationship, or one that is not represented by another ArchiMate relationship."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld worden gebruikt om aan te geven dat twee elementen samenwerken of dat er een link is tussen twee aspecten van hetzelfde element. De exacte betekenis van de associatierelatie moet worden beschreven in de documentatie van het model."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AssociationRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/AssociationRelationship> .
+
+am:BehaviorElement
+    skos:definition "Een gedragselement is een eenheid van activiteit, uitgevoerd door een of meer actieve structuurelementen."@nl ;
+    skos:definition "A behavior element is a unit of activity performed by one or more active structure elements."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> .
+
+am:BusinessActor
+    skos:definition "Een bedrijfsactor is een bedrijfsentiteit die gedrag kan uitvoeren, zoals een persoon, afdeling of organisatie."@nl ;
+    skos:definition "A business actor is a business entity that is capable of performing behavior."@en ;
+    skos:scopeNote "BusinessActors in ArchiMate kunnen bijvoorbeeld worden gebruikt om rollen of functies in een organisatie te modelleren, of om externe partijen te vertegenwoordigen die invloed hebben op het bedrijfsproces, zoals klanten, leveranciers of partners.\nBusinessActors kunnen worden geassocieerd met andere elementen in ArchiMate, zoals 'BusinessProcesses', 'BusinessFunctions', 'BusinessServices' en 'BusinessRoles', om de rollen en verantwoordelijkheden van verschillende actoren binnen de bedrijfsomgeving te verduidelijken en de interacties tussen deze elementen te modelleren. Dit kan helpen bij het begrijpen en ontwerpen van bedrijfsprocessen en -systemen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Actor.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessActor> .
+
+am:BusinessCollaboration
+    skos:definition "Een bedrijfssamenwerking is een geheel van twee of meer bedrijfsrollen dat gezamenlijk bedrijfsgedrag uitvoert."@nl ;
+    skos:definition "A business collaboration is an aggregate of two or more business internal active structure elements that work together to perform collective behavior."@en ;
+    skos:scopeNote "Een BusinessCollaboration kan worden gebruikt om de samenwerking tussen verschillende afdelingen, bedrijven of organisaties te modelleren, bijvoorbeeld bij het uitvoeren van een gezamenlijk project of het leveren van een gezamenlijke dienst aan klanten. Het element kan worden gebruikt om de interacties en communicatie tussen de betrokken actoren te modelleren en de verantwoordelijkheden en rollen van elke actor binnen de samenwerking vast te stellen.\nBinnen ArchiMate kunnen BusinessCollaborations worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessService', 'BusinessObject' en 'BusinessRole', om de relaties tussen de verschillende elementen te modelleren en de samenwerking binnen de bedrijfsomgeving te verbeteren. Door het modelleren van BusinessCollaborations kunnen organisaties hun bedrijfsprocessen en -structuren beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Collaboration.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessCollaboration> .
+
+am:BusinessEvent
+    skos:definition "Een bedrijfsgebeurtenis is een toestandsverandering op bedrijfsniveau."@nl ;
+    skos:definition "A business event is a business behavior element that denotes an organizational state change. It may originate from and be resolved inside or outside the organization."@en ;
+    skos:scopeNote "Een BusinessEvent kan bijvoorbeeld worden gebruikt om een klantorder te modelleren als een gebeurtenis die leidt tot het starten van een bedrijfsproces, zoals het verwerken van de order of het leveren van het product aan de klant. Andere voorbeelden van BusinessEvents zijn het ontvangen van een betaling, het aanvragen van een dienst of het voltooien van een projectfase.\nBinnen ArchiMate kan een BusinessEvent worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessRole' en 'BusinessService', om de impact van de gebeurtenis op de bedrijfsomgeving te modelleren en de acties en verantwoordelijkheden van de betrokken actoren vast te stellen. Door het gebruik van BusinessEvents kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessEvent> .
+
+am:BusinessFunction
+    skos:definition "Een bedrijfsfunctie is een verzameling samenhangend bedrijfsgedrag, gegroepeerd naar bijvoorbeeld benodigde vaardigheden, kennis of middelen."@nl ;
+    skos:definition "A business function is a collection of business behavior based on a chosen set of criteria (typically required business resources and/or competencies), closely aligned to an organization, but not necessarily explicitly governed by the organization."@en ;
+    skos:scopeNote "Een BusinessFunction kan bijvoorbeeld worden gebruikt om een specifiek bedrijfsproces te modelleren, zoals het verwerken van een klantorder of het uitvoeren van een facturatieproces. Het kan ook een meer algemene taak beschrijven, zoals 'klantenservice' of 'marketing'.\nBinnen ArchiMate kan een BusinessFunction worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessEvent', 'BusinessRole' en 'BusinessService', om de rol en verantwoordelijkheden van het element in de bedrijfsomgeving te modelleren. Door het gebruik van BusinessFunctions kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Function.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessFunction> .
+
+am:BusinessInteraction
+    skos:definition "Een bedrijfsinteractie is een eenheid van gezamenlijk bedrijfsgedrag, uitgevoerd door (een samenwerking van) twee of meer bedrijfsrollen of bedrijfsactoren."@nl ;
+    skos:definition "A business interaction is a unit of collective business behavior performed by (a collaboration of) two or more business roles."@en ;
+    skos:scopeNote "Een BusinessInteraction kan bijvoorbeeld worden gebruikt om de communicatie tussen een klant en een bedrijf te modelleren, zoals het plaatsen van een order of het indienen van een klacht. Het kan ook de communicatie tussen bedrijfsactoren beschrijven, zoals tussen afdelingen of tussen leveranciers en klanten.\nBinnen ArchiMate kan een BusinessInteraction worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessRole' en 'BusinessService', om de rol en verantwoordelijkheden van de betrokken actoren in de bedrijfsomgeving te modelleren. Door het gebruik van BusinessInteractions kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interaction.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessInteraction> .
+
+am:BusinessInterface
+    skos:definition "Een bedrijfsinterface is een toegangspunt waar bedrijfsdiensten beschikbaar worden gesteld aan de omgeving."@nl ;
+    skos:definition "A business interface is a point of access where a business service is made available to the environment."@en ;
+    skos:scopeNote "Een BusinessInterface kan bijvoorbeeld worden gebruikt om de manier te beschrijven waarop een klant toegang krijgt tot de diensten van een bedrijf via een webportaal, of hoe een bedrijfsafdeling toegang krijgt tot een database met klantinformatie via een API.\nBinnen ArchiMate kan een BusinessInterface worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessRole', 'BusinessService' en 'ApplicationComponent', om de manier te modelleren waarop deze elementen met elkaar communiceren en samenwerken via de interface. Door het gebruik van BusinessInterfaces kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interface.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessInterface> .
+
+am:BusinessObject
+    skos:definition "Een bedrijfsobject is een concept dat binnen een bedrijfsdomein wordt gebruikt of geproduceerd."@nl ;
+    skos:definition "A business object represents a concept used within a particular business domain."@en ;
+    skos:scopeNote "Een BusinessObject kan worden gebruikt om de belangrijkste gegevensstructuren van een organisatie te modelleren en te beschrijven hoe deze gegevens worden gebruikt door verschillende bedrijfsprocessen en -functies. Hierdoor kan een beter begrip worden verkregen van de manier waarop gegevens door een organisatie stromen en hoe deze gegevens worden gebruikt om bedrijfsdoelen te bereiken.\nBinnen ArchiMate kan een BusinessObject worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessService' en 'ApplicationComponent', om de manier te modelleren waarop deze elementen samenwerken om het bedrijfsproces te ondersteunen. Door het gebruik van BusinessObjects kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Object.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessObject> .
+
+am:BusinessProcess
+    skos:definition "Een bedrijfsproces is een reeks bedrijfsgedragingen die een specifiek resultaat bereikt, zoals een gedefinieerde verzameling producten of diensten."@nl ;
+    skos:definition "A business process represents a sequence of business behaviors that achieves a specific outcome such as a defined set of products or business services."@en ;
+    skos:scopeNote "Een BusinessProcess kan worden gebruikt om bedrijfsactiviteiten te modelleren en te beschrijven hoe verschillende taken en activiteiten samenwerken om de gewenste resultaten te bereiken. Het kan ook helpen bij het identificeren van knelpunten en inefficiënties in het proces, wat kan leiden tot verbeteringen in de bedrijfsvoering.\nBinnen ArchiMate kan een BusinessProcess worden geassocieerd met andere elementen, zoals 'BusinessObject', 'BusinessFunction', 'BusinessService' en 'ApplicationComponent', om de manier te modelleren waarop deze elementen samenwerken om het bedrijfsproces te ondersteunen. Hierdoor kunnen organisaties een beter begrip krijgen van hoe hun bedrijfsprocessen werken en hoe ze kunnen worden verbeterd om beter te voldoen aan de behoeften van hun klanten en het behalen van hun doelstellingen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Process.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessProcess> .
+
+am:BusinessRole
+    skos:definition "Een bedrijfsrol is de verantwoordelijkheid om specifiek bedrijfsgedrag uit te voeren, waaraan een bedrijfsactor kan worden toegewezen."@nl ;
+    skos:definition "A business role is the responsibility for performing specific behavior, to which an actor can be assigned, or the part an actor plays in a particular action or event."@en ;
+    skos:scopeNote "Een BusinessRole kan worden geassocieerd met een of meer 'BusinessActor'-elementen, die de personen of groepen van personen representeren die deze rol vervullen. Het kan ook worden geassocieerd met 'BusinessProcess', 'BusinessFunction', 'BusinessInteraction' en andere elementen om de manier te modelleren waarop deze elementen samenwerken om de gewenste bedrijfsresultaten te bereiken.\nHet gebruik van BusinessRoles in ArchiMate helpt organisaties om een beter begrip te krijgen van de verantwoordelijkheden en de rollen van individuen en groepen binnen hun organisatie. Dit kan helpen bij het ontwikkelen van effectieve organisatiestructuren en het toewijzen van taken en verantwoordelijkheden aan de juiste personen om de bedrijfsdoelstellingen te bereiken."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Role.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessRole> .
+
+am:BusinessService
+    skos:definition "Een bedrijfsdienst is expliciet gedefinieerd bedrijfsgedrag dat aan de omgeving wordt aangeboden."@nl ;
+    skos:definition "A business service represents an explicitly defined exposed business behavior."@en ;
+    skos:scopeNote "Een BusinessService kan worden gebruikt om de bedrijfsactiviteiten te modelleren die nodig zijn om een bepaalde waardepropositie te leveren, zoals orderverwerking, facturering, klantenservice, enz. Het kan ook worden geassocieerd met 'BusinessActor'-elementen om de personen of groepen van personen te modelleren die betrokken zijn bij het leveren van de service.\nHet gebruik van BusinessServices in ArchiMate helpt organisaties om hun bedrijfsactiviteiten beter te begrijpen en de relatie tussen hun diensten en de bedrijfsdoelstellingen te begrijpen. Dit kan helpen bij het identificeren van kansen voor verbetering en innovatie in de dienstverlening om de klanttevredenheid en de bedrijfsresultaten te verbeteren."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Service.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/BusinessService> .
+
+am:Capability
+    skos:definition "Een vermogen is een vaardigheid die een actief structuurelement, zoals een organisatie, persoon of systeem, bezit."@nl ;
+    skos:definition "A capability represents an ability that an active structure element, such as an organization, person, or system, possesses."@en ;
+    skos:scopeNote "Het modelleren van capabilities in ArchiMate kan helpen om de verschillende vermogens van de onderneming in kaart te brengen en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van capabilities kan de architectuur beter worden afgestemd op de vermogens van de onderneming en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen capabilities worden gemodelleerd met behulp van het 'capability' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke capabilities van toepassing zijn. Capabilities kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'requirements' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de vermogens van de onderneming."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Capability.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Capability> .
+
+am:CommunicationNetwork
+    skos:definition "Een communicatienetwerk is een verzameling structuren die knooppunten verbindt voor overdracht, routering en ontvangst van gegevens."@nl ;
+    skos:definition "A communication network represents a set of structures that connects computer systems or other electronic devices for transmission, routing, and reception of data or data-based communications such as voice and video."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld een netwerk van computers, telefoons of andere communicatiemiddelen zijn die gebruikt worden om informatie tussen verschillende locaties of systemen te versturen. Een CommunicationNetwork kan ook verschillende technische elementen bevatten, zoals routers, switches, hubs, firewalls en andere apparaten die worden gebruikt om communicatie mogelijk te maken en te beheren. Dit element wordt vooral gebruikt in de technische lagen van een architectuurmodel om de onderliggende infrastructuur te beschrijven die nodig is om informatie uit te wisselen tussen de verschillende componenten van een systeem."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_CommunicationNetwork.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/CommunicationNetwork> .
+
+am:CompositeElement
+    skos:definition "Een samengesteld element aggregeert of groepeert concepten uit meerdere aspecten en lagen."@nl ;
+    skos:definition "A composite element aggregates or groups concepts from multiple aspects and layers."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> .
+
+am:Composition
+    skos:definition "De compositierelatie drukt uit dat een element bestaat uit een of meer andere concepten; het deel hoort bij precies één geheel."@nl ;
+    skos:definition "The composition relationship indicates that an element consists of one or more other concepts."@en ;
+    skos:scopeNote "Bijvoorbeeld, een auto bestaat uit verschillende componenten, zoals de motor, de carrosserie, de wielen en de stoelen. In dit voorbeeld is de auto het geheel (composite) en zijn de motor, carrosserie, wielen en stoelen de componenten. De CompositionRelationship laat zien hoe de componenten zijn samengevoegd om het geheel te vormen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_CompositionRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/CompositionRelationship> .
+
+am:Concept
+    skos:definition "Het gemeenschappelijke supertype van elementen, relaties en relatieconnectoren."@nl ;
+    skos:definition "The common supertype of elements, relationships, and relationship connectors."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate> .
+
+am:Constraint
+    skos:definition "Een randvoorwaarde is een beperking op de manier waarop het systeem wordt gerealiseerd."@nl ;
+    skos:definition "A constraint represents a factor that prevents or obstructs the realization of goals."@en ;
+    skos:scopeNote "Een constraint kan bijvoorbeeld de eis zijn dat een bepaalde technologie moet worden gebruikt, of dat een bepaald beveiligingsbeleid moet worden gevolgd. Een constraint kan ook betrekking hebben op de beschikbare middelen, zoals tijd, budget of personeel.\nConstraints kunnen worden gemodelleerd in ArchiMate door het gebruik van het 'constraint' element. Dit element kan worden gekoppeld aan andere elementen in de architectuur, zoals een component, een relatie of een view, om aan te geven welke beperkingen van toepassing zijn.\nHet modelleren van constraints in ArchiMate kan helpen om de impact van beperkingen op de architectuur in kaart te brengen en om alternatieve ontwerpopties te identificeren die aan de beperkingen voldoen. Hierdoor kan de architectuur beter worden afgestemd op de zakelijke doelen en kunnen risico's en kosten worden verminderd."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Constraint.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Constraint> .
+
+am:Contract
+    skos:definition "Een contract is een formele of informele specificatie van een overeenkomst tussen een aanbieder en een afnemer."@nl ;
+    skos:definition "A contract represents a formal or informal specification of an agreement between a provider and a consumer that specifies the rights and obligations associated with a product and establishes functional and non-functional parameters for interaction."@en ;
+    skos:scopeNote "Een 'Contract' kan worden gebruikt om de relatie tussen een organisatie en haar klanten, leveranciers, partners of andere stakeholders te modelleren. Het kan ook worden gebruikt om interne overeenkomsten tussen verschillende afdelingen of units binnen een organisatie te modelleren. Een 'Contract' kan verschillende aspecten van een overeenkomst bevatten, zoals de contractuele verplichtingen, de duur van de overeenkomst, de prijs en betalingsvoorwaarden, de kwaliteitsnormen, de vertrouwelijkheid en intellectuele eigendomsrechten.\nHet gebruik van 'Contract'-elementen in ArchiMate kan helpen bij het beter begrijpen en beheren van de complexiteit van zakelijke relaties en overeenkomsten. Het kan ook bijdragen aan het identificeren van mogelijke risico's en het verminderen van misverstanden tussen de partijen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Contract.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Contract> .
+
+am:CourseOfAction
+    skos:definition "Een koers is een aanpak of plan om met bepaalde vermogens en middelen doelen te bereiken."@nl ;
+    skos:definition "A course of action is an approach or plan for configuring some capabilities and resources of the enterprise, undertaken to achieve a goal."@en ;
+    skos:scopeNote "Het modelleren van COA's in ArchiMate kan helpen om de verschillende activiteiten die nodig zijn om een doel te bereiken in kaart te brengen en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van COA's kan de architectuur beter worden afgestemd op de activiteiten die nodig zijn om de doelen van de onderneming te bereiken, en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen COA's worden gemodelleerd met behulp van het 'course of action' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke COA's van toepassing zijn. COA's kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'requirements' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de activiteiten die nodig zijn om de doelen van de onderneming te bereiken."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_CourseOfAction.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/CourseOfAction> .
+
+am:DataObject
+    skos:definition "Een gegevensobject vertegenwoordigt gegevens die gestructureerd zijn voor geautomatiseerde verwerking."@nl ;
+    skos:definition "A data object represents data structured for automated processing."@en ;
+    skos:scopeNote "Een DataObject kan bijvoorbeeld een klantprofiel, een productlijst of een factuur zijn.\nDataObjects kunnen worden toegewezen aan ApplicationComponents, BusinessObjects of TechnologyComponents. Door het toewijzen van DataObjects aan deze componenten kan de relatie tussen de gegevens en de componenten die deze gegevens opslaan of verwerken worden gemodelleerd.\nHet is belangrijk om op te merken dat DataObjects alleen de inhoud van gegevens of informatie beschrijven en niet de structuur van gegevens of de manier waarop ze worden verwerkt. Hiervoor worden andere elementen in ArchiMate gebruikt, zoals ApplicationFunction, ApplicationService en TechnologyFunction."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Object.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/DataObject> .
+
+am:Deliverable
+    skos:definition "Een op te leveren resultaat is een nauwkeurig gedefinieerde uitkomst van een werkpakket."@nl ;
+    skos:definition "A deliverable represents a precisely-defined outcome of a work package."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld gaan om een document, een rapport, een softwareapplicatie of een fysiek object. Deliverables kunnen dienen als inputs voor andere processen of activiteiten binnen een organisatie. Ze worden meestal in verband gebracht met bedrijfs- of applicatiecomponenten en kunnen worden gemodelleerd als onderdeel van een proces of functie."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Deliverable.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Deliverable> .
+
+am:DependencyRelationship
+    skos:definition "Afhankelijkheidsrelaties drukken uit dat een element gebruikmaakt van of afhankelijk is van een ander element."@nl ;
+    skos:definition "Dependency relationships model how elements are used to support other elements."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> .
+
+am:Device
+    skos:definition "Een apparaat is een fysiek IT-middel waarop systeemsoftware en artefacten kunnen worden opgeslagen of ingezet voor uitvoering."@nl ;
+    skos:definition "A device is a physical IT resource upon which system software and artifacts may be stored or deployed for execution."@en ;
+    skos:scopeNote "Devices bieden over het algemeen functionaliteit voor de gebruikers en ondersteunen de werking van systemen en applicaties. Ze kunnen ook dienen als onderdelen van netwerkinfrastructuur en worden daarom vaak geassocieerd met Communication Networks en Infrastructuur Services."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Device.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Device> .
+
+am:DistributionNetwork
+    skos:definition "Een distributienetwerk is een fysiek netwerk voor het transporteren van materialen of energie."@nl ;
+    skos:definition "A distribution network represents a physical network used to transport materials or energy."@en ;
+    skos:scopeNote "Het kan ook worden gebruikt om de distributie van digitale content zoals software of media te beschrijven."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_DistributionNetwork.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/DistributionNetwork> .
+
+am:Driver
+    skos:definition "Een drijfveer is een externe of interne conditie die een organisatie motiveert om doelen te stellen en veranderingen door te voeren."@nl ;
+    skos:definition "A driver represents an external or internal condition that motivates an organization to define its goals and implement the changes necessary to achieve them."@en ;
+    skos:scopeNote "Een driver kan bijvoorbeeld een verandering in de wetgeving zijn, een veranderende marktvraag of nieuwe technologische ontwikkelingen. Door deze invloeden kan de onderneming gedwongen zijn om haar bedrijfsprocessen, diensten, producten of technologieën aan te passen, wat weer consequenties heeft voor de architectuur.\nHet modelleren van drivers in ArchiMate kan helpen om de impact van veranderingen in kaart te brengen en om de architectuur beter af te stemmen op de zakelijke doelen. Dit kan helpen om risico's te verminderen en kansen te benutten die zich voordoen door veranderingen in de omgeving waarin de onderneming opereert.\nBinnen ArchiMate kunnen drivers worden gemodelleerd met behulp van het 'driver' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke invloeden van toepassing zijn."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Driver.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Driver> .
+
+am:DynamicRelationship
+    skos:definition "Dynamische relaties drukken tijdelijke afhankelijkheden tussen gedragingen uit."@nl ;
+    skos:definition "Dynamic relationships model temporal dependencies between behaviors."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship> .
+
+am:Element
+    skos:definition "Een element is een bouwsteen van een ArchiMate-model; relaties verbinden elementen."@nl ;
+    skos:definition "An element is a building block of an ArchiMate model; relationships connect elements."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Element> .
+
+am:Equipment
+    skos:definition "Een bedrijfsmiddel is een of meer fysieke machines, gereedschappen of instrumenten die fysiek materiaal kunnen maken, gebruiken, opslaan, verplaatsen of transformeren."@nl ;
+    skos:definition "Equipment represents one or more physical machines, tools, or instruments that can create, use, store, move, or transform materials."@en ;
+    skos:scopeNote "Equipment kan onder andere machines, gereedschappen, voertuigen en apparatuur omvatten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Equipment.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Equipment> .
+
+am:Facility
+    skos:definition "Een faciliteit is een fysieke voorziening of omgeving, zoals een fabriek, magazijn of kantoor."@nl ;
+    skos:definition "A facility represents a physical structure or environment."@en ;
+    skos:scopeNote "Het kan ook betrekking hebben op infrastructuurvoorzieningen, zoals water- of energievoorzieningen, die nodig zijn om een organisatie te laten functioneren. Kortom, het gaat om de materiële en fysieke componenten van een organisatie of systeem."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Facility.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Facility> .
+
+am:Flow
+    skos:definition "De stroomrelatie drukt overdracht van bijvoorbeeld informatie, goederen of geld tussen elementen uit."@nl ;
+    skos:definition "The flow relationship represents transfer from one element to another."@en ;
+    skos:scopeNote "Dit kan bijvoorbeeld de stroom van gegevens tussen twee applicaties of de beweging van materialen tussen twee locaties zijn. De FlowRelationship is een veelzijdige relatie in ArchiMate, omdat het niet beperkt is tot een specifieke laag of domein en kan worden gebruikt om de interacties tussen elementen van verschillende typen te modelleren."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_FlowRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/FlowRelationship> .
+
+am:Gap
+    skos:definition "Een kloof is een uitspraak over het verschil tussen twee plateaus."@nl ;
+    skos:definition "A gap represents a statement of difference between two plateaus."@en ;
+    skos:scopeNote "Gaps worden vaak gebruikt in veranderings- en verbeteringsprojecten om de huidige en gewenste situaties in kaart te brengen en om de acties te identificeren die moeten worden ondernomen om de gap te dichten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Gap.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Gap> .
+
+am:Goal
+    skos:definition "Een doel is een verklaring van intentie, richting of gewenste eindtoestand van een belanghebbende."@nl ;
+    skos:definition "A goal represents a high-level statement of intent, direction, or desired end state for an organization and its stakeholders."@en ;
+    skos:scopeNote "Een goal kan worden beschouwd als een concreet doel waarnaar de onderneming streeft en dat kan worden gerealiseerd door middel van veranderingen in de architectuur. Het modelleren van goals in ArchiMate kan helpen om de relatie tussen de doelstellingen van de onderneming en de architectuur te begrijpen en om te bepalen welke architectuurcomponenten en -processen nodig zijn om deze doelstellingen te bereiken.\nBinnen ArchiMate kunnen goals worden gemodelleerd met behulp van het 'goal' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke doelstellingen van toepassing zijn. Goals kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'requirements', 'capabilities' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Goal.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Goal> .
+
+am:Grouping
+    skos:definition "Een groepering verzamelt concepten die een gemeenschappelijke eigenschap delen."@nl ;
+    skos:definition "The grouping element aggregates or composes concepts that belong together based on some common characteristic."@en ;
+    skos:scopeNote "Een groepering heeft geen directe fysieke of logische betekenis, maar kan helpen om de leesbaarheid van het model te verbeteren door de weergave van het model te vereenvoudigen en te verduidelijken."@nl ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Grouping> .
+
+am:ImplementationEvent
+    skos:definition "Een implementatiegebeurtenis is een toestandsverandering in het implementatie- of migratieproces."@nl ;
+    skos:definition "An implementation event is a behavior element that denotes a state change related to implementation or migration."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld betrekking hebben op migraties, upgrades of implementaties van nieuwe software of hardware. Het element kan worden gebruikt om de impact van deze gebeurtenissen op de bedrijfsprocessen en -functies van de onderneming te beschrijven en te modelleren."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ImplementationEvent> .
+
+am:Influence
+    skos:definition "De beïnvloedingsrelatie drukt uit dat een element een ander element beïnvloedt, met een optionele sterkte; vooral gebruikt tussen motivatie-elementen."@nl ;
+    skos:definition "The influence relationship models that an element affects the implementation or achievement of some motivation element."@en ;
+    skos:scopeNote "Dit kan bijvoorbeeld betrekking hebben op hoe een actor een bepaalde taak uitvoert met behulp van een applicatiecomponent, of hoe een business object wordt gewijzigd door een bepaalde applicatiefunctie. De InfluenceRelationship kan ook aangeven of de invloed positief of negatief is, of dat er sprake is van een neutrale invloed."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_InfluenceRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/InfluenceRelationship> .
+
+am:Location
+    skos:definition "Een locatie is een conceptuele of fysieke plaats of positie waar concepten zich bevinden of worden uitgevoerd."@nl ;
+    skos:definition "A location is a place or position where structure elements can be located or behavior can be performed."@en ;
+    skos:scopeNote "Een Location kan zowel worden gebruikt in de Business-, Application- als Technology-layer van ArchiMate."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Location.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Location> .
+
+am:Material
+    skos:definition "Materiaal is tastbare fysieke materie of energie."@nl ;
+    skos:definition "Material represents tangible physical matter or physical elements."@en ;
+    skos:scopeNote "Het kan fysiek of virtueel zijn en kan bijvoorbeeld grondstoffen, componenten, informatie of documentatie omvatten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Material.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Material> .
+
+am:Meaning
+    skos:definition "Een betekenis is de kennis, expertise of interpretatie die aan een concept wordt gegeven in een bepaalde context."@nl ;
+    skos:definition "Meaning represents the knowledge or expertise present in, or the interpretation given to, a core element in a particular context."@en ;
+    skos:scopeNote "Het modelleren van meaning in ArchiMate kan helpen om de communicatie en samenwerking tussen verschillende belanghebbenden te verbeteren, doordat een gemeenschappelijk begrip wordt gecreëerd van de betekenis van de gebruikte concepten en termen. Dit kan bijdragen aan een betere afstemming tussen de zakelijke doelen, de architectuur en de implementatie daarvan.\nBinnen ArchiMate kunnen meanings worden gemodelleerd met behulp van het 'meaning' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke betekenis of interpretatie van toepassing is. Dit element wordt vaak gebruikt in combinatie met andere concepten, zoals 'business object', 'data object' of 'application component', om de betekenis van deze concepten te verduidelijken en om de communicatie tussen belanghebbenden te verbeteren."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Meaning.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Meaning> .
+
+am:MotivationElement
+    skos:definition "Een motivatie-element geeft de context of reden achter de architectuur weer."@nl ;
+    skos:definition "A motivation element provides the context of or reason behind the architecture."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> .
+
+am:Node
+    skos:definition "Een knooppunt is een reken- of fysiek middel dat andere reken- of fysieke middelen host, manipuleert of ermee interacteert."@nl ;
+    skos:definition "A node represents a computational or physical resource that hosts, manipulates, or interacts with other computational or physical resources."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld een apparaat, server, netwerkcomponent of softwarecomponent vertegenwoordigen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Node.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Node> .
+
+am:OrJunction
+    skos:definition "Een of-junction: een of meer van de inkomende of uitgaande relaties gelden."@nl ;
+    skos:definition "An or-junction is used to explicitly express that one of the elements participates in the relationship."@en ;
+    skos:scopeNote "In een procesmodel kan een OrJunction worden gebruikt om de keuze te modelleren tussen verschillende alternatieve activiteiten die op een bepaald punt kunnen worden uitgevoerd."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Junction_Or.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/OrJunction> .
+
+am:OtherRelationship
+    skos:definition "Relaties die niet structureel, afhankelijk of dynamisch zijn: specialisatie en associatie."@nl ;
+    skos:definition "Relationships that are neither structural, dependency, nor dynamic: specialization and association."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship> .
+
+am:Outcome
+    skos:definition "Een resultaat is een bereikt eindresultaat."@nl ;
+    skos:definition "An outcome represents an end result that has been achieved."@en ;
+    skos:scopeNote "Een outcome kan worden beschouwd als een meetbaar resultaat van een bepaalde verandering in de architectuur. Het modelleren van outcomes in ArchiMate kan helpen om de impact van veranderingen in kaart te brengen en om te bepalen welke architectuurcomponenten en -processen nodig zijn om de gewenste outcomes te bereiken.\nBinnen ArchiMate kunnen outcomes worden gemodelleerd met behulp van het 'outcome' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke outcomes van toepassing zijn. Outcomes kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'capabilities', 'requirements' en 'goals', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Outcome.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Outcome> .
+
+am:PassiveStructureElement
+    skos:definition "Een passief structuurelement is een element waarop gedrag wordt uitgevoerd."@nl ;
+    skos:definition "A passive structure element is an element on which behavior is performed."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> .
+
+am:Path
+    skos:definition "Een pad is een verbinding tussen twee of meer knooppunten waarover die knooppunten gegevens, energie of materiaal kunnen uitwisselen."@nl ;
+    skos:definition "A path represents a link between two or more nodes, through which these nodes can exchange data or material."@en ;
+    skos:scopeNote "Een Path representeert de route die data, informatie of materiaal aflegt tussen twee of meer Nodes. Het kan ook gebruikt worden om de verbinding tussen twee of meer Nodes te beschrijven en om de fysieke locatie van componenten te modelleren."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Path.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Path> .
+
+am:Plateau
+    skos:definition "Een plateau is een relatief stabiele toestand van de architectuur gedurende een bepaalde periode."@nl ;
+    skos:definition "A plateau represents a relatively stable state of the architecture that exists during a limited period of time."@en ;
+    skos:scopeNote "Een Plateau kan worden gebruikt om de huidige status van de organisatie te beschrijven en om doelstellingen te definiëren voor de toekomstige ontwikkeling van de organisatie."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Plateau.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Plateau> .
+
+am:Principle
+    skos:definition "Een principe is een uitspraak over intentie of algemene eigenschap die geldt voor elk systeem in een bepaalde context."@nl ;
+    skos:definition "A principle represents a qualitative statement of intent that should be met by the architecture."@en ;
+    skos:scopeNote "Het modelleren van principles in ArchiMate kan helpen om de samenhang tussen de architectuur en de zakelijke doelen te verbeteren, doordat een duidelijk beeld wordt gegeven van de uitgangspunten en normen die ten grondslag liggen aan de architectuur. Dit kan bijdragen aan een betere afstemming tussen de architectuur en de strategie van de onderneming.\nBinnen ArchiMate kunnen principles worden gemodelleerd met behulp van het 'principle' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke principles van toepassing zijn. Principles kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'requirements', 'goals' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Principle.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Principle> .
+
+am:Product
+    skos:definition "Een product is een samenhangende verzameling diensten en/of passieve structuurelementen, met een contract, die als geheel aan afnemers wordt aangeboden."@nl ;
+    skos:definition "A product represents a coherent collection of services and/or passive structure elements, accompanied by a contract/set of agreements, which is offered as a whole to (internal or external) customers."@en ;
+    skos:scopeNote "Een 'Product' kan worden gebruikt om de verschillende soorten producten te modelleren die een organisatie aanbiedt aan klanten of andere belanghebbenden. Het kan ook worden gebruikt om de levenscyclus van een product te modelleren, van ideevorming tot productie, distributie, verkoop en onderhoud. Het 'Product'-element kan ook worden gebruikt om de relatie tussen verschillende producten te modelleren, bijvoorbeeld om aan te geven welke producten afhankelijk zijn van andere producten of welke producten samen worden verkocht als een bundel.\nHet gebruik van 'Product'-elementen in ArchiMate kan helpen bij het beter begrijpen en beheren van de productportfolio van een organisatie en kan ook bijdragen aan het identificeren van mogelijkheden voor productinnovatie en productdifferentiatie."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Product.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Product> .
+
+am:Realization
+    skos:definition "De realisatierelatie drukt uit dat een concreter element een abstracter element waarmaakt."@nl ;
+    skos:definition "The realization relationship indicates that an entity plays a critical role in the creation, achievement, sustenance, or operation of a more abstract entity."@en ;
+    skos:scopeNote "Deze relatie wordt gebruikt om de relatie tussen een abstract concept en een concrete realisatie van dat concept te modelleren, bijvoorbeeld tussen een bedrijfsproces en de IT-toepassing die dat proces ondersteunt."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_RealisationRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/RealizationRelationship> .
+
+am:Relationship
+    skos:definition "Een relatie verbindt twee concepten en typeert hun samenhang."@nl ;
+    skos:definition "A relationship connects two concepts and types their association."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Relationship> .
+
+am:RelationshipConnector
+    skos:definition "Een relatieconnector verbindt relaties van hetzelfde type, zoals een junction."@nl ;
+    skos:definition "A relationship connector connects relationships of the same type, such as a junction."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector> .
+
+am:Representation
+    skos:definition "Een representatie is een waarneembare vorm van de informatie in een bedrijfsobject."@nl ;
+    skos:definition "A representation represents a perceptible form of the information carried by a business object."@en ;
+    skos:scopeNote "Een 'Representation' kan bijvoorbeeld worden gebruikt om een diagram te maken van een bedrijfsproces of om een afbeelding te maken van een systeemcomponent. Representations kunnen worden gebruikt in combinatie met andere elementen in ArchiMate om de complexiteit van een model te verminderen en het begrip te verbeteren.\nRepresentations zijn nuttig omdat ze vaak een betere manier bieden om informatie over te brengen dan alleen tekstuele beschrijvingen. Ze kunnen bijvoorbeeld helpen om een abstract concept te visualiseren of om de relatie tussen verschillende elementen in een model te verduidelijken.\nHet gebruik van 'Representation'-elementen in ArchiMate kan helpen bij het communiceren van complexe ideeën en ontwerpen, het verbeteren van samenwerking en begrip tussen verschillende belanghebbenden, en het verminderen van misverstanden en fouten bij de implementatie van systemen of processen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Representation.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Representation> .
+
+am:Requirement
+    skos:definition "Een vereiste is een uitspraak over een behoefte waaraan de architectuur moet voldoen."@nl ;
+    skos:definition "A requirement represents a statement of need that must be met by the architecture."@en ;
+    skos:scopeNote "Het modelleren van requirements in ArchiMate kan helpen om de samenhang tussen de architectuur en de zakelijke doelen te verbeteren, doordat de eisen en voorwaarden die van belang zijn voor de realisatie van de doelen duidelijk in kaart worden gebracht. Dit kan bijdragen aan een betere afstemming tussen de architectuur en de strategie van de onderneming en aan een betere communicatie tussen de verschillende belanghebbenden.\nBinnen ArchiMate kunnen requirements worden gemodelleerd met behulp van het 'requirement' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke requirements van toepassing zijn. Requirements kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'outcomes' en 'principles', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Requirement.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Requirement> .
+
+am:Resource
+    skos:definition "Een middel is een bezitting die een organisatie in eigendom of beheer heeft."@nl ;
+    skos:definition "A resource represents an asset owned or controlled by an individual or organization."@en ;
+    skos:scopeNote "Het modelleren van resources in ArchiMate kan helpen om de verschillende resources die nodig zijn om producten of diensten te produceren, leveren of ondersteunen in kaart te brengen en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van resources kan de architectuur beter worden afgestemd op de resources die nodig zijn om de producten of diensten van de onderneming te produceren, leveren of ondersteunen, en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen resources worden gemodelleerd met behulp van het 'resource' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke resources van toepassing zijn. Resources kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'capabilities', 'business processes' en 'products', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de resources die nodig zijn om de producten of diensten van de onderneming te produceren, leveren of ondersteunen."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Resource.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Resource> .
+
+am:Serving
+    skos:definition "De bedieningsrelatie drukt uit dat een element functionaliteit levert aan een ander element."@nl ;
+    skos:definition "The serving relationship models that an element provides its functionality to another element."@en ;
+    skos:scopeNote "Deze relatie wordt vaak gebruikt om de dienstverlening van een IT-systeem te beschrijven."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_ServingRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ServingRelationship> .
+
+am:Specialization
+    skos:definition "De specialisatierelatie drukt uit dat een concept een bijzondere vorm van een ander concept is."@nl ;
+    skos:definition "The specialization relationship indicates that an element is a particular kind of another element."@en ;
+    skos:scopeNote "Deze relatie wordt vaak gebruikt in het modelleren van hiërarchische structuren, waarbij concepten worden onderverdeeld in meer specifieke subconcepten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_SpecialisationRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/SpecializationRelationship> .
+
+am:Stakeholder
+    skos:definition "Een belanghebbende is de rol van een persoon, team of organisatie met belangen in de effecten van de architectuur."@nl ;
+    skos:definition "A stakeholder is the role of an individual, team, or organization (or classes thereof) that represents their interests in the outcome of the architecture."@en ;
+    skos:scopeNote "Het modelleren van stakeholders in ArchiMate kan helpen om een compleet beeld te krijgen van de verschillende belanghebbenden die betrokken zijn bij de onderneming en hun belangen en invloed. Door het modelleren van stakeholders kunnen de verschillende aspecten van de onderneming beter worden afgestemd op de belangen van de belanghebbenden en kan de communicatie tussen de verschillende belanghebbenden worden verbeterd.\nBinnen ArchiMate kunnen stakeholders worden gemodelleerd met behulp van het 'stakeholder' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke stakeholders betrokken zijn bij bepaalde activiteiten of resultaten. Stakeholders kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'requirements' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de belangen van de belanghebbenden."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Stakeholder.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Stakeholder> .
+
+am:StructuralRelationship
+    skos:definition "Structurele relaties leggen de statische samenhang van elementen vast."@nl ;
+    skos:definition "Structural relationships model the static construction or composition of elements."@en ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> .
+
+am:SystemSoftware
+    skos:definition "Systeemsoftware biedt een omgeving voor het opslaan, uitvoeren en gebruiken van software of gegevens die erop zijn ingezet."@nl ;
+    skos:definition "System software represents software that provides or contributes to an environment for storing, executing, and using software or data deployed within it."@en ;
+    skos:scopeNote "Voorbeelden zijn :\n* Besturingssystemen (zoals Windows, MacOS, Linux)\n* Virtualisatiesoftware (zoals VMware, VirtualBox)\n* Databasesoftware (zoals Oracle, MySQL, Microsoft SQL Server)\n* Web- en applicatieservers (zoals Apache, Tomcat, IIS)\n* Netwerksoftware (zoals routers, switches, firewalls)\n* Backup- en herstelsoftware (zoals Backup Exec)\n* Antivirus- en beveiligingssoftware (zoals Norton, McAfee, Symantec)"@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_SystemSoftware.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/SystemSoftware> .
+
+am:TechnologyCollaboration
+    skos:definition "Een technologiesamenwerking is een geheel van twee of meer knooppunten dat gezamenlijk technologiegedrag uitvoert."@nl ;
+    skos:definition "A technology collaboration represents an aggregate of two or more nodes that work together to perform collective technology behavior."@en ;
+    skos:scopeNote "Een Technology Collaboration kan worden gebruikt om de samenwerking tussen verschillende technologische afdelingen of teams binnen een organisatie te modelleren, of om de samenwerking tussen verschillende technologieën of systemen in een bedrijfsomgeving te modelleren. Enkele voorbeelden van Technology Collaboration-elementen in ArchiMate zijn 'Application Platform', 'Infrastructure Platform' en 'Service Platform'."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Collaboration.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TechnologyCollaboration> .
+
+am:TechnologyEvent
+    skos:definition "Een technologiegebeurtenis is een toestandsverandering op technologieniveau."@nl ;
+    skos:definition "A technology event is a technology behavior element that denotes a state change."@en ;
+    skos:scopeNote "Voorbeelden van TechnologyEvents zijn het ontvangen van een signaal door een sensor, het verzenden van een bericht door een systeem, of het verlopen van een timer."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TechnologyEvent> .
+
+am:TechnologyFunction
+    skos:definition "Een technologiefunctie is een verzameling samenhangend technologiegedrag dat door een knooppunt kan worden uitgevoerd."@nl ;
+    skos:definition "A technology function represents a collection of technology behavior that can be performed by a node."@en ;
+    skos:scopeNote "Een TechnologyFunction kan worden gebruikt om de functionaliteit van een systeem of applicatie te beschrijven en hoe deze interageert met andere technologische componenten"@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Function.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TechnologyFunction> .
+
+am:TechnologyInteraction
+    skos:definition "Een technologie-interactie is een eenheid van gezamenlijk technologiegedrag, uitgevoerd door (een samenwerking van) twee of meer knooppunten."@nl ;
+    skos:definition "A technology interaction represents a unit of collective technology behavior performed by (a collaboration of) two or more nodes."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld gaan om communicatie tussen servers, gegevensuitwisseling tussen applicaties, of integratie tussen verschillende technologiecomponenten."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interaction.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInteraction> .
+
+am:TechnologyInterface
+    skos:definition "Een technologie-interface is een toegangspunt waar technologiediensten door een knooppunt worden aangeboden aan de omgeving."@nl ;
+    skos:definition "A technology interface represents a point of access where technology services offered by a node can be accessed."@en ;
+    skos:scopeNote "TechnologyInterface kan ook worden gebruikt om de communicatie tussen verschillende TechnologieComponenten te modelleren."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interface.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInterface> .
+
+am:TechnologyProcess
+    skos:definition "Een technologieproces is een reeks technologiegedragingen die een specifiek resultaat bereikt."@nl ;
+    skos:definition "A technology process represents a sequence of technology behaviors that achieves a specific outcome."@en ;
+    skos:scopeNote "TechnologyProcess is een subelement van het element Process en kan worden gebruikt om de technologische aspecten van een bedrijfsproces te modelleren."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Process.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TechnologyProcess> .
+
+am:TechnologyService
+    skos:definition "Een technologiedienst is expliciet gedefinieerd, extern zichtbaar technologiegedrag."@nl ;
+    skos:definition "A technology service represents an explicitly defined exposed technology behavior."@en ;
+    skos:scopeNote "Een TechnologyService kan bijvoorbeeld een netwerkdienst zijn die door een router wordt aangeboden, een besturingssysteem of een cloudservice."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Service.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TechnologyService> .
+
+am:Triggering
+    skos:definition "De triggerrelatie drukt een tijdelijke of causale opvolging tussen elementen uit."@nl ;
+    skos:definition "The triggering relationship describes a temporal or causal relationship between elements."@en ;
+    skos:scopeNote "Het kan bijvoorbeeld aangeven dat een bepaalde gebeurtenis een proces triggert om uitgevoerd te worden. Zo'n relatie geeft daarmee aan dat er sprake is van een causaal verband tussen de gebeurtenis en het proces of de functie."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_TriggeringRelationship.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/TriggeringRelationship> .
+
+am:Value
+    skos:definition "Een waarde is het relatieve nut, belang of voordeel van een concept voor een belanghebbende."@nl ;
+    skos:definition "Value represents the relative worth, utility, or importance of a core element or an outcome."@en ;
+    skos:scopeNote "Het modelleren van values in ArchiMate kan helpen om de kernwaarden van de onderneming duidelijk te maken en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van values kan de architectuur beter worden afgestemd op de kernwaarden van de onderneming en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen values worden gemodelleerd met behulp van het 'value' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke values van toepassing zijn. Values kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'outcomes' en 'principles', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de kernwaarden van de onderneming."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Value.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/Value> .
+
+am:ValueStream
+    skos:definition "Een waardestroom is een reeks activiteiten die een totaalresultaat creëert voor een klant, belanghebbende of eindgebruiker."@nl ;
+    skos:definition "A value stream represents a sequence of activities that create an overall result for a customer, stakeholder, or end user."@en ;
+    skos:scopeNote "Het modelleren van Value Streams in ArchiMate kan helpen bij het begrijpen van de bedrijfsprocessen en -activiteiten die betrokken zijn bij het leveren van waarde aan klanten. Door het modelleren van Value Streams kunnen de verschillende activiteiten die nodig zijn om waarde te creëren in kaart worden gebracht en kunnen inefficiënties en problemen in het proces worden geïdentificeerd en aangepakt.\nBinnen ArchiMate kunnen Value Streams worden gemodelleerd met behulp van het 'Value Stream' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke processen en activiteiten bijdragen aan de Value Stream. Value Streams kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'capabilities', 'business processes', 'products' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de activiteiten die nodig zijn om waarde te creëren voor de klant."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_ValueStream.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/ValueStream> .
+
+am:WorkPackage
+    skos:definition "Een werkpakket is een reeks acties met een bepaald doel en een gedefinieerd begin en einde, zoals een project."@nl ;
+    skos:definition "A work package represents a series of actions identified and designed to achieve specific results within specified time and resource constraints."@en ;
+    skos:scopeNote "Work Packages kunnen worden toegewezen aan specifieke rollen, teams of resources, en kunnen worden gemonitord en gecontroleerd om ervoor te zorgen dat de gewenste resultaten worden bereikt."@nl ;
+    foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_WorkPackage.png> ;
+    rdfs:seeAlso <http://www.begrippenxl.nl/archimate/nl/page/WorkPackage> .
+
+am:AccessTypeValue
+    skos:definition "Een toegangstype-waarde geeft de richting van een toegangsrelatie aan: lezen, schrijven, beide of niet gespecificeerd."@nl ;
+    skos:definition "An access type value indicates the direction of an access relationship: read, write, both, or unspecified."@en .
+
+am:ApplicationLayer
+    skos:definition "De applicatielaag beschrijft de applicaties die de bedrijfslaag met applicatiediensten ondersteunen."@nl ;
+    skos:definition "The application layer describes the applications that support the business layer with application services."@en .
+
+am:BusinessLayer
+    skos:definition "De bedrijfslaag beschrijft de producten en diensten voor klanten, gerealiseerd door bedrijfsprocessen van actoren en rollen."@nl ;
+    skos:definition "The business layer describes the products and services offered to customers, realized by business processes performed by actors and roles."@en .
+
+am:Collaboration
+    skos:definition "Een samenwerking is een geheel van twee of meer actieve structuurelementen dat gezamenlijk gedrag uitvoert."@nl ;
+    skos:definition "A collaboration represents an aggregate of two or more active structure elements that work together to perform collective behavior."@en .
+
+am:Event
+    skos:definition "Een gebeurtenis is een toestandsverandering."@nl ;
+    skos:definition "An event represents a state change."@en .
+
+am:Function
+    skos:definition "Een functie is een verzameling samenhangend gedrag, gegroepeerd naar bijvoorbeeld benodigde middelen, kennis of vaardigheden."@nl ;
+    skos:definition "A function represents a collection of coherent behavior, grouped by, for example, required resources, knowledge, or skills."@en .
+
+am:ImplementationLayer
+    skos:definition "De implementatie- en migratielaag beschrijft de verandering: werkpakketten, op te leveren resultaten en plateaus."@nl ;
+    skos:definition "The implementation and migration layer describes change: work packages, deliverables, and plateaus."@en .
+
+am:Junction
+    skos:definition "Een junction splitst of bundelt relaties van hetzelfde type."@nl ;
+    skos:definition "A junction is used to connect relationships of the same type."@en .
+
+am:Layer
+    skos:definition "Een laag is een indeling van het model naar abstractieniveau, van strategie tot implementatie."@nl ;
+    skos:definition "A layer partitions the model by level of abstraction, from strategy to implementation."@en .
+
+am:MatrixCell
+    skos:definition "Een matrixcel legt vast welke relatietypen tussen een bron- en doeltype zijn toegestaan en welke daarvan direct tekenbaar zijn."@nl ;
+    skos:definition "A matrix cell records which relationship types are permitted between a source and target type, and which of those may be drawn directly."@en .
+
+am:MotivationLayer
+    skos:definition "De motivatielaag beschrijft waarom de architectuur is zoals hij is: belanghebbenden, drijfveren, doelen, principes en vereisten."@nl ;
+    skos:definition "The motivation layer describes why the architecture is the way it is: stakeholders, drivers, goals, principles, and requirements."@en .
+
+am:PhysicalLayer
+    skos:definition "De fysieke laag beschrijft bedrijfsmiddelen, faciliteiten, distributienetwerken en materiaal in de fysieke wereld."@nl ;
+    skos:definition "The physical layer describes equipment, facilities, distribution networks, and material in the physical world."@en .
+
+am:Process
+    skos:definition "Een proces is een reeks gedragingen die een specifiek resultaat bereikt."@nl ;
+    skos:definition "A process represents a sequence of behaviors that achieves a specific outcome."@en .
+
+am:Role
+    skos:definition "Een rol is de verantwoordelijkheid om specifiek gedrag uit te voeren, waaraan een actor kan worden toegewezen."@nl ;
+    skos:definition "A role represents the responsibility for performing specific behavior, to which an actor can be assigned."@en .
+
+am:Service
+    skos:definition "Een dienst is expliciet gedefinieerd, extern zichtbaar gedrag."@nl ;
+    skos:definition "A service represents explicitly defined exposed behavior."@en .
+
+am:StrategyLayer
+    skos:definition "De strategielaag beschrijft koersen, vermogens, waardestromen en middelen van de organisatie."@nl ;
+    skos:definition "The strategy layer describes the organization's courses of action, capabilities, value streams, and resources."@en .
+
+am:TechnologyLayer
+    skos:definition "De technologielaag beschrijft de infrastructuur van knooppunten, systeemsoftware en netwerken die de applicaties draagt."@nl ;
+    skos:definition "The technology layer describes the infrastructure of nodes, system software, and networks that supports the applications."@en .
+
+am:View
+    skos:definition "Een view is een geselecteerd deel van het model, gericht op een belanghebbende of vraag."@nl ;
+    skos:definition "A view is a selected part of the model, addressing a stakeholder or question."@en .

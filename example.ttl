@@ -1,0 +1,68 @@
+@prefix am:   <https://purl.org/archimate#> .
+@prefix ex:   <https://example.org/model/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+# Voorbeeldmodel: klein, bewust half fout.
+#
+# Vier meldingen verwacht bij validatie (zie README):
+#   * ex:afleiding   waarschuwing: afleidbaar maar niet tekenbaar
+#   * ex:fout        overtreding: niet toegestaan volgens de matrix
+#   * ex:zwevend     overtreding: doel bestaat niet in de graaf
+#   * ex:api2        overtreding: doel van twee composities
+#################################################################
+
+ex:polisadmin a am:ApplicationComponent ;
+    rdfs:label "Polisadministratie"@nl , "Policy administration"@en ;
+    dcterms:description "Registreert en beheert polissen."@nl ;
+    am:identifier "id-1001" .
+
+ex:polisapi a am:ApplicationInterface ;
+    rdfs:label "Polis-API"@nl , "Policy API"@en ;
+    am:identifier "id-1002" .
+
+ex:api2 a am:ApplicationInterface ;
+    rdfs:label "Claims-API"@nl , "Claims API"@en .
+
+ex:polis a am:BusinessObject ;
+    rdfs:label "Polis"@nl , "Policy"@en .
+
+ex:verzekeraar a am:BusinessActor ;
+    rdfs:label "Verzekeraar"@nl , "Insurer"@en .
+
+# 3.2-profieltype: telt via rdfs:subClassOf als am:Process.
+ex:claimproces a am:BusinessProcess ;
+    rdfs:label "Claim afhandelen"@nl , "Handle claim"@en ;
+    am:layer am:BusinessLayer .
+
+# Correct: compositie is direct tekenbaar tussen deze typen.
+ex:onderdeel a am:Composition ;
+    am:source ex:polisadmin ; am:target ex:polisapi ;
+    am:identifier "id-2001" .
+
+# Correct: gedrag benadert een passief element, met toegangstype.
+ex:leest a am:Access ;
+    am:source ex:claimproces ; am:target ex:polis ;
+    am:accessType am:ReadAccess .
+
+# Waarschuwing: Serving tussen deze typen is wel afleidbaar maar
+# niet direct tekenbaar; hoort een gematerialiseerde afleiding te zijn.
+ex:afleiding a am:Serving ;
+    am:source ex:polisadmin ; am:target ex:polisapi .
+
+# Overtreding: een passief bedrijfsobject bedient geen actor.
+ex:fout a am:Serving ;
+    am:source ex:polis ; am:target ex:verzekeraar .
+
+# Overtreding: doel ontbreekt in de graaf (los eindpunt).
+ex:zwevend a am:Flow ;
+    am:source ex:polisadmin ; am:target ex:bestaatniet .
+
+# Overtreding: ex:api2 is doel van twee composities.
+ex:portaal a am:ApplicationComponent ;
+    rdfs:label "Klantportaal"@nl , "Customer portal"@en .
+ex:dubbel a am:Composition ;
+    am:source ex:polisadmin ; am:target ex:api2 .
+ex:dubbel2 a am:Composition ;
+    am:source ex:portaal ; am:target ex:api2 .

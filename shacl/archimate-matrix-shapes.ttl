@@ -1,0 +1,99 @@
+@prefix am:   <https://purl.org/archimate#> .
+@prefix amsh: <https://purl.org/archimate/shapes#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# SHACL-matrixvalidatie (niveau 3)
+#
+# De matrix zelf is data (archimate-matrix.ttl, gegenereerd uit
+# Appendix B.5). Deze twee constraints zijn generiek en hoeven bij
+# een matrixwijziging dus NIET opnieuw gegenereerd te worden: ze
+# lezen de cellen uit de graaf. Dat is het verschil met per cel
+# gegenereerde shapes: één regel, 1.936 cellen data.
+#
+# Subklassen resolven vanzelf: een 3.2-instantie `a am:BusinessProcess`
+# bereikt de cel voor am:Process via rdfs:subClassOf*, een junction
+# de cel voor am:Junction, en een relatie-als-eindpunt de cel voor
+# am:Relationship.
+#
+# LET OP: laad ontologie, 3.2-profiel en matrix in DEZELFDE graaf
+# als de modeldata (of in een union-dataset). De ont-graph-optie van
+# pyshacl volstaat niet: die mixin is voor de SPARQL-constraints
+# hier niet zichtbaar, waardoor elke relatie ten onrechte als
+# overtreding gemeld wordt. Zie de validatiesectie in de README.
+#################################################################
+
+<https://purl.org/archimate/shapes/matrix>
+    a owl:Ontology ;
+    rdfs:label "ArchiMate SHACL-matrixshapes"@nl , "ArchiMate SHACL matrix shapes"@en ;
+    owl:versionInfo "0.1.0-concept" ;
+    sh:declare [ sh:prefix "am" ; sh:namespace "https://purl.org/archimate#"^^xsd:anyURI ] ,
+               [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] .
+
+# Hard fout: de relatie komt in geen enkele toegestane cel voor,
+# ook niet als afgeleide relatie.
+amsh:MatrixPermittedShape
+    a sh:NodeShape ;
+    sh:targetClass am:Relationship ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Relatie is volgens Appendix B.5 niet toegestaan tussen deze twee concepttypen, ook niet als afgeleide relatie."@nl , "Relationship is not permitted between these two concept types according to Appendix B.5, not even as a derived relationship."@en ;
+        sh:prefixes <https://purl.org/archimate/shapes/matrix> ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a ?relType ; am:source ?src ; am:target ?tgt .
+                ?relType rdfs:subClassOf* am:Relationship .
+                ?src a ?srcType . ?tgt a ?tgtType .
+                FILTER NOT EXISTS {
+                    ?cell a am:MatrixCell ;
+                          am:sourceType ?srcMatrix ;
+                          am:targetType ?tgtMatrix ;
+                          am:permitsRelation ?permitted .
+                    ?relType rdfs:subClassOf* ?permitted .
+                    ?srcType rdfs:subClassOf* ?srcMatrix .
+                    ?tgtType rdfs:subClassOf* ?tgtMatrix .
+                }
+            }
+        """ ;
+    ] .
+
+# Waarschuwing: toegestaan in de volledige matrix, maar niet direct
+# tekenbaar. Zo'n relatie hoort het resultaat van afleiding te zijn
+# (derived), niet iets dat een modelleur heeft getekend (asserted).
+amsh:MatrixDirectShape
+    a sh:NodeShape ;
+    sh:targetClass am:Relationship ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Relatie is wel afleidbaar maar niet direct tekenbaar volgens Appendix B.5; controleer of dit een gematerialiseerde afleiding is en geen tekenfout."@nl , "Relationship is derivable but not directly drawable according to Appendix B.5; check whether this is a materialized derivation rather than a drawing mistake."@en ;
+        sh:prefixes <https://purl.org/archimate/shapes/matrix> ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a ?relType ; am:source ?src ; am:target ?tgt .
+                ?relType rdfs:subClassOf* am:Relationship .
+                ?src a ?srcType . ?tgt a ?tgtType .
+                FILTER EXISTS {
+                    ?cell1 a am:MatrixCell ;
+                           am:sourceType ?srcM1 ;
+                           am:targetType ?tgtM1 ;
+                           am:permitsRelation ?perm1 .
+                    ?relType rdfs:subClassOf* ?perm1 .
+                    ?srcType rdfs:subClassOf* ?srcM1 .
+                    ?tgtType rdfs:subClassOf* ?tgtM1 .
+                }
+                FILTER NOT EXISTS {
+                    ?cell2 a am:MatrixCell ;
+                           am:sourceType ?srcM2 ;
+                           am:targetType ?tgtM2 ;
+                           am:permitsDirectRelation ?perm2 .
+                    ?relType rdfs:subClassOf* ?perm2 .
+                    ?srcType rdfs:subClassOf* ?srcM2 .
+                    ?tgtType rdfs:subClassOf* ?tgtM2 .
+                }
+            }
+        """ ;
+    ] .

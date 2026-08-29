@@ -1,0 +1,1321 @@
+PREFIX dct:      <http://purl.org/dc/terms/>
+PREFIX extnlsbb: <http://extnlsbb.begrippenxl.nl/>
+PREFIX foaf:     <http://xmlns.com/foaf/0.1/>
+PREFIX isothes:  <http://purl.org/iso25964/skos-thes#>
+PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:     <http://www.w3.org/2004/02/skos/core#>
+
+<http://www.begrippenxl.nl/archimate/nl/page/Application>
+        a                skos:Collection;
+        skos:definition  "De applicatielaag in ArchiMate beschrijft de functionaliteit en het gedrag van de software-applicaties die worden gebruikt om bedrijfsprocessen te ondersteunen. Het omvat elementen zoals applicaties, componenten en interfaces en de relaties daartussen. De applicatielaag richt zich op de implementatie van bedrijfsprocessen en vertaalt de behoeften van de bedrijfs- en informatie-laag naar specifieke applicaties."@nl;
+        skos:member      <http://www.begrippenxl.nl/archimate/nl/page/ApplicationCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationComponent> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationFunction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInterface> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationProcess> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationService> , <http://www.begrippenxl.nl/archimate/nl/page/DataObject>;
+        skos:prefLabel   "Application"@en , "applicatielaag"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationCollaboration>
+        a                       skos:Concept;
+        rdfs:comment            "An application collaboration represents an aggregate of two or more application components that work together to perform collective application behavior."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "ApplicationCollaboration"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een 'Application Collaboration' is een element in ArchiMate dat de samenwerking tussen verschillende applicaties of componenten in een applicatieomgeving vertegenwoordigt. Het is een abstractie van een groep samenwerkende applicaties die een gemeenschappelijk doel dienen."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatiesamenwerking"@nl , "ApplicationCollaboration"@en;
+        skos:scopeNote          "Een 'Application Collaboration' kan bijvoorbeeld een groep applicaties vertegenwoordigen die samenwerken om een specifieke bedrijfsfunctie uit te voeren, zoals een klantrelatiebeheersysteem. Het kan ook een groep applicaties zijn die samenwerken om een gemeenschappelijk technisch doel te bereiken, zoals een applicatieplatform of -framework.\nIn het ArchiMate-model kan een 'Application Collaboration' worden verbonden met andere elementen, zoals 'Application Components' en 'Application Services', om de relaties tussen deze elementen te specificeren en het gedrag van de applicaties in de samenwerking te beschrijven. Dit helpt bij het begrijpen van de rol van de verschillende applicaties in de omgeving en bij het identificeren van de afhankelijkheden tussen hen.\nOver het algemeen wordt de 'Application Collaboration' gebruikt om de structuur en samenwerking tussen applicaties te modelleren en te communiceren, zodat het gemakkelijker wordt om complexe applicatieomgevingen te begrijpen en te beheren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Collaboration.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationComponent>
+        a                       skos:Concept;
+        rdfs:comment            "An application component represents an encapsulation of application functionality aligned to implementation structure, which is modular and replaceable. It encapsulates its behavior and data, exposes services, and makes them available through interfaces."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "ApplicationComponent"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een 'Application Component' is een element in ArchiMate dat een zelfstandig uitvoerbaar stuk software vertegenwoordigt dat kan worden gebruikt om een of meer applicaties te implementeren of te ondersteunen. Het kan worden beschouwd als een specifieke realisatie van een 'Application Service' die is ontworpen om specifieke functionaliteit te bieden aan een of meer gebruikers of andere applicaties."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatiecomponent"@nl , "ApplicationComponent"@en;
+        skos:scopeNote          "Een 'Application Component' kan bijvoorbeeld een stuk software zijn dat specifieke taken uitvoert, zoals een login-systeem, een rapportgenerator of een betaalmodule. Het kan ook een module of bibliotheek zijn die wordt gebruikt door andere software om bepaalde functies te bieden, zoals een beveiligingsmodule of een grafische gebruikersinterface-bibliotheek.\nIn het ArchiMate-model kan een 'Application Component' worden verbonden met andere elementen, zoals 'Application Services', 'Application Interfaces' en 'Data Objects', om de functies die het biedt en de relaties tussen deze elementen te specificeren. Dit helpt bij het begrijpen van de rol van het 'Application Component' in de applicatieomgeving en bij het identificeren van de afhankelijkheden tussen de verschillende componenten.\nOver het algemeen wordt de 'Application Component' gebruikt om de structuur en functies van de softwarecomponenten in een applicatieomgeving te modelleren en te communiceren, zodat het gemakkelijker wordt om complexe software-architecturen te begrijpen en te beheren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Component.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationEvent>
+        a                       skos:Concept;
+        rdfs:comment            "An application event is an application behavior element that denotes a state change."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:altLabel           "ApplicationEvent"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:definition         "Een 'Application Event' is een element in ArchiMate dat een specifieke gebeurtenis in een applicatieomgeving vertegenwoordigt. Het kan worden beschouwd als een signaal dat aangeeft dat er iets is gebeurd of is veranderd in de applicatie, bijvoorbeeld een wijziging in de status van een bestelling, het verstrijken van een deadline of het voltooien van een taak."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatiegebeurtenis"@nl , "ApplicationEvent"@en;
+        skos:scopeNote          "Een 'Application Event' wordt meestal geactiveerd door een andere gebeurtenis of actie in de applicatie, zoals het invoeren van gegevens door een gebruiker, een timer die afloopt of een signaal van een andere applicatie. Het kan vervolgens worden verwerkt door een of meer 'Application Components' die zijn ontworpen om te reageren op dat specifieke type gebeurtenis.\nIn het ArchiMate-model kan een 'Application Event' worden verbonden met andere elementen, zoals 'Application Components', 'Application Services' en 'Data Objects', om de functies die het biedt en de relaties tussen deze elementen te specificeren. Dit helpt bij het begrijpen van de rol van het 'Application Event' in de applicatieomgeving en bij het identificeren van de afhankelijkheden tussen de verschillende componenten.\nOver het algemeen wordt het 'Application Event' gebruikt om de gebeurtenissen en signalen in de applicatieomgeving te modelleren en te communiceren, zodat het gemakkelijker wordt om de gedragingen van de applicatie te begrijpen en te beheren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationFunction>
+        a                       skos:Concept;
+        rdfs:comment            "An application function represents automated behavior that can be performed by an application component."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "ApplicationFunction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een ApplicationFunction in ArchiMate vertegenwoordigt een geautomatiseerde of handmatige procedure die verantwoordelijk is voor het uitvoeren van een bepaalde taak in een applicatie."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatiefunctie"@nl , "ApplicationFunction"@en;
+        skos:scopeNote          "Een ApplicationFunction kan deel uitmaken van een of meer ApplicationComponents en kan afhankelijk zijn van andere ApplicationFunctions. Een voorbeeld van een ApplicationFunction is 'Verwerken van betalingen' in een e-commerce applicatie."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Function.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationInteraction>
+        a                       skos:Concept;
+        rdfs:comment            "An application interaction represents a unit of collective application behavior performed by (a collaboration of) two or more application components."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "ApplicationInteraction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een ApplicationInteraction in ArchiMate vertegenwoordigt de uitwisseling van informatie of signalen tussen twee of meer applicatiecomponenten in een systeem."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatie-interactie"@nl , "ApplicationInteraction"@en;
+        skos:scopeNote          "Het kan bijvoorbeeld de uitwisseling van gegevens zijn tussen verschillende applicatiecomponenten of de communicatie tussen een gebruiker en een applicatie. Een ApplicationInteraction kan ook de uitwisseling van informatie tussen verschillende applicaties vertegenwoordigen, bijvoorbeeld de integratie van gegevens tussen een e-commerce applicatie en een voorraadbeheersysteem."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interaction.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationInterface>
+        a                       skos:Concept;
+        rdfs:comment            "An application interface represents a point of access where application services are made available to a user, another application component, or a node."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>;
+        skos:altLabel           "ApplicationInterface"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>;
+        skos:definition         "Een ApplicationInterface in ArchiMate is een abstractie die de diensten of communicatiepunten vertegenwoordigt die door een ApplicationComponent worden aangeboden om te communiceren met andere componenten, bijvoorbeeld andere applicaties, apparaten of gebruikersinterfaces."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatie-interface"@nl , "ApplicationInterface"@en;
+        skos:scopeNote          "Een ApplicationInterface kan ook gebruikt worden om de integratie tussen verschillende applicaties te modelleren, waarbij het de punten vertegenwoordigt waar de ene applicatie gegevens of informatie kan uitwisselen met een andere applicatie.\nEen voorbeeld van een ApplicationInterface kan de REST API zijn die wordt aangeboden door een bepaalde applicatiecomponent om gegevens uit te wisselen met een andere component."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interface.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationProcess>
+        a                       skos:Concept;
+        rdfs:comment            "An application process represents a sequence of application behaviors that achieves a specific outcome."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "ApplicationProcess"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een ApplicationProcess in ArchiMate is een element dat een uitvoerende activiteit of taak binnen een applicatie vertegenwoordigt. Het vertegenwoordigt het gedrag van de applicatie en wordt gebruikt om de functionaliteit van een applicatie te modelleren."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatieproces"@nl , "ApplicationProcess"@en;
+        skos:scopeNote          "Een ApplicationProcess kan bijvoorbeeld de verwerking van gegevens in een applicatie vertegenwoordigen, zoals het verwerken van orders of het genereren van facturen. Het kan ook betrekking hebben op de logica achter de gebruikersinterface van de applicatie, zoals het validatieproces van invoergegevens.\nApplicationProcesses kunnen worden toegewezen aan ApplicationComponents, waardoor de relaties tussen de processen en de componenten die ze uitvoeren worden gemodelleerd."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Process.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationService>
+        a                       skos:Concept;
+        rdfs:comment            "An application service represents an explicitly defined exposed application behavior."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:altLabel           "ApplicationService"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:definition         "Een ApplicationService in ArchiMate is een element dat een specifieke functionaliteit of dienst van een applicatie vertegenwoordigt. Het beschrijft wat de applicatie doet, onafhankelijk van hoe het wordt gedaan."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "applicatieservice"@nl , "ApplicationService"@en;
+        skos:scopeNote          "Een ApplicationService kan bijvoorbeeld het versturen van e-mails vanuit een applicatie vertegenwoordigen, het ophalen van gegevens van een database of het verwerken van betalingen.\nApplicationServices kunnen worden toegewezen aan ApplicationComponents, wat betekent dat de relatie tussen de service en de component die de service aanbiedt wordt gemodelleerd. Daarnaast kunnen ApplicationServices ook worden toegewezen aan BusinessServices, waardoor de relatie tussen de services die worden aangeboden door de applicatie en de services die worden gevraagd door de business worden gemodelleerd."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Service.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DataObject>
+        a                       skos:Concept;
+        rdfs:comment            "A data object represents data structured for automated processing."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "DataObject"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "Een DataObject in ArchiMate is een element dat een abstracte of fysieke representatie van gegevens of informatie vertegenwoordigt. Het beschrijft wat de gegevens zijn, onafhankelijk van hoe ze worden opgeslagen, verwerkt of getransporteerd."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "gegevensobject"@nl , "DataObject"@en;
+        skos:scopeNote          "Een DataObject kan bijvoorbeeld een klantprofiel, een productlijst of een factuur zijn.\nDataObjects kunnen worden toegewezen aan ApplicationComponents, BusinessObjects of TechnologyComponents. Door het toewijzen van DataObjects aan deze componenten kan de relatie tussen de gegevens en de componenten die deze gegevens opslaan of verwerken worden gemodelleerd.\nHet is belangrijk om op te merken dat DataObjects alleen de inhoud van gegevens of informatie beschrijven en niet de structuur van gegevens of de manier waarop ze worden verwerkt. Hiervoor worden andere elementen in ArchiMate gebruikt, zoals ApplicationFunction, ApplicationService en TechnologyFunction."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Object.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/>
+        a                   skos:ConceptScheme;
+        skos:hasTopConcept  <http://www.begrippenxl.nl/archimate/nl/page/ApplicationCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationComponent> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationFunction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInterface> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationProcess> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationService> , <http://www.begrippenxl.nl/archimate/nl/page/DataObject> , <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessActor> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessEvent> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessFunction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInterface> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessObject> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessProcess> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessRole> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessService> , <http://www.begrippenxl.nl/archimate/nl/page/Contract> , <http://www.begrippenxl.nl/archimate/nl/page/Product> , <http://www.begrippenxl.nl/archimate/nl/page/Representation> , <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> , <http://www.begrippenxl.nl/archimate/nl/page/Deliverable> , <http://www.begrippenxl.nl/archimate/nl/page/Gap> , <http://www.begrippenxl.nl/archimate/nl/page/ImplementationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/Plateau> , <http://www.begrippenxl.nl/archimate/nl/page/WorkPackage> , <http://www.begrippenxl.nl/archimate/nl/page/AccessRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AggregationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AndJunction> , <http://www.begrippenxl.nl/archimate/nl/page/Assessment> , <http://www.begrippenxl.nl/archimate/nl/page/AssignmentRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AssociationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/CompositionRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Constraint> , <http://www.begrippenxl.nl/archimate/nl/page/Driver> , <http://www.begrippenxl.nl/archimate/nl/page/FlowRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Goal> , <http://www.begrippenxl.nl/archimate/nl/page/Grouping> , <http://www.begrippenxl.nl/archimate/nl/page/InfluenceRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Location> , <http://www.begrippenxl.nl/archimate/nl/page/Meaning> , <http://www.begrippenxl.nl/archimate/nl/page/OrJunction> , <http://www.begrippenxl.nl/archimate/nl/page/Outcome> , <http://www.begrippenxl.nl/archimate/nl/page/Principle> , <http://www.begrippenxl.nl/archimate/nl/page/RealizationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Requirement> , <http://www.begrippenxl.nl/archimate/nl/page/ServingRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/SpecializationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Stakeholder> , <http://www.begrippenxl.nl/archimate/nl/page/TriggeringRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Value> , <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector> , <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> , <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/DistributionNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/Equipment> , <http://www.begrippenxl.nl/archimate/nl/page/Facility> , <http://www.begrippenxl.nl/archimate/nl/page/Material> , <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/Capability> , <http://www.begrippenxl.nl/archimate/nl/page/CourseOfAction> , <http://www.begrippenxl.nl/archimate/nl/page/Resource> , <http://www.begrippenxl.nl/archimate/nl/page/ValueStream> , <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/StructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/Artifact> , <http://www.begrippenxl.nl/archimate/nl/page/CommunicationNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/Device> , <http://www.begrippenxl.nl/archimate/nl/page/Node> , <http://www.begrippenxl.nl/archimate/nl/page/Path> , <http://www.begrippenxl.nl/archimate/nl/page/SystemSoftware> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyEvent> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyFunction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInterface> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyProcess> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyService> , <http://www.begrippenxl.nl/archimate/nl/page/Relationship> , <http://www.begrippenxl.nl/archimate/nl/page/Element> , <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/ApplicationCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationComponent> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessActor> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessRole> , <http://www.begrippenxl.nl/archimate/nl/page/Equipment> , <http://www.begrippenxl.nl/archimate/nl/page/Facility> , <http://www.begrippenxl.nl/archimate/nl/page/Device> , <http://www.begrippenxl.nl/archimate/nl/page/Node> , <http://www.begrippenxl.nl/archimate/nl/page/SystemSoftware> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyCollaboration>;
+        skos:altLabel             "Internal Active Structure Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:definition           "Een Internal Active Structure Element (interne actieve structuurelement) is een elementtype in het ArchiMate-model dat wordt gebruikt om actieve elementen binnen de organisatie te modelleren die betrokken zijn bij de uitvoering van bedrijfsprocessen en activiteiten. Dit type element wordt gebruikt om de interne structuur van de organisatie te modelleren en te begrijpen welke actoren verantwoordelijk zijn voor de uitvoering van activiteiten en processen."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/ApplicationCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationComponent> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessActor> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessRole> , <http://www.begrippenxl.nl/archimate/nl/page/Equipment> , <http://www.begrippenxl.nl/archimate/nl/page/Facility> , <http://www.begrippenxl.nl/archimate/nl/page/Device> , <http://www.begrippenxl.nl/archimate/nl/page/Node> , <http://www.begrippenxl.nl/archimate/nl/page/SystemSoftware> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyCollaboration>;
+        skos:prefLabel            "Internal Active Structure Element"@en , "interne actieve structuurelement"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/ApplicationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationService> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessEvent> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessService> , <http://www.begrippenxl.nl/archimate/nl/page/ImplementationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyEvent> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyService>;
+        skos:altLabel             "External Behavior Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        skos:definition           "Een External Behavior Element (externe gedragselement) is een elementtype in het ArchiMate-model dat wordt gebruikt om het gedrag van entiteiten buiten de organisatie te modelleren die van invloed zijn op de bedrijfsprocessen en activiteiten van de organisatie. Dit type element wordt gebruikt om de interacties tussen de organisatie en haar externe omgeving te modelleren."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/ApplicationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationService> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessEvent> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessService> , <http://www.begrippenxl.nl/archimate/nl/page/ImplementationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyEvent> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyService>;
+        skos:prefLabel            "External Behavior Element"@en , "extern gedragselement"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/ApplicationFunction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationProcess> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessFunction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessProcess> , <http://www.begrippenxl.nl/archimate/nl/page/WorkPackage> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyFunction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyProcess>;
+        skos:altLabel             "Internal Behavior Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        skos:definition           "Een Internal Behavior Element (interne gedragselement) is een elementtype in het ArchiMate-model dat wordt gebruikt om het gedrag van actoren en objecten binnen de organisatie te modelleren. Dit type element wordt gebruikt om de interne processen en activiteiten van de organisatie te begrijpen en te optimaliseren."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/ApplicationFunction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/ApplicationProcess> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessFunction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessProcess> , <http://www.begrippenxl.nl/archimate/nl/page/WorkPackage> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyFunction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyProcess>;
+        skos:prefLabel            "Internal Behavior Element"@en , "intern gedragselement"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInterface> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInterface> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInterface>;
+        skos:altLabel             "External Active Structure Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:definition           "Een External Active Structure Element (externe actieve structuurelement) is een elementtype in het ArchiMate-model dat wordt gebruikt om de actieve elementen buiten de organisatie te modelleren die van invloed zijn op de bedrijfsprocessen en activiteiten van de organisatie. Dit type element wordt gebruikt om de interacties tussen de organisatie en haar externe omgeving te modelleren."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/ApplicationInterface> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInterface> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInterface>;
+        skos:prefLabel            "External Active Structure Element"@en , "externe actieve structuurelement"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/DataObject> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessObject> , <http://www.begrippenxl.nl/archimate/nl/page/Contract> , <http://www.begrippenxl.nl/archimate/nl/page/Representation> , <http://www.begrippenxl.nl/archimate/nl/page/Deliverable> , <http://www.begrippenxl.nl/archimate/nl/page/Gap> , <http://www.begrippenxl.nl/archimate/nl/page/Material> , <http://www.begrippenxl.nl/archimate/nl/page/Artifact>;
+        skos:altLabel             "Passive Structure Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        skos:definition           "Een Passive Structure Element (passief structuurelement) is een elementtype in het ArchiMate-model dat wordt gebruikt om de statische structuur van een organisatie of systeem te modelleren. Dit type element wordt gebruikt om de entiteiten te modelleren die geen actieve rol spelen in de uitvoering van bedrijfsprocessen, maar wel belangrijk zijn voor het begrijpen van de organisatie of het systeem."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/DataObject> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessObject> , <http://www.begrippenxl.nl/archimate/nl/page/Contract> , <http://www.begrippenxl.nl/archimate/nl/page/Representation> , <http://www.begrippenxl.nl/archimate/nl/page/Deliverable> , <http://www.begrippenxl.nl/archimate/nl/page/Gap> , <http://www.begrippenxl.nl/archimate/nl/page/Material> , <http://www.begrippenxl.nl/archimate/nl/page/Artifact>;
+        skos:prefLabel            "Passive Structure Element"@en , "passief structuurelement"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Business>
+        a                skos:Collection;
+        skos:definition  "De businesslaag in ArchiMate is gericht op het modelleren van de bedrijfsprocessen en -functies van een organisatie. Het biedt een holistisch perspectief op de bedrijfsvoering en beschrijft de diensten, producten, processen, bedrijfsrollen en -actoren, en de informatie die nodig is voor de bedrijfsvoering."@nl;
+        skos:member      <http://www.begrippenxl.nl/archimate/nl/page/BusinessActor> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessEvent> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessFunction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessInterface> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessObject> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessProcess> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessRole> , <http://www.begrippenxl.nl/archimate/nl/page/BusinessService> , <http://www.begrippenxl.nl/archimate/nl/page/Contract> , <http://www.begrippenxl.nl/archimate/nl/page/Product> , <http://www.begrippenxl.nl/archimate/nl/page/Representation>;
+        skos:prefLabel   "Business"@en , "bedrijfslaag"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessActor>
+        a                       skos:Concept;
+        rdfs:comment            "A business actor is a business entity that is capable of performing behavior."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "BusinessActor"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een 'BusinessActor' in ArchiMate is een abstract element dat een rol, persoon of systeem voorstelt die verantwoordelijk is voor het uitvoeren van gedrag in een bedrijfsomgeving. Een BusinessActor kan worden gezien als een bron van gedrag, waarbij het gedrag kan worden beschouwd als de acties die de actor uitvoert in een bepaalde context of situatie."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsactor"@nl , "BusinessActor"@en;
+        skos:scopeNote          "BusinessActors in ArchiMate kunnen bijvoorbeeld worden gebruikt om rollen of functies in een organisatie te modelleren, of om externe partijen te vertegenwoordigen die invloed hebben op het bedrijfsproces, zoals klanten, leveranciers of partners.\nBusinessActors kunnen worden geassocieerd met andere elementen in ArchiMate, zoals 'BusinessProcesses', 'BusinessFunctions', 'BusinessServices' en 'BusinessRoles', om de rollen en verantwoordelijkheden van verschillende actoren binnen de bedrijfsomgeving te verduidelijken en de interacties tussen deze elementen te modelleren. Dit kan helpen bij het begrijpen en ontwerpen van bedrijfsprocessen en -systemen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Actor.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessCollaboration>
+        a                       skos:Concept;
+        rdfs:comment            "A business collaboration is an aggregate of two or more business internal active structure elements that work together to perform collective behavior."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "BusinessCollaboration"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een 'BusinessCollaboration' in ArchiMate is een abstract element dat de samenwerking tussen verschillende BusinessActors voorstelt om een bepaald gemeenschappelijk doel te bereiken. Het kan worden gezien als een tijdelijke entiteit die wordt gecreëerd om de samenwerking tussen meerdere actoren te organiseren en te coördineren."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfssamenwerking"@nl , "BusinessCollaboration"@en;
+        skos:scopeNote          "Een BusinessCollaboration kan worden gebruikt om de samenwerking tussen verschillende afdelingen, bedrijven of organisaties te modelleren, bijvoorbeeld bij het uitvoeren van een gezamenlijk project of het leveren van een gezamenlijke dienst aan klanten. Het element kan worden gebruikt om de interacties en communicatie tussen de betrokken actoren te modelleren en de verantwoordelijkheden en rollen van elke actor binnen de samenwerking vast te stellen.\nBinnen ArchiMate kunnen BusinessCollaborations worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessService', 'BusinessObject' en 'BusinessRole', om de relaties tussen de verschillende elementen te modelleren en de samenwerking binnen de bedrijfsomgeving te verbeteren. Door het modelleren van BusinessCollaborations kunnen organisaties hun bedrijfsprocessen en -structuren beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Collaboration.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessEvent>
+        a                       skos:Concept;
+        rdfs:comment            "A business event is a business behavior element that denotes an organizational state change. It may originate from and be resolved inside or outside the organization."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:altLabel           "BusinessEvent"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:definition         "Een 'BusinessEvent' in ArchiMate is een element dat een gebeurtenis of trigger voorstelt die leidt tot een bepaald gedrag of actie binnen een bedrijfsomgeving. Een BusinessEvent kan worden gezien als een gebeurtenis die plaatsvindt in de omgeving van een bedrijfsproces en die een bepaalde respons of actie van de betrokken actoren vereist."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsgebeurtenis"@nl , "BusinessEvent"@en;
+        skos:scopeNote          "Een BusinessEvent kan bijvoorbeeld worden gebruikt om een klantorder te modelleren als een gebeurtenis die leidt tot het starten van een bedrijfsproces, zoals het verwerken van de order of het leveren van het product aan de klant. Andere voorbeelden van BusinessEvents zijn het ontvangen van een betaling, het aanvragen van een dienst of het voltooien van een projectfase.\nBinnen ArchiMate kan een BusinessEvent worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessRole' en 'BusinessService', om de impact van de gebeurtenis op de bedrijfsomgeving te modelleren en de acties en verantwoordelijkheden van de betrokken actoren vast te stellen. Door het gebruik van BusinessEvents kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessFunction>
+        a                       skos:Concept;
+        rdfs:comment            "A business function is a collection of business behavior based on a chosen set of criteria (typically required business resources and/or competencies), closely aligned to an organization, but not necessarily explicitly governed by the organization."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "BusinessFunction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een 'BusinessFunction' in ArchiMate is een element dat een specifieke taak of verantwoordelijkheid binnen een bedrijfsomgeving vertegenwoordigt. Het is een abstractie van de uitvoering van een bedrijfsproces en beschrijft wat er gedaan moet worden om een bedrijfsdoel te bereiken."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsfunctie"@nl , "BusinessFunction"@en;
+        skos:scopeNote          "Een BusinessFunction kan bijvoorbeeld worden gebruikt om een specifiek bedrijfsproces te modelleren, zoals het verwerken van een klantorder of het uitvoeren van een facturatieproces. Het kan ook een meer algemene taak beschrijven, zoals 'klantenservice' of 'marketing'.\nBinnen ArchiMate kan een BusinessFunction worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessEvent', 'BusinessRole' en 'BusinessService', om de rol en verantwoordelijkheden van het element in de bedrijfsomgeving te modelleren. Door het gebruik van BusinessFunctions kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Function.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessInteraction>
+        a                       skos:Concept;
+        rdfs:comment            "A business interaction is a unit of collective business behavior performed by (a collaboration of) two or more business roles."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "BusinessInteraction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een 'BusinessInteraction' in ArchiMate is een element dat de uitwisseling van informatie of communicatie tussen bedrijfsactoren vertegenwoordigt. Het beschrijft de manier waarop bedrijfsactoren met elkaar communiceren en samenwerken om een bedrijfsdoel te bereiken."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsinteractie"@nl , "BusinessInteraction"@en;
+        skos:scopeNote          "Een BusinessInteraction kan bijvoorbeeld worden gebruikt om de communicatie tussen een klant en een bedrijf te modelleren, zoals het plaatsen van een order of het indienen van een klacht. Het kan ook de communicatie tussen bedrijfsactoren beschrijven, zoals tussen afdelingen of tussen leveranciers en klanten.\nBinnen ArchiMate kan een BusinessInteraction worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessRole' en 'BusinessService', om de rol en verantwoordelijkheden van de betrokken actoren in de bedrijfsomgeving te modelleren. Door het gebruik van BusinessInteractions kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interaction.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessInterface>
+        a                       skos:Concept;
+        rdfs:comment            "A business interface is a point of access where a business service is made available to the environment."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>;
+        skos:altLabel           "BusinessInterface"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>;
+        skos:definition         "Een 'BusinessInterface' in ArchiMate is een abstract element dat de manier beschrijft waarop een bedrijfsactor externe entiteiten (zoals andere bedrijfsactoren, applicaties, of gebruikers) kan gebruiken om toegang te krijgen tot de diensten of informatie die zij nodig hebben om hun taken uit te voeren."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsinterface"@nl , "BusinessInterface"@en;
+        skos:scopeNote          "Een BusinessInterface kan bijvoorbeeld worden gebruikt om de manier te beschrijven waarop een klant toegang krijgt tot de diensten van een bedrijf via een webportaal, of hoe een bedrijfsafdeling toegang krijgt tot een database met klantinformatie via een API.\nBinnen ArchiMate kan een BusinessInterface worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessRole', 'BusinessService' en 'ApplicationComponent', om de manier te modelleren waarop deze elementen met elkaar communiceren en samenwerken via de interface. Door het gebruik van BusinessInterfaces kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interface.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessObject>
+        a                       skos:Concept;
+        rdfs:comment            "A business object represents a concept used within a particular business domain."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "BusinessObject"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "Een 'BusinessObject' in ArchiMate is een element dat de belangrijke concepten, entiteiten of informatie-elementen van een bedrijfsproces of -systeem vertegenwoordigt. Het kan informatie bevatten over objecten zoals klanten, producten, bestellingen, facturen, enzovoort."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsobject"@nl , "BusinessObject"@en;
+        skos:scopeNote          "Een BusinessObject kan worden gebruikt om de belangrijkste gegevensstructuren van een organisatie te modelleren en te beschrijven hoe deze gegevens worden gebruikt door verschillende bedrijfsprocessen en -functies. Hierdoor kan een beter begrip worden verkregen van de manier waarop gegevens door een organisatie stromen en hoe deze gegevens worden gebruikt om bedrijfsdoelen te bereiken.\nBinnen ArchiMate kan een BusinessObject worden geassocieerd met andere elementen, zoals 'BusinessProcess', 'BusinessFunction', 'BusinessService' en 'ApplicationComponent', om de manier te modelleren waarop deze elementen samenwerken om het bedrijfsproces te ondersteunen. Door het gebruik van BusinessObjects kunnen organisaties hun bedrijfsprocessen beter begrijpen en optimaliseren, wat kan leiden tot verbeteringen in de efficiëntie en effectiviteit van hun activiteiten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Object.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessProcess>
+        a                       skos:Concept;
+        rdfs:comment            "A business process represents a sequence of business behaviors that achieves a specific outcome such as a defined set of products or business services."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "BusinessProcess"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een 'BusinessProcess' in ArchiMate is een element dat een gestructureerde set van activiteiten vertegenwoordigt die zijn ontworpen om een specifieke zakelijke doelstelling te bereiken. Dit omvat vaak het stroomlijnen van de activiteiten binnen een organisatie, het verbeteren van de efficiëntie en het verminderen van de kosten."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsproces"@nl , "BusinessProcess"@en;
+        skos:scopeNote          "Een BusinessProcess kan worden gebruikt om bedrijfsactiviteiten te modelleren en te beschrijven hoe verschillende taken en activiteiten samenwerken om de gewenste resultaten te bereiken. Het kan ook helpen bij het identificeren van knelpunten en inefficiënties in het proces, wat kan leiden tot verbeteringen in de bedrijfsvoering.\nBinnen ArchiMate kan een BusinessProcess worden geassocieerd met andere elementen, zoals 'BusinessObject', 'BusinessFunction', 'BusinessService' en 'ApplicationComponent', om de manier te modelleren waarop deze elementen samenwerken om het bedrijfsproces te ondersteunen. Hierdoor kunnen organisaties een beter begrip krijgen van hoe hun bedrijfsprocessen werken en hoe ze kunnen worden verbeterd om beter te voldoen aan de behoeften van hun klanten en het behalen van hun doelstellingen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Process.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessRole>
+        a                       skos:Concept;
+        rdfs:comment            "A business role is the responsibility for performing specific behavior, to which an actor can be assigned, or the part an actor plays in a particular action or event."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "BusinessRole"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een 'BusinessRole' in ArchiMate is een abstract element dat een verzameling van verantwoordelijkheden en gedragingen representeert die zijn toegewezen aan een individu of een groep van individuen binnen een organisatie. Een BusinessRole wordt meestal gebruikt om de verschillende rollen of functies in een organisatie te modelleren, zoals manager, medewerker, verkoper, klantenservicemedewerker, enz."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsrol"@nl , "BusinessRole"@en;
+        skos:scopeNote          "Een BusinessRole kan worden geassocieerd met een of meer 'BusinessActor'-elementen, die de personen of groepen van personen representeren die deze rol vervullen. Het kan ook worden geassocieerd met 'BusinessProcess', 'BusinessFunction', 'BusinessInteraction' en andere elementen om de manier te modelleren waarop deze elementen samenwerken om de gewenste bedrijfsresultaten te bereiken.\nHet gebruik van BusinessRoles in ArchiMate helpt organisaties om een beter begrip te krijgen van de verantwoordelijkheden en de rollen van individuen en groepen binnen hun organisatie. Dit kan helpen bij het ontwikkelen van effectieve organisatiestructuren en het toewijzen van taken en verantwoordelijkheden aan de juiste personen om de bedrijfsdoelstellingen te bereiken."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Role.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessService>
+        a                       skos:Concept;
+        rdfs:comment            "A business service represents an explicitly defined exposed business behavior."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:altLabel           "BusinessService"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:definition         "Een 'BusinessService' in ArchiMate is een abstract element dat een verzameling van bedrijfsactiviteiten representeert die een specifiek bedrijfsdoel ondersteunen. Het is een dienst die wordt geleverd door een organisatie om waarde te creëren voor haar klanten, leveranciers of partners.\nEen BusinessService kan worden beschouwd als een abstractie van de bedrijfsprocessen die nodig zijn om de service te leveren. Het wordt vaak geassocieerd met 'BusinessProcess'-elementen die de werkelijke stappen in het proces representeren."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "bedrijfsservice"@nl , "BusinessService"@en;
+        skos:scopeNote          "Een BusinessService kan worden gebruikt om de bedrijfsactiviteiten te modelleren die nodig zijn om een bepaalde waardepropositie te leveren, zoals orderverwerking, facturering, klantenservice, enz. Het kan ook worden geassocieerd met 'BusinessActor'-elementen om de personen of groepen van personen te modelleren die betrokken zijn bij het leveren van de service.\nHet gebruik van BusinessServices in ArchiMate helpt organisaties om hun bedrijfsactiviteiten beter te begrijpen en de relatie tussen hun diensten en de bedrijfsdoelstellingen te begrijpen. Dit kan helpen bij het identificeren van kansen voor verbetering en innovatie in de dienstverlening om de klanttevredenheid en de bedrijfsresultaten te verbeteren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Service.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Contract>
+        a                       skos:Concept;
+        rdfs:comment            "A contract represents a formal or informal specification of an agreement between a provider and a consumer that specifies the rights and obligations associated with a product and establishes functional and non-functional parameters for interaction."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "Contract"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "Een 'Contract' in ArchiMate is een element dat een formele overeenkomst tussen twee of meer partijen vertegenwoordigt. Het beschrijft de wederzijdse verplichtingen, rechten en verantwoordelijkheden van de partijen die bij de overeenkomst betrokken zijn."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "contract"@nl , "Contract"@en;
+        skos:scopeNote          "Een 'Contract' kan worden gebruikt om de relatie tussen een organisatie en haar klanten, leveranciers, partners of andere stakeholders te modelleren. Het kan ook worden gebruikt om interne overeenkomsten tussen verschillende afdelingen of units binnen een organisatie te modelleren. Een 'Contract' kan verschillende aspecten van een overeenkomst bevatten, zoals de contractuele verplichtingen, de duur van de overeenkomst, de prijs en betalingsvoorwaarden, de kwaliteitsnormen, de vertrouwelijkheid en intellectuele eigendomsrechten.\nHet gebruik van 'Contract'-elementen in ArchiMate kan helpen bij het beter begrijpen en beheren van de complexiteit van zakelijke relaties en overeenkomsten. Het kan ook bijdragen aan het identificeren van mogelijke risico's en het verminderen van misverstanden tussen de partijen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Contract.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Product>
+        a                       skos:Concept;
+        rdfs:comment            "A product represents a coherent collection of services and/or passive structure elements, accompanied by a contract/set of agreements, which is offered as a whole to (internal or external) customers."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:altLabel           "Product"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:definition         "In ArchiMate is een 'Product' een element dat een tastbaar of ontastbaar object representeert dat door een organisatie wordt gemaakt, geleverd of verkocht. Het kan zowel fysieke als digitale producten omvatten, zoals apparatuur, software, diensten, documenten of processen."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "product"@nl , "Product"@en;
+        skos:scopeNote          "Een 'Product' kan worden gebruikt om de verschillende soorten producten te modelleren die een organisatie aanbiedt aan klanten of andere belanghebbenden. Het kan ook worden gebruikt om de levenscyclus van een product te modelleren, van ideevorming tot productie, distributie, verkoop en onderhoud. Het 'Product'-element kan ook worden gebruikt om de relatie tussen verschillende producten te modelleren, bijvoorbeeld om aan te geven welke producten afhankelijk zijn van andere producten of welke producten samen worden verkocht als een bundel.\nHet gebruik van 'Product'-elementen in ArchiMate kan helpen bij het beter begrijpen en beheren van de productportfolio van een organisatie en kan ook bijdragen aan het identificeren van mogelijkheden voor productinnovatie en productdifferentiatie."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Product.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Representation>
+        a                       skos:Concept;
+        rdfs:comment            "A representation represents a perceptible form of the information carried by a business object."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "Representation"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "In ArchiMate is een 'Representation' een element dat een abstracte weergave van een object of concept representeert, zoals een afbeelding, symbool of diagram. Representations worden gebruikt om de communicatie en documentatie van modellen en ontwerpen te vergemakkelijken en om een beter begrip van de inhoud te geven."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "representatie"@nl , "Representation"@en;
+        skos:scopeNote          "Een 'Representation' kan bijvoorbeeld worden gebruikt om een diagram te maken van een bedrijfsproces of om een afbeelding te maken van een systeemcomponent. Representations kunnen worden gebruikt in combinatie met andere elementen in ArchiMate om de complexiteit van een model te verminderen en het begrip te verbeteren.\nRepresentations zijn nuttig omdat ze vaak een betere manier bieden om informatie over te brengen dan alleen tekstuele beschrijvingen. Ze kunnen bijvoorbeeld helpen om een abstract concept te visualiseren of om de relatie tussen verschillende elementen in een model te verduidelijken.\nHet gebruik van 'Representation'-elementen in ArchiMate kan helpen bij het communiceren van complexe ideeën en ontwerpen, het verbeteren van samenwerking en begrip tussen verschillende belanghebbenden, en het verminderen van misverstanden en fouten bij de implementatie van systemen of processen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Representation.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/Product> , <http://www.begrippenxl.nl/archimate/nl/page/Plateau> , <http://www.begrippenxl.nl/archimate/nl/page/Grouping> , <http://www.begrippenxl.nl/archimate/nl/page/Location>;
+        skos:altLabel             "Composite Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        skos:definition           "Een Composite Element in ArchiMate is een element dat bestaat uit andere elementen en dat als één geheel wordt behandeld. Het kan dienen als een container voor andere elementen om ze te groeperen en te organiseren. Composite Elementen worden weergegeven als een rechthoek met een gestippelde lijn en een kleinere rechthoek binnenin om de onderliggende elementen aan te geven. Voorbeelden van Composite Elementen in ArchiMate zijn Composition, Aggregation en Junction elementen."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/Product> , <http://www.begrippenxl.nl/archimate/nl/page/Plateau> , <http://www.begrippenxl.nl/archimate/nl/page/Grouping> , <http://www.begrippenxl.nl/archimate/nl/page/Location>;
+        skos:prefLabel            "samengesteld element"@nl , "Composite Element"@en;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ImplementationMigration>
+        a                skos:Collection;
+        skos:definition  "De Implementation & Migration laag in ArchiMate omvat de elementen en relaties die betrekking hebben op het plannen en beheren van veranderingen in de enterprise-architectuur en het implementeren van deze veranderingen in de organisatie. Deze laag beschrijft de projecten, programma's, processen en middelen die nodig zijn om de enterprise-architectuur te realiseren en te implementeren, en de transformatie die nodig is om van de huidige toestand naar de gewenste toestand te gaan. Het omvat ook het monitoren en evalueren van de implementatie- en migratie-inspanningen om ervoor te zorgen dat de doelstellingen van de verandering worden bereikt."@nl;
+        skos:member      <http://www.begrippenxl.nl/archimate/nl/page/Deliverable> , <http://www.begrippenxl.nl/archimate/nl/page/Gap> , <http://www.begrippenxl.nl/archimate/nl/page/ImplementationEvent> , <http://www.begrippenxl.nl/archimate/nl/page/Plateau> , <http://www.begrippenxl.nl/archimate/nl/page/WorkPackage>;
+        skos:prefLabel   "Implementation & Migration"@en , "implementatie- en migratielaag"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Deliverable>
+        a                       skos:Concept;
+        rdfs:comment            "A deliverable represents a precisely-defined outcome of a work package."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "Deliverable"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "In ArchiMate is een deliverable een tastbaar of ontastbaar resultaat dat gecreëerd wordt door een proces en afgeleverd wordt aan een andere actor, rol, of systeem."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "Deliverable"@en , "werkresultaat"@nl;
+        skos:scopeNote          "Het kan bijvoorbeeld gaan om een document, een rapport, een softwareapplicatie of een fysiek object. Deliverables kunnen dienen als inputs voor andere processen of activiteiten binnen een organisatie. Ze worden meestal in verband gebracht met bedrijfs- of applicatiecomponenten en kunnen worden gemodelleerd als onderdeel van een proces of functie."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Deliverable.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Gap>
+        a                       skos:Concept;
+        rdfs:comment            "A gap represents a statement of difference between two plateaus."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "Gap"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "n ArchiMate wordt een Gap gezien als een verschil tussen de werkelijke situatie en de gewenste situatie. Een Gap kan worden gebruikt om te laten zien waar er afwijkingen zijn tussen een huidige en een gewenste situatie en om te bepalen wat er moet gebeuren om de doelstellingen te bereiken."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "Gap"@en , "gemis"@nl;
+        skos:scopeNote          "Gaps worden vaak gebruikt in veranderings- en verbeteringsprojecten om de huidige en gewenste situaties in kaart te brengen en om de acties te identificeren die moeten worden ondernomen om de gap te dichten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Gap.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ImplementationEvent>
+        a                       skos:Concept;
+        rdfs:comment            "An implementation event is a behavior element that denotes a state change related to implementation or migration."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:altLabel           "ImplementationEvent"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:definition         "In ArchiMate is een ImplementationEvent een element dat veranderingen in de operationele omgeving van de onderneming vertegenwoordigt die worden veroorzaakt door de implementatie van IT-oplossingen."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "implementatiegebeurtenis"@nl , "ImplementationEvent"@en;
+        skos:scopeNote          "Het kan bijvoorbeeld betrekking hebben op migraties, upgrades of implementaties van nieuwe software of hardware. Het element kan worden gebruikt om de impact van deze gebeurtenissen op de bedrijfsprocessen en -functies van de onderneming te beschrijven en te modelleren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Plateau>
+        a                       skos:Concept;
+        rdfs:comment            "A plateau represents a relatively stable state of the architecture that exists during a limited period of time."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:altLabel           "Plateau"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:definition         "Een Plateau in ArchiMate is een begrip dat wordt gebruikt om een momentopname te beschrijven van de huidige status van de organisatie of een deel ervan. Een Plateau bevat een specifieke set van veranderingen in de architectuur van de organisatie die op dat moment zijn geïmplementeerd of nog moeten worden uitgevoerd. Het wordt gebruikt om de verschillende stadia van verandering in een organisatie te beschrijven en te beheren en om de vooruitgang bij te houden in de implementatie van de gewenste veranderingen."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "plateau"@nl , "Plateau"@en;
+        skos:scopeNote          "Een Plateau kan worden gebruikt om de huidige status van de organisatie te beschrijven en om doelstellingen te definiëren voor de toekomstige ontwikkeling van de organisatie."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Plateau.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/WorkPackage>
+        a                       skos:Concept;
+        rdfs:comment            "A work package represents a series of actions identified and designed to achieve specific results within specified time and resource constraints."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "WorkPackage"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een Work Package is een element in ArchiMate dat gebruikt kan worden om een specifieke activiteit of taak binnen een project of veranderinitiatief te representeren. Het kan bijvoorbeeld worden gebruikt om een specifieke set van werkzaamheden of deliverables te beschrijven die nodig zijn om een bepaalde fase van een project of een specifieke doelstelling te bereiken."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "werkpakket"@nl , "WorkPackage"@en;
+        skos:scopeNote          "Work Packages kunnen worden toegewezen aan specifieke rollen, teams of resources, en kunnen worden gemonitord en gecontroleerd om ervoor te zorgen dat de gewenste resultaten worden bereikt."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_WorkPackage.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Multilayer>
+        a                skos:Collection;
+        skos:definition  "Omvat alle ArchiMate lagen"@nl;
+        skos:member      <http://www.begrippenxl.nl/archimate/nl/page/AccessRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AggregationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AndJunction> , <http://www.begrippenxl.nl/archimate/nl/page/Assessment> , <http://www.begrippenxl.nl/archimate/nl/page/AssignmentRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AssociationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/CompositionRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Constraint> , <http://www.begrippenxl.nl/archimate/nl/page/Driver> , <http://www.begrippenxl.nl/archimate/nl/page/FlowRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Goal> , <http://www.begrippenxl.nl/archimate/nl/page/Grouping> , <http://www.begrippenxl.nl/archimate/nl/page/InfluenceRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Location> , <http://www.begrippenxl.nl/archimate/nl/page/Meaning> , <http://www.begrippenxl.nl/archimate/nl/page/OrJunction> , <http://www.begrippenxl.nl/archimate/nl/page/Outcome> , <http://www.begrippenxl.nl/archimate/nl/page/Principle> , <http://www.begrippenxl.nl/archimate/nl/page/RealizationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Requirement> , <http://www.begrippenxl.nl/archimate/nl/page/ServingRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/SpecializationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Stakeholder> , <http://www.begrippenxl.nl/archimate/nl/page/TriggeringRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/Value>;
+        skos:prefLabel   "Multi layer"@en , "meerdere lagen"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AccessRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The access relationship models the ability of behavior and active structure elements to observe or act upon passive structure elements."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship>;
+        skos:altLabel           "AccessRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship>;
+        skos:definition         "Een AccessRelationship is een relatie in ArchiMate die aangeeft hoe een actief object toegang heeft tot een passief object. Dit kan bijvoorbeeld betekenen dat een applicatie toegang heeft tot een database, of dat een gebruiker toegang heeft tot een applicatie."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "AccessRelationship"@en , "toegangrelatie"@nl;
+        skos:scopeNote          "De AccessRelationship kan worden gebruikt om de relatie tussen deze objecten te modelleren en de impact van veranderingen op deze relaties te begrijpen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AccessRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AggregationRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The aggregation relationship indicates that an element consists of one or more other concepts."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:altLabel           "AggregationRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:definition         "Een AggregationRelationship is een type relatie in ArchiMate die aangeeft dat een element deel uitmaakt van een groter geheel, zoals een samengesteld object. Het grotere geheel wordt in ArchiMate aangeduid als de aggregatie, en het element dat deel uitmaakt van de aggregatie wordt het geaggregeerde element genoemd."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "AggregationRelationship"@en , "aggregatierelatie"@nl;
+        skos:scopeNote          "Bijvoorbeeld, een auto kan worden beschouwd als een aggregatie van verschillende geaggregeerde elementen, zoals wielen, een motor, een carrosserie, enzovoort. De relatie tussen de auto en zijn componenten wordt aangeduid met een AggregationRelationship."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AggregationRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AndJunction>
+        a                       skos:Concept;
+        rdfs:comment            "An and-junction is used to explicitly express that several elements together participate in the relationship."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector>;
+        skos:altLabel           "AndJunction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector>;
+        skos:definition         "In ArchiMate is een AndJunction een type van Junction die wordt gebruikt om meerdere uitgaande of inkomende Flow-elementen samen te voegen of te splitsen in één verbindingspunt. Dit wordt gedaan om aan te geven dat alle inkomende of uitgaande flows nodig zijn om een bepaalde actie te ondernemen."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "AndJunction"@en , "en-aansluiting"@nl;
+        skos:scopeNote          "Een AndJunction wordt meestal aangeduid met een cirkel die is verdeeld in twee of meer secties en waar de pijlen van de verschillende elementen samenkomen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Junction_And.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Assessment>
+        a                       skos:Concept;
+        rdfs:comment            "An assessment represents the result of an analysis of the state of affairs of the enterprise with respect to some driver."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Assessment"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "Een 'assessment' kan worden gezien als een analyse of evaluatie van de huidige toestand van de Enterprise of een specifiek aspect daarvan, met het oog op het identificeren van mogelijke verbeteringen, risico's of tekortkomingen."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "beoordeling"@nl , "Assessment"@en;
+        skos:scopeNote          "Een assessment kan bijvoorbeeld gericht zijn op het beoordelen van de kwaliteit van de IT-infrastructuur of op het identificeren van beveiligingsrisico's. Het doel van een assessment is om inzicht te krijgen in de huidige situatie en om te bepalen welke stappen er moeten worden genomen om verbeteringen aan te brengen.\nBinnen het ArchiMate framework kunnen assessments worden uitgevoerd door middel van het modelleren van de huidige toestand (as-is) en de gewenste toestand (to-be), en door het identificeren van de 'gaps' tussen deze toestanden. Het modelleren van assessments kan helpen bij het visualiseren en communiceren van de resultaten van de analyse en het bieden van inzicht in de acties die moeten worden genomen om de gewenste toestand te bereiken."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Assessment.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AssignmentRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The assignment relationship expresses the allocation of responsibility, performance of behavior, or execution."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:altLabel           "AssignmentRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:definition         "Een AssignmentRelationship in ArchiMate is een relatie tussen twee elementen waarbij het ene element verantwoordelijkheid heeft voor het uitvoeren van het andere element. Het kan bijvoorbeeld gebruikt worden om de verantwoordelijkheid van een persoon of afdeling voor het uitvoeren van een bepaalde taak of functie aan te geven."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "AssignmentRelationship"@en , "toewijzingrelatie"@nl;
+        skos:scopeNote          "Het AssignmentRelationship wordt weergegeven met een pijl die van het toewijzende element naar het toegewezen element wijst."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AssignmentRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AssociationRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "An association relationship models an unspecified relationship, or one that is not represented by another ArchiMate relationship."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship>;
+        skos:altLabel           "AssociationRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship>;
+        skos:definition         "Een AssociationRelationship in ArchiMate wordt gebruikt om relaties tussen elementen te modelleren die niet passen in een van de andere relatiecategorieën. Het beschrijft een algemene relatie tussen twee elementen, waarbij de aard van de relatie niet nader wordt gespecificeerd door een specifieke relatiecategorie."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "AssociationRelationship"@en , "associatierelatie"@nl;
+        skos:scopeNote          "Het kan bijvoorbeeld worden gebruikt om aan te geven dat twee elementen samenwerken of dat er een link is tussen twee aspecten van hetzelfde element. De exacte betekenis van de associatierelatie moet worden beschreven in de documentatie van het model."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_AssociationRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CompositionRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The composition relationship indicates that an element consists of one or more other concepts."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:altLabel           "CompositionRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:definition         "Een CompositionRelationship is een relatie in ArchiMate tussen twee elementen waarbij het ene element bestaat uit en/of deel uitmaakt van het andere element. Het ene element is hierbij het geheel (composite) en het andere element is een deel (component) van dat geheel."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "CompositionRelationship"@en , "samenstellingrelatie"@nl;
+        skos:scopeNote          "Bijvoorbeeld, een auto bestaat uit verschillende componenten, zoals de motor, de carrosserie, de wielen en de stoelen. In dit voorbeeld is de auto het geheel (composite) en zijn de motor, carrosserie, wielen en stoelen de componenten. De CompositionRelationship laat zien hoe de componenten zijn samengevoegd om het geheel te vormen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_CompositionRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Constraint>
+        a                       skos:Concept;
+        rdfs:comment            "A constraint represents a factor that prevents or obstructs the realization of goals."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Constraint"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate is een 'constraint' een beperking of voorwaarde die van invloed is op de manier waarop de architectuur wordt ontworpen en uitgevoerd."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "beperking"@nl , "Constraint"@en;
+        skos:scopeNote          "Een constraint kan bijvoorbeeld de eis zijn dat een bepaalde technologie moet worden gebruikt, of dat een bepaald beveiligingsbeleid moet worden gevolgd. Een constraint kan ook betrekking hebben op de beschikbare middelen, zoals tijd, budget of personeel.\nConstraints kunnen worden gemodelleerd in ArchiMate door het gebruik van het 'constraint' element. Dit element kan worden gekoppeld aan andere elementen in de architectuur, zoals een component, een relatie of een view, om aan te geven welke beperkingen van toepassing zijn.\nHet modelleren van constraints in ArchiMate kan helpen om de impact van beperkingen op de architectuur in kaart te brengen en om alternatieve ontwerpopties te identificeren die aan de beperkingen voldoen. Hierdoor kan de architectuur beter worden afgestemd op de zakelijke doelen en kunnen risico's en kosten worden verminderd."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Constraint.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Driver>
+        a                       skos:Concept;
+        rdfs:comment            "A driver represents an external or internal condition that motivates an organization to define its goals and implement the changes necessary to achieve them."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Driver"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate wordt een 'driver' gedefinieerd als een interne of externe invloed die de ontwikkeling van de onderneming beïnvloedt en die aanleiding geeft tot veranderingen in de architectuur."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "drijfveer"@nl , "Driver"@en;
+        skos:scopeNote          "Een driver kan bijvoorbeeld een verandering in de wetgeving zijn, een veranderende marktvraag of nieuwe technologische ontwikkelingen. Door deze invloeden kan de onderneming gedwongen zijn om haar bedrijfsprocessen, diensten, producten of technologieën aan te passen, wat weer consequenties heeft voor de architectuur.\nHet modelleren van drivers in ArchiMate kan helpen om de impact van veranderingen in kaart te brengen en om de architectuur beter af te stemmen op de zakelijke doelen. Dit kan helpen om risico's te verminderen en kansen te benutten die zich voordoen door veranderingen in de omgeving waarin de onderneming opereert.\nBinnen ArchiMate kunnen drivers worden gemodelleerd met behulp van het 'driver' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke invloeden van toepassing zijn."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Driver.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/FlowRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The flow relationship represents transfer from one element to another."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship>;
+        skos:altLabel           "FlowRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship>;
+        skos:definition         "Een FlowRelationship is een relatie in ArchiMate die aangeeft dat er een flow van objecten, informatie of materialen tussen twee elementen plaatsvindt."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "FlowRelationship"@en , "stroomrelatie"@nl;
+        skos:scopeNote          "Dit kan bijvoorbeeld de stroom van gegevens tussen twee applicaties of de beweging van materialen tussen twee locaties zijn. De FlowRelationship is een veelzijdige relatie in ArchiMate, omdat het niet beperkt is tot een specifieke laag of domein en kan worden gebruikt om de interacties tussen elementen van verschillende typen te modelleren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_FlowRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Goal>
+        a                       skos:Concept;
+        rdfs:comment            "A goal represents a high-level statement of intent, direction, or desired end state for an organization and its stakeholders."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Goal"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate wordt een 'goal' gedefinieerd als een specifieke en meetbare uitkomst die de onderneming wil bereiken als onderdeel van haar strategie. Een goal kan bijvoorbeeld betrekking hebben op het verbeteren van de klanttevredenheid, het verminderen van de kosten, het verhogen van de omzet of het verbeteren van de operationele efficiëntie."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "doelstelling"@nl , "Goal"@en;
+        skos:scopeNote          "Een goal kan worden beschouwd als een concreet doel waarnaar de onderneming streeft en dat kan worden gerealiseerd door middel van veranderingen in de architectuur. Het modelleren van goals in ArchiMate kan helpen om de relatie tussen de doelstellingen van de onderneming en de architectuur te begrijpen en om te bepalen welke architectuurcomponenten en -processen nodig zijn om deze doelstellingen te bereiken.\nBinnen ArchiMate kunnen goals worden gemodelleerd met behulp van het 'goal' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke doelstellingen van toepassing zijn. Goals kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'requirements', 'capabilities' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Goal.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Grouping>
+        a                       skos:Concept;
+        rdfs:comment            "The grouping element aggregates or composes concepts that belong together based on some common characteristic."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:altLabel           "Grouping"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:definition         "In ArchiMate is een Grouping een element dat wordt gebruikt om een verzameling gerelateerde elementen samen te voegen in een enkel abstract element. Het wordt vaak gebruikt om complexe architecturen te vereenvoudigen door elementen te groeperen die in dezelfde context werken of die dezelfde functionaliteit hebben."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "groepering"@nl , "Grouping"@en;
+        skos:scopeNote          "Een groepering heeft geen directe fysieke of logische betekenis, maar kan helpen om de leesbaarheid van het model te verbeteren door de weergave van het model te vereenvoudigen en te verduidelijken."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/InfluenceRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The influence relationship models that an element affects the implementation or achievement of some motivation element."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship>;
+        skos:altLabel           "InfluenceRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship>;
+        skos:definition         "Een InfluenceRelationship in ArchiMate beschrijft hoe een element (bijvoorbeeld een actor, applicatiecomponent of business object) invloed heeft op een ander element."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "InfluenceRelationship"@en , "invloedrelatie"@nl;
+        skos:scopeNote          "Dit kan bijvoorbeeld betrekking hebben op hoe een actor een bepaalde taak uitvoert met behulp van een applicatiecomponent, of hoe een business object wordt gewijzigd door een bepaalde applicatiefunctie. De InfluenceRelationship kan ook aangeven of de invloed positief of negatief is, of dat er sprake is van een neutrale invloed."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_InfluenceRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Location>
+        a                       skos:Concept;
+        rdfs:comment            "A location is a place or position where structure elements can be located or behavior can be performed."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:altLabel           "Location"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement>;
+        skos:definition         "Een Location in ArchiMate is een abstract element dat de fysieke of virtuele plaatsen representeert waar activiteiten plaatsvinden of resources zich bevinden. Dit kan bijvoorbeeld een kantoor, een serverruimte, een website of een datacenter zijn."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "locatie"@nl , "Location"@en;
+        skos:scopeNote          "Een Location kan zowel worden gebruikt in de Business-, Application- als Technology-layer van ArchiMate."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Location.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Meaning>
+        a                       skos:Concept;
+        rdfs:comment            "Meaning represents the knowledge or expertise present in, or the interpretation given to, a core element in a particular context."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Meaning"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate is 'meaning' een aspect van een concept dat aangeeft wat het concept vertegenwoordigt en wat het betekent binnen de context van de architectuur. Het gaat hierbij dus om de semantiek of betekenis van een concept."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "betekenis"@nl , "Meaning"@en;
+        skos:scopeNote          "Het modelleren van meaning in ArchiMate kan helpen om de communicatie en samenwerking tussen verschillende belanghebbenden te verbeteren, doordat een gemeenschappelijk begrip wordt gecreëerd van de betekenis van de gebruikte concepten en termen. Dit kan bijdragen aan een betere afstemming tussen de zakelijke doelen, de architectuur en de implementatie daarvan.\nBinnen ArchiMate kunnen meanings worden gemodelleerd met behulp van het 'meaning' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke betekenis of interpretatie van toepassing is. Dit element wordt vaak gebruikt in combinatie met andere concepten, zoals 'business object', 'data object' of 'application component', om de betekenis van deze concepten te verduidelijken en om de communicatie tussen belanghebbenden te verbeteren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Meaning.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/OrJunction>
+        a                       skos:Concept;
+        rdfs:comment            "An or-junction is used to explicitly express that one of the elements participates in the relationship."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector>;
+        skos:altLabel           "OrJunction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector>;
+        skos:definition         "Een OrJunction in Archimate is een element dat wordt gebruikt om alternatieve paden te definiëren in een proces of flow. Het geeft aan dat een taak of actie kan worden uitgevoerd via meerdere paden, waarbij slechts één van deze paden moet worden gevolgd."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "OrJunction"@en , "of-aansluiting"@nl;
+        skos:scopeNote          "In een procesmodel kan een OrJunction worden gebruikt om de keuze te modelleren tussen verschillende alternatieve activiteiten die op een bepaald punt kunnen worden uitgevoerd."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Junction_Or.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Outcome>
+        a                       skos:Concept;
+        rdfs:comment            "An outcome represents an end result that has been achieved."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Outcome"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate wordt een 'outcome' gedefinieerd als het resultaat of effect van een bepaalde activiteit of verandering die plaatsvindt in de onderneming. Een outcome kan bijvoorbeeld betrekking hebben op het verminderen van de kosten, het verbeteren van de klanttevredenheid, het vergroten van de operationele efficiëntie of het realiseren van nieuwe producten of diensten."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "resultaat"@nl , "Outcome"@en;
+        skos:scopeNote          "Een outcome kan worden beschouwd als een meetbaar resultaat van een bepaalde verandering in de architectuur. Het modelleren van outcomes in ArchiMate kan helpen om de impact van veranderingen in kaart te brengen en om te bepalen welke architectuurcomponenten en -processen nodig zijn om de gewenste outcomes te bereiken.\nBinnen ArchiMate kunnen outcomes worden gemodelleerd met behulp van het 'outcome' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke outcomes van toepassing zijn. Outcomes kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'capabilities', 'requirements' en 'goals', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Outcome.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Principle>
+        a                       skos:Concept;
+        rdfs:comment            "A principle represents a qualitative statement of intent that should be met by the architecture."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Principle"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate wordt een 'principle' gedefinieerd als een fundamenteel uitgangspunt dat de basis vormt voor het ontwerp en de ontwikkeling van de architectuur. Een principle is een algemeen geaccepteerde richtlijn of norm die bepaalt hoe de onderneming haar doelen wil bereiken en welke waarden zij belangrijk vindt."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "principe"@nl , "Principle"@en;
+        skos:scopeNote          "Het modelleren van principles in ArchiMate kan helpen om de samenhang tussen de architectuur en de zakelijke doelen te verbeteren, doordat een duidelijk beeld wordt gegeven van de uitgangspunten en normen die ten grondslag liggen aan de architectuur. Dit kan bijdragen aan een betere afstemming tussen de architectuur en de strategie van de onderneming.\nBinnen ArchiMate kunnen principles worden gemodelleerd met behulp van het 'principle' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke principles van toepassing zijn. Principles kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'requirements', 'goals' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Principle.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/RealizationRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The realization relationship indicates that an entity plays a critical role in the creation, achievement, sustenance, or operation of a more abstract entity."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:altLabel           "RealizationRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>;
+        skos:definition         "Een RealizationRelationship in ArchiMate is een relatie tussen twee concepten waarbij het ene concept de realisatie is van het andere concept. Het eerste concept is de implementatie of instantiatie van het tweede concept, en het tweede concept is meestal abstract en specificeert een bepaalde functionaliteit of vereiste."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "RealizationRelationship"@en , "realisatierelatie"@nl;
+        skos:scopeNote          "Deze relatie wordt gebruikt om de relatie tussen een abstract concept en een concrete realisatie van dat concept te modelleren, bijvoorbeeld tussen een bedrijfsproces en de IT-toepassing die dat proces ondersteunt."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_RealisationRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Requirement>
+        a                       skos:Concept;
+        rdfs:comment            "A requirement represents a statement of need that must be met by the architecture."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Requirement"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate wordt een 'requirement' gedefinieerd als een specifieke eis of voorwaarde die moet worden voldaan om een bepaald doel te bereiken. Een requirement kan bijvoorbeeld betrekking hebben op de prestaties, kwaliteit, beveiliging, betrouwbaarheid of beschikbaarheid van een systeem, product of dienst."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "eis"@nl , "Requirement"@en;
+        skos:scopeNote          "Het modelleren van requirements in ArchiMate kan helpen om de samenhang tussen de architectuur en de zakelijke doelen te verbeteren, doordat de eisen en voorwaarden die van belang zijn voor de realisatie van de doelen duidelijk in kaart worden gebracht. Dit kan bijdragen aan een betere afstemming tussen de architectuur en de strategie van de onderneming en aan een betere communicatie tussen de verschillende belanghebbenden.\nBinnen ArchiMate kunnen requirements worden gemodelleerd met behulp van het 'requirement' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke requirements van toepassing zijn. Requirements kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'outcomes' en 'principles', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de zakelijke doelen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Requirement.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ServingRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The serving relationship models that an element provides its functionality to another element."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship>;
+        skos:altLabel           "ServingRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship>;
+        skos:definition         "Een ServingRelationship in ArchiMate is een relatie tussen een element en een ander element dat door dat element wordt bediend of geleverd. Het bedienende element wordt ook wel de dienstverlener genoemd, terwijl het element dat wordt bediend of geleverd, de klant wordt genoemd."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "ServingRelationship"@en , "bedienrelatie"@nl;
+        skos:scopeNote          "Deze relatie wordt vaak gebruikt om de dienstverlening van een IT-systeem te beschrijven."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_ServingRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/SpecializationRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The specialization relationship indicates that an element is a particular kind of another element."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship>;
+        skos:altLabel           "SpecializationRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship>;
+        skos:definition         "Een SpecializationRelationship in ArchiMate is een relatie tussen twee concepten waarbij het ene concept een specifieke instantie is van het andere concept. Het concept aan de ene kant van de relatie is het meer algemene concept, terwijl het concept aan de andere kant van de relatie het meer specifieke concept is dat het algemene concept verder definieert en specificeert."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "SpecializationRelationship"@en , "specialisatierelatie"@nl;
+        skos:scopeNote          "Deze relatie wordt vaak gebruikt in het modelleren van hiërarchische structuren, waarbij concepten worden onderverdeeld in meer specifieke subconcepten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_SpecialisationRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Stakeholder>
+        a                       skos:Concept;
+        rdfs:comment            "A stakeholder is the role of an individual, team, or organization (or classes thereof) that represents their interests in the outcome of the architecture."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Stakeholder"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate wordt een 'stakeholder' gedefinieerd als een persoon, groep of organisatie die belang heeft bij de activiteiten en resultaten van de onderneming en die invloed kan uitoefenen op de strategie, beslissingen en activiteiten van de onderneming."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "belanghebbende"@nl , "Stakeholder"@en;
+        skos:scopeNote          "Het modelleren van stakeholders in ArchiMate kan helpen om een compleet beeld te krijgen van de verschillende belanghebbenden die betrokken zijn bij de onderneming en hun belangen en invloed. Door het modelleren van stakeholders kunnen de verschillende aspecten van de onderneming beter worden afgestemd op de belangen van de belanghebbenden en kan de communicatie tussen de verschillende belanghebbenden worden verbeterd.\nBinnen ArchiMate kunnen stakeholders worden gemodelleerd met behulp van het 'stakeholder' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke stakeholders betrokken zijn bij bepaalde activiteiten of resultaten. Stakeholders kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'requirements' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de belangen van de belanghebbenden."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Stakeholder.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TriggeringRelationship>
+        a                       skos:Concept;
+        rdfs:comment            "The triggering relationship describes a temporal or causal relationship between elements."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship>;
+        skos:altLabel           "TriggeringRelationship"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship>;
+        skos:definition         "Een TriggeringRelationship is een relatie in ArchiMate die aangeeft dat een gebeurtenis (event) het startpunt is voor een proces of functie."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "gebeurtenisrelatie"@nl , "TriggeringRelationship"@en;
+        skos:scopeNote          "Het kan bijvoorbeeld aangeven dat een bepaalde gebeurtenis een proces triggert om uitgevoerd te worden. Zo'n relatie geeft daarmee aan dat er sprake is van een causaal verband tussen de gebeurtenis en het proces of de functie."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_TriggeringRelationship.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Value>
+        a                       skos:Concept;
+        rdfs:comment            "Value represents the relative worth, utility, or importance of a core element or an outcome."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:altLabel           "Value"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>;
+        skos:definition         "In ArchiMate wordt een 'value' gedefinieerd als een overtuiging of principe dat belangrijk is voor de onderneming en dat richting geeft aan de beslissingen en activiteiten van de onderneming. Een value kan bijvoorbeeld betrekking hebben op kwaliteit, innovatie, duurzaamheid of klantgerichtheid."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "waarde"@nl , "Value"@en;
+        skos:scopeNote          "Het modelleren van values in ArchiMate kan helpen om de kernwaarden van de onderneming duidelijk te maken en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van values kan de architectuur beter worden afgestemd op de kernwaarden van de onderneming en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen values worden gemodelleerd met behulp van het 'value' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke values van toepassing zijn. Values kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'outcomes' en 'principles', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de kernwaarden van de onderneming."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Value.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/AccessRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/InfluenceRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/ServingRelationship>;
+        skos:altLabel             "Dependency Relationship"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        skos:definition           "Een Dependency Relationship in ArchiMate is een type relatie tussen elementen die aangeeft dat een verandering in het ene element een impact kan hebben op het andere element. Het geeft aan dat het ene element afhankelijk is van het andere element. Deze relatie wordt gebruikt om de afhankelijkheden tussen elementen te modelleren en kan worden gebruikt om de impact van veranderingen in een architectuur te bepalen."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/AccessRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/InfluenceRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/ServingRelationship>;
+        skos:prefLabel            "afhankelijkheidsrelatie"@nl , "Dependency Relationship"@en;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/AggregationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AssignmentRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/CompositionRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/RealizationRelationship>;
+        skos:altLabel             "Structural Relationship"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        skos:definition           "Een 'Structural Relationship' (structurele relatie) is een type relatie in het ArchiMate-model dat de structurele afhankelijkheid tussen twee elementen aangeeft. Het beschrijft de manier waarop elementen met elkaar zijn verbonden en hoe ze samenwerken om een bepaald doel te bereiken."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/AggregationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/AssignmentRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/CompositionRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/RealizationRelationship>;
+        skos:prefLabel            "structurele relatie"@nl , "Structural Relationship"@en;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/AndJunction> , <http://www.begrippenxl.nl/archimate/nl/page/OrJunction>;
+        skos:altLabel             "Relationship Connector"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate>;
+        skos:definition           "Een 'Relationship Connector' (relatieconnector) is een grafisch symbool in het ArchiMate-model dat wordt gebruikt om de verschillende types relaties tussen elementen in het model weer te geven. Het is een lijn die tussen twee elementen wordt getekend om aan te geven welk type relatie er tussen deze elementen bestaat."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/AndJunction> , <http://www.begrippenxl.nl/archimate/nl/page/OrJunction>;
+        skos:prefLabel            "Relationship Connector"@en , "relatieconnector"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/MotivationElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/Assessment> , <http://www.begrippenxl.nl/archimate/nl/page/Constraint> , <http://www.begrippenxl.nl/archimate/nl/page/Driver> , <http://www.begrippenxl.nl/archimate/nl/page/Goal> , <http://www.begrippenxl.nl/archimate/nl/page/Meaning> , <http://www.begrippenxl.nl/archimate/nl/page/Outcome> , <http://www.begrippenxl.nl/archimate/nl/page/Principle> , <http://www.begrippenxl.nl/archimate/nl/page/Requirement> , <http://www.begrippenxl.nl/archimate/nl/page/Stakeholder> , <http://www.begrippenxl.nl/archimate/nl/page/Value>;
+        skos:altLabel             "Motivation Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        skos:definition           "Een Motivation Element (motivatie-element) is een elementtype in het ArchiMate-model dat wordt gebruikt om de motivatiefactoren en doelen van een organisatie te modelleren. Dit type element wordt gebruikt om de strategie en visie van de organisatie te begrijpen en te communiceren."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/Assessment> , <http://www.begrippenxl.nl/archimate/nl/page/Constraint> , <http://www.begrippenxl.nl/archimate/nl/page/Driver> , <http://www.begrippenxl.nl/archimate/nl/page/Goal> , <http://www.begrippenxl.nl/archimate/nl/page/Meaning> , <http://www.begrippenxl.nl/archimate/nl/page/Outcome> , <http://www.begrippenxl.nl/archimate/nl/page/Principle> , <http://www.begrippenxl.nl/archimate/nl/page/Requirement> , <http://www.begrippenxl.nl/archimate/nl/page/Stakeholder> , <http://www.begrippenxl.nl/archimate/nl/page/Value>;
+        skos:prefLabel            "Motivation Element"@en , "motivatie element"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/AssociationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/SpecializationRelationship>;
+        skos:altLabel             "Other Relationship"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        skos:definition           "Other Relationship' (andere relatie) is een relatie-type in het ArchiMate-model dat wordt gebruikt om relaties te modelleren die niet passen in de andere ArchiMate-relatietypen. Dit type relatie wordt gebruikt als er geen passende relatie beschikbaar is om een bepaalde relatie tussen elementen in het model te modelleren."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/AssociationRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/SpecializationRelationship>;
+        skos:prefLabel            "Other Relationship"@en , "overige relaties"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/FlowRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/TriggeringRelationship>;
+        skos:altLabel             "Dynamic Relationship"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/Relationship>;
+        skos:definition           "Een Dynamic Relationship in ArchiMate is een type relatie tussen twee elementen die de volgorde van gebeurtenissen of acties binnen een proces of systeem weergeeft. Het wordt gebruikt om te laten zien hoe het ene element het andere beïnvloedt in termen van het starten of beëindigen van acties of het verzenden van berichten of signalen tussen elementen. Een voorbeeld van een Dynamic Relationship is de Flow Relationship, die aangeeft dat er een stroom van informatie of materiaal tussen twee elementen is."@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/FlowRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/TriggeringRelationship>;
+        skos:prefLabel            "dynamische relatie"@nl , "Dynamic Relationship"@en;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Physical>
+        a                skos:Collection;
+        skos:definition  "In ArchiMate, de physical laag vertegenwoordigt de fysieke infrastructuur waarop de IT-systemen worden uitgevoerd. Het omvat alle apparatuur, apparaten en middelen die nodig zijn voor de werking van de IT-systemen, zoals servers, datacenters, netwerken, opslagapparaten, enz. De physical laag richt zich dus op de hardware-componenten en de fysieke aspecten van het IT-landschap."@nl;
+        skos:member      <http://www.begrippenxl.nl/archimate/nl/page/DistributionNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/Equipment> , <http://www.begrippenxl.nl/archimate/nl/page/Facility> , <http://www.begrippenxl.nl/archimate/nl/page/Material>;
+        skos:prefLabel   "Physical"@en , "fysieke laag"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DistributionNetwork>
+        a                       skos:Concept;
+        rdfs:comment            "A distribution network represents a physical network used to transport materials or energy."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:altLabel           "DistributionNetwork"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:definition         "Een DistributionNetwork in ArchiMate is een element dat de infrastructuur weergeeft die wordt gebruikt voor de distributie van materiaal, energie of informatie tussen locaties. Dit kan bijvoorbeeld een netwerk van pijpleidingen zijn om olie te vervoeren, een elektriciteitsnetwerk of een informatienetwerk zoals het internet."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "distributienetwerk"@nl , "DistributionNetwork"@en;
+        skos:scopeNote          "Het kan ook worden gebruikt om de distributie van digitale content zoals software of media te beschrijven."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_DistributionNetwork.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Equipment>
+        a                       skos:Concept;
+        rdfs:comment            "Equipment represents one or more physical machines, tools, or instruments that can create, use, store, move, or transform materials."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "Equipment"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "In ArchiMate is Equipment een element dat wordt gebruikt om fysieke middelen weer te geven die worden gebruikt voor de uitvoering van een bedrijfsproces."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "uitrusting"@nl , "Equipment"@en;
+        skos:scopeNote          "Equipment kan onder andere machines, gereedschappen, voertuigen en apparatuur omvatten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Equipment.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Facility>
+        a                       skos:Concept;
+        rdfs:comment            "A facility represents a physical structure or environment."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "Facility"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een Facility in ArchiMate is een element dat de fysieke structuur van een organisatie of systeem weergeeft, zoals een gebouw, een kamer, een vloer of een site."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "faciliteit"@nl , "Facility"@en;
+        skos:scopeNote          "Het kan ook betrekking hebben op infrastructuurvoorzieningen, zoals water- of energievoorzieningen, die nodig zijn om een organisatie te laten functioneren. Kortom, het gaat om de materiële en fysieke componenten van een organisatie of systeem."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Facility.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Material>
+        a                       skos:Concept;
+        rdfs:comment            "Material represents tangible physical matter or physical elements."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "Material"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "Een Material in ArchiMate kan worden gedefinieerd als iets wat nodig is voor de productie van een product of het verlenen van een dienst."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "materiaal"@nl , "Material"@en;
+        skos:scopeNote          "Het kan fysiek of virtueel zijn en kan bijvoorbeeld grondstoffen, componenten, informatie of documentatie omvatten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Material.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>
+        a                          skos:Concept;
+        dct:created                "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive   <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        isothes:narrowerGeneric    <http://www.begrippenxl.nl/archimate/nl/page/DistributionNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/CommunicationNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/Path>;
+        isothes:narrowerPartitive  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>;
+        skos:altLabel              "Active Structure Element"@nl;
+        skos:broader               <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        skos:definition            "Active Structure Element (ASE) is een concept in ArchiMate dat verwijst naar elementen in de architectuur die zich bezighouden met de uitvoering van bedrijfsprocessen. Dit omvat entiteiten zoals personen, afdelingen, systemen en applicaties, die actief betrokken zijn bij de dagelijkse activiteiten van een organisatie. Active Structure Elementen worden vaak gebruikt in combinatie met de andere twee concepten van ArchiMate, namelijk de Passive Structure Elements (PSEs) en de Behavioral Elements (BEs), om de volledige reikwijdte van de bedrijfsarchitectuur te beschrijven."@nl;
+        skos:inScheme              <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower              <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/DistributionNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/CommunicationNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/Path>;
+        skos:prefLabel             "Active Structure Element"@en , "actieve structuurelement"@nl;
+        skos:topConceptOf          <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Strategy>
+        a                skos:Collection;
+        skos:definition  "Deze laag richt zich op het formuleren van de doelen, strategieën, beleidslijnen en regels van een organisatie. De strategielaag is gericht op het ontwikkelen van een duidelijke visie voor de organisatie en het identificeren van de middelen en maatregelen die nodig zijn om deze visie te realiseren."@nl;
+        skos:member      <http://www.begrippenxl.nl/archimate/nl/page/Capability> , <http://www.begrippenxl.nl/archimate/nl/page/CourseOfAction> , <http://www.begrippenxl.nl/archimate/nl/page/Resource> , <http://www.begrippenxl.nl/archimate/nl/page/ValueStream>;
+        skos:prefLabel   "Strategy"@en , "strategische laag"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Capability>
+        a                       skos:Concept;
+        rdfs:comment            "A capability represents an ability that an active structure element, such as an organization, person, or system, possesses."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement>;
+        skos:altLabel           "Capability"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement>;
+        skos:definition         "In ArchiMate wordt een 'capability' gedefinieerd als het vermogen van de onderneming om bepaalde activiteiten of functies uit te voeren om zo waarde te leveren aan belanghebbenden. Een capability kan bijvoorbeeld betrekking hebben op het vermogen van de onderneming om producten te ontwikkelen, diensten te leveren, klantrelaties te onderhouden of financiële transacties af te handelen."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "vermogen"@nl , "Capability"@en;
+        skos:scopeNote          "Het modelleren van capabilities in ArchiMate kan helpen om de verschillende vermogens van de onderneming in kaart te brengen en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van capabilities kan de architectuur beter worden afgestemd op de vermogens van de onderneming en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen capabilities worden gemodelleerd met behulp van het 'capability' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke capabilities van toepassing zijn. Capabilities kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'requirements' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de vermogens van de onderneming."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Capability.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CourseOfAction>
+        a                       skos:Concept;
+        rdfs:comment            "A course of action is an approach or plan for configuring some capabilities and resources of the enterprise, undertaken to achieve a goal."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        skos:altLabel           "CourseOfAction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        skos:definition         "In ArchiMate wordt een 'course of action' (COA) gedefinieerd als een reeks activiteiten die worden uitgevoerd om een bepaald doel of resultaat te bereiken. Een COA kan bijvoorbeeld betrekking hebben op een projectplan, een implementatieplan of een business plan."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "actieplan"@nl , "CourseOfAction"@en;
+        skos:scopeNote          "Het modelleren van COA's in ArchiMate kan helpen om de verschillende activiteiten die nodig zijn om een doel te bereiken in kaart te brengen en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van COA's kan de architectuur beter worden afgestemd op de activiteiten die nodig zijn om de doelen van de onderneming te bereiken, en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen COA's worden gemodelleerd met behulp van het 'course of action' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke COA's van toepassing zijn. COA's kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'goals', 'requirements' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de activiteiten die nodig zijn om de doelen van de onderneming te bereiken."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_CourseOfAction.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Resource>
+        a                       skos:Concept;
+        rdfs:comment            "A resource represents an asset owned or controlled by an individual or organization."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        skos:altLabel           "Resource"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        skos:definition         "In ArchiMate wordt een 'resource' gedefinieerd als een fysiek of abstract element dat wordt gebruikt om een product of dienst te produceren, leveren of ondersteunen. Dit kan bijvoorbeeld een machine, materiaal, menselijke capaciteit, software of informatie zijn."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "middel"@nl , "Resource"@en;
+        skos:scopeNote          "Het modelleren van resources in ArchiMate kan helpen om de verschillende resources die nodig zijn om producten of diensten te produceren, leveren of ondersteunen in kaart te brengen en deze af te stemmen op de strategie en doelen van de onderneming. Door het modelleren van resources kan de architectuur beter worden afgestemd op de resources die nodig zijn om de producten of diensten van de onderneming te produceren, leveren of ondersteunen, en kunnen de beslissingen en activiteiten van de onderneming beter worden afgestemd op de strategie en doelen.\nBinnen ArchiMate kunnen resources worden gemodelleerd met behulp van het 'resource' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke resources van toepassing zijn. Resources kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'capabilities', 'business processes' en 'products', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de resources die nodig zijn om de producten of diensten van de onderneming te produceren, leveren of ondersteunen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Resource.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ValueStream>
+        a                       skos:Concept;
+        rdfs:comment            "A value stream represents a sequence of activities that create an overall result for a customer, stakeholder, or end user."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement>;
+        skos:altLabel           "ValueStream"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement>;
+        skos:definition         "Een 'Value Stream' in ArchiMate is een reeks activiteiten die worden uitgevoerd om waarde te creëren voor klanten of andere belanghebbenden. Het gaat hierbij om een proces of keten van activiteiten die gericht zijn op het leveren van een bepaalde dienst of product, waarbij het doel is om waarde te creëren voor de klant."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "waardestroom"@nl , "ValueStream"@en;
+        skos:scopeNote          "Het modelleren van Value Streams in ArchiMate kan helpen bij het begrijpen van de bedrijfsprocessen en -activiteiten die betrokken zijn bij het leveren van waarde aan klanten. Door het modelleren van Value Streams kunnen de verschillende activiteiten die nodig zijn om waarde te creëren in kaart worden gebracht en kunnen inefficiënties en problemen in het proces worden geïdentificeerd en aangepakt.\nBinnen ArchiMate kunnen Value Streams worden gemodelleerd met behulp van het 'Value Stream' element, dat kan worden gekoppeld aan andere elementen in de architectuur om aan te geven welke processen en activiteiten bijdragen aan de Value Stream. Value Streams kunnen ook worden gerelateerd aan andere concepten in ArchiMate, zoals 'capabilities', 'business processes', 'products' en 'outcomes', om de samenhang tussen deze concepten aan te geven en om de architectuur beter af te stemmen op de activiteiten die nodig zijn om waarde te creëren voor de klant."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_ValueStream.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement>
+        a                         skos:Concept;
+        dct:created               "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive  <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        isothes:narrowerGeneric   <http://www.begrippenxl.nl/archimate/nl/page/Capability> , <http://www.begrippenxl.nl/archimate/nl/page/ValueStream>;
+        skos:altLabel             "Strategy Behavior Element"@nl;
+        skos:broader              <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>;
+        skos:definition           "Relevant voor strategisch gedrag of gedragsaspecten van strategie. Dit zijn voornamelijk de elementen en relaties die vallen onder de laag 'Motivatie'"@nl;
+        skos:inScheme             <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower             <http://www.begrippenxl.nl/archimate/nl/page/Capability> , <http://www.begrippenxl.nl/archimate/nl/page/ValueStream>;
+        skos:prefLabel            "Strategy Behavior Element"@en , "strategisch gedragselement"@nl;
+        skos:topConceptOf         <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement>
+        a                          skos:Concept;
+        dct:created                "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive   <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        isothes:narrowerGeneric    <http://www.begrippenxl.nl/archimate/nl/page/CourseOfAction>;
+        isothes:narrowerPartitive  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement>;
+        skos:altLabel              "Behavior Element"@nl;
+        skos:broader               <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        skos:definition            "Gedragselementen in ArchiMate zijn elementen die de dynamische aspecten van een architectuurmodel weergeven. Dit omvat acties, gebeurtenissen en processen die plaatsvinden binnen de architectuur."@nl;
+        skos:inScheme              <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower              <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/CourseOfAction> , <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement>;
+        skos:prefLabel             "Behavior Element"@en , "gedragselement"@nl;
+        skos:topConceptOf          <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/StructureElement>
+        a                          skos:Concept;
+        dct:created                "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive   <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        isothes:narrowerGeneric    <http://www.begrippenxl.nl/archimate/nl/page/Resource>;
+        isothes:narrowerPartitive  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:altLabel              "Structure Element"@nl;
+        skos:broader               <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        skos:definition            "Een 'Structureel Element' is een element in het ArchiMate-model dat de statische aspecten van een organisatie, systeem of applicatie weergeeft. Het beschrijft de elementen die deel uitmaken van de structuur, hun onderlinge relaties en hun rollen en verantwoordelijkheden.\nStructurele elementen in het ArchiMate-model zijn onderverdeeld in drie categorieën: Active, Passive en Behavioral."@nl;
+        skos:inScheme              <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower              <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> , <http://www.begrippenxl.nl/archimate/nl/page/Resource>;
+        skos:prefLabel             "Structure Element"@en , "structureel element"@nl;
+        skos:topConceptOf          <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Technology>
+        a                skos:Collection;
+        skos:definition  "De technologielaag in ArchiMate is een van de vier lagen in de architectuurraamwerktaal en omvat de modellering van de fysieke infrastructuur, technologiecomponenten en -services die nodig zijn om de applicaties van een organisatie te ondersteunen. Dit omvat bijvoorbeeld servers, netwerken, databases en middleware. De technologielaag beschrijft ook de distributie van applicaties en data over het netwerk, evenals de interfaces en protocollen die worden gebruikt om de communicatie tussen systemen mogelijk te maken."@nl;
+        skos:member      <http://www.begrippenxl.nl/archimate/nl/page/Artifact> , <http://www.begrippenxl.nl/archimate/nl/page/CommunicationNetwork> , <http://www.begrippenxl.nl/archimate/nl/page/Device> , <http://www.begrippenxl.nl/archimate/nl/page/Node> , <http://www.begrippenxl.nl/archimate/nl/page/Path> , <http://www.begrippenxl.nl/archimate/nl/page/SystemSoftware> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyCollaboration> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyEvent> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyFunction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInteraction> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyInterface> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyProcess> , <http://www.begrippenxl.nl/archimate/nl/page/TechnologyService>;
+        skos:prefLabel   "Technology"@en , "technologielaag"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Artifact>
+        a                       skos:Concept;
+        rdfs:comment            "An artifact represents a piece of data that is used or produced in a software development process, or by deployment and operation of an IT system."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:altLabel           "Artifact"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement>;
+        skos:definition         "In ArchiMate wordt een Artifact vertaald als een 'artefact' of 'artefact-element'. Dit is een type element dat een concreet, fysiek object vertegenwoordigt dat wordt geproduceerd, gebruikt of gemanipuleerd door een proces, service of gedrag."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "artefact"@nl , "Artifact"@en;
+        skos:scopeNote          "Artifacts kunnen onder andere fysieke documenten, softwarebestanden, gegevensrecords en andere soortgelijke items omvatten. Ze worden vaak gebruikt om de invoer en uitvoer van een proces te vertegenwoordigen, evenals de opslag van gegevens of informatie."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Artifact.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CommunicationNetwork>
+        a                       skos:Concept;
+        rdfs:comment            "A communication network represents a set of structures that connects computer systems or other electronic devices for transmission, routing, and reception of data or data-based communications such as voice and video."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:altLabel           "CommunicationNetwork"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:definition         "Een CommunicationNetwork in ArchiMate is een element dat de communicatie-infrastructuur van een organisatie of systeem weergeeft."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "CommunicationNetwork"@en , "communicatie-infrastructuur"@nl;
+        skos:scopeNote          "Het kan bijvoorbeeld een netwerk van computers, telefoons of andere communicatiemiddelen zijn die gebruikt worden om informatie tussen verschillende locaties of systemen te versturen. Een CommunicationNetwork kan ook verschillende technische elementen bevatten, zoals routers, switches, hubs, firewalls en andere apparaten die worden gebruikt om communicatie mogelijk te maken en te beheren. Dit element wordt vooral gebruikt in de technische lagen van een architectuurmodel om de onderliggende infrastructuur te beschrijven die nodig is om informatie uit te wisselen tussen de verschillende componenten van een systeem."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_CommunicationNetwork.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Device>
+        a                       skos:Concept;
+        rdfs:comment            "A device is a physical IT resource upon which system software and artifacts may be stored or deployed for execution."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "Device"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "In ArchiMate wordt een Device gezien als een infrastructuurelement. Het vertegenwoordigt fysieke apparaten, zoals laptops, smartphones, servers, printers, routers, switches en andere soortgelijke apparatuur."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "infrastructuurelement"@nl , "Device"@en;
+        skos:scopeNote          "Devices bieden over het algemeen functionaliteit voor de gebruikers en ondersteunen de werking van systemen en applicaties. Ze kunnen ook dienen als onderdelen van netwerkinfrastructuur en worden daarom vaak geassocieerd met Communication Networks en Infrastructuur Services."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Device.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Node>
+        a                       skos:Concept;
+        rdfs:comment            "A node represents a computational or physical resource that hosts, manipulates, or interacts with other computational or physical resources."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "Node"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een Node in ArchiMate is een element dat kan worden gebruikt om de fysieke of technologische aspecten van een systeem of omgeving te modelleren."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "node"@nl , "Node"@en;
+        skos:scopeNote          "Het kan bijvoorbeeld een apparaat, server, netwerkcomponent of softwarecomponent vertegenwoordigen."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Node.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Path>
+        a                       skos:Concept;
+        rdfs:comment            "A path represents a link between two or more nodes, through which these nodes can exchange data or material."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:altLabel           "Path"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement>;
+        skos:definition         "In ArchiMate, een Path is een relatie die wordt gebruikt om de connectiviteit tussen componenten in een technologie- of fysieke laag van een architectuur te modelleren."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "Path"@en , "connectiviteit"@nl;
+        skos:scopeNote          "Een Path representeert de route die data, informatie of materiaal aflegt tussen twee of meer Nodes. Het kan ook gebruikt worden om de verbinding tussen twee of meer Nodes te beschrijven en om de fysieke locatie van componenten te modelleren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Path.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/SystemSoftware>
+        a                       skos:Concept;
+        rdfs:comment            "System software represents software that provides or contributes to an environment for storing, executing, and using software or data deployed within it."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "SystemSoftware"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "SystemSoftware in Archimate wordt ook wel 'systeemsoftware' genoemd. Dit omvat de software die nodig is om een computersysteem of applicatie uit te voeren, zoals besturingssystemen, drivers, bibliotheken en hulpprogramma's."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "systeemsoftware"@nl , "SystemSoftware"@en;
+        skos:scopeNote          "Voorbeelden zijn :\n* Besturingssystemen (zoals Windows, MacOS, Linux)\n* Virtualisatiesoftware (zoals VMware, VirtualBox)\n* Databasesoftware (zoals Oracle, MySQL, Microsoft SQL Server)\n* Web- en applicatieservers (zoals Apache, Tomcat, IIS)\n* Netwerksoftware (zoals routers, switches, firewalls)\n* Backup- en herstelsoftware (zoals Backup Exec)\n* Antivirus- en beveiligingssoftware (zoals Norton, McAfee, Symantec)"@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_SystemSoftware.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyCollaboration>
+        a                       skos:Concept;
+        rdfs:comment            "A technology collaboration represents an aggregate of two or more nodes that work together to perform collective technology behavior."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:altLabel           "TechnologyCollaboration"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement>;
+        skos:definition         "Een Technology Collaboration is een element in het ArchiMate framework dat de samenwerking tussen twee of meer technologische componenten of systemen vertegenwoordigt. Het beschrijft hoe technologische componenten of systemen samenwerken om een specifiek technologisch doel te bereiken."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "technologiesamenwerking"@nl , "TechnologyCollaboration"@en;
+        skos:scopeNote          "Een Technology Collaboration kan worden gebruikt om de samenwerking tussen verschillende technologische afdelingen of teams binnen een organisatie te modelleren, of om de samenwerking tussen verschillende technologieën of systemen in een bedrijfsomgeving te modelleren. Enkele voorbeelden van Technology Collaboration-elementen in ArchiMate zijn 'Application Platform', 'Infrastructure Platform' en 'Service Platform'."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Collaboration.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyEvent>
+        a                       skos:Concept;
+        rdfs:comment            "A technology event is a technology behavior element that denotes a state change."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:altLabel           "TechnologyEvent"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:definition         "In ArchiMate is een TechnologyEvent een element dat een gebeurtenis in de technologische omgeving beschrijft. Het vertegenwoordigt een moment in de tijd waarop iets in de technologische omgeving gebeurt dat relevant is voor een bepaalde architectuur."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "technologiegebeurtenis"@nl , "TechnologyEvent"@en;
+        skos:scopeNote          "Voorbeelden van TechnologyEvents zijn het ontvangen van een signaal door een sensor, het verzenden van een bericht door een systeem, of het verlopen van een timer."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Event.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyFunction>
+        a                       skos:Concept;
+        rdfs:comment            "A technology function represents a collection of technology behavior that can be performed by a node."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "TechnologyFunction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een TechnologyFunction in ArchiMate is een element dat een of meer technische services biedt om technologische functionaliteit te leveren en te ondersteunen. Het kan bijvoorbeeld gaan om een softwarebibliotheek, een besturingssysteem of een beveiligingsmechanisme."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "technologiefunctie"@nl , "TechnologyFunction"@en;
+        skos:scopeNote          "Een TechnologyFunction kan worden gebruikt om de functionaliteit van een systeem of applicatie te beschrijven en hoe deze interageert met andere technologische componenten"@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Function.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyInteraction>
+        a                       skos:Concept;
+        rdfs:comment            "A technology interaction represents a unit of collective technology behavior performed by (a collaboration of) two or more nodes."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "TechnologyInteraction"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "Een TechnologyInteraction is een element in ArchiMate dat de manier beschrijft waarop technologiecomponenten samenwerken om een technische taak of functie uit te voeren."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "TechnologyInteraction"@en , "technologieinteractie"@nl;
+        skos:scopeNote          "Het kan bijvoorbeeld gaan om communicatie tussen servers, gegevensuitwisseling tussen applicaties, of integratie tussen verschillende technologiecomponenten."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interaction.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyInterface>
+        a                       skos:Concept;
+        rdfs:comment            "A technology interface represents a point of access where technology services offered by a node can be accessed."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>;
+        skos:altLabel           "TechnologyInterface"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement>;
+        skos:definition         "Een TechnologyInterface in ArchiMate is een abstract element dat de diensten beschrijft die door een Technologie Component worden aangeboden. Het specificeert welke input en output een Technologie Component accepteert of genereert en beschrijft de communicatie tussen Technologie Componenten en tussen Technologie Componenten en bedrijfs- of gebruikersinterfaces."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "TechnologyInterface"@en , "technologieinterface"@nl;
+        skos:scopeNote          "TechnologyInterface kan ook worden gebruikt om de communicatie tussen verschillende TechnologieComponenten te modelleren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Interface.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyProcess>
+        a                       skos:Concept;
+        rdfs:comment            "A technology process represents a sequence of technology behaviors that achieves a specific outcome."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:altLabel           "TechnologyProcess"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement>;
+        skos:definition         "In ArchiMate is een TechnologyProcess een element dat een geautomatiseerde reeks stappen of activiteiten voorstelt die worden uitgevoerd door technologiecomponenten om een bepaald doel te bereiken. Dit kunnen bijvoorbeeld processen zijn voor gegevensverwerking, gegevensbeheer of netwerkbeheer."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "technologieproces"@nl , "TechnologyProcess"@en;
+        skos:scopeNote          "TechnologyProcess is een subelement van het element Process en kan worden gebruikt om de technologische aspecten van een bedrijfsproces te modelleren."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Process.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyService>
+        a                       skos:Concept;
+        rdfs:comment            "A technology service represents an explicitly defined exposed technology behavior."@en;
+        dct:created             "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderGeneric  <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:altLabel           "TechnologyService"@nl;
+        skos:broader            <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement>;
+        skos:definition         "In ArchiMate is een TechnologyService een abstract element dat een technologische functie of dienst voorstelt die door een technologisch component wordt aangeboden. Een TechnologyService kan een fysieke of virtuele entiteit zijn die kan worden gebruikt door andere technologische componenten, technologieprocessen en -functies om technische doelen te bereiken."@nl;
+        skos:inScheme           <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:prefLabel          "technologieservice"@nl , "TechnologyService"@en;
+        skos:scopeNote          "Een TechnologyService kan bijvoorbeeld een netwerkdienst zijn die door een router wordt aangeboden, een besturingssysteem of een cloudservice."@nl;
+        skos:topConceptOf       <http://www.begrippenxl.nl/archimate/nl/page/>;
+        foaf:img                <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_Service.png> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Relationship>
+        a                          skos:Concept;
+        dct:created                "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive   <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate>;
+        isothes:narrowerPartitive  <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship>;
+        skos:altLabel              "Relationship"@nl;
+        skos:broader               <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate>;
+        skos:definition            "Een 'Relationship' (relatie) is een elementtype in het ArchiMate-model dat wordt gebruikt om de relaties tussen de verschillende elementen in het model te modelleren. Dit type element wordt gebruikt om aan te geven hoe de elementen elkaar beïnvloeden, samenwerken of afhankelijk zijn van elkaar."@nl;
+        skos:inScheme              <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower              <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship> , <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship>;
+        skos:prefLabel             "Relationship"@en , "relatie"@nl;
+        skos:topConceptOf          <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Element>
+        a                          skos:Concept;
+        dct:created                "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:broaderPartitive   <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate>;
+        isothes:narrowerPartitive  <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> , <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> , <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        skos:altLabel              "Element"@nl;
+        skos:broader               <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate>;
+        skos:definition            "In de context van ArchiMate, verwijst een element naar een bouwsteen die gebruikt wordt om de architectuur van een organisatie te modelleren. Deze elementen zijn visuele symbolen die specifieke concepten of componenten representeren binnen de organisatie. ArchiMate kent verschillende soorten elementen, waaronder business, applicatie, technologie, fysieke en implementatie-elementen.\nBusiness-elementen worden gebruikt om bedrijfsprocessen, bedrijfsobjecten en de organisatiestructuur te modelleren. Applicatie-elementen worden gebruikt om software- en informatiesystemen te modelleren, terwijl technologie-elementen worden gebruikt om de technische infrastructuur van een organisatie te modelleren. Fysieke elementen representeren de fysieke apparatuur en locaties van de organisatie, terwijl implementatie-elementen betrekking hebben op de implementatie en uitvoering van de architectuur.\nHet gebruik van deze elementen binnen ArchiMate stelt architecten in staat om de structuur, functies en relaties tussen de verschillende componenten van een organisatie te begrijpen en te communiceren. Dit kan helpen bij het verbeteren van de bedrijfsprocessen, het identificeren van kansen voor innovatie en het optimaliseren van de architectuur van de organisatie."@nl;
+        skos:inScheme              <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower              <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> , <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> , <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> , <http://www.begrippenxl.nl/archimate/nl/page/StructureElement>;
+        skos:prefLabel             "element"@nl , "Element"@en;
+        skos:topConceptOf          <http://www.begrippenxl.nl/archimate/nl/page/> .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate>
+        a                          skos:Concept;
+        dct:created                "2023-03-01T00:00:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+        isothes:narrowerPartitive  <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector> , <http://www.begrippenxl.nl/archimate/nl/page/Relationship> , <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        skos:altLabel              "Concept"@nl;
+        skos:definition            "Een abstract idee of conceptueel onderdeel van een organisatie, systeem of proces zijn. Het kan bijvoorbeeld verwijzen naar een bedrijfsproces, product, dienst, applicatie of infrastructuurcomponent. Een concept wordt vaak gedefinieerd in termen van zijn eigenschappen, relaties en functies binnen het betreffende domein."@nl;
+        skos:inScheme              <http://www.begrippenxl.nl/archimate/nl/page/>;
+        skos:narrower              <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector> , <http://www.begrippenxl.nl/archimate/nl/page/Relationship> , <http://www.begrippenxl.nl/archimate/nl/page/Element>;
+        skos:prefLabel             "Concept"@en , "concept"@nl;
+        skos:topConceptOf          <http://www.begrippenxl.nl/archimate/nl/page/> .

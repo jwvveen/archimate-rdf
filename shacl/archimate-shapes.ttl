@@ -1,0 +1,151 @@
+@prefix am:   <https://purl.org/archimate#> .
+@prefix amsh: <https://purl.org/archimate/shapes#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# SHACL-kernvalidatie (niveau 1 en 2)
+#
+# Bewust gescheiden van de ontologie: de ontologie zegt wat de
+# termen betekenen, deze shapes zeggen wanneer een model deugt.
+# Wie alleen wil bevragen, laadt de shapes niet; wie valideert,
+# laadt ontologie (voor de subklassenpaden) plus deze shapes.
+#
+# Niveau 1: graafintegriteit (elke relatie compleet, geen losse
+#           eindpunten, geldige waardenlijsten).
+# Niveau 2: metamodelregels die niet uit de matrix komen
+#           (compositie-uniciteit, aanbevolen labels).
+# Niveau 3: de relatiematrix, in archimate-matrix-shapes.ttl.
+#
+# Valideer met de ontologie in dezelfde graaf als de modeldata
+# (niet als losse ont-graph; zie de validatiesectie in de README).
+#################################################################
+
+<https://purl.org/archimate/shapes>
+    a owl:Ontology ;
+    rdfs:label "ArchiMate SHACL-kernshapes"@nl , "ArchiMate SHACL core shapes"@en ;
+    owl:versionInfo "0.1.0-concept" ;
+    sh:declare [ sh:prefix "am" ; sh:namespace "https://purl.org/archimate#"^^xsd:anyURI ] ,
+               [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] .
+
+# --- Niveau 1: elke relatie is compleet en verwijst naar bestaande
+#     concepten ------------------------------------------------------
+
+amsh:RelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass am:Relationship ;
+    sh:property [
+        sh:path am:source ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class am:Concept ;
+        sh:message "Een relatie heeft precies één bron, en die bron moet een ArchiMate-concept in de graaf zijn (geen los eindpunt)."@nl , "A relationship has exactly one source, and that source must be an ArchiMate concept in the graph (no dangling endpoint)."@en ;
+    ] ;
+    sh:property [
+        sh:path am:target ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:class am:Concept ;
+        sh:message "Een relatie heeft precies één doel, en dat doel moet een ArchiMate-concept in de graaf zijn (geen los eindpunt)."@nl , "A relationship has exactly one target, and that target must be an ArchiMate concept in the graph (no dangling endpoint)."@en ;
+    ] .
+
+amsh:AccessShape
+    a sh:NodeShape ;
+    sh:targetClass am:Access ;
+    sh:property [
+        sh:path am:accessType ;
+        sh:maxCount 1 ;
+        sh:in ( am:ReadAccess am:WriteAccess am:ReadWriteAccess am:UnspecifiedAccess ) ;
+        sh:message "Toegangstype moet een van de vier gedefinieerde waarden zijn."@nl , "Access type must be one of the four defined values."@en ;
+    ] .
+
+amsh:InfluenceShape
+    a sh:NodeShape ;
+    sh:targetClass am:Influence ;
+    sh:property [
+        sh:path am:influenceStrength ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Beïnvloedingssterkte is één tekstwaarde (bijvoorbeeld +, ++, -, 0..10)."@nl , "Influence strength is a single text value (for example +, ++, -, 0..10)."@en ;
+    ] .
+
+amsh:AssociationShape
+    a sh:NodeShape ;
+    sh:targetClass am:Association ;
+    sh:property [
+        sh:path am:isDirected ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:message "am:isDirected is een boolean."@nl , "am:isDirected is a boolean."@en ;
+    ] .
+
+# --- Niveau 2: metamodelregels buiten de matrix ---------------------
+
+# Een concept mag onderdeel zijn van hooguit één compositie. In de
+# canonieke vorm (relatie als resource, P1) is dat telbaar; in de
+# suikerlaag was deze regel niet eens uit te drukken.
+amsh:CompositionUniqueWholeShape
+    a sh:NodeShape ;
+    sh:targetClass am:Concept ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Dit concept is doel van meer dan één compositie; een element hoort bij precies één geheel."@nl , "This concept is the target of more than one composition; an element belongs to exactly one whole."@en ;
+        sh:prefixes <https://purl.org/archimate/shapes> ;
+        sh:select """
+            SELECT $this WHERE {
+                ?c1 a/rdfs:subClassOf* am:Composition ; am:target $this .
+                ?c2 a/rdfs:subClassOf* am:Composition ; am:target $this .
+                FILTER (?c1 != ?c2)
+            }
+        """ ;
+    ] .
+
+# Een element zonder naam is in een uitwisselbare graaf onbruikbaar;
+# waarschuwing, geen fout, want tussenresultaten bestaan.
+amsh:ElementLabelShape
+    a sh:NodeShape ;
+    sh:targetClass am:Element ;
+    sh:severity sh:Warning ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:message "Element heeft geen rdfs:label; geef minstens één naam, bij voorkeur met taaltag."@nl , "Element has no rdfs:label; provide at least one name, preferably with a language tag."@en ;
+    ] .
+
+# Meertaligheid (P4): labels zonder taaltag zijn toegestaan maar
+# gemarkeerd, zodat een kader dat meertalig publiceert ze vindt.
+amsh:LabelLanguageShape
+    a sh:NodeShape ;
+    sh:targetClass am:Element ;
+    sh:severity sh:Info ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Label zonder taaltag; voeg @nl, @en, ... toe voor meertalige publicatie."@nl , "Label without a language tag; add @nl, @en, ... for multilingual publication."@en ;
+        sh:prefixes <https://purl.org/archimate/shapes> ;
+        sh:select """
+            SELECT $this ?value WHERE {
+                $this rdfs:label ?value .
+                FILTER (lang(?value) = "")
+            }
+        """ ;
+    ] .
+
+# Losse metadata: een relatie-attribuut op iets dat geen relatie is
+# wijst op een conversiefout (les uit de 3.2-ontologie: verweesde
+# annotaties vallen anders niemand op).
+amsh:OrphanAccessTypeShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf am:accessType ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "am:accessType op een resource die geen Access-relatie is."@nl , "am:accessType on a resource that is not an Access relationship."@en ;
+        sh:prefixes <https://purl.org/archimate/shapes> ;
+        sh:select """
+            SELECT $this WHERE {
+                FILTER NOT EXISTS { $this a/rdfs:subClassOf* am:Access }
+            }
+        """ ;
+    ] .

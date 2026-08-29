@@ -1,0 +1,590 @@
+@prefix am:       <https://purl.org/archimate#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+# ArchiMate 4.0 kern-ontologie (concept)
+#
+# Conceptversie ter bespreking in de werkgroep "ArchiMate in RDF".
+# De namespace purl.org/archimate is de bestaande basis van
+# de bestaande 3.2-ontologie in die namespace; dit bestand is een 4.0-voorstel
+# daarop, geen
+# claim op die namespace. Governance is een fase-0-onderwerp.
+#
+# Ontwerpprincipes (zie docs/ArchiMate-RDF-Ontologie-Voorstel.md):
+#   P1  De relatie is een eigen resource (am:source / am:target).
+#       Directe predicaten (am:serves, ...) zijn een afgeleide
+#       suikerlaag die per afnemer gematerialiseerd kan worden.
+#   P2  ArchiMate 4.0 (C260) is de doelversie; 3.2 is een profiel
+#       (archimate-profile-3.2.ttl).
+#   P3  De relatiematrix is data (archimate-matrix.ttl, gegenereerd
+#       uit Appendix B.5), geen documentatie.
+#   P7  Modulair: dit bestand is de kern. Views, profiel, matrix en
+#       SHACL-validatie zijn aparte bestanden. Validatieregels staan
+#       nadrukkelijk NIET hier maar in shacl/.
+#
+# De kern bevat precies de 42 elementtypen die in Appendix B.5 van
+# de 4.0-specificatie als concept voorkomen, plus de junction. Alles
+# wat 3.2 daarbovenop kende (laag-specifieke gedragstypen, Contract,
+# Constraint, Representation, Gap, ...) staat in het 3.2-profiel.
+#################################################################
+
+<https://purl.org/archimate>
+    a owl:Ontology ;
+    rdfs:label "ArchiMate 4.0-ontologie"@nl , "ArchiMate 4.0 ontology"@en ;
+    dcterms:description "OWL-representatie van de ArchiMate 4.0-specificatie (The Open Group, C260). Conceptversie, opgesteld als voorstel voor een gezamenlijke open ArchiMate-ontologie."@nl , "OWL representation of the ArchiMate 4.0 Specification (The Open Group, C260). Draft version, written as a proposal for a shared open ArchiMate ontology."@en ;
+    dcterms:source "ArchiMate 4 Specification, The Open Group, C260" ;
+    dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    owl:versionInfo "0.1.0-concept" ;
+    rdfs:comment "ArchiMate is een geregistreerd merk van The Open Group. Deze ontologie is geen publicatie van The Open Group."@nl , "ArchiMate is a registered trademark of The Open Group. This ontology is not a publication of The Open Group."@en .
+
+#################################################################
+# 1. Toplaag: concept, element, relatie, junction
+#################################################################
+
+am:Concept a owl:Class ;
+    rdfs:label "Concept"@nl , "Concept"@en ;
+    rdfs:comment "Alles wat in een ArchiMate-model kan staan: elementen, relaties en junctions. Bron en doel van een relatie zijn concepten, want ook een relatie of junction kan eindpunt zijn."@nl , "Anything an ArchiMate model can contain: elements, relationships, and junctions. Source and target of a relationship are concepts, because a relationship or junction can be an endpoint too."@en .
+
+am:Element a owl:Class ;
+    rdfs:subClassOf am:Concept ;
+    rdfs:label "Element"@nl , "Element"@en .
+
+am:Relationship a owl:Class ;
+    rdfs:subClassOf am:Concept ;
+    rdfs:label "Relatie"@nl , "Relationship"@en ;
+    rdfs:comment "Canonieke vorm van elke ArchiMate-relatie: een eigen resource met am:source en am:target (principe P1). Zo blijven parallelle relaties tussen dezelfde elementen onderscheidbaar en kan een relatie zonder RDF-Star metadata dragen."@nl , "Canonical form of every ArchiMate relationship: a resource of its own with am:source and am:target (principle P1). Parallel relationships between the same elements stay distinguishable, and a relationship can carry metadata without RDF-Star."@en .
+
+am:RelationshipConnector a owl:Class ;
+    rdfs:subClassOf am:Concept ;
+    rdfs:label "Relatieconnector"@nl , "Relationship connector"@en .
+
+am:Junction a owl:Class ;
+    rdfs:subClassOf am:RelationshipConnector ;
+    rdfs:label "Junction"@nl , "Junction"@en ;
+    rdfs:comment "Splitst of bundelt relaties van hetzelfde type. Let op bij SPARQL-traversal: een pad door een junction is alleen compleet als de query de junction expliciet meeneemt."@nl , "Splits or combines relationships of the same type. Mind SPARQL traversal: a path through a junction is only complete when the query handles the junction explicitly."@en .
+
+am:AndJunction a owl:Class ;
+    rdfs:subClassOf am:Junction ;
+    rdfs:label "En-junction"@nl , "And junction"@en .
+
+am:OrJunction a owl:Class ;
+    rdfs:subClassOf am:Junction ;
+    rdfs:label "Of-junction"@nl , "Or junction"@en .
+
+#################################################################
+# 2. Aspect-as (actieve structuur, gedrag, passieve structuur,
+#    motivatie, samengesteld)
+#################################################################
+
+am:ActiveStructureElement a owl:Class ;
+    rdfs:subClassOf am:Element ;
+    rdfs:label "Actief structuurelement"@nl , "Active structure element"@en ;
+    rdfs:comment "Kan gedrag vertonen: actoren, componenten, knooppunten, interfaces."@nl , "Can perform behavior: actors, components, nodes, interfaces."@en .
+
+am:BehaviorElement a owl:Class ;
+    rdfs:subClassOf am:Element ;
+    rdfs:label "Gedragselement"@nl , "Behavior element"@en .
+
+am:PassiveStructureElement a owl:Class ;
+    rdfs:subClassOf am:Element ;
+    rdfs:label "Passief structuurelement"@nl , "Passive structure element"@en ;
+    rdfs:comment "Waarop gedrag wordt uitgevoerd: objecten, data, artefacten, materiaal."@nl , "What behavior is performed on: objects, data, artifacts, material."@en .
+
+am:MotivationElement a owl:Class ;
+    rdfs:subClassOf am:Element ;
+    rdfs:label "Motivatie-element"@nl , "Motivation element"@en .
+
+am:CompositeElement a owl:Class ;
+    rdfs:subClassOf am:Element ;
+    rdfs:label "Samengesteld element"@nl , "Composite element"@en ;
+    rdfs:comment "Aggregeert of groepeert concepten uit meerdere aspecten en lagen: grouping, location, product, plateau."@nl , "Aggregates or groups concepts from multiple aspects and layers: grouping, location, product, plateau."@en .
+
+#################################################################
+# 3. Laag-as
+#
+# In 4.0 zijn gedragstypen (Function, Process, Service, Event) en
+# Role/Collaboration laag-generiek: de laag is een eigenschap van
+# het exemplaar, niet van de klasse. Laag-gebonden typen dragen hun
+# laag als am:defaultLayer-annotatie.
+#################################################################
+
+am:Layer a owl:Class ;
+    rdfs:label "Laag"@nl , "Layer"@en .
+
+am:StrategyLayer a am:Layer ; rdfs:label "Strategie"@nl , "Strategy"@en .
+am:BusinessLayer a am:Layer ; rdfs:label "Bedrijf"@nl , "Business"@en .
+am:ApplicationLayer a am:Layer ; rdfs:label "Applicatie"@nl , "Application"@en .
+am:TechnologyLayer a am:Layer ; rdfs:label "Technologie"@nl , "Technology"@en .
+am:PhysicalLayer a am:Layer ; rdfs:label "Fysiek"@nl , "Physical"@en .
+am:MotivationLayer a am:Layer ; rdfs:label "Motivatie"@nl , "Motivation"@en .
+am:ImplementationLayer a am:Layer ; rdfs:label "Implementatie en migratie"@nl , "Implementation and migration"@en .
+
+am:layer a owl:ObjectProperty ;
+    rdfs:domain am:Element ;
+    rdfs:range am:Layer ;
+    rdfs:label "laag"@nl , "layer"@en ;
+    rdfs:comment "De laag van dit exemplaar. Verplicht wil je op laag kunnen filteren bij laag-generieke typen (Function, Process, Service, Event, Role, Collaboration); bij laag-gebonden typen volgt hij uit am:defaultLayer."@nl , "The layer of this instance. Needed for layer filtering on layer-generic types (Function, Process, Service, Event, Role, Collaboration); for layer-bound types it follows from am:defaultLayer."@en .
+
+am:defaultLayer a owl:AnnotationProperty ;
+    rdfs:label "standaardlaag"@nl , "default layer"@en ;
+    rdfs:comment "Annotatie op een elementklasse: de laag die elk exemplaar van deze klasse heeft."@nl , "Annotation on an element class: the layer every instance of this class has."@en .
+
+#################################################################
+# 4. Elementtypen (de 42 concepten uit Appendix B.5)
+#################################################################
+
+# --- Laag-generiek (nieuw in 4.0: één type over de lagen heen) ---
+
+am:Function a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    rdfs:label "Functie"@nl , "Function"@en ;
+    rdfs:comment "Laag-generiek in 4.0; vervangt BusinessFunction, ApplicationFunction en TechnologyFunction uit 3.2."@nl , "Layer-generic in 4.0; replaces BusinessFunction, ApplicationFunction, and TechnologyFunction from 3.2."@en .
+
+am:Process a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    rdfs:label "Proces"@nl , "Process"@en ;
+    rdfs:comment "Laag-generiek in 4.0; vervangt BusinessProcess, ApplicationProcess en TechnologyProcess uit 3.2."@nl , "Layer-generic in 4.0; replaces BusinessProcess, ApplicationProcess, and TechnologyProcess from 3.2."@en .
+
+am:Service a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    rdfs:label "Dienst"@nl , "Service"@en ;
+    rdfs:comment "Laag-generiek in 4.0; vervangt BusinessService, ApplicationService en TechnologyService uit 3.2."@nl , "Layer-generic in 4.0; replaces BusinessService, ApplicationService, and TechnologyService from 3.2."@en .
+
+am:Event a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    rdfs:label "Gebeurtenis"@nl , "Event"@en ;
+    rdfs:comment "Laag-generiek in 4.0; vervangt BusinessEvent, ApplicationEvent, TechnologyEvent en ImplementationEvent uit 3.2."@nl , "Layer-generic in 4.0; replaces BusinessEvent, ApplicationEvent, TechnologyEvent, and ImplementationEvent from 3.2."@en .
+
+am:Role a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    rdfs:label "Rol"@nl , "Role"@en ;
+    rdfs:comment "Laag-generiek in 4.0; vervangt BusinessRole uit 3.2."@nl , "Layer-generic in 4.0; replaces BusinessRole from 3.2."@en .
+
+am:Collaboration a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    rdfs:label "Samenwerking"@nl , "Collaboration"@en ;
+    rdfs:comment "Laag-generiek in 4.0; vervangt BusinessCollaboration, ApplicationCollaboration en TechnologyCollaboration uit 3.2."@nl , "Layer-generic in 4.0; replaces BusinessCollaboration, ApplicationCollaboration, and TechnologyCollaboration from 3.2."@en .
+
+# --- Strategie ---
+
+am:Resource a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:StrategyLayer ;
+    rdfs:label "Middel"@nl , "Resource"@en .
+
+am:Capability a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    am:defaultLayer am:StrategyLayer ;
+    rdfs:label "Vermogen"@nl , "Capability"@en .
+
+am:CourseOfAction a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    am:defaultLayer am:StrategyLayer ;
+    rdfs:label "Koers"@nl , "Course of action"@en .
+
+am:ValueStream a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    am:defaultLayer am:StrategyLayer ;
+    rdfs:label "Waardestroom"@nl , "Value stream"@en .
+
+# --- Bedrijf ---
+
+am:BusinessActor a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsactor"@nl , "Business actor"@en .
+
+am:BusinessInterface a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsinterface"@nl , "Business interface"@en .
+
+am:BusinessObject a owl:Class ;
+    rdfs:subClassOf am:PassiveStructureElement ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Bedrijfsobject"@nl , "Business object"@en .
+
+am:Product a owl:Class ;
+    rdfs:subClassOf am:CompositeElement ;
+    am:defaultLayer am:BusinessLayer ;
+    rdfs:label "Product"@nl , "Product"@en .
+
+# --- Applicatie ---
+
+am:ApplicationComponent a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Applicatiecomponent"@nl , "Application component"@en .
+
+am:ApplicationInterface a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Applicatie-interface"@nl , "Application interface"@en .
+
+am:DataObject a owl:Class ;
+    rdfs:subClassOf am:PassiveStructureElement ;
+    am:defaultLayer am:ApplicationLayer ;
+    rdfs:label "Gegevensobject"@nl , "Data object"@en .
+
+# --- Technologie ---
+
+am:Node a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Knooppunt"@nl , "Node"@en .
+
+am:Device a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Apparaat"@nl , "Device"@en .
+
+am:SystemSoftware a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Systeemsoftware"@nl , "System software"@en .
+
+am:TechnologyInterface a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Technologie-interface"@nl , "Technology interface"@en .
+
+am:Path a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Pad"@nl , "Path"@en .
+
+am:CommunicationNetwork a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Communicatienetwerk"@nl , "Communication network"@en .
+
+am:Artifact a owl:Class ;
+    rdfs:subClassOf am:PassiveStructureElement ;
+    am:defaultLayer am:TechnologyLayer ;
+    rdfs:label "Artefact"@nl , "Artifact"@en .
+
+# --- Fysiek ---
+
+am:Equipment a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:PhysicalLayer ;
+    rdfs:label "Bedrijfsmiddel"@nl , "Equipment"@en .
+
+am:Facility a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:PhysicalLayer ;
+    rdfs:label "Faciliteit"@nl , "Facility"@en .
+
+am:DistributionNetwork a owl:Class ;
+    rdfs:subClassOf am:ActiveStructureElement ;
+    am:defaultLayer am:PhysicalLayer ;
+    rdfs:label "Distributienetwerk"@nl , "Distribution network"@en .
+
+am:Material a owl:Class ;
+    rdfs:subClassOf am:PassiveStructureElement ;
+    am:defaultLayer am:PhysicalLayer ;
+    rdfs:label "Materiaal"@nl , "Material"@en .
+
+# --- Motivatie ---
+
+am:Stakeholder a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Belanghebbende"@nl , "Stakeholder"@en .
+
+am:Driver a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Drijfveer"@nl , "Driver"@en .
+
+am:Assessment a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Beoordeling"@nl , "Assessment"@en .
+
+am:Goal a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Doel"@nl , "Goal"@en .
+
+am:Outcome a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Resultaat"@nl , "Outcome"@en .
+
+am:Principle a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Principe"@nl , "Principle"@en .
+
+am:Requirement a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Vereiste"@nl , "Requirement"@en .
+
+am:Meaning a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Betekenis"@nl , "Meaning"@en .
+
+am:Value a owl:Class ;
+    rdfs:subClassOf am:MotivationElement ;
+    am:defaultLayer am:MotivationLayer ;
+    rdfs:label "Waarde"@nl , "Value"@en .
+
+# --- Implementatie en migratie ---
+
+am:WorkPackage a owl:Class ;
+    rdfs:subClassOf am:BehaviorElement ;
+    am:defaultLayer am:ImplementationLayer ;
+    rdfs:label "Werkpakket"@nl , "Work package"@en .
+
+am:Deliverable a owl:Class ;
+    rdfs:subClassOf am:PassiveStructureElement ;
+    am:defaultLayer am:ImplementationLayer ;
+    rdfs:label "Op te leveren resultaat"@nl , "Deliverable"@en .
+
+am:Plateau a owl:Class ;
+    rdfs:subClassOf am:CompositeElement ;
+    am:defaultLayer am:ImplementationLayer ;
+    rdfs:label "Plateau"@nl , "Plateau"@en .
+
+# --- Samengesteld, laag-overstijgend ---
+
+am:Grouping a owl:Class ;
+    rdfs:subClassOf am:CompositeElement ;
+    rdfs:label "Groepering"@nl , "Grouping"@en .
+
+am:Location a owl:Class ;
+    rdfs:subClassOf am:CompositeElement ;
+    rdfs:label "Locatie"@nl , "Location"@en .
+
+#################################################################
+# 5. Relatietypen
+#################################################################
+
+am:StructuralRelationship a owl:Class ;
+    rdfs:subClassOf am:Relationship ;
+    rdfs:label "Structurele relatie"@nl , "Structural relationship"@en .
+
+am:DependencyRelationship a owl:Class ;
+    rdfs:subClassOf am:Relationship ;
+    rdfs:label "Afhankelijkheidsrelatie"@nl , "Dependency relationship"@en .
+
+am:DynamicRelationship a owl:Class ;
+    rdfs:subClassOf am:Relationship ;
+    rdfs:label "Dynamische relatie"@nl , "Dynamic relationship"@en .
+
+am:OtherRelationship a owl:Class ;
+    rdfs:subClassOf am:Relationship ;
+    rdfs:label "Overige relatie"@nl , "Other relationship"@en .
+
+am:Composition a owl:Class ;
+    rdfs:subClassOf am:StructuralRelationship ;
+    rdfs:label "Compositie"@nl , "Composition"@en ;
+    rdfs:comment "De bron bestaat uit het doel; een element is onderdeel van precies één composiet."@nl , "The source consists of the target; an element is part of exactly one composite."@en .
+
+am:Aggregation a owl:Class ;
+    rdfs:subClassOf am:StructuralRelationship ;
+    rdfs:label "Aggregatie"@nl , "Aggregation"@en ;
+    rdfs:comment "De bron groepeert het doel; het doel kan in meerdere aggregaties zitten."@nl , "The source groups the target; the target can be part of multiple aggregations."@en .
+
+am:Assignment a owl:Class ;
+    rdfs:subClassOf am:StructuralRelationship ;
+    rdfs:label "Toewijzing"@nl , "Assignment"@en ;
+    rdfs:comment "De bron voert het doel uit of is er verantwoordelijk voor (actief element aan gedrag, actor aan rol)."@nl , "The source performs or is responsible for the target (active element to behavior, actor to role)."@en .
+
+am:Realization a owl:Class ;
+    rdfs:subClassOf am:StructuralRelationship ;
+    rdfs:label "Realisatie"@nl , "Realization"@en ;
+    rdfs:comment "De bron realiseert het doel: een concreter element maakt een abstracter element waar."@nl , "The source realizes the target: a more concrete element makes a more abstract element happen."@en .
+
+am:Serving a owl:Class ;
+    rdfs:subClassOf am:DependencyRelationship ;
+    rdfs:label "Bediening"@nl , "Serving"@en ;
+    rdfs:comment "De bron levert functionaliteit aan het doel."@nl , "The source provides functionality to the target."@en .
+
+am:Access a owl:Class ;
+    rdfs:subClassOf am:DependencyRelationship ;
+    rdfs:label "Toegang"@nl , "Access"@en ;
+    rdfs:comment "Gedrag (bron) benadert een passief element (doel); de richting van benadering staat in am:accessType."@nl , "Behavior (source) accesses a passive element (target); the direction of access is in am:accessType."@en .
+
+am:Influence a owl:Class ;
+    rdfs:subClassOf am:DependencyRelationship ;
+    rdfs:label "Beïnvloeding"@nl , "Influence"@en ;
+    rdfs:comment "De bron beïnvloedt het doel (motivatie-elementen); sterkte in am:influenceStrength."@nl , "The source influences the target (motivation elements); strength in am:influenceStrength."@en .
+
+am:Association a owl:Class ;
+    rdfs:subClassOf am:DependencyRelationship ;
+    rdfs:label "Associatie"@nl , "Association"@en ;
+    rdfs:comment "Ongetypeerde samenhang; am:isDirected zegt of de richting betekenis heeft."@nl , "Untyped association; am:isDirected states whether the direction is meaningful."@en .
+
+am:Triggering a owl:Class ;
+    rdfs:subClassOf am:DynamicRelationship ;
+    rdfs:label "Trigger"@nl , "Triggering"@en ;
+    rdfs:comment "Tijdelijke of causale opvolging: de bron zet het doel in gang."@nl , "Temporal or causal succession: the source initiates the target."@en .
+
+am:Flow a owl:Class ;
+    rdfs:subClassOf am:DynamicRelationship ;
+    rdfs:label "Stroom"@nl , "Flow"@en ;
+    rdfs:comment "Overdracht van informatie, goederen of geld van bron naar doel."@nl , "Transfer of, for example, information, goods, or money from source to target."@en .
+
+am:Specialization a owl:Class ;
+    rdfs:subClassOf am:OtherRelationship ;
+    rdfs:label "Specialisatie"@nl , "Specialization"@en ;
+    rdfs:comment "De bron is een bijzondere vorm van het doel."@nl , "The source is a particular kind of the target."@en .
+
+#################################################################
+# 6. Eigenschappen van concepten en relaties
+#################################################################
+
+am:source a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:domain am:Relationship ;
+    rdfs:range am:Concept ;
+    rdfs:label "bron"@nl , "source"@en .
+
+am:target a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:domain am:Relationship ;
+    rdfs:range am:Concept ;
+    rdfs:label "doel"@nl , "target"@en .
+
+am:identifier a owl:DatatypeProperty ;
+    rdfs:domain am:Concept ;
+    rdfs:range xsd:string ;
+    rdfs:label "identifier"@nl , "identifier"@en ;
+    rdfs:comment "Het id uit het Model Exchange Format. Nodig voor een verliesvrije round-trip (principe P5) en om samengeklapte parallelle relaties terug te vinden."@nl , "The id from the Model Exchange Format. Needed for a lossless round-trip (principle P5) and to recover collapsed parallel relationships."@en .
+
+am:accessType a owl:ObjectProperty ;
+    rdfs:domain am:Access ;
+    rdfs:range am:AccessTypeValue ;
+    rdfs:label "toegangstype"@nl , "access type"@en .
+
+am:AccessTypeValue a owl:Class ;
+    rdfs:label "Toegangstype-waarde"@nl , "Access type value"@en ;
+    owl:oneOf ( am:ReadAccess am:WriteAccess am:ReadWriteAccess am:UnspecifiedAccess ) .
+
+am:ReadAccess a am:AccessTypeValue ; rdfs:label "lezen"@nl , "read"@en .
+am:WriteAccess a am:AccessTypeValue ; rdfs:label "schrijven"@nl , "write"@en .
+am:ReadWriteAccess a am:AccessTypeValue ; rdfs:label "lezen en schrijven"@nl , "read/write"@en .
+am:UnspecifiedAccess a am:AccessTypeValue ; rdfs:label "niet gespecificeerd"@nl , "unspecified"@en .
+
+am:influenceStrength a owl:DatatypeProperty ;
+    rdfs:domain am:Influence ;
+    rdfs:range xsd:string ;
+    rdfs:label "beïnvloedingssterkte"@nl , "influence strength"@en ;
+    rdfs:comment "Vrije notatie conform de specificatie: bijvoorbeeld +, ++, -, of 0..10."@nl , "Free notation as in the specification: for example +, ++, -, or 0..10."@en .
+
+am:isDirected a owl:DatatypeProperty ;
+    rdfs:domain am:Association ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "gericht"@nl , "is directed"@en .
+
+# Meertaligheid (principe P4): rdfs:label met taaltag per naam,
+# dcterms:description met taaltag per documentatieveld. De
+# name:<lang>-propertyconventie uit het exchange-format mapt
+# bidirectioneel op rdfs:label@lang.
+
+#################################################################
+# 7. Suikerlaag: directe predicaten (principe P1)
+#
+# Afgeleid uit de canonieke relatie-resources en per afnemer te
+# materialiseren, bijvoorbeeld met één SPARQL CONSTRUCT:
+#
+#   CONSTRUCT { ?s ?p ?t }
+#   WHERE { ?r am:source ?s ; am:target ?t ; a ?klasse .
+#           ?p am:relationshipClass ?klasse . }
+#
+# Let op: de suikerlaag klapt parallelle relaties samen en verliest
+# hun metadata. De canonieke vorm blijft de waarheid.
+#################################################################
+
+am:relationshipClass a owl:AnnotationProperty ;
+    rdfs:label "relatieklasse"@nl , "relationship class"@en ;
+    rdfs:comment "Koppelt een direct predicaat aan de relatieklasse waaruit het gematerialiseerd wordt."@nl , "Links a direct predicate to the relationship class it is materialized from."@en .
+
+am:composes a owl:ObjectProperty ;
+    am:relationshipClass am:Composition ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "bestaat uit"@nl , "composes"@en .
+
+am:aggregates a owl:ObjectProperty ;
+    am:relationshipClass am:Aggregation ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "groepeert"@nl , "aggregates"@en .
+
+am:assignedTo a owl:ObjectProperty ;
+    am:relationshipClass am:Assignment ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "toegewezen aan"@nl , "assigned to"@en .
+
+am:realizes a owl:ObjectProperty ;
+    am:relationshipClass am:Realization ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "realiseert"@nl , "realizes"@en .
+
+am:serves a owl:ObjectProperty ;
+    am:relationshipClass am:Serving ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "bedient"@nl , "serves"@en .
+
+am:accesses a owl:ObjectProperty ;
+    am:relationshipClass am:Access ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "benadert"@nl , "accesses"@en .
+
+am:influences a owl:ObjectProperty ;
+    am:relationshipClass am:Influence ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "beïnvloedt"@nl , "influences"@en .
+
+am:associatedWith a owl:ObjectProperty ;
+    am:relationshipClass am:Association ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "geassocieerd met"@nl , "associated with"@en .
+
+am:triggers a owl:ObjectProperty ;
+    am:relationshipClass am:Triggering ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "triggert"@nl , "triggers"@en .
+
+am:flowsTo a owl:ObjectProperty ;
+    am:relationshipClass am:Flow ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "stroomt naar"@nl , "flows to"@en .
+
+am:specializes a owl:ObjectProperty , owl:TransitiveProperty ;
+    am:relationshipClass am:Specialization ;
+    rdfs:domain am:Concept ; rdfs:range am:Concept ;
+    rdfs:label "specialiseert"@nl , "specializes"@en ;
+    rdfs:comment "Transitief: wie A specialiseert en A specialiseert B, specialiseert B. De enige suikerrelatie waar OWL-redenering direct waarde toevoegt."@nl , "Transitive: what specializes A, where A specializes B, specializes B. The only sugar relation where OWL reasoning adds direct value."@en .
+
+#################################################################
+# 8. Matrixvocabulaire (gebruikt door archimate-matrix.ttl)
+#################################################################
+
+am:MatrixCell a owl:Class ;
+    rdfs:label "Matrixcel"@nl , "Matrix cell"@en ;
+    rdfs:comment "Eén cel uit Appendix B.5: welke relatietypen tussen een bron- en doeltype zijn toegestaan (am:permitsRelation, inclusief afgeleid) en welke daarvan direct tekenbaar zijn (am:permitsDirectRelation). De cellen zelf worden gegenereerd uit de machineleesbare matrix (principe P3)."@nl , "One cell from Appendix B.5: which relationship types are permitted between a source and target type (am:permitsRelation, including derived) and which of those may be drawn directly (am:permitsDirectRelation). The cells are generated from the machine-readable matrix (principle P3)."@en .
+
+am:sourceType a owl:ObjectProperty ;
+    rdfs:domain am:MatrixCell ;
+    rdfs:label "brontype"@nl , "source type"@en .
+
+am:targetType a owl:ObjectProperty ;
+    rdfs:domain am:MatrixCell ;
+    rdfs:label "doeltype"@nl , "target type"@en .
+
+am:permitsRelation a owl:ObjectProperty ;
+    rdfs:domain am:MatrixCell ;
+    rdfs:label "staat relatie toe"@nl , "permits relation"@en ;
+    rdfs:comment "Toegestaan volgens de volledige matrix, inclusief wat alleen via afleidingsregels kan ontstaan."@nl , "Permitted by the full matrix, including what can only arise through derivation rules."@en .
+
+am:permitsDirectRelation a owl:ObjectProperty ;
+    rdfs:domain am:MatrixCell ;
+    rdfs:label "staat directe relatie toe"@nl , "permits direct relation"@en ;
+    rdfs:comment "Direct tekenbaar door een modelleur; deelverzameling van am:permitsRelation."@nl , "May be drawn directly by a modeler; subset of am:permitsRelation."@en .

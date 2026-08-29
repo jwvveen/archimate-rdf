@@ -1,0 +1,37 @@
+@prefix am:      <https://purl.org/archimate#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+#################################################################
+# Views-module (principe P7: apart laadbaar)
+#
+# Bewust minimaal: welke view bestaat er, wat toont hij, vanuit
+# welk gezichtspunt. Grafische informatie (posities, kleuren,
+# bendpoints) hoort niet in de kennisgraaf maar in het Model
+# Exchange Format; de round-trip (P5) bewaart haar daar.
+# Praktijkles uit SemanticXL: zonder views is een graaf een zak
+# elementen, met volledige geometrie is hij een tekenbestand.
+#################################################################
+
+<https://purl.org/archimate/views>
+    a owl:Ontology ;
+    rdfs:label "ArchiMate views-module"@nl , "ArchiMate views module"@en ;
+    owl:imports <https://purl.org/archimate> ;
+    owl:versionInfo "0.1.0-concept" .
+
+am:View a owl:Class ;
+    rdfs:label "View"@nl , "View"@en ;
+    rdfs:comment "Een geselecteerd deel van het model, gericht op een belanghebbende of vraag."@nl , "A selected part of the model, addressing a stakeholder or question."@en .
+
+am:shows a owl:ObjectProperty ;
+    rdfs:domain am:View ;
+    rdfs:range am:Concept ;
+    rdfs:label "toont"@nl , "shows"@en .
+
+am:viewpoint a owl:DatatypeProperty ;
+    rdfs:domain am:View ;
+    rdfs:range xsd:string ;
+    rdfs:label "gezichtspunt"@nl , "viewpoint"@en ;
+    rdfs:comment "Naam van het gezichtspunt uit de specificatie of een eigen gezichtspunt."@nl , "Name of a viewpoint from the specification or a custom viewpoint."@en .

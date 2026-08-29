@@ -1,0 +1,2027 @@
+<?xml version='1.0' encoding='utf-8'?>
+<relationships version="4.0" bron="ArchiMate 4 Specification, Appendix B.5 (pagina 139-145)">
+    <source concept="ApplicationComponent">
+        <target concept="ApplicationComponent" relations="cfgostv" direct="cgos" />
+        <target concept="ApplicationInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Artifact" relations="ao" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fiortv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="aio" direct="io" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fiotv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fiotv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiotv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiotv" direct="io" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fiotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="ApplicationInterface">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="cfgostv" direct="cgos" />
+        <target concept="Artifact" relations="ao" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fortv" direct="or" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fotv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fotv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fotv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fotv" direct="o" />
+        <target concept="Service" relations="fiortv" direct="io" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Artifact">
+        <target concept="ApplicationComponent" relations="or" direct="or" />
+        <target concept="ApplicationInterface" relations="or" direct="o" />
+        <target concept="Artifact" relations="cgors" direct="cgos" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="or" direct="o" />
+        <target concept="BusinessObject" relations="ors" direct="os" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ors" direct="ors" />
+        <target concept="Deliverable" relations="os" direct="os" />
+        <target concept="Device" relations="or" direct="or" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="or" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="or" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="ors" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="os" direct="os" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="or" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="or" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="or" direct="o" />
+        <target concept="Service" relations="or" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="or" direct="or" />
+        <target concept="TechnologyInterface" relations="or" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Assessment">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="cgnos" direct="cgnos" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="no" direct="no" />
+        <target concept="Grouping" relations="cgnos" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="no" direct="no" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="no" direct="no" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="BusinessActor">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="ao" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="cfgostv" direct="cgos" />
+        <target concept="BusinessInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="BusinessObject" relations="aio" direct="io" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fiotv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fiotv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiotv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiotv" direct="io" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="ino" direct="io" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fiotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="BusinessInterface">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="fotv" direct="o" />
+        <target concept="Artifact" relations="ao" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="cfgostv" direct="cgos" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fotv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fotv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fotv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fotv" direct="o" />
+        <target concept="Service" relations="fiotv" direct="io" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="BusinessObject">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="cgos" direct="cgos" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="os" direct="os" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="ors" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Capability">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="cfgostv" direct="cfgostv" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="fortv" direct="fortv" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cfgnorstv" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="fotv" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="fotv" direct="fotv" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Collaboration">
+        <target concept="ApplicationComponent" relations="cfgortv" direct="cgo" />
+        <target concept="ApplicationInterface" relations="cfgiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="cfgiotv" direct="cgo" />
+        <target concept="BusinessInterface" relations="cfgiortv" direct="o" />
+        <target concept="BusinessObject" relations="aio" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="cfgostv" direct="cgos" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="aio" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="cfgiortv" direct="cgo" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="cfgiortv" direct="cgo" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="cfgiotv" direct="cgo" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="aio" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="cfgiotv" direct="cgo" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="cfgiortv" direct="cgio" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="ino" direct="o" />
+        <target concept="SystemSoftware" relations="cfgiortv" direct="cgo" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="CommunicationNetwork">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fiortv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="cfgostv" direct="cgos" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="cfgortv" direct="cgo" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiortv" direct="o" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="cfgiortv" direct="cgo" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="CourseOfAction">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="fotv" direct="fotv" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="cfgostv" direct="cfgostv" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cfgnorstv" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="nor" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="fotv" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="fotv" direct="fotv" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="DataObject">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="or" direct="or" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="cgos" direct="cgos" />
+        <target concept="Deliverable" relations="os" direct="os" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="ors" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Deliverable">
+        <target concept="ApplicationComponent" relations="or" direct="or" />
+        <target concept="ApplicationInterface" relations="or" direct="or" />
+        <target concept="Artifact" relations="or" direct="or" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="or" direct="or" />
+        <target concept="BusinessInterface" relations="or" direct="or" />
+        <target concept="BusinessObject" relations="or" direct="or" />
+        <target concept="Capability" relations="or" direct="or" />
+        <target concept="Collaboration" relations="or" direct="or" />
+        <target concept="CommunicationNetwork" relations="or" direct="or" />
+        <target concept="CourseOfAction" relations="or" direct="or" />
+        <target concept="DataObject" relations="or" direct="or" />
+        <target concept="Deliverable" relations="cgos" direct="cgos" />
+        <target concept="Device" relations="or" direct="or" />
+        <target concept="DistributionNetwork" relations="or" direct="or" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="or" direct="or" />
+        <target concept="Event" relations="or" direct="or" />
+        <target concept="Facility" relations="or" direct="or" />
+        <target concept="Function" relations="or" direct="or" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="or" />
+        <target concept="Location" relations="or" direct="or" />
+        <target concept="Material" relations="or" direct="or" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="or" direct="or" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="or" direct="or" />
+        <target concept="Plateau" relations="or" direct="or" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="or" direct="or" />
+        <target concept="Product" relations="or" direct="or" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="or" direct="or" />
+        <target concept="Service" relations="or" direct="or" />
+        <target concept="Stakeholder" relations="nor" direct="o" />
+        <target concept="SystemSoftware" relations="or" direct="or" />
+        <target concept="TechnologyInterface" relations="or" direct="or" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="or" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Device">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="io" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fiortv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="cfgorstv" direct="cgos" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiortv" direct="io" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fiortv" direct="io" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="DistributionNetwork">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="cfgiotv" direct="cgo" />
+        <target concept="BusinessInterface" relations="cfgiortv" direct="o" />
+        <target concept="BusinessObject" relations="aio" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="cfgiortv" direct="o" />
+        <target concept="DistributionNetwork" relations="cfgostv" direct="cgos" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="cfgiortv" direct="cgo" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="cfgiotv" direct="cgo" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="aio" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="cfgiotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiortv" direct="o" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="ino" direct="o" />
+        <target concept="SystemSoftware" relations="cfgiortv" direct="o" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="Driver">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="cgnos" direct="cgnos" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="no" direct="no" />
+        <target concept="Grouping" relations="cgnos" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="no" direct="no" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="no" direct="no" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Equipment">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fiortv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="cfgortv" direct="cgo" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="cfgorstv" direct="cgos" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="aio" direct="io" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiortv" direct="io" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fiortv" direct="o" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="Event">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="fotv" direct="o" />
+        <target concept="Artifact" relations="ao" direct="ao" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fotv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="ao" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="ao" direct="ao" />
+        <target concept="Deliverable" relations="ao" direct="ao" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="cfgostv" direct="cgos" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fotv" direct="fot" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfgnorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="ao" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fotv" direct="o" />
+        <target concept="Plateau" relations="ot" direct="ot" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fotv" direct="fot" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="fotv" direct="o" />
+        <target concept="Service" relations="fotv" direct="fot" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="fot" direct="fot" />
+    </source>
+    <source concept="Facility">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fiotv" direct="io" />
+        <target concept="BusinessInterface" relations="fiortv" direct="o" />
+        <target concept="BusinessObject" relations="aio" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="cfgiortv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="cfgiortv" direct="cgo" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="cfgiostv" direct="cgos" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="aio" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="cfgiotv" direct="cgio" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiortv" direct="io" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="ino" direct="o" />
+        <target concept="SystemSoftware" relations="cfgiortv" direct="o" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="Function">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="fotv" direct="o" />
+        <target concept="Artifact" relations="ao" direct="ao" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fotv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="ao" />
+        <target concept="Capability" relations="or" direct="or" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="or" />
+        <target concept="DataObject" relations="ao" direct="ao" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fotv" direct="fot" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="cfgostv" direct="cfgost" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfgnorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="ao" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fotv" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="cfgotv" direct="cfgot" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="fotv" direct="o" />
+        <target concept="Service" relations="fortv" direct="or" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="or" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Goal">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="cgnos" direct="cgnos" />
+        <target concept="Grouping" relations="cgnos" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="no" direct="no" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="no" direct="no" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Grouping">
+        <target concept="ApplicationComponent" relations="cfgorstv" direct="cgo" />
+        <target concept="ApplicationInterface" relations="cfgiorstv" direct="cgo" />
+        <target concept="Artifact" relations="acgiors" direct="cgo" />
+        <target concept="Assessment" relations="cgnos" direct="cgo" />
+        <target concept="BusinessActor" relations="cfgiorstv" direct="cgo" />
+        <target concept="BusinessInterface" relations="cfgiorstv" direct="cgo" />
+        <target concept="BusinessObject" relations="acgiors" direct="cgo" />
+        <target concept="Capability" relations="cfgiorstv" direct="cgo" />
+        <target concept="Collaboration" relations="cfgorstv" direct="cgo" />
+        <target concept="CommunicationNetwork" relations="cfgorstv" direct="cgo" />
+        <target concept="CourseOfAction" relations="cfgiorstv" direct="cgo" />
+        <target concept="DataObject" relations="acgiors" direct="cgo" />
+        <target concept="Deliverable" relations="acgors" direct="cgo" />
+        <target concept="Device" relations="cfgiorstv" direct="cgo" />
+        <target concept="DistributionNetwork" relations="cfgorstv" direct="cgo" />
+        <target concept="Driver" relations="cgnos" direct="cgo" />
+        <target concept="Equipment" relations="cfgiorstv" direct="cgo" />
+        <target concept="Event" relations="cfgiorstv" direct="cgo" />
+        <target concept="Facility" relations="cfgiorstv" direct="cgo" />
+        <target concept="Function" relations="cfgiorstv" direct="cgo" />
+        <target concept="Goal" relations="cgnors" direct="cgo" />
+        <target concept="Grouping" relations="acfginorstv" direct="cgos" />
+        <target concept="Junction" relations="acfginorstv" />
+        <target concept="Location" relations="cfgorstv" direct="cgo" />
+        <target concept="Material" relations="acgiors" direct="cgo" />
+        <target concept="Meaning" relations="cgnos" direct="cgo" />
+        <target concept="Node" relations="cfgiorstv" direct="cgo" />
+        <target concept="Outcome" relations="cgnors" direct="cgo" />
+        <target concept="Path" relations="cfgorstv" direct="cgo" />
+        <target concept="Plateau" relations="cfgorst" direct="cgo" />
+        <target concept="Principle" relations="cgnors" direct="cgo" />
+        <target concept="Process" relations="cfgiorstv" direct="cgo" />
+        <target concept="Product" relations="cfgorstv" direct="cgo" />
+        <target concept="Relationship" relations="cgo" />
+        <target concept="Requirement" relations="cgnors" direct="cgnor" />
+        <target concept="Resource" relations="cfgorstv" direct="cgo" />
+        <target concept="Role" relations="cfgiorstv" direct="cgo" />
+        <target concept="Service" relations="cfgiorstv" direct="cgo" />
+        <target concept="Stakeholder" relations="cginors" direct="cgo" />
+        <target concept="SystemSoftware" relations="cfgiorstv" direct="cgo" />
+        <target concept="TechnologyInterface" relations="cfgiorstv" direct="cgo" />
+        <target concept="Value" relations="cgnos" direct="cgo" />
+        <target concept="ValueStream" relations="cfgiorstv" direct="cgo" />
+        <target concept="WorkPackage" relations="cfgiost" direct="cgo" />
+    </source>
+    <source concept="Junction">
+        <target concept="ApplicationComponent" relations="fortv" />
+        <target concept="ApplicationInterface" relations="fortv" />
+        <target concept="Artifact" relations="aio" />
+        <target concept="Assessment" relations="no" />
+        <target concept="BusinessActor" relations="fiortv" />
+        <target concept="BusinessInterface" relations="fiortv" />
+        <target concept="BusinessObject" relations="ao" />
+        <target concept="Capability" relations="or" />
+        <target concept="Collaboration" relations="fiortv" />
+        <target concept="CommunicationNetwork" relations="fortv" />
+        <target concept="CourseOfAction" relations="or" />
+        <target concept="DataObject" relations="ao" />
+        <target concept="Deliverable" relations="o" />
+        <target concept="Device" relations="fiortv" />
+        <target concept="DistributionNetwork" relations="fortv" />
+        <target concept="Driver" relations="no" />
+        <target concept="Equipment" relations="fiortv" />
+        <target concept="Event" relations="fiortv" />
+        <target concept="Facility" relations="fiortv" />
+        <target concept="Function" relations="fiortv" />
+        <target concept="Goal" relations="nor" />
+        <target concept="Grouping" relations="afinortv" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fortv" />
+        <target concept="Material" relations="aio" />
+        <target concept="Meaning" relations="no" />
+        <target concept="Node" relations="fiortv" />
+        <target concept="Outcome" relations="nor" />
+        <target concept="Path" relations="fortv" />
+        <target concept="Plateau" relations="fort" />
+        <target concept="Principle" relations="nor" />
+        <target concept="Process" relations="fiortv" />
+        <target concept="Product" relations="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" />
+        <target concept="Resource" relations="or" />
+        <target concept="Role" relations="fiortv" />
+        <target concept="Service" relations="fiortv" />
+        <target concept="Stakeholder" relations="inor" />
+        <target concept="SystemSoftware" relations="fiortv" />
+        <target concept="TechnologyInterface" relations="fiortv" />
+        <target concept="Value" relations="no" />
+        <target concept="ValueStream" relations="or" />
+        <target concept="WorkPackage" relations="io" />
+    </source>
+    <source concept="Location">
+        <target concept="ApplicationComponent" relations="cfgortv" direct="cgo" />
+        <target concept="ApplicationInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Artifact" relations="acgio" direct="cgo" />
+        <target concept="Assessment" relations="cgno" direct="cgo" />
+        <target concept="BusinessActor" relations="cfgiotv" direct="cgo" />
+        <target concept="BusinessInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="BusinessObject" relations="acgio" direct="cgo" />
+        <target concept="Capability" relations="cgor" direct="cgo" />
+        <target concept="Collaboration" relations="cfgotv" direct="cgo" />
+        <target concept="CommunicationNetwork" relations="cfgotv" direct="cgo" />
+        <target concept="CourseOfAction" relations="cgor" direct="cgo" />
+        <target concept="DataObject" relations="acgio" direct="cgo" />
+        <target concept="Deliverable" relations="cgo" direct="cgo" />
+        <target concept="Device" relations="cfgiortv" direct="cgo" />
+        <target concept="DistributionNetwork" relations="cfgotv" direct="cgo" />
+        <target concept="Driver" relations="cgno" direct="cgo" />
+        <target concept="Equipment" relations="cfgiortv" direct="cgo" />
+        <target concept="Event" relations="cfgiortv" direct="cgo" />
+        <target concept="Facility" relations="cfgiotv" direct="cgo" />
+        <target concept="Function" relations="cfgiortv" direct="cgo" />
+        <target concept="Goal" relations="cgnor" direct="cgo" />
+        <target concept="Grouping" relations="acfginorstv" direct="cgo" />
+        <target concept="Junction" relations="acfginorstv" />
+        <target concept="Location" relations="cfgostv" direct="cgos" />
+        <target concept="Material" relations="acgio" direct="cgo" />
+        <target concept="Meaning" relations="cgno" direct="cgo" />
+        <target concept="Node" relations="cfgiotv" direct="cgo" />
+        <target concept="Outcome" relations="cgnor" direct="cgo" />
+        <target concept="Path" relations="cfgortv" direct="cgo" />
+        <target concept="Plateau" relations="cgo" direct="cgo" />
+        <target concept="Principle" relations="cgnor" direct="cgo" />
+        <target concept="Process" relations="cfgiortv" direct="cgo" />
+        <target concept="Product" relations="cfgotv" direct="cgo" />
+        <target concept="Relationship" relations="cgo" />
+        <target concept="Requirement" relations="cgnor" direct="cgnor" />
+        <target concept="Resource" relations="cgor" direct="cgor" />
+        <target concept="Role" relations="cfgiortv" direct="cgo" />
+        <target concept="Service" relations="cfgiortv" direct="cgo" />
+        <target concept="Stakeholder" relations="cgino" direct="cgo" />
+        <target concept="SystemSoftware" relations="cfgiortv" direct="cgo" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Value" relations="cgno" direct="cgo" />
+        <target concept="ValueStream" relations="cgor" direct="cgo" />
+        <target concept="WorkPackage" relations="cgio" direct="cgo" />
+    </source>
+    <source concept="Material">
+        <target concept="ApplicationComponent" relations="or" direct="o" />
+        <target concept="ApplicationInterface" relations="or" direct="o" />
+        <target concept="Artifact" relations="ors" direct="os" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="or" direct="o" />
+        <target concept="BusinessObject" relations="ors" direct="ors" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ors" direct="os" />
+        <target concept="Deliverable" relations="os" direct="os" />
+        <target concept="Device" relations="or" direct="or" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="or" direct="or" />
+        <target concept="Event" relations="or" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="or" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="ors" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="cgors" direct="cgos" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="or" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="or" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="or" direct="o" />
+        <target concept="Service" relations="or" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="or" direct="o" />
+        <target concept="TechnologyInterface" relations="or" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Meaning">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="no" direct="no" />
+        <target concept="Grouping" relations="cgnos" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="cgnos" direct="cgnos" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="no" direct="no" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="no" direct="no" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Node">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fiotv" direct="o" />
+        <target concept="BusinessInterface" relations="fiortv" direct="o" />
+        <target concept="BusinessObject" relations="aio" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="cfgiortv" direct="cgo" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="cfgiortv" direct="cgo" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="cfgiotv" direct="cgo" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="aio" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="cfgiostv" direct="cgos" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiortv" direct="io" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="ino" direct="o" />
+        <target concept="SystemSoftware" relations="cfgiortv" direct="cgo" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="Outcome">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="nor" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="cgnos" direct="cgnos" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="no" direct="no" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Path">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="fotv" direct="o" />
+        <target concept="Artifact" relations="ao" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fotv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fotv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fotv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfgnorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="cfgorstv" direct="cgors" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fotv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fotv" direct="o" />
+        <target concept="Service" relations="fotv" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Plateau">
+        <target concept="ApplicationComponent" relations="cgor" direct="cgor" />
+        <target concept="ApplicationInterface" relations="cgor" direct="cgor" />
+        <target concept="Artifact" relations="cgor" direct="cgor" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="cgor" direct="cgor" />
+        <target concept="BusinessInterface" relations="cgor" direct="cgor" />
+        <target concept="BusinessObject" relations="cgor" direct="cgor" />
+        <target concept="Capability" relations="cgor" direct="cgor" />
+        <target concept="Collaboration" relations="cgor" direct="cgor" />
+        <target concept="CommunicationNetwork" relations="cgor" direct="cgor" />
+        <target concept="CourseOfAction" relations="cgor" direct="cgor" />
+        <target concept="DataObject" relations="cgor" direct="cgor" />
+        <target concept="Deliverable" relations="ao" direct="o" />
+        <target concept="Device" relations="cgor" direct="cgor" />
+        <target concept="DistributionNetwork" relations="cgor" direct="cgor" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="cgor" direct="cgor" />
+        <target concept="Event" relations="cgort" direct="cgort" />
+        <target concept="Facility" relations="cgor" direct="cgor" />
+        <target concept="Function" relations="cgor" direct="cgor" />
+        <target concept="Goal" relations="cgnor" direct="cgo" />
+        <target concept="Grouping" relations="acfginorst" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="cgor" direct="cgor" />
+        <target concept="Material" relations="cgor" direct="cgor" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="cgor" direct="cgor" />
+        <target concept="Outcome" relations="cgnor" direct="cgo" />
+        <target concept="Path" relations="cgor" direct="cgor" />
+        <target concept="Plateau" relations="cfgost" direct="cgost" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="cgor" direct="cgor" />
+        <target concept="Product" relations="cgor" direct="cgor" />
+        <target concept="Relationship" relations="cgo" />
+        <target concept="Requirement" relations="cgnor" direct="cgnor" />
+        <target concept="Resource" relations="cgor" direct="cgor" />
+        <target concept="Role" relations="cgor" direct="cgor" />
+        <target concept="Service" relations="cgor" direct="cgor" />
+        <target concept="Stakeholder" relations="inor" direct="o" />
+        <target concept="SystemSoftware" relations="cgor" direct="cgor" />
+        <target concept="TechnologyInterface" relations="cgor" direct="cgor" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="cgor" direct="cgor" />
+        <target concept="WorkPackage" relations="fot" direct="o" />
+    </source>
+    <source concept="Principle">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="no" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="nor" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="cgnos" direct="cgnos" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Process">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="fotv" direct="o" />
+        <target concept="Artifact" relations="ao" direct="ao" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fotv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="ao" />
+        <target concept="Capability" relations="or" direct="or" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="or" />
+        <target concept="DataObject" relations="ao" direct="ao" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fotv" direct="fot" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="cfgotv" direct="cfgot" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfgnorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="ao" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fotv" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="cfgostv" direct="cfgost" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="fotv" direct="o" />
+        <target concept="Service" relations="fortv" direct="or" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="fotv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="or" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Product">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fortv" direct="o" />
+        <target concept="Artifact" relations="acgo" direct="cgo" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fortv" direct="o" />
+        <target concept="BusinessObject" relations="acgo" direct="cgo" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="acgo" direct="cgo" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fortv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fortv" direct="o" />
+        <target concept="Event" relations="fortv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfgnorstv" direct="o" />
+        <target concept="Junction" relations="ors" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="acgo" direct="cgo" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fortv" direct="o" />
+        <target concept="Product" relations="cfgostv" direct="cgos" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fortv" direct="o" />
+        <target concept="Service" relations="cfgortv" direct="cgo" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fortv" direct="o" />
+        <target concept="TechnologyInterface" relations="fortv" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Relationship">
+        <target concept="ApplicationComponent" relations="o" />
+        <target concept="ApplicationInterface" relations="o" />
+        <target concept="Artifact" relations="o" />
+        <target concept="Assessment" relations="o" />
+        <target concept="BusinessActor" relations="o" />
+        <target concept="BusinessInterface" relations="o" />
+        <target concept="BusinessObject" relations="o" />
+        <target concept="Capability" relations="o" />
+        <target concept="Collaboration" relations="o" />
+        <target concept="CommunicationNetwork" relations="o" />
+        <target concept="CourseOfAction" relations="o" />
+        <target concept="DataObject" relations="o" />
+        <target concept="Deliverable" relations="o" />
+        <target concept="Device" relations="o" />
+        <target concept="DistributionNetwork" relations="o" />
+        <target concept="Driver" relations="o" />
+        <target concept="Equipment" relations="o" />
+        <target concept="Event" relations="o" />
+        <target concept="Facility" relations="o" />
+        <target concept="Function" relations="o" />
+        <target concept="Goal" relations="o" />
+        <target concept="Grouping" relations="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" />
+        <target concept="Material" relations="o" />
+        <target concept="Meaning" relations="o" />
+        <target concept="Node" relations="o" />
+        <target concept="Outcome" relations="o" />
+        <target concept="Path" relations="o" />
+        <target concept="Plateau" relations="o" />
+        <target concept="Principle" relations="o" />
+        <target concept="Process" relations="o" />
+        <target concept="Product" relations="o" />
+        <target concept="Relationship" relations="os" />
+        <target concept="Requirement" relations="o" />
+        <target concept="Resource" relations="o" />
+        <target concept="Role" relations="o" />
+        <target concept="Service" relations="o" />
+        <target concept="Stakeholder" relations="o" />
+        <target concept="SystemSoftware" relations="o" />
+        <target concept="TechnologyInterface" relations="o" />
+        <target concept="Value" relations="o" />
+        <target concept="ValueStream" relations="o" />
+        <target concept="WorkPackage" relations="o" />
+    </source>
+    <source concept="Requirement">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="no" />
+        <target concept="Grouping" relations="cgnors" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="nor" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="nor" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="cgnos" direct="cgnos" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Resource">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="fiotv" direct="io" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="fiortv" direct="io" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cfginorstv" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="cfgostv" direct="cgos" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="fiotv" direct="io" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Role">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Artifact" relations="ao" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fiotv" direct="io" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fiotv" direct="io" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiotv" direct="io" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="cfgiostv" direct="cgios" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="cfgiotv" direct="cgo" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="io" />
+    </source>
+    <source concept="Service">
+        <target concept="ApplicationComponent" relations="fotv" direct="ov" />
+        <target concept="ApplicationInterface" relations="fotv" direct="ov" />
+        <target concept="Artifact" relations="ao" direct="ao" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="ov" />
+        <target concept="BusinessInterface" relations="fotv" direct="ov" />
+        <target concept="BusinessObject" relations="ao" direct="ao" />
+        <target concept="Capability" relations="or" direct="or" />
+        <target concept="Collaboration" relations="fotv" direct="ov" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="ov" />
+        <target concept="CourseOfAction" relations="or" direct="or" />
+        <target concept="DataObject" relations="ao" direct="ao" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="ov" />
+        <target concept="DistributionNetwork" relations="fotv" direct="ov" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="ov" />
+        <target concept="Event" relations="fotv" direct="fot" />
+        <target concept="Facility" relations="fotv" direct="ov" />
+        <target concept="Function" relations="fotv" direct="ov" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfgnorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="ao" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="ov" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fotv" direct="ov" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fotv" direct="ov" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="fotv" direct="ov" />
+        <target concept="Service" relations="cfgostv" direct="cfgost" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="ov" />
+        <target concept="TechnologyInterface" relations="fotv" direct="ov" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="or" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Stakeholder">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="no" direct="no" />
+        <target concept="Grouping" relations="cgnos" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="no" direct="no" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="no" direct="no" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="cgnos" direct="cgnos" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="no" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="SystemSoftware">
+        <target concept="ApplicationComponent" relations="fortv" direct="o" />
+        <target concept="ApplicationInterface" relations="fiortv" direct="o" />
+        <target concept="Artifact" relations="aio" direct="io" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fiortv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fortv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fiortv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fiortv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fiortv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fiortv" direct="io" />
+        <target concept="Service" relations="fiortv" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="cfgiorstv" direct="cgios" />
+        <target concept="TechnologyInterface" relations="cfgiortv" direct="cgo" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="io" direct="o" />
+    </source>
+    <source concept="TechnologyInterface">
+        <target concept="ApplicationComponent" relations="fotv" direct="o" />
+        <target concept="ApplicationInterface" relations="fortv" direct="or" />
+        <target concept="Artifact" relations="ao" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="fotv" direct="o" />
+        <target concept="BusinessInterface" relations="fortv" direct="o" />
+        <target concept="BusinessObject" relations="ao" direct="o" />
+        <target concept="Capability" relations="or" direct="o" />
+        <target concept="Collaboration" relations="fotv" direct="o" />
+        <target concept="CommunicationNetwork" relations="fotv" direct="o" />
+        <target concept="CourseOfAction" relations="or" direct="o" />
+        <target concept="DataObject" relations="ao" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="fotv" direct="o" />
+        <target concept="DistributionNetwork" relations="fotv" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="fotv" direct="o" />
+        <target concept="Event" relations="fotv" direct="o" />
+        <target concept="Facility" relations="fotv" direct="o" />
+        <target concept="Function" relations="fotv" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfginorstv" direct="o" />
+        <target concept="Junction" relations="cfgiorstv" />
+        <target concept="Location" relations="fotv" direct="o" />
+        <target concept="Material" relations="ao" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="fotv" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="fortv" direct="or" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="fotv" direct="o" />
+        <target concept="Product" relations="fotv" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="fotv" direct="o" />
+        <target concept="Service" relations="fiortv" direct="io" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="fotv" direct="o" />
+        <target concept="TechnologyInterface" relations="cfgostv" direct="cgos" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="Value">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="no" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="o" direct="o" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="o" direct="o" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="no" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="no" direct="no" />
+        <target concept="Grouping" relations="cgnos" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="no" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="no" direct="no" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="no" direct="no" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="no" direct="no" />
+        <target concept="Resource" relations="o" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="no" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="cgnos" direct="cgnos" />
+        <target concept="ValueStream" relations="o" direct="o" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="ValueStream">
+        <target concept="ApplicationComponent" relations="o" direct="o" />
+        <target concept="ApplicationInterface" relations="o" direct="o" />
+        <target concept="Artifact" relations="o" direct="o" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="o" direct="o" />
+        <target concept="BusinessInterface" relations="o" direct="o" />
+        <target concept="BusinessObject" relations="o" direct="o" />
+        <target concept="Capability" relations="fotv" direct="fotv" />
+        <target concept="Collaboration" relations="o" direct="o" />
+        <target concept="CommunicationNetwork" relations="o" direct="o" />
+        <target concept="CourseOfAction" relations="fortv" direct="fortv" />
+        <target concept="DataObject" relations="o" direct="o" />
+        <target concept="Deliverable" relations="o" direct="o" />
+        <target concept="Device" relations="o" direct="o" />
+        <target concept="DistributionNetwork" relations="o" direct="o" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="o" direct="o" />
+        <target concept="Event" relations="o" direct="o" />
+        <target concept="Facility" relations="o" direct="o" />
+        <target concept="Function" relations="o" direct="o" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="cfgnorstv" direct="o" />
+        <target concept="Junction" relations="o" />
+        <target concept="Location" relations="o" direct="o" />
+        <target concept="Material" relations="o" direct="o" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="o" direct="o" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="o" direct="o" />
+        <target concept="Plateau" relations="o" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="o" direct="o" />
+        <target concept="Product" relations="o" direct="o" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="fotv" direct="o" />
+        <target concept="Role" relations="o" direct="o" />
+        <target concept="Service" relations="o" direct="o" />
+        <target concept="Stakeholder" relations="no" direct="o" />
+        <target concept="SystemSoftware" relations="o" direct="o" />
+        <target concept="TechnologyInterface" relations="o" direct="o" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="cfgostv" direct="cfgostv" />
+        <target concept="WorkPackage" relations="o" direct="o" />
+    </source>
+    <source concept="WorkPackage">
+        <target concept="ApplicationComponent" relations="or" direct="or" />
+        <target concept="ApplicationInterface" relations="or" direct="or" />
+        <target concept="Artifact" relations="or" direct="or" />
+        <target concept="Assessment" relations="no" direct="o" />
+        <target concept="BusinessActor" relations="or" direct="or" />
+        <target concept="BusinessInterface" relations="or" direct="or" />
+        <target concept="BusinessObject" relations="or" direct="or" />
+        <target concept="Capability" relations="or" direct="or" />
+        <target concept="Collaboration" relations="or" direct="or" />
+        <target concept="CommunicationNetwork" relations="or" direct="or" />
+        <target concept="CourseOfAction" relations="or" direct="or" />
+        <target concept="DataObject" relations="or" direct="or" />
+        <target concept="Deliverable" relations="aor" direct="aor" />
+        <target concept="Device" relations="or" direct="or" />
+        <target concept="DistributionNetwork" relations="or" direct="or" />
+        <target concept="Driver" relations="no" direct="o" />
+        <target concept="Equipment" relations="or" direct="or" />
+        <target concept="Event" relations="fort" direct="fort" />
+        <target concept="Facility" relations="or" direct="or" />
+        <target concept="Function" relations="or" direct="or" />
+        <target concept="Goal" relations="nor" direct="o" />
+        <target concept="Grouping" relations="acfgnorst" direct="o" />
+        <target concept="Junction" relations="or" />
+        <target concept="Location" relations="or" direct="or" />
+        <target concept="Material" relations="or" direct="or" />
+        <target concept="Meaning" relations="no" direct="o" />
+        <target concept="Node" relations="or" direct="or" />
+        <target concept="Outcome" relations="nor" direct="o" />
+        <target concept="Path" relations="or" direct="or" />
+        <target concept="Plateau" relations="fort" direct="o" />
+        <target concept="Principle" relations="nor" direct="o" />
+        <target concept="Process" relations="or" direct="or" />
+        <target concept="Product" relations="or" direct="or" />
+        <target concept="Relationship" relations="o" />
+        <target concept="Requirement" relations="nor" direct="nor" />
+        <target concept="Resource" relations="or" direct="or" />
+        <target concept="Role" relations="or" direct="or" />
+        <target concept="Service" relations="or" direct="or" />
+        <target concept="Stakeholder" relations="nor" direct="o" />
+        <target concept="SystemSoftware" relations="or" direct="or" />
+        <target concept="TechnologyInterface" relations="or" direct="or" />
+        <target concept="Value" relations="no" direct="o" />
+        <target concept="ValueStream" relations="or" direct="or" />
+        <target concept="WorkPackage" relations="cfgost" direct="cfgost" />
+    </source>
+</relationships>
