@@ -26,7 +26,9 @@ ontology in that namespace; shared governance is an open agenda item.
 | `shacl/archimate-shapes.ttl` | SHACL levels 1+2: graph integrity (complete relationships, no dangling endpoints, value lists) and metamodel rules outside the matrix (composition uniqueness, label rules) |
 | `shacl/archimate-matrix-shapes.ttl` | SHACL level 3: two generic SPARQL constraints that read the matrix cells as data; a matrix change requires no shape regeneration |
 | `example.ttl` | Small, deliberately half-broken example model; yields exactly four findings |
-| `validate.py` | Runs the validation on the example model |
+| `archisurance.ttl` | **Generated**: the Open Group's ArchiSurance case study (3.2 exchange format, `sources/archisurance-3.2.xml`) converted to the canonical form: 122 elements, 178 relationships, 17 views, labels in five languages. Converter: `scripts/exchange_to_rdf.py` |
+| `validate.py` | Runs the full SHACL validation on the example model |
+| `scripts/check_matrix.py` | Fast set-based matrix check for large models (pyshacl's per-node SPARQL does not scale) |
 
 ## Design choices
 
@@ -85,11 +87,27 @@ Expected findings on `example.ttl`:
 4. **Warning** `ex:afleiding`: Serving between these types is derivable
    but not directly drawable.
 
+For models beyond a few dozen relationships, run the matrix check
+set-based instead (same rules, seconds instead of hours):
+
+```
+python scripts/check_matrix.py archisurance.ttl
+```
+
+On ArchiSurance this reports one violation and 53 warnings, and both are
+telling. The violation is the Realization from a Representation, the one
+element in the model that 4.0 removed. The warnings are relationships that
+were directly drawable in 3.2 but are derivable-only in the 4.0 matrix,
+such as Access from an ApplicationComponent to a DataObject: in 4.0,
+behavior accesses data, and the component's access is a derivation. A
+textbook 3.2 model against the 4.0 matrix is itself a migration report.
+
 ## Regenerating
 
 ```
 python scripts/generate_matrix_ttl.py
 python scripts/generate_skos_ttl.py
+python scripts/exchange_to_rdf.py sources/archisurance-3.2.xml archisurance.ttl
 ```
 
 The generated files are committed; the scripts are the only way to change
@@ -102,4 +120,7 @@ issue, or join the working group discussion.
 
 ## License
 
-Apache 2.0, see [LICENSE](LICENSE).
+Apache 2.0, see [LICENSE](LICENSE). The ArchiSurance case study in
+`sources/` is by The Open Group and is included here as widely
+redistributed example material; ArchiMate is a registered trademark of
+The Open Group.

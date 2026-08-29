@@ -1,0 +1,2768 @@
+@prefix am:   <https://purl.org/archimate#> .
+@prefix m:    <https://example.org/archisurance/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# GENERATED FILE; do not edit by hand.
+# Source: archisurance-3.2.xml (ArchiMate Model Exchange Format)
+# Generator: scripts/exchange_to_rdf.py, 2026-08-29
+# 122 elements, 178 relationships, 17 views.
+
+m:id-261
+    a am:Principle ;
+    rdfs:label "Component principle"@en ;
+    rdfs:label "Component principe"@nl ;
+    rdfs:label "Komponenten Prinzip"@de ;
+    rdfs:label "Principio de componentes"@es ;
+    rdfs:label "Principe de composants"@fr ;
+    dcterms:description "All applications must be composed as much as possible from prefabricated components."@en ;
+    dcterms:description "Alle applicaties dienen zo veel mogelijk van geprefabriceerde componenten samengesteld te worden."@nl ;
+    dcterms:description "Alle Anwendungen sollten soweit wie möglich aus vorgefertigte Komponenten bestehen."@de ;
+    dcterms:description "Hay que composar todas las aplicaciónes con el máximo de componentes prefabricados."@es ;
+    dcterms:description "Il faut composer toutes les applications avec un maximum de composants préfabriqués."@fr ;
+    am:identifier "id-261" .
+
+m:id-254
+    a am:Principle ;
+    rdfs:label "TCO goal"@en ;
+    rdfs:label "TCO doelstelling"@nl ;
+    rdfs:label "TCO Ziel"@de ;
+    rdfs:label "Objetivo TCO"@es ;
+    rdfs:label "Objectif  TCO"@fr ;
+    dcterms:description "TCO for applications must be cut with 10 percent"@en ;
+    dcterms:description "TCO voor applicaties moet 10 procent dalen"@nl ;
+    dcterms:description "Der TCO für Anwendungen müssen um 10% gesenkt werden."@de ;
+    dcterms:description "El TCO para aplicaciónes deben bajar de 10%."@es ;
+    dcterms:description "Le TCO pour applications doit baisser de 10%."@fr ;
+    am:identifier "id-254" .
+
+m:id-226
+    a am:Principle ;
+    rdfs:label "Treatment time principle"@en ;
+    rdfs:label "Behandelingsduur principe"@nl ;
+    rdfs:label "Bearbeitungszeit Prinzipien"@de ;
+    rdfs:label "Principio de duración de tratamiento"@es ;
+    rdfs:label "Principe de la durée de la manipulation"@fr ;
+    dcterms:description "The waiting time for a price quote is at maximum 2 days."@en ;
+    dcterms:description "De wachttijd voor een prijsopgave is maximaal 2 dagen."@nl ;
+    dcterms:description "Die Wartezeit für eine Preisangabe beträgt höchstens 2 Tage."@de ;
+    dcterms:description "El tiempo de espera para una propuesta es 2 dias como maximó."@es ;
+    dcterms:description "Le temps d'attente pour une proposition est de 2 jours au maximum."@fr ;
+    am:identifier "id-226" .
+
+m:id-240
+    a am:Principle ;
+    rdfs:label "Occupancy principle"@en ;
+    rdfs:label "Bezettingsprincipe"@nl ;
+    rdfs:label "Besetzungsprinzip"@de ;
+    rdfs:label "Principio de ocupación"@es ;
+    rdfs:label "Principe d'occupation"@fr ;
+    dcterms:description "Each working place must have the highest possible occupancy"@en ;
+    dcterms:description "Elke werkplek moet de hoogst mogelijke bezetting hebben."@nl ;
+    dcterms:description "Jeder Arbeitsplatz muss soll optimal genutzt werden."@de ;
+    dcterms:description "Cada lugar de trabajo tiene que tener una ocupación máximo."@es ;
+    dcterms:description "Chaque lieu de travail doit avoir une occupation maximale."@fr ;
+    am:identifier "id-240" .
+
+m:id-219
+    a am:Principle ;
+    rdfs:label "one stop principle"@en ;
+    rdfs:label "One Stop principe"@nl ;
+    rdfs:label "One Stop Prinzip"@de ;
+    rdfs:label "Principio One Stop"@es ;
+    rdfs:label "Principe One Stop"@fr ;
+    dcterms:description "We offer a one stop shop for clients with questions regarding products and services."@en ;
+    dcterms:description "Wij bieden een 'one stop shop' voor klanten met vragen over producten en services."@nl ;
+    dcterms:description "Unser Produkte und Dienstleistungen werden geliefert nach dem Motto - alles aus einer Hand."@de ;
+    dcterms:description "Presentamos un sistema de solicitud única para nuestros clientes con preguntas sobre servicios y productos."@es ;
+    dcterms:description "Nous présentons un guichet unique pour nos clients avec des questions sur nos produits et services."@fr ;
+    am:identifier "id-219" .
+
+m:id-268
+    a am:Principle ;
+    rdfs:label "Infrastructure principle"@en ;
+    rdfs:label "Infrastructuurprincipe"@nl ;
+    rdfs:label "Infrastruktur Prinzip"@de ;
+    rdfs:label "Principio de infraestructura"@es ;
+    rdfs:label "Principe de infrastructure"@fr ;
+    dcterms:description "Applications are required to use a common infrastructure."@en ;
+    dcterms:description "Applicaties dienen gebruik te maken van een gemeenschappelijke infrastructuur."@nl ;
+    dcterms:description "Anwendungen müssen eine gemeinsame Infrastruktur nutzen."@de ;
+    dcterms:description "Aplicaciónes deben utilizar una infraestructura colectivo."@es ;
+    dcterms:description "Applications doivent utiliser une infrastructure collective."@fr ;
+    am:identifier "id-268" .
+
+m:id-247
+    a am:Principle ;
+    rdfs:label "License principle"@en ;
+    rdfs:label "Licentieprincipe"@nl ;
+    rdfs:label "Lizenz Prinzip"@de ;
+    rdfs:label "Principio de licencia"@es ;
+    rdfs:label "Principe de licence"@fr ;
+    dcterms:description "Software licenses are to be acquired by one central office."@en ;
+    dcterms:description "Softwarelicenties worden verworven door één centraal kantoor."@nl ;
+    dcterms:description "Softwarelizenzen sollten zentral beschafft werden."@de ;
+    dcterms:description "Hay que pedir centralizado las licencias de programa."@es ;
+    dcterms:description "Il faut commander centralisé les licences de programme."@fr ;
+    am:identifier "id-247" .
+
+m:id-233
+    a am:Principle ;
+    rdfs:label "Costs goal"@en ;
+    rdfs:label "Kosten doelstelling"@nl ;
+    rdfs:label "Kostenziel"@de ;
+    rdfs:label "Objetivo de costes"@es ;
+    rdfs:label "Objectif de frais"@fr ;
+    dcterms:description "The total working place costs for each employee must be cut with 10 percent."@en ;
+    dcterms:description "De totale werkplek kosten voor elke werknemer moeten met 10 procent dalen."@nl ;
+    dcterms:description "Arbeitsplatzkosten pro Mitarbeiter müssen um 10% gesenkt werden."@de ;
+    dcterms:description "Los costes de lugar de trabajo deben que bajar de 10% por colaborador."@es ;
+    dcterms:description "Les frais du lieu de travail doivent baisser de 10% par employé."@fr ;
+    am:identifier "id-233" .
+
+m:id-203
+    a am:Principle ;
+    rdfs:label "Client satisfaction goal"@en ;
+    rdfs:label "Klanttevredenheid doelstelling"@nl ;
+    rdfs:label "Kundenzufriedenheitsziel"@de ;
+    rdfs:label "Objetivo de satisfacción de cliente"@es ;
+    rdfs:label "Objectif de satisfaction de client"@fr ;
+    dcterms:description "Customer satisfaction for products and services from Archisurance must be higher than the benchmark."@en ;
+    dcterms:description "Klanttevredenheid voor producten en diensten van ArchiSurance moet hoger zijn dan de benchmark."@nl ;
+    dcterms:description "Customer satisfaction for products and services from Archisurance must be higher than the benchmark. Die Kundenzufriedenheit für Produkte und Dienstleistungen von Archisurance müssen höher sein als der Benchmark."@de ;
+    dcterms:description "La apreciación de clientes para productos y servicios de Archiseguro deben que estar superior al benchmark."@es ;
+    dcterms:description "L'appréciation des clients pour les produits et services de Archsurance doit être supérieur à la référence."@fr ;
+    am:identifier "id-203" .
+
+m:id-843
+    a am:ApplicationComponent ;
+    rdfs:label "Home & Away Policy Administration"@en ;
+    rdfs:label "Uit & Thuis polis administratie"@nl ;
+    rdfs:label "Heim & Weg Policeverwaltung"@de ;
+    rdfs:label "Administración de póliza En casa y fuera"@es ;
+    rdfs:label "Adminstration de la police A la maison et à l'extérieur"@fr ;
+    am:identifier "id-843" .
+
+m:id-855
+    a am:ApplicationComponent ;
+    rdfs:label "Customer Data Access"@en ;
+    rdfs:label "Klantgegevens toegang"@nl ;
+    rdfs:label "Datenzugang Kunden"@de ;
+    rdfs:label "Acceso datos de clientes"@es ;
+    rdfs:label "Accès aux données des clients"@fr ;
+    am:identifier "id-855" .
+
+m:id-849
+    a am:ApplicationComponent ;
+    rdfs:label "Risk Assessment"@en ;
+    rdfs:label "Risicobeoordeling"@nl ;
+    rdfs:label "Risikobeurteilung"@de ;
+    rdfs:label "Apreciación de riesgo"@es ;
+    rdfs:label "Appréciation de risque"@fr ;
+    am:identifier "id-849" .
+
+m:id-867
+    a am:ApplicationComponent ;
+    rdfs:label "Claim Data Management"@en ;
+    rdfs:label "Claim gegevens management"@nl ;
+    rdfs:label "Schadenersatzdaten Management"@de ;
+    rdfs:label "Gestión de datos de reclamación"@es ;
+    rdfs:label "Gestion des données de réclamation"@fr ;
+    am:identifier "id-867" .
+
+m:id-1793
+    a am:ApplicationComponent ;
+    rdfs:label "Call center application"@en ;
+    rdfs:label "Callcenter applicatie"@nl ;
+    rdfs:label "Call Center Anwendungen"@de ;
+    rdfs:label "Aplicación callcenter"@es ;
+    rdfs:label "Application callcenter"@fr ;
+    am:identifier "id-1793" .
+
+m:id-1800
+    a am:ApplicationComponent ;
+    rdfs:label "Web portal"@en ;
+    rdfs:label "Web portaal"@nl ;
+    rdfs:label "Webportal"@de ;
+    rdfs:label "Portal Web"@es ;
+    rdfs:label "Portail Web"@fr ;
+    am:identifier "id-1800" .
+
+m:id-861
+    a am:ApplicationComponent ;
+    rdfs:label "Policy Data Management"@en ;
+    rdfs:label "Polisgegevens management"@nl ;
+    rdfs:label "Police Daten Management"@de ;
+    rdfs:label "Gestión de datos de pólizas"@es ;
+    rdfs:label "Gestion de données de polices"@fr ;
+    am:identifier "id-861" .
+
+m:id-1399
+    a am:ApplicationComponent ;
+    rdfs:label "Financial Application"@en ;
+    rdfs:label "Financiële applicatie"@nl ;
+    rdfs:label "Finanzapplikation"@de ;
+    rdfs:label "Aplicación financiero"@es ;
+    rdfs:label "Application financier"@fr ;
+    am:identifier "id-1399" .
+
+m:id-1393
+    a am:ApplicationComponent ;
+    rdfs:label "CRM System"@en ;
+    rdfs:label "CRM systeem"@nl ;
+    rdfs:label "CRM System"@de ;
+    rdfs:label "Sistema CRM"@es ;
+    rdfs:label "Système CRM"@fr ;
+    am:identifier "id-1393" .
+
+m:id-1813
+    a am:ApplicationComponent ;
+    rdfs:label "Bank System"@en ;
+    rdfs:label "Bank systeem"@nl ;
+    rdfs:label "Bankensystem"@de ;
+    rdfs:label "Sistema de bancos"@es ;
+    rdfs:label "Système de banques"@fr ;
+    am:identifier "id-1813" .
+
+m:id-1414
+    a am:ApplicationService ;
+    rdfs:label "Claim InfoServ"@en ;
+    rdfs:label "Claim informatie service"@nl ;
+    rdfs:label "Schadenersatz Informationsdienst"@de ;
+    rdfs:label "Servicio de información de reclamación"@es ;
+    rdfs:label "Service d'information de la réclamation"@fr ;
+    am:identifier "id-1414" .
+
+m:id-1407
+    a am:ApplicationService ;
+    rdfs:label "CIS"@en ;
+    rdfs:label "CIS"@nl ;
+    rdfs:label "CIS"@de ;
+    rdfs:label "CIS"@es ;
+    rdfs:label "CIS"@fr ;
+    dcterms:description "Customer Information Service"@en ;
+    dcterms:description "Klanten Informatie Service (Customer Information Service)"@nl ;
+    dcterms:description "Kunden Informationsdienst"@de ;
+    dcterms:description "Servicio de información de clientes"@es ;
+    dcterms:description "Service d'information de clients"@fr ;
+    am:identifier "id-1407" .
+
+m:id-935
+    a am:ApplicationService ;
+    rdfs:label "Policy Creation Service"@en ;
+    rdfs:label "Polisservice"@nl ;
+    rdfs:label "Police Erstellungsdienst"@de ;
+    rdfs:label "Servicio de pólizas"@es ;
+    rdfs:label "Service des polices"@fr ;
+    am:identifier "id-935" .
+
+m:id-885
+    a am:ApplicationFunction ;
+    rdfs:label "Policy Creation"@en ;
+    rdfs:label "Polis aanmaken"@nl ;
+    rdfs:label "Police erstellen"@de ;
+    rdfs:label "Crear póliza"@es ;
+    rdfs:label "Créer police"@fr ;
+    am:identifier "id-885" .
+
+m:id-909
+    a am:ApplicationFunction ;
+    rdfs:label "Store Policy"@en ;
+    rdfs:label "Opslagbeleid"@nl ;
+    rdfs:label "Police speichern"@de ;
+    rdfs:label "Guardar póliza"@es ;
+    rdfs:label "Sauver police"@fr ;
+    am:identifier "id-909" .
+
+m:id-891
+    a am:ApplicationFunction ;
+    rdfs:label "Calculate Risk"@en ;
+    rdfs:label "Risico berekenen"@nl ;
+    rdfs:label "Risiko berechnen"@de ;
+    rdfs:label "Calcular el riesgo"@es ;
+    rdfs:label "Calculer le risque"@fr ;
+    am:identifier "id-891" .
+
+m:id-897
+    a am:ApplicationFunction ;
+    rdfs:label "Calculate Premium"@en ;
+    rdfs:label "Premie berekenen"@nl ;
+    rdfs:label "Prämie berechnen"@de ;
+    rdfs:label "Calcular cotización"@es ;
+    rdfs:label "Calculer cotisation"@fr ;
+    am:identifier "id-897" .
+
+m:id-903
+    a am:ApplicationFunction ;
+    rdfs:label "Create Policy"@en ;
+    rdfs:label "Aanmaken polis"@nl ;
+    rdfs:label "Police erstellen"@de ;
+    rdfs:label "Crear póliza"@es ;
+    rdfs:label "Créer police"@fr ;
+    am:identifier "id-903" .
+
+m:id-791
+    a am:BusinessObject ;
+    rdfs:label "Customer"@en ;
+    rdfs:label "Klant"@nl ;
+    rdfs:label "Kunde"@de ;
+    rdfs:label "Cliente"@es ;
+    rdfs:label "Client"@fr ;
+    am:identifier "id-791" .
+
+m:id-794
+    a am:BusinessObject ;
+    rdfs:label "Car Insurance Policy"@en ;
+    rdfs:label "Autoverzekeringspolis"@nl ;
+    rdfs:label "Autoversicherungspolice"@de ;
+    rdfs:label "Seguro de coche"@es ;
+    rdfs:label "Assurance automobile"@fr ;
+    am:identifier "id-794" .
+
+m:id-792
+    a am:BusinessObject ;
+    rdfs:label "Insurance Request"@en ;
+    rdfs:label "Verzekeringsaanvraag"@nl ;
+    rdfs:label "Versicherungsanfrage"@de ;
+    rdfs:label "Solicitud de seguro"@es ;
+    rdfs:label "Demande d'assurance"@fr ;
+    am:identifier "id-792" .
+
+m:id-793
+    a am:BusinessObject ;
+    rdfs:label "Travel Insurance Policy"@en ;
+    rdfs:label "Reisverzekeringspolis"@nl ;
+    rdfs:label "Reiseversicherungspolice"@de ;
+    rdfs:label "Aseguro de viaje"@es ;
+    rdfs:label "Assurance de voyage"@fr ;
+    am:identifier "id-793" .
+
+m:id-795
+    a am:BusinessObject ;
+    rdfs:label "Liability Insurance Policy"@en ;
+    rdfs:label "Aansprakelijkheidsverzekeringspolis"@nl ;
+    rdfs:label "Haftpflichtversicherungs Police"@de ;
+    rdfs:label "Seguro de reponsabilidad civil"@es ;
+    rdfs:label "Assurance de responsabilité"@fr ;
+    am:identifier "id-795" .
+
+m:id-796
+    a am:BusinessObject ;
+    rdfs:label "Legal aid Insurance Policy"@en ;
+    rdfs:label "Rechtsbijstandsverzekeringspolis"@nl ;
+    rdfs:label "Rechtschutzversicherung Police"@de ;
+    rdfs:label "Seguro de asistencia juridíca"@es ;
+    rdfs:label "Assurance d'assistance juridique"@fr ;
+    am:identifier "id-796" .
+
+m:id-803
+    a am:BusinessObject ;
+    rdfs:label "Home Insurance Policy"@en ;
+    rdfs:label "Opstalverzekeringspolis"@nl ;
+    rdfs:label "Hausratversicherung Police"@de ;
+    rdfs:label "Seguro de lo edificado"@es ;
+    rdfs:label "Assurance de bâtisse"@fr ;
+    am:identifier "id-803" .
+
+m:id-675
+    a am:BusinessObject ;
+    rdfs:label "Insurance Policy"@en ;
+    rdfs:label "Verzekeringspolis"@nl ;
+    rdfs:label "Versicherungspolice"@de ;
+    rdfs:label "Póliza de seguro"@es ;
+    rdfs:label "Police d'assurance"@fr ;
+    am:identifier "id-675" .
+
+m:id-674
+    a am:BusinessObject ;
+    rdfs:label "Customer File"@en ;
+    rdfs:label "Klantenbestand"@nl ;
+    rdfs:label "Kundendatei"@de ;
+    rdfs:label "Fichero de cliente"@es ;
+    rdfs:label "Fichier du client"@fr ;
+    am:identifier "id-674" .
+
+m:id-673
+    a am:BusinessObject ;
+    rdfs:label "Damage Claim"@en ;
+    rdfs:label "Schadeclaim"@nl ;
+    rdfs:label "Schadensanspruch"@de ;
+    rdfs:label "Reclamación"@es ;
+    rdfs:label "Réclamation"@fr ;
+    am:identifier "id-673" .
+
+m:id-676
+    a am:Representation ;
+    rdfs:label "Claim Form"@en ;
+    rdfs:label "Claim formulier"@nl ;
+    rdfs:label "Schadensantrag"@de ;
+    rdfs:label "Formulario de daños"@es ;
+    rdfs:label "Constat d'accident"@fr ;
+    am:identifier "id-676" .
+
+m:id-838
+    a am:DataObject ;
+    rdfs:label "Insurance Policy Data"@en ;
+    rdfs:label "Verzekeringspolis gegevens"@nl ;
+    rdfs:label "Daten Versicherungspolice"@de ;
+    rdfs:label "Información del contrato de seguro"@es ;
+    rdfs:label "Information du contrat d'assurance"@fr ;
+    am:identifier "id-838" .
+
+m:id-837
+    a am:DataObject ;
+    rdfs:label "Customer File Data"@en ;
+    rdfs:label "Klantbestand gegevens"@nl ;
+    rdfs:label "Kundendaten"@de ;
+    rdfs:label "Datos del cliente"@es ;
+    rdfs:label "Données du client"@fr ;
+    am:identifier "id-837" .
+
+m:id-946
+    a am:DataObject ;
+    rdfs:label "Insurance Request Data"@en ;
+    rdfs:label "Verzekeringsaanvraag gegevens"@nl ;
+    rdfs:label "Daten Versicherungsanfrage"@de ;
+    rdfs:label "Datos de petición de seguro"@es ;
+    rdfs:label "Données de la demande d'assurance"@fr ;
+    am:identifier "id-946" .
+
+m:id-839
+    a am:DataObject ;
+    rdfs:label "Damage Claim Data"@en ;
+    rdfs:label "Schadeclaim gegevens"@nl ;
+    rdfs:label "Daten vom Schaden"@de ;
+    rdfs:label "Fecha de daño"@es ;
+    rdfs:label "Date du dommage"@fr ;
+    am:identifier "id-839" .
+
+m:id-1239
+    a am:Contract ;
+    rdfs:label "Travel Insurance Policy"@en ;
+    rdfs:label "Reisverzekeringspolis"@nl ;
+    rdfs:label "Police Reiseversicherung"@de ;
+    rdfs:label "Seguro de viaje"@es ;
+    rdfs:label "Assurance de voyage"@fr ;
+    am:identifier "id-1239" .
+
+m:id-1220
+    a am:BusinessService ;
+    rdfs:label "Customer data mutation Service"@en ;
+    rdfs:label "Klantgegevens mutatie service"@nl ;
+    rdfs:label "Kunden Datenveränderungsdienst"@de ;
+    rdfs:label "Servicio de modificación de datos de clientes"@es ;
+    rdfs:label "Service de modification des données des clients"@fr ;
+    am:identifier "id-1220" .
+
+m:id-1196
+    a am:BusinessService ;
+    rdfs:label "Insurance Application Service"@en ;
+    rdfs:label "Verzekeringsapplicatie service"@nl ;
+    rdfs:label "Versicherungs Anwendungsdienst"@de ;
+    rdfs:label "Servicio de aplicación de seguro"@es ;
+    rdfs:label "Service d'application d'assurance"@fr ;
+    am:identifier "id-1196" .
+
+m:id-1208
+    a am:BusinessService ;
+    rdfs:label "Premium Payment Service"@en ;
+    rdfs:label "Premiebetalingservice"@nl ;
+    rdfs:label "Prämienzahlungsdienst"@de ;
+    rdfs:label "Servicio de pagamiento de primos"@es ;
+    rdfs:label "Service des règelemenst des cotisations"@fr ;
+    am:identifier "id-1208" .
+
+m:id-1202
+    a am:BusinessService ;
+    rdfs:label "Claim Registration Service"@en ;
+    rdfs:label "Claim registratie service"@nl ;
+    rdfs:label "Forderungsanahme Dienst"@de ;
+    rdfs:label "Servicio de enregistramiento de la reclamación"@es ;
+    rdfs:label "Service d'enregistrement de la réclamation"@fr ;
+    am:identifier "id-1202" .
+
+m:id-1214
+    a am:BusinessService ;
+    rdfs:label "Customer Information Service"@en ;
+    rdfs:label "Klanteninformatieservice"@nl ;
+    rdfs:label "Kunden Informationsdienst"@de ;
+    rdfs:label "Información del cliente"@es ;
+    rdfs:label "Information du client"@fr ;
+    am:identifier "id-1214" .
+
+m:id-1226
+    a am:BusinessService ;
+    rdfs:label "Claims Payment Service"@en ;
+    rdfs:label "Claim uitbetaling service"@nl ;
+    rdfs:label "Schadenregulierungsdienst"@de ;
+    rdfs:label "Servicio de pago de reclamaciónes"@es ;
+    rdfs:label "Service des paiements des réclamations"@fr ;
+    am:identifier "id-1226" .
+
+m:id-1250
+    a am:Value ;
+    rdfs:label "Be Insured"@en ;
+    rdfs:label "Verzekerd zijn"@nl ;
+    rdfs:label "Versichert sein"@de ;
+    rdfs:label "estar asegurado"@es ;
+    rdfs:label "être assuré"@fr ;
+    am:identifier "id-1250" .
+
+m:id-1089
+    a am:CommunicationNetwork ;
+    rdfs:label "LAN"@en ;
+    rdfs:label "LAN"@nl ;
+    rdfs:label "LAN"@de ;
+    rdfs:label "Red"@es ;
+    rdfs:label "Réseau"@fr ;
+    am:identifier "id-1089" .
+
+m:id-1101
+    a am:CommunicationNetwork ;
+    rdfs:label "LAN"@en ;
+    rdfs:label "LAN"@nl ;
+    rdfs:label "LAN"@de ;
+    rdfs:label "Red"@es ;
+    rdfs:label "Réseau"@fr ;
+    am:identifier "id-1101" .
+
+m:id-1095
+    a am:CommunicationNetwork ;
+    rdfs:label "BIBIT"@en ;
+    rdfs:label "BIBIT"@nl ;
+    rdfs:label "BIBIT"@de ;
+    rdfs:label "BIBIT"@es ;
+    rdfs:label "BIBIT"@fr ;
+    am:identifier "id-1095" .
+
+m:id-992
+    a am:Node ;
+    rdfs:label "Unix Server Farm"@en ;
+    rdfs:label "Unix server farm"@nl ;
+    rdfs:label "Unix Server Farm"@de ;
+    rdfs:label "Conjunto de servidores Unix"@es ;
+    rdfs:label "Ensemble de serveurs Unix"@fr ;
+    am:identifier "id-992" .
+
+m:id-1870
+    a am:SystemSoftware ;
+    rdfs:label "Financial Software"@en ;
+    rdfs:label "Financiële software"@nl ;
+    rdfs:label "Finanzsoftware"@de ;
+    rdfs:label "Programa financiero"@es ;
+    rdfs:label "Logiciel Financier"@fr ;
+    am:identifier "id-1870" .
+
+m:id-986
+    a am:Node ;
+    rdfs:label "Mainframe"@en ;
+    rdfs:label "Mainframe"@nl ;
+    rdfs:label "Mainframe"@de ;
+    rdfs:label "Mainframe"@es ;
+    rdfs:label "Mainframe"@fr ;
+    am:identifier "id-986" .
+
+m:id-1022
+    a am:SystemSoftware ;
+    rdfs:label "CICS"@en ;
+    rdfs:label "CICS"@nl ;
+    rdfs:label "CICS"@de ;
+    rdfs:label "CICS"@es ;
+    rdfs:label "CICS"@fr ;
+    am:identifier "id-1022" .
+
+m:id-1016
+    a am:SystemSoftware ;
+    rdfs:label "DBMS"@en ;
+    rdfs:label "DBMS"@nl ;
+    rdfs:label "DBMS"@de ;
+    rdfs:label "DBMS"@es ;
+    rdfs:label "DBMS"@fr ;
+    am:identifier "id-1016" .
+
+m:id-1010
+    a am:SystemSoftware ;
+    rdfs:label "Message Queuing"@en ;
+    rdfs:label "Message queuing"@nl ;
+    rdfs:label "Message queuing"@de ;
+    rdfs:label "Message queuing"@es ;
+    rdfs:label "Message queuing"@fr ;
+    am:identifier "id-1010" .
+
+m:id-1065
+    a am:Device ;
+    rdfs:label "NAS File Server"@en ;
+    rdfs:label "NAS Fileserver"@nl ;
+    rdfs:label "NAS Datenserver"@de ;
+    rdfs:label "Servidor NAS"@es ;
+    rdfs:label "Serveur NAS"@fr ;
+    am:identifier "id-1065" .
+
+m:id-1053
+    a am:Device ;
+    rdfs:label "Unix Server"@en ;
+    rdfs:label "Unix Server"@nl ;
+    rdfs:label "Unix Server"@de ;
+    rdfs:label "Servidor Unix"@es ;
+    rdfs:label "Serveur Unix"@fr ;
+    am:identifier "id-1053" .
+
+m:id-1059
+    a am:Device ;
+    rdfs:label "Unix Server"@en ;
+    rdfs:label "Unix server"@nl ;
+    rdfs:label "Unix Server"@de ;
+    rdfs:label "Servidor Unix"@es ;
+    rdfs:label "Serveur Unix"@fr ;
+    am:identifier "id-1059" .
+
+m:id-998
+    a am:Node ;
+    rdfs:label "Firewall"@en ;
+    rdfs:label "Firewall"@nl ;
+    rdfs:label "Firewall"@de ;
+    rdfs:label "Parafuego"@es ;
+    rdfs:label "Parefeu"@fr ;
+    am:identifier "id-998" .
+
+m:id-1071
+    a am:Device ;
+    rdfs:label "Admin Server"@en ;
+    rdfs:label "Admin server"@nl ;
+    rdfs:label "Admin Server"@de ;
+    rdfs:label "Admin Servidor"@es ;
+    rdfs:label "Admin serveur"@fr ;
+    am:identifier "id-1071" .
+
+m:id-1004
+    a am:Node ;
+    rdfs:label "Firewall"@en ;
+    rdfs:label "Firewall"@nl ;
+    rdfs:label "Firewall"@de ;
+    rdfs:label "Parafuego"@es ;
+    rdfs:label "Parefeu"@fr ;
+    am:identifier "id-1004" .
+
+m:id-1882
+    a am:Device ;
+    rdfs:label "BIBIT Server"@en ;
+    rdfs:label "BIBIT server"@nl ;
+    rdfs:label "BIBIT Server"@de ;
+    rdfs:label "Servido BIBIT"@es ;
+    rdfs:label "Serveur BIBIT"@fr ;
+    am:identifier "id-1882" .
+
+m:id-1455
+    a am:TechnologyService ;
+    rdfs:label "Claim Files Service"@en ;
+    rdfs:label "Claim bestanden service"@nl ;
+    rdfs:label "Schadenersatzdienst"@de ;
+    rdfs:label "Servicio de archivos de reclamaciónes"@es ;
+    rdfs:label "Service des fichiers de réclamation"@fr ;
+    am:identifier "id-1455" .
+
+m:id-1462
+    a am:TechnologyService ;
+    rdfs:label "Customer File Service"@en ;
+    rdfs:label "Klantbestandservice"@nl ;
+    rdfs:label "Kundendaten Dienst"@de ;
+    rdfs:label "Servicio de datos de clientes"@es ;
+    rdfs:label "Service des données des clients"@fr ;
+    am:identifier "id-1462" .
+
+m:id-1110
+    a am:TechnologyService ;
+    rdfs:label "File Service"@en ;
+    rdfs:label "Bestandservice"@nl ;
+    rdfs:label "Datendienst"@de ;
+    rdfs:label "Servico de datos"@es ;
+    rdfs:label "Service de données"@fr ;
+    am:identifier "id-1110" .
+
+m:id-1116
+    a am:TechnologyService ;
+    rdfs:label "Network Service"@en ;
+    rdfs:label "Netwerkservice"@nl ;
+    rdfs:label "Netzwerkdienst"@de ;
+    rdfs:label "Servicio de red"@es ;
+    rdfs:label "Service de réseau"@fr ;
+    am:identifier "id-1116" .
+
+m:id-1128
+    a am:TechnologyService ;
+    rdfs:label "Database Service"@en ;
+    rdfs:label "Databaseservice"@nl ;
+    rdfs:label "Datenbankdienst"@de ;
+    rdfs:label "Servicio de base de datos"@es ;
+    rdfs:label "Service de base de données"@fr ;
+    am:identifier "id-1128" .
+
+m:id-1863
+    a am:TechnologyService ;
+    rdfs:label "BIBIT"@en ;
+    rdfs:label "BIBIT"@nl ;
+    rdfs:label "BIBIT"@de ;
+    rdfs:label "BIBIT"@es ;
+    rdfs:label "BIBIT"@fr ;
+    am:identifier "id-1863" .
+
+m:id-612
+    a am:BusinessProcess ;
+    rdfs:label "Create Contract"@en ;
+    rdfs:label "Creëer overeenkomst"@nl ;
+    rdfs:label "Vertrag erstellen"@de ;
+    rdfs:label "Crear contrato"@es ;
+    rdfs:label "Créer contrat"@fr ;
+    am:identifier "id-612" .
+
+m:id-564
+    a am:BusinessProcess ;
+    rdfs:label "Register"@en ;
+    rdfs:label "Registreer"@nl ;
+    rdfs:label "Registrieren"@de ;
+    rdfs:label "Registrar"@es ;
+    rdfs:label "Enregistrer"@fr ;
+    am:identifier "id-564" .
+
+m:id-588
+    a am:BusinessProcess ;
+    rdfs:label "Pay"@en ;
+    rdfs:label "Uitbetalen"@nl ;
+    rdfs:label "Auszahlen"@de ;
+    rdfs:label "Pagar"@es ;
+    rdfs:label "Payer"@fr ;
+    am:identifier "id-588" .
+
+m:id-1302
+    a am:BusinessProcess ;
+    rdfs:label "Inform Customer"@en ;
+    rdfs:label "Informeer klant"@nl ;
+    rdfs:label "Informiere Kunde"@de ;
+    rdfs:label "Informar cliente"@es ;
+    rdfs:label "Informer client"@fr ;
+    am:identifier "id-1302" .
+
+m:id-1311
+    a am:BusinessProcess ;
+    rdfs:label "Collect Premium"@en ;
+    rdfs:label "Premie innen"@nl ;
+    rdfs:label "Beitrag kassieren"@de ;
+    rdfs:label "Cobrar cotización"@es ;
+    rdfs:label "Encaisser cotisation"@fr ;
+    am:identifier "id-1311" .
+
+m:id-572
+    a am:BusinessProcess ;
+    rdfs:label "Accept"@en ;
+    rdfs:label "Accepteer"@nl ;
+    rdfs:label "Akzeptieren"@de ;
+    rdfs:label "Aceptar"@es ;
+    rdfs:label "Accepter"@fr ;
+    am:identifier "id-572" .
+
+m:id-580
+    a am:BusinessProcess ;
+    rdfs:label "Valuate"@en ;
+    rdfs:label "Waarderen"@nl ;
+    rdfs:label "Bewerten"@de ;
+    rdfs:label "Apreciar"@es ;
+    rdfs:label "Apprécier"@fr ;
+    am:identifier "id-580" .
+
+m:id-596
+    a am:BusinessProcess ;
+    rdfs:label "Close Contract"@en ;
+    rdfs:label "Sluit overeenkomst"@nl ;
+    rdfs:label "Vertrag schliessen"@de ;
+    rdfs:label "Concluir contrato"@es ;
+    rdfs:label "Souscrire contrat"@fr ;
+    am:identifier "id-596" .
+
+m:id-556
+    a am:BusinessProcess ;
+    rdfs:label "Handle Claim"@en ;
+    rdfs:label "Claim afhandeling"@nl ;
+    rdfs:label "Forderung bearbeiten"@de ;
+    rdfs:label "Tratar reclamación"@es ;
+    rdfs:label "Traîter la réclamation"@fr ;
+    am:identifier "id-556" .
+
+m:id-651
+    a am:BusinessEvent ;
+    rdfs:label "Damage Occurred"@en ;
+    rdfs:label "Schade voorgevallen"@nl ;
+    rdfs:label "Schadensfall"@de ;
+    rdfs:label "Caso de daño"@es ;
+    rdfs:label "Cas de dommage"@fr ;
+    am:identifier "id-651" .
+
+m:id-650
+    a am:BusinessEvent ;
+    rdfs:label "Request for Insurance"@en ;
+    rdfs:label "Verzekeringsaanvraag"@nl ;
+    rdfs:label "Versicherungsanfrage"@de ;
+    rdfs:label "Solicitud de seguro"@es ;
+    rdfs:label "Demande d'assurance"@fr ;
+    am:identifier "id-650" .
+
+m:id-722
+    a am:BusinessInteraction ;
+    rdfs:label "Check and Sign Contract"@en ;
+    rdfs:label "Controleer en teken contract"@nl ;
+    rdfs:label "Vertrag prüfen und unterschreiben"@de ;
+    rdfs:label "Verificar contrato"@es ;
+    rdfs:label "Vérifiér le contrat"@fr ;
+    am:identifier "id-722" .
+
+m:id-721
+    a am:BusinessInteraction ;
+    rdfs:label "Formalize Request"@en ;
+    rdfs:label "Afsluiten verzekering"@nl ;
+    rdfs:label "Versicherung abschließen"@de ;
+    rdfs:label "Firmar una seguro"@es ;
+    rdfs:label "Souscrire une assurance"@fr ;
+    am:identifier "id-721" .
+
+m:id-495
+    a am:BusinessFunction ;
+    rdfs:label "Asset Management"@en ;
+    rdfs:label "Vermogensbeheer"@nl ;
+    rdfs:label "Anlageverwaltung"@de ;
+    rdfs:label "Gestión de patrimonio"@es ;
+    rdfs:label "Gestion de fortune"@fr ;
+    am:identifier "id-495" .
+
+m:id-483
+    a am:BusinessFunction ;
+    rdfs:label "Contracting"@en ;
+    rdfs:label "Aanbesteding"@nl ;
+    rdfs:label "Vertragschließend"@de ;
+    rdfs:label "Concurso"@es ;
+    rdfs:label "Adjudication"@fr ;
+    am:identifier "id-483" .
+
+m:id-471
+    a am:BusinessFunction ;
+    rdfs:label "Maintaining Intermediary Relations"@en ;
+    rdfs:label "Onderhoud tussenpersoonrelaties"@nl ;
+    rdfs:label "Personenpflege"@de ;
+    rdfs:label "Mantenimiento de relaciónes agentes"@es ;
+    rdfs:label "Maintenance de relations avec les intermédiaires"@fr ;
+    am:identifier "id-471" .
+
+m:id-477
+    a am:BusinessFunction ;
+    rdfs:label "Maintaining Customer Relations"@en ;
+    rdfs:label "Onderhoud klantrelaties"@nl ;
+    rdfs:label "Kundenpflege"@de ;
+    rdfs:label "Mantenimiento de relaciónes clientes"@es ;
+    rdfs:label "Maintenance de relations avec les clients"@fr ;
+    am:identifier "id-477" .
+
+m:id-489
+    a am:BusinessFunction ;
+    rdfs:label "Claims Handling"@en ;
+    rdfs:label "Claim afhandeling"@nl ;
+    rdfs:label "Schadenersatzregulierung"@de ;
+    rdfs:label "Tratar reclamación"@es ;
+    rdfs:label "Traîter la réclamation"@fr ;
+    am:identifier "id-489" .
+
+m:id-501
+    a am:BusinessFunction ;
+    rdfs:label "Financial Handling"@en ;
+    rdfs:label "Financiële afhandeling"@nl ;
+    rdfs:label "Finanzielle Regelung"@de ;
+    rdfs:label "Tratamiento financiero"@es ;
+    rdfs:label "Traîtement financier"@fr ;
+    am:identifier "id-501" .
+
+m:id-303
+    a am:BusinessActor ;
+    rdfs:label "Home & Away"@en ;
+    rdfs:label "Uit & Thuis"@nl ;
+    rdfs:label "Heim & Weg"@de ;
+    rdfs:label "En casa y fuera"@es ;
+    rdfs:label "A la maison et à l'extérieur"@fr ;
+    am:identifier "id-303" .
+
+m:id-310
+    a am:BusinessActor ;
+    rdfs:label "Car"@en ;
+    rdfs:label "Auto"@nl ;
+    rdfs:label "Auto"@de ;
+    rdfs:label "Coche"@es ;
+    rdfs:label "Voiture"@fr ;
+    am:identifier "id-310" .
+
+m:id-317
+    a am:BusinessActor ;
+    rdfs:label "Legal Aid"@en ;
+    rdfs:label "Rechtsbijstand"@nl ;
+    rdfs:label "Rechtsbeistand"@de ;
+    rdfs:label "Asistencia jurídica"@es ;
+    rdfs:label "Assistance juridique"@fr ;
+    am:identifier "id-317" .
+
+m:id-402
+    a am:BusinessActor ;
+    rdfs:label "Board"@en ;
+    rdfs:label "Bestuur"@nl ;
+    rdfs:label "Vorstand"@de ;
+    rdfs:label "Dirección"@es ;
+    rdfs:label "Direction"@fr ;
+    am:identifier "id-402" .
+
+m:id-409
+    a am:BusinessActor ;
+    rdfs:label "Director of Sales"@en ;
+    rdfs:label "Directeur verkoop"@nl ;
+    rdfs:label "Vertriebsleiter"@de ;
+    rdfs:label "Director comercial"@es ;
+    rdfs:label "Directeur commercial"@fr ;
+    am:identifier "id-409" .
+
+m:id-423
+    a am:BusinessActor ;
+    rdfs:label "Director of Finance"@en ;
+    rdfs:label "Financieel directeur"@nl ;
+    rdfs:label "Leiter Finanzen"@de ;
+    rdfs:label "Director financiero"@es ;
+    rdfs:label "Directeur financier"@fr ;
+    am:identifier "id-423" .
+
+m:id-416
+    a am:BusinessActor ;
+    rdfs:label "Director of Operations"@en ;
+    rdfs:label "Operationeel directeur"@nl ;
+    rdfs:label "Betriebsleiter"@de ;
+    rdfs:label "Gerente"@es ;
+    rdfs:label "Gérant"@fr ;
+    am:identifier "id-416" .
+
+m:id-275
+    a am:BusinessActor ;
+    rdfs:label "Archisurance"@en ;
+    rdfs:label "Archisurance"@nl ;
+    rdfs:label "Archisurance"@de ;
+    rdfs:label "Archiseguro"@es ;
+    rdfs:label "Archisurance"@fr ;
+    am:identifier "id-275" .
+
+m:id-1337
+    a am:BusinessActor ;
+    rdfs:label "Client"@en ;
+    rdfs:label "Klant"@nl ;
+    rdfs:label "Kunde"@de ;
+    rdfs:label "Cliente"@es ;
+    rdfs:label "Client"@fr ;
+    am:identifier "id-1337" .
+
+m:id-345
+    a am:BusinessActor ;
+    rdfs:label "HRM"@en ;
+    rdfs:label "HRM"@nl ;
+    rdfs:label "HRM"@de ;
+    rdfs:label "GRRHH"@es ;
+    rdfs:label "GRH"@fr ;
+    am:identifier "id-345" .
+
+m:id-338
+    a am:BusinessActor ;
+    rdfs:label "Product Development"@en ;
+    rdfs:label "Productontwikkeling"@nl ;
+    rdfs:label "Produktentwicklung"@de ;
+    rdfs:label "Elaboración de producto"@es ;
+    rdfs:label "Développement du produit"@fr ;
+    am:identifier "id-338" .
+
+m:id-296
+    a am:BusinessActor ;
+    rdfs:label "Front Office"@en ;
+    rdfs:label "Front office"@nl ;
+    rdfs:label "Kundendienst"@de ;
+    rdfs:label "Servicio clientes"@es ;
+    rdfs:label "Service clients"@fr ;
+    am:identifier "id-296" .
+
+m:id-289
+    a am:BusinessActor ;
+    rdfs:label "Intermediary Relations"@en ;
+    rdfs:label "Tussenpersoonrelaties"@nl ;
+    rdfs:label "Mittelperson Verbindungen"@de ;
+    rdfs:label "Agente relaciónes"@es ;
+    rdfs:label "Intermédiaire relations"@fr ;
+    am:identifier "id-289" .
+
+m:id-282
+    a am:BusinessActor ;
+    rdfs:label "Customer Relations"@en ;
+    rdfs:label "Klantrelaties"@nl ;
+    rdfs:label "Kundenverbindungen"@de ;
+    rdfs:label "Relaciones clientes"@es ;
+    rdfs:label "Relations de clients"@fr ;
+    am:identifier "id-282" .
+
+m:id-331
+    a am:BusinessActor ;
+    rdfs:label "Finance"@en ;
+    rdfs:label "Financiën"@nl ;
+    rdfs:label "Finanz"@de ;
+    rdfs:label "Financiero"@es ;
+    rdfs:label "Financier"@fr ;
+    am:identifier "id-331" .
+
+m:id-352
+    a am:BusinessActor ;
+    rdfs:label "Document Processing SSC"@en ;
+    rdfs:label "Documentverwerking SSC"@nl ;
+    rdfs:label "Dokumentverarbeitung SSC"@de ;
+    rdfs:label "Tratamiento de documentos SSC"@es ;
+    rdfs:label "Traîtement de documents SSC"@fr ;
+    am:identifier "id-352" .
+
+m:id-324
+    a am:BusinessActor ;
+    rdfs:label "Back Office"@en ;
+    rdfs:label "Back office"@nl ;
+    rdfs:label "Innendienst"@de ;
+    rdfs:label "Servicio interno"@es ;
+    rdfs:label "Service interne"@fr ;
+    am:identifier "id-324" .
+
+m:id-521
+    a am:BusinessRole ;
+    rdfs:label "Customer"@en ;
+    rdfs:label "Klant"@nl ;
+    rdfs:label "Kunde"@de ;
+    rdfs:label "Cliente"@es ;
+    rdfs:label "Client"@fr ;
+    am:identifier "id-521" .
+
+m:id-1368
+    a am:BusinessRole ;
+    rdfs:label "Insurant"@en ;
+    rdfs:label "Verzekerde"@nl ;
+    rdfs:label "Versicherungsnehmer"@de ;
+    rdfs:label "Asegurado"@es ;
+    rdfs:label "Assuré"@fr ;
+    am:identifier "id-1368" .
+
+m:id-507
+    a am:BusinessRole ;
+    rdfs:label "Intermediary"@en ;
+    rdfs:label "Tussenpersoon"@nl ;
+    rdfs:label "Zwischenperson"@de ;
+    rdfs:label "Agente"@es ;
+    rdfs:label "Intermédiaire"@fr ;
+    am:identifier "id-507" .
+
+m:id-528
+    a am:BusinessRole ;
+    rdfs:label "Customer's Bank"@en ;
+    rdfs:label "Bank van de klant"@nl ;
+    rdfs:label "Bank vom Kunde"@de ;
+    rdfs:label "Banco del cliente"@es ;
+    rdfs:label "Banque du client"@fr ;
+    am:identifier "id-528" .
+
+m:id-514
+    a am:BusinessRole ;
+    rdfs:label "Insurer"@en ;
+    rdfs:label "Verzekeraar"@nl ;
+    rdfs:label "Versicherungsgeber"@de ;
+    rdfs:label "Asegurador"@es ;
+    rdfs:label "Assureur"@fr ;
+    am:identifier "id-514" .
+
+m:id-740
+    a am:BusinessCollaboration ;
+    rdfs:label "Contracting"@en ;
+    rdfs:label "Aanbesteding"@nl ;
+    rdfs:label "Vertragschließend"@de ;
+    rdfs:label "Concurso"@es ;
+    rdfs:label "Adjudication"@fr ;
+    am:identifier "id-740" .
+
+m:id-733
+    a am:BusinessCollaboration ;
+    rdfs:label "Negotiation"@en ;
+    rdfs:label "Onderhandelingen"@nl ;
+    rdfs:label "Verhandlung"@de ;
+    rdfs:label "Negociación"@es ;
+    rdfs:label "Négotiation"@fr ;
+    am:identifier "id-733" .
+
+m:id-1546
+    a am:BusinessCollaboration ;
+    rdfs:label "Collaboration"@en ;
+    rdfs:label "Samenwerking"@nl ;
+    rdfs:label "Zusammenarbeit"@de ;
+    rdfs:label "Colaboración"@es ;
+    rdfs:label "Collaboration"@fr ;
+    am:identifier "id-1546" .
+
+m:id-1544
+    a am:BusinessInterface ;
+    rdfs:label "mail"@en ;
+    rdfs:label "Post"@nl ;
+    rdfs:label "Post"@de ;
+    rdfs:label "Correo"@es ;
+    rdfs:label "Courier"@fr ;
+    am:identifier "id-1544" .
+
+m:id-1540
+    a am:BusinessInterface ;
+    rdfs:label "phone"@en ;
+    rdfs:label "Telefoon"@nl ;
+    rdfs:label "Telefon"@de ;
+    rdfs:label "Telefono"@es ;
+    rdfs:label "Téléphone"@fr ;
+    am:identifier "id-1540" .
+
+m:id-1542
+    a am:BusinessInterface ;
+    rdfs:label "GIM"@en ;
+    rdfs:label "GIM"@nl ;
+    rdfs:label "GIM"@de ;
+    rdfs:label "GIM"@es ;
+    rdfs:label "GIM"@fr ;
+    am:identifier "id-1542" .
+
+m:id-1538
+    a am:BusinessInterface ;
+    rdfs:label "e-mail"@en ;
+    rdfs:label "E-mail"@nl ;
+    rdfs:label "E-Mail"@de ;
+    rdfs:label "E-mail"@es ;
+    rdfs:label "Courriel"@fr ;
+    am:identifier "id-1538" .
+
+m:id-1536
+    a am:BusinessInterface ;
+    rdfs:label "phone"@en ;
+    rdfs:label "Telefoon"@nl ;
+    rdfs:label "Telefon"@de ;
+    rdfs:label "Telefono"@es ;
+    rdfs:label "Téléphone"@fr ;
+    am:identifier "id-1536" .
+
+m:id-9634
+    a am:AndJunction ;
+    rdfs:label "(unnamed id-9634)"@en ;
+    am:identifier "id-9634" .
+
+m:id-884
+    a am:Access ;
+    am:source m:id-861 ;
+    am:target m:id-838 ;
+    am:identifier "id-884" ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-880
+    a am:Access ;
+    am:source m:id-855 ;
+    am:target m:id-837 ;
+    am:identifier "id-880" ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-974
+    a am:Access ;
+    am:source m:id-909 ;
+    am:target m:id-837 ;
+    am:identifier "id-974" ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-943
+    a am:Realization ;
+    am:source m:id-843 ;
+    am:target m:id-935 ;
+    am:identifier "id-943" .
+
+m:id-930
+    a am:Triggering ;
+    am:source m:id-891 ;
+    am:target m:id-897 ;
+    am:identifier "id-930" .
+
+m:id-932
+    a am:Triggering ;
+    am:source m:id-897 ;
+    am:target m:id-903 ;
+    am:identifier "id-932" .
+
+m:id-934
+    a am:Triggering ;
+    am:source m:id-903 ;
+    am:target m:id-909 ;
+    am:identifier "id-934" .
+
+m:id-972
+    a am:Access ;
+    am:source m:id-903 ;
+    am:target m:id-838 ;
+    am:identifier "id-972" ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-976
+    a am:Access ;
+    am:source m:id-891 ;
+    am:target m:id-946 ;
+    am:identifier "id-976" ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-4395
+    a am:Serving ;
+    am:source m:id-1813 ;
+    am:target m:id-1399 ;
+    am:identifier "id-4395" .
+
+m:id-1731
+    a am:Serving ;
+    am:source m:id-935 ;
+    am:target m:id-722 ;
+    am:identifier "id-1731" .
+
+m:id-1821
+    a am:Serving ;
+    am:source m:id-1793 ;
+    am:target m:id-1800 ;
+    am:identifier "id-1821" .
+
+m:id-1823
+    a am:Serving ;
+    am:source m:id-1393 ;
+    am:target m:id-1800 ;
+    am:identifier "id-1823" .
+
+m:id-1825
+    a am:Serving ;
+    am:source m:id-849 ;
+    am:target m:id-1800 ;
+    am:identifier "id-1825" .
+
+m:id-1831
+    a am:Composition ;
+    am:source m:id-843 ;
+    am:target m:id-855 ;
+    am:identifier "id-1831" .
+
+m:id-1862
+    a am:Association ;
+    am:source m:id-1399 ;
+    am:target m:id-992 ;
+    am:identifier "id-1862" .
+
+m:id-1733
+    a am:Serving ;
+    am:source m:id-1414 ;
+    am:target m:id-721 ;
+    am:identifier "id-1733" .
+
+m:id-1829
+    a am:Serving ;
+    am:source m:id-1399 ;
+    am:target m:id-843 ;
+    am:identifier "id-1829" .
+
+m:id-1833
+    a am:Composition ;
+    am:source m:id-843 ;
+    am:target m:id-861 ;
+    am:identifier "id-1833" .
+
+m:id-1827
+    a am:Serving ;
+    am:source m:id-855 ;
+    am:target m:id-849 ;
+    am:identifier "id-1827" .
+
+m:id-1835
+    a am:Serving ;
+    am:source m:id-855 ;
+    am:target m:id-1793 ;
+    am:identifier "id-1835" .
+
+m:id-4430
+    a am:Serving ;
+    am:source m:id-1407 ;
+    am:target m:id-612 ;
+    am:identifier "id-4430" .
+
+m:id-1424
+    a am:Realization ;
+    am:source m:id-861 ;
+    am:target m:id-1414 ;
+    am:identifier "id-1424" .
+
+m:id-1428
+    a am:Serving ;
+    am:source m:id-1414 ;
+    am:target m:id-1399 ;
+    am:identifier "id-1428" .
+
+m:id-1422
+    a am:Realization ;
+    am:source m:id-1393 ;
+    am:target m:id-1407 ;
+    am:identifier "id-1422" .
+
+m:id-1426
+    a am:Serving ;
+    am:source m:id-1407 ;
+    am:target m:id-861 ;
+    am:identifier "id-1426" .
+
+m:id-1452
+    a am:Realization ;
+    am:source m:id-861 ;
+    am:target m:id-1220 ;
+    am:identifier "id-1452" .
+
+m:id-1450
+    a am:Realization ;
+    am:source m:id-1393 ;
+    am:target m:id-1196 ;
+    am:identifier "id-1450" .
+
+m:id-1454
+    a am:Realization ;
+    am:source m:id-1399 ;
+    am:target m:id-1208 ;
+    am:identifier "id-1454" .
+
+m:id-882
+    a am:Access ;
+    am:source m:id-867 ;
+    am:target m:id-839 ;
+    am:identifier "id-882" ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-718
+    a am:Realization ;
+    am:source m:id-676 ;
+    am:target m:id-673 ;
+    am:identifier "id-718" .
+
+m:id-812
+    a am:Composition ;
+    am:source m:id-674 ;
+    am:target m:id-673 ;
+    am:identifier "id-812" .
+
+m:id-810
+    a am:Composition ;
+    am:source m:id-674 ;
+    am:target m:id-675 ;
+    am:identifier "id-810" .
+
+m:id-806
+    a am:Aggregation ;
+    am:source m:id-791 ;
+    am:target m:id-674 ;
+    am:identifier "id-806" .
+
+m:id-808
+    a am:Composition ;
+    am:source m:id-674 ;
+    am:target m:id-792 ;
+    am:identifier "id-808" .
+
+m:id-826
+    a am:Specialization ;
+    am:source m:id-796 ;
+    am:target m:id-675 ;
+    am:identifier "id-826" .
+
+m:id-816
+    a am:Aggregation ;
+    am:source m:id-675 ;
+    am:target m:id-792 ;
+    am:identifier "id-816" .
+
+m:id-818
+    a am:Specialization ;
+    am:source m:id-793 ;
+    am:target m:id-675 ;
+    am:identifier "id-818" .
+
+m:id-824
+    a am:Specialization ;
+    am:source m:id-795 ;
+    am:target m:id-675 ;
+    am:identifier "id-824" .
+
+m:id-822
+    a am:Specialization ;
+    am:source m:id-803 ;
+    am:target m:id-675 ;
+    am:identifier "id-822" .
+
+m:id-814
+    a am:Aggregation ;
+    am:source m:id-675 ;
+    am:target m:id-673 ;
+    am:identifier "id-814" .
+
+m:id-820
+    a am:Specialization ;
+    am:source m:id-794 ;
+    am:target m:id-675 ;
+    am:identifier "id-820" .
+
+m:id-965
+    a am:Realization ;
+    am:source m:id-838 ;
+    am:target m:id-794 ;
+    am:identifier "id-965" .
+
+m:id-953
+    a am:Realization ;
+    am:source m:id-946 ;
+    am:target m:id-792 ;
+    am:identifier "id-953" .
+
+m:id-967
+    a am:Realization ;
+    am:source m:id-838 ;
+    am:target m:id-793 ;
+    am:identifier "id-967" .
+
+m:id-955
+    a am:Realization ;
+    am:source m:id-837 ;
+    am:target m:id-674 ;
+    am:identifier "id-955" .
+
+m:id-961
+    a am:Realization ;
+    am:source m:id-838 ;
+    am:target m:id-795 ;
+    am:identifier "id-961" .
+
+m:id-957
+    a am:Realization ;
+    am:source m:id-839 ;
+    am:target m:id-673 ;
+    am:identifier "id-957" .
+
+m:id-959
+    a am:Realization ;
+    am:source m:id-838 ;
+    am:target m:id-796 ;
+    am:identifier "id-959" .
+
+m:id-963
+    a am:Realization ;
+    am:source m:id-838 ;
+    am:target m:id-803 ;
+    am:identifier "id-963" .
+
+m:id-1293
+    a am:Serving ;
+    am:source m:id-1202 ;
+    am:target m:id-521 ;
+    am:identifier "id-1293" .
+
+m:id-1297
+    a am:Serving ;
+    am:source m:id-1214 ;
+    am:target m:id-521 ;
+    am:identifier "id-1297" .
+
+m:id-1282
+    a am:Serving ;
+    am:source m:id-1196 ;
+    am:target m:id-521 ;
+    am:identifier "id-1282" .
+
+m:id-1299
+    a am:Serving ;
+    am:source m:id-1208 ;
+    am:target m:id-521 ;
+    am:identifier "id-1299" .
+
+m:id-1274
+    a am:Association ;
+    am:source m:id-1250 ;
+    am:target m:id-1208 ;
+    am:identifier "id-1274" .
+
+m:id-1438
+    a am:Serving ;
+    am:source m:id-1202 ;
+    am:target m:id-1368 ;
+    am:identifier "id-1438" .
+
+m:id-1444
+    a am:Serving ;
+    am:source m:id-1196 ;
+    am:target m:id-564 ;
+    am:identifier "id-1444" .
+
+m:id-1446
+    a am:Serving ;
+    am:source m:id-1220 ;
+    am:target m:id-564 ;
+    am:identifier "id-1446" .
+
+m:id-1448
+    a am:Serving ;
+    am:source m:id-1208 ;
+    am:target m:id-588 ;
+    am:identifier "id-1448" .
+
+m:id-1442
+    a am:Serving ;
+    am:source m:id-1226 ;
+    am:target m:id-1368 ;
+    am:identifier "id-1442" .
+
+m:id-1440
+    a am:Serving ;
+    am:source m:id-1214 ;
+    am:target m:id-1368 ;
+    am:identifier "id-1440" .
+
+m:id-1295
+    a am:Serving ;
+    am:source m:id-1226 ;
+    am:target m:id-521 ;
+    am:identifier "id-1295" .
+
+m:id-4409
+    a am:Association ;
+    am:source m:id-1101 ;
+    am:target m:id-1882 ;
+    am:identifier "id-4409" .
+
+m:id-1482
+    a am:Realization ;
+    am:source m:id-986 ;
+    am:target m:id-1455 ;
+    am:identifier "id-1482" .
+
+m:id-1480
+    a am:Realization ;
+    am:source m:id-1065 ;
+    am:target m:id-1462 ;
+    am:identifier "id-1480" .
+
+m:id-4415
+    a am:Serving ;
+    am:source m:id-1462 ;
+    am:target m:id-861 ;
+    am:identifier "id-4415" .
+
+m:id-4417
+    a am:Serving ;
+    am:source m:id-1462 ;
+    am:target m:id-1399 ;
+    am:identifier "id-4417" .
+
+m:id-4419
+    a am:Serving ;
+    am:source m:id-1455 ;
+    am:target m:id-861 ;
+    am:identifier "id-4419" .
+
+m:id-4413
+    a am:Serving ;
+    am:source m:id-1455 ;
+    am:target m:id-1393 ;
+    am:identifier "id-4413" .
+
+m:id-4426
+    a am:Association ;
+    am:source m:id-986 ;
+    am:target m:id-1089 ;
+    am:identifier "id-4426" .
+
+m:id-4401
+    a am:Association ;
+    am:source m:id-1089 ;
+    am:target m:id-998 ;
+    am:identifier "id-4401" .
+
+m:id-4407
+    a am:Association ;
+    am:source m:id-1004 ;
+    am:target m:id-1101 ;
+    am:identifier "id-4407" .
+
+m:id-4424
+    a am:Association ;
+    am:source m:id-1101 ;
+    am:target m:id-1071 ;
+    am:identifier "id-4424" .
+
+m:id-1127
+    a am:Realization ;
+    am:source m:id-1065 ;
+    am:target m:id-1110 ;
+    am:identifier "id-1127" .
+
+m:id-1125
+    a am:Realization ;
+    am:source m:id-998 ;
+    am:target m:id-1116 ;
+    am:identifier "id-1125" .
+
+m:id-1136
+    a am:Realization ;
+    am:source m:id-986 ;
+    am:target m:id-1128 ;
+    am:identifier "id-1136" .
+
+m:id-4403
+    a am:Association ;
+    am:source m:id-998 ;
+    am:target m:id-1095 ;
+    am:identifier "id-4403" .
+
+m:id-4405
+    a am:Association ;
+    am:source m:id-1095 ;
+    am:target m:id-1004 ;
+    am:identifier "id-4405" .
+
+m:id-4397
+    a am:Association ;
+    am:source m:id-992 ;
+    am:target m:id-1089 ;
+    am:identifier "id-4397" .
+
+m:id-1892
+    a am:Realization ;
+    am:source m:id-1882 ;
+    am:target m:id-1813 ;
+    am:identifier "id-1892" .
+
+m:id-1879
+    a am:Realization ;
+    am:source m:id-1870 ;
+    am:target m:id-1399 ;
+    am:identifier "id-1879" .
+
+m:id-4399
+    a am:Association ;
+    am:source m:id-1089 ;
+    am:target m:id-1065 ;
+    am:identifier "id-4399" .
+
+m:id-1430
+    a am:Realization ;
+    am:source m:id-564 ;
+    am:target m:id-1202 ;
+    am:identifier "id-1430" .
+
+m:id-1432
+    a am:Realization ;
+    am:source m:id-572 ;
+    am:target m:id-1214 ;
+    am:identifier "id-1432" .
+
+m:id-4411
+    a am:Triggering ;
+    am:source m:id-612 ;
+    am:target m:id-722 ;
+    am:identifier "id-4411" .
+
+m:id-657
+    a am:Triggering ;
+    am:source m:id-564 ;
+    am:target m:id-572 ;
+    am:identifier "id-657" .
+
+m:id-706
+    a am:Access ;
+    am:source m:id-572 ;
+    am:target m:id-675 ;
+    am:identifier "id-706" ;
+    rdfs:label "read"@en ;
+    rdfs:label "lees"@nl ;
+    rdfs:label "Lesen"@de ;
+    rdfs:label "leer"@es ;
+    rdfs:label "lire"@fr ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-655
+    a am:Triggering ;
+    am:source m:id-651 ;
+    am:target m:id-564 ;
+    am:identifier "id-655" .
+
+m:id-1329
+    a am:Realization ;
+    am:source m:id-1311 ;
+    am:target m:id-1208 ;
+    am:identifier "id-1329" .
+
+m:id-1335
+    a am:Triggering ;
+    am:source m:id-1302 ;
+    am:target m:id-1311 ;
+    am:identifier "id-1335" .
+
+m:id-1323
+    a am:Realization ;
+    am:source m:id-556 ;
+    am:target m:id-1202 ;
+    am:identifier "id-1323" .
+
+m:id-693
+    a am:Access ;
+    am:source m:id-564 ;
+    am:target m:id-674 ;
+    am:identifier "id-693" ;
+    rdfs:label "create/ update"@en ;
+    rdfs:label "creëer/wijzig"@nl ;
+    rdfs:label "Erstellen/Ändern"@de ;
+    rdfs:label "crear/actualisar"@es ;
+    rdfs:label "créer/actualiser"@fr ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-704
+    a am:Access ;
+    am:source m:id-572 ;
+    am:target m:id-673 ;
+    am:identifier "id-704" ;
+    rdfs:label "read"@en ;
+    rdfs:label "lees"@nl ;
+    rdfs:label "Lesen"@de ;
+    rdfs:label "leer"@es ;
+    rdfs:label "lire"@fr ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-708
+    a am:Access ;
+    am:source m:id-580 ;
+    am:target m:id-673 ;
+    am:identifier "id-708" ;
+    rdfs:label "crud"@en ;
+    rdfs:label "CRUD"@nl ;
+    rdfs:label "CRUD"@de ;
+    rdfs:label "CRUD"@es ;
+    rdfs:label "CRUD"@fr ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-1327
+    a am:Realization ;
+    am:source m:id-1302 ;
+    am:target m:id-1214 ;
+    am:identifier "id-1327" .
+
+m:id-1333
+    a am:Triggering ;
+    am:source m:id-556 ;
+    am:target m:id-1302 ;
+    am:identifier "id-1333" .
+
+m:id-728
+    a am:Triggering ;
+    am:source m:id-721 ;
+    am:target m:id-612 ;
+    am:identifier "id-728" .
+
+m:id-659
+    a am:Triggering ;
+    am:source m:id-572 ;
+    am:target m:id-580 ;
+    am:identifier "id-659" .
+
+m:id-661
+    a am:Triggering ;
+    am:source m:id-580 ;
+    am:target m:id-588 ;
+    am:identifier "id-661" .
+
+m:id-1321
+    a am:Realization ;
+    am:source m:id-596 ;
+    am:target m:id-1196 ;
+    am:identifier "id-1321" .
+
+m:id-1325
+    a am:Realization ;
+    am:source m:id-556 ;
+    am:target m:id-1226 ;
+    am:identifier "id-1325" .
+
+m:id-732
+    a am:Triggering ;
+    am:source m:id-650 ;
+    am:target m:id-721 ;
+    am:identifier "id-732" .
+
+m:id-697
+    a am:Access ;
+    am:source m:id-564 ;
+    am:target m:id-673 ;
+    am:identifier "id-697" ;
+    rdfs:label "create/update"@en ;
+    rdfs:label "creëer/wijzig"@nl ;
+    rdfs:label "Erstellen/Ändern"@de ;
+    rdfs:label "crear/actualisar"@es ;
+    rdfs:label "créer/actualiser"@fr ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-695
+    a am:Access ;
+    am:source m:id-572 ;
+    am:target m:id-674 ;
+    am:identifier "id-695" ;
+    rdfs:label "read"@en ;
+    rdfs:label "lees"@nl ;
+    rdfs:label "Lesen"@de ;
+    rdfs:label "leer"@es ;
+    rdfs:label "lire"@fr ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-712
+    a am:Access ;
+    am:source m:id-588 ;
+    am:target m:id-674 ;
+    am:identifier "id-712" ;
+    rdfs:label "update"@en ;
+    rdfs:label "Wijzig"@nl ;
+    rdfs:label "Ändern"@de ;
+    rdfs:label "Actualización"@es ;
+    rdfs:label "Mise à jour"@fr ;
+    am:accessType am:UnspecifiedAccess .
+
+m:id-1434
+    a am:Realization ;
+    am:source m:id-588 ;
+    am:target m:id-1226 ;
+    am:identifier "id-1434" .
+
+m:id-1774
+    a am:Flow ;
+    am:source m:id-477 ;
+    am:target m:id-521 ;
+    am:identifier "id-1774" ;
+    rdfs:label "insurance info"@en ;
+    rdfs:label "Verzekeringsinformatie"@nl ;
+    rdfs:label "Versicherungs Information"@de ;
+    rdfs:label "Información de seguro"@es ;
+    rdfs:label "Information d'assurance"@fr .
+
+m:id-1784
+    a am:Flow ;
+    am:source m:id-489 ;
+    am:target m:id-521 ;
+    am:identifier "id-1784" ;
+    rdfs:label "claim info"@en ;
+    rdfs:label "Claiminformatie"@nl ;
+    rdfs:label "Schadenersatz Information"@de ;
+    rdfs:label "Información de la reclamación"@es ;
+    rdfs:label "Information de la réclamation"@fr .
+
+m:id-1782
+    a am:Flow ;
+    am:source m:id-471 ;
+    am:target m:id-507 ;
+    am:identifier "id-1782" ;
+    rdfs:label "product info."@en ;
+    rdfs:label "Productinformatie"@nl ;
+    rdfs:label "Produktinformation"@de ;
+    rdfs:label "Información del producto"@es ;
+    rdfs:label "Information du produit"@fr .
+
+m:id-1788
+    a am:Flow ;
+    am:source m:id-501 ;
+    am:target m:id-495 ;
+    am:identifier "id-1788" ;
+    rdfs:label "money"@en ;
+    rdfs:label "Geld"@nl ;
+    rdfs:label "Geld"@de ;
+    rdfs:label "Dinero"@es ;
+    rdfs:label "Argent"@fr .
+
+m:id-1760
+    a am:Flow ;
+    am:source m:id-483 ;
+    am:target m:id-495 ;
+    am:identifier "id-1760" ;
+    rdfs:label "contract info."@en ;
+    rdfs:label "Overeenkomstinformatie"@nl ;
+    rdfs:label "Vertragsinformation"@de ;
+    rdfs:label "Información de contrato"@es ;
+    rdfs:label "Information du contrat"@fr .
+
+m:id-1756
+    a am:Flow ;
+    am:source m:id-471 ;
+    am:target m:id-483 ;
+    am:identifier "id-1756" ;
+    rdfs:label "customer information"@en ;
+    rdfs:label "Klantinformatie"@nl ;
+    rdfs:label "Kundeninformation"@de ;
+    rdfs:label "Información del cliente"@es ;
+    rdfs:label "Information du client"@fr .
+
+m:id-1762
+    a am:Flow ;
+    am:source m:id-495 ;
+    am:target m:id-483 ;
+    am:identifier "id-1762" ;
+    rdfs:label "asset info"@en ;
+    rdfs:label "Vermogensinformatie"@nl ;
+    rdfs:label "Vermögensinformation"@de ;
+    rdfs:label "Información de patrimonio"@es ;
+    rdfs:label "Information patrimonial"@fr .
+
+m:id-1758
+    a am:Flow ;
+    am:source m:id-483 ;
+    am:target m:id-471 ;
+    am:identifier "id-1758" ;
+    rdfs:label "contract info"@en ;
+    rdfs:label "Contractinformatie"@nl ;
+    rdfs:label "Vertragsinformation"@de ;
+    rdfs:label "Información de contrato"@es ;
+    rdfs:label "Information du contrat"@fr .
+
+m:id-1768
+    a am:Flow ;
+    am:source m:id-489 ;
+    am:target m:id-501 ;
+    am:identifier "id-1768" .
+
+m:id-1766
+    a am:Flow ;
+    am:source m:id-489 ;
+    am:target m:id-477 ;
+    am:identifier "id-1766" .
+
+m:id-1786
+    a am:Flow ;
+    am:source m:id-495 ;
+    am:target m:id-501 ;
+    am:identifier "id-1786" .
+
+m:id-1764
+    a am:Flow ;
+    am:source m:id-477 ;
+    am:target m:id-489 ;
+    am:identifier "id-1764" .
+
+m:id-1770
+    a am:Flow ;
+    am:source m:id-501 ;
+    am:target m:id-489 ;
+    am:identifier "id-1770" .
+
+m:id-1776
+    a am:Flow ;
+    am:source m:id-501 ;
+    am:target m:id-528 ;
+    am:identifier "id-1776" .
+
+m:id-4389
+    a am:Serving ;
+    am:source m:id-1544 ;
+    am:target m:id-521 ;
+    am:identifier "id-4389" ;
+    rdfs:label "write"@en ;
+    rdfs:label "Opstellen"@nl ;
+    rdfs:label "Schreiben"@de ;
+    rdfs:label "Escribir"@es ;
+    rdfs:label "Ecrire"@fr .
+
+m:id-4377
+    a am:Association ;
+    am:source m:id-1540 ;
+    am:target m:id-289 ;
+    am:identifier "id-4377" .
+
+m:id-4371
+    a am:Association ;
+    am:source m:id-282 ;
+    am:target m:id-1536 ;
+    am:identifier "id-4371" .
+
+m:id-4375
+    a am:Association ;
+    am:source m:id-1544 ;
+    am:target m:id-352 ;
+    am:identifier "id-4375" .
+
+m:id-4379
+    a am:Association ;
+    am:source m:id-1542 ;
+    am:target m:id-289 ;
+    am:identifier "id-4379" .
+
+m:id-4381
+    a am:Aggregation ;
+    am:source m:id-1546 ;
+    am:target m:id-528 ;
+    am:identifier "id-4381" .
+
+m:id-4385
+    a am:Serving ;
+    am:source m:id-1536 ;
+    am:target m:id-521 ;
+    am:identifier "id-4385" ;
+    rdfs:label "call"@en ;
+    rdfs:label "Telefoongesprek"@nl ;
+    rdfs:label "Anruf"@de ;
+    rdfs:label "Llamada"@es ;
+    rdfs:label "Appél"@fr .
+
+m:id-4387
+    a am:Serving ;
+    am:source m:id-1538 ;
+    am:target m:id-521 ;
+    am:identifier "id-4387" ;
+    rdfs:label "write"@en ;
+    rdfs:label "Opstellen"@nl ;
+    rdfs:label "Schreiben"@de ;
+    rdfs:label "Escribir"@es ;
+    rdfs:label "Ecrire"@fr .
+
+m:id-4393
+    a am:Serving ;
+    am:source m:id-1542 ;
+    am:target m:id-507 ;
+    am:identifier "id-4393" .
+
+m:id-441
+    a am:Association ;
+    am:source m:id-409 ;
+    am:target m:id-423 ;
+    am:identifier "id-441" .
+
+m:id-1388
+    a am:Assignment ;
+    am:source m:id-514 ;
+    am:target m:id-556 ;
+    am:identifier "id-1388" .
+
+m:id-1386
+    a am:Assignment ;
+    am:source m:id-275 ;
+    am:target m:id-514 ;
+    am:identifier "id-1386" .
+
+m:id-1381
+    a am:Assignment ;
+    am:source m:id-1337 ;
+    am:target m:id-1368 ;
+    am:identifier "id-1381" .
+
+m:id-770
+    a am:Assignment ;
+    am:source m:id-521 ;
+    am:target m:id-650 ;
+    am:identifier "id-770" .
+
+m:id-776
+    a am:Assignment ;
+    am:source m:id-740 ;
+    am:target m:id-722 ;
+    am:identifier "id-776" .
+
+m:id-774
+    a am:Assignment ;
+    am:source m:id-514 ;
+    am:target m:id-612 ;
+    am:identifier "id-774" .
+
+m:id-772
+    a am:Assignment ;
+    am:source m:id-733 ;
+    am:target m:id-721 ;
+    am:identifier "id-772" .
+
+m:id-756
+    a am:Aggregation ;
+    am:source m:id-733 ;
+    am:target m:id-521 ;
+    am:identifier "id-756" .
+
+m:id-760
+    a am:Aggregation ;
+    am:source m:id-733 ;
+    am:target m:id-507 ;
+    am:identifier "id-760" .
+
+m:id-758
+    a am:Aggregation ;
+    am:source m:id-733 ;
+    am:target m:id-514 ;
+    am:identifier "id-758" .
+
+m:id-762
+    a am:Aggregation ;
+    am:source m:id-740 ;
+    am:target m:id-507 ;
+    am:identifier "id-762" .
+
+m:id-764
+    a am:Aggregation ;
+    am:source m:id-740 ;
+    am:target m:id-514 ;
+    am:identifier "id-764" .
+
+m:id-768
+    a am:Aggregation ;
+    am:source m:id-740 ;
+    am:target m:id-521 ;
+    am:identifier "id-768" .
+
+m:id-1772
+    a am:Flow ;
+    am:source m:id-521 ;
+    am:target m:id-477 ;
+    am:identifier "id-1772" ;
+    rdfs:label "claims"@en ;
+    rdfs:label "Claims"@nl ;
+    rdfs:label "Schäden"@de ;
+    rdfs:label "Reclamaciön"@es ;
+    rdfs:label "Demande"@fr .
+
+m:id-1750
+    a am:Flow ;
+    am:source m:id-507 ;
+    am:target m:id-521 ;
+    am:identifier "id-1750" ;
+    rdfs:label "Product Information"@en ;
+    rdfs:label "Productinformatie"@nl ;
+    rdfs:label "Produktinformation"@de ;
+    rdfs:label "Información de producto"@es ;
+    rdfs:label "Information du produit"@fr .
+
+m:id-1780
+    a am:Flow ;
+    am:source m:id-507 ;
+    am:target m:id-471 ;
+    am:identifier "id-1780" ;
+    rdfs:label "cust. info"@en ;
+    rdfs:label "Klantinformatie"@nl ;
+    rdfs:label "Kundeninformation"@de ;
+    rdfs:label "Información del cliente"@es ;
+    rdfs:label "Information du client"@fr .
+
+m:id-1752
+    a am:Flow ;
+    am:source m:id-521 ;
+    am:target m:id-507 ;
+    am:identifier "id-1752" ;
+    rdfs:label "Customer Information"@en ;
+    rdfs:label "Klantinformatie"@nl ;
+    rdfs:label "Kundeninformation"@de ;
+    rdfs:label "Información del cliente"@es ;
+    rdfs:label "Information du client"@fr .
+
+m:id-1778
+    a am:Flow ;
+    am:source m:id-528 ;
+    am:target m:id-501 ;
+    am:identifier "id-1778" .
+
+m:id-464
+    a am:Association ;
+    am:source m:id-416 ;
+    am:target m:id-310 ;
+    am:identifier "id-464" .
+
+m:id-466
+    a am:Association ;
+    am:source m:id-416 ;
+    am:target m:id-317 ;
+    am:identifier "id-466" .
+
+m:id-468
+    a am:Association ;
+    am:source m:id-416 ;
+    am:target m:id-352 ;
+    am:identifier "id-468" .
+
+m:id-458
+    a am:Association ;
+    am:source m:id-409 ;
+    am:target m:id-282 ;
+    am:identifier "id-458" .
+
+m:id-445
+    a am:Association ;
+    am:source m:id-402 ;
+    am:target m:id-345 ;
+    am:identifier "id-445" .
+
+m:id-447
+    a am:Association ;
+    am:source m:id-402 ;
+    am:target m:id-409 ;
+    am:identifier "id-447" .
+
+m:id-460
+    a am:Association ;
+    am:source m:id-409 ;
+    am:target m:id-289 ;
+    am:identifier "id-460" .
+
+m:id-470
+    a am:Association ;
+    am:source m:id-423 ;
+    am:target m:id-331 ;
+    am:identifier "id-470" .
+
+m:id-449
+    a am:Association ;
+    am:source m:id-402 ;
+    am:target m:id-423 ;
+    am:identifier "id-449" .
+
+m:id-443
+    a am:Association ;
+    am:source m:id-402 ;
+    am:target m:id-338 ;
+    am:identifier "id-443" .
+
+m:id-462
+    a am:Association ;
+    am:source m:id-416 ;
+    am:target m:id-303 ;
+    am:identifier "id-462" .
+
+m:id-437
+    a am:Association ;
+    am:source m:id-402 ;
+    am:target m:id-416 ;
+    am:identifier "id-437" .
+
+m:id-1259
+    a am:Association ;
+    am:source m:id-521 ;
+    am:target m:id-1250 ;
+    am:identifier "id-1259" .
+
+m:id-1634
+    a am:Flow ;
+    am:source m:id-331 ;
+    am:target m:id-528 ;
+    am:identifier "id-1634" ;
+    rdfs:label "payment"@en ;
+    rdfs:label "Betaling"@nl ;
+    rdfs:label "Zahlung"@de ;
+    rdfs:label "pagamiento"@es ;
+    rdfs:label "paiement"@fr .
+
+m:id-1628
+    a am:Flow ;
+    am:source m:id-324 ;
+    am:target m:id-352 ;
+    am:identifier "id-1628" ;
+    rdfs:label "paper contracts"@en ;
+    rdfs:label "Papieren overeenkomsten"@nl ;
+    rdfs:label "Papierverträge"@de ;
+    rdfs:label "Contratos en papel"@es ;
+    rdfs:label "Contrats en papier"@fr .
+
+m:id-1632
+    a am:Flow ;
+    am:source m:id-324 ;
+    am:target m:id-331 ;
+    am:identifier "id-1632" ;
+    rdfs:label "payment order"@en ;
+    rdfs:label "Betalingsopdracht"@nl ;
+    rdfs:label "Zahlungsanweisung"@de ;
+    rdfs:label "Orden de pago"@es ;
+    rdfs:label "Ordre de virement"@fr .
+
+m:id-1648
+    a am:Flow ;
+    am:source m:id-345 ;
+    am:target m:id-324 ;
+    am:identifier "id-1648" .
+
+m:id-1650
+    a am:Flow ;
+    am:source m:id-324 ;
+    am:target m:id-345 ;
+    am:identifier "id-1650" .
+
+m:id-1618
+    a am:Flow ;
+    am:source m:id-352 ;
+    am:target m:id-282 ;
+    am:identifier "id-1618" ;
+    rdfs:label "Claim form (electronic)"@en ;
+    rdfs:label "Claim formulier (digitaal)"@nl ;
+    rdfs:label "Schadensformular (digital)"@de ;
+    rdfs:label "Formulario de daños (electrónica)"@es ;
+    rdfs:label "Constat d'accident (électronique)"@fr .
+
+m:id-1622
+    a am:Flow ;
+    am:source m:id-352 ;
+    am:target m:id-289 ;
+    am:identifier "id-1622" ;
+    rdfs:label "Electronic Contracts"@en ;
+    rdfs:label "Digitale overeenkomsten"@nl ;
+    rdfs:label "Digitale Verträge"@de ;
+    rdfs:label "Contratos digitales"@es ;
+    rdfs:label "Contrats numériques"@fr .
+
+m:id-1638
+    a am:Flow ;
+    am:source m:id-331 ;
+    am:target m:id-324 ;
+    am:identifier "id-1638" ;
+    rdfs:label "confirm."@en ;
+    rdfs:label "Bevestig"@nl ;
+    rdfs:label "Bestätigung"@de ;
+    rdfs:label "Confirmación"@es ;
+    rdfs:label "Confirmation"@fr .
+
+m:id-1630
+    a am:Flow ;
+    am:source m:id-352 ;
+    am:target m:id-324 ;
+    am:identifier "id-1630" ;
+    rdfs:label "electronic contracts"@en ;
+    rdfs:label "Digitale contracten"@nl ;
+    rdfs:label "Digitale Verträge"@de ;
+    rdfs:label "Contratos digitales"@es ;
+    rdfs:label "Contrats numériques"@fr .
+
+m:id-1616
+    a am:Flow ;
+    am:source m:id-282 ;
+    am:target m:id-352 ;
+    am:identifier "id-1616" ;
+    rdfs:label "claim form (paper)"@en ;
+    rdfs:label "Claimformulier (papier)"@nl ;
+    rdfs:label "Schadenformular (Papier)"@de ;
+    rdfs:label "Formulario de daños (papel)"@es ;
+    rdfs:label "Constat d'accident (papier)"@fr .
+
+m:id-1652
+    a am:Flow ;
+    am:source m:id-324 ;
+    am:target m:id-338 ;
+    am:identifier "id-1652" .
+
+m:id-1644
+    a am:Flow ;
+    am:source m:id-338 ;
+    am:target m:id-324 ;
+    am:identifier "id-1644" .
+
+m:id-1620
+    a am:Flow ;
+    am:source m:id-289 ;
+    am:target m:id-352 ;
+    am:identifier "id-1620" ;
+    rdfs:label "Intermediary Contracts"@en ;
+    rdfs:label "Tussenpersoon overeenkomsten"@nl ;
+    rdfs:label "Mittelperson Vertrag"@de ;
+    rdfs:label "Agente contratos"@es ;
+    rdfs:label "Intermédiaire contrats"@fr .
+
+m:id-1636
+    a am:Flow ;
+    am:source m:id-528 ;
+    am:target m:id-331 ;
+    am:identifier "id-1636" ;
+    rdfs:label "confirmation"@en ;
+    rdfs:label "Bevestiging"@nl ;
+    rdfs:label "Bestätigung"@de ;
+    rdfs:label "Confirmación"@es ;
+    rdfs:label "Confirmation"@fr .
+
+m:id-4391
+    a am:Serving ;
+    am:source m:id-1540 ;
+    am:target m:id-507 ;
+    am:identifier "id-4391" .
+
+m:id-4383
+    a am:Aggregation ;
+    am:source m:id-1546 ;
+    am:target m:id-352 ;
+    am:identifier "id-4383" .
+
+m:id-4373
+    a am:Association ;
+    am:source m:id-1538 ;
+    am:target m:id-282 ;
+    am:identifier "id-4373" .
+
+m:id-4165
+    a am:View ;
+    am:identifier "id-4165" ;
+    rdfs:label "Actor Cooperation view"@en ;
+    rdfs:label "Actorsamenwerkingview"@nl ;
+    rdfs:label "Akteur Zusammenarbeit Ansicht"@de ;
+    rdfs:label "Vista de colaboración de actores"@es ;
+    rdfs:label "Vue de collaboration d'acteurs"@fr ;
+    am:shows m:id-1536 ;
+    am:shows m:id-1538 ;
+    am:shows m:id-1540 ;
+    am:shows m:id-1542 ;
+    am:shows m:id-1544 ;
+    am:shows m:id-1546 ;
+    am:shows m:id-275 ;
+    am:shows m:id-282 ;
+    am:shows m:id-289 ;
+    am:shows m:id-296 ;
+    am:shows m:id-303 ;
+    am:shows m:id-310 ;
+    am:shows m:id-317 ;
+    am:shows m:id-324 ;
+    am:shows m:id-331 ;
+    am:shows m:id-338 ;
+    am:shows m:id-345 ;
+    am:shows m:id-352 ;
+    am:shows m:id-507 ;
+    am:shows m:id-521 ;
+    am:shows m:id-528 .
+
+m:id-3641
+    a am:View ;
+    am:identifier "id-3641" ;
+    rdfs:label "Archimate View"@en ;
+    rdfs:label "Archimate view"@nl ;
+    rdfs:label "ArchiMate Ansicht"@de ;
+    rdfs:label "Vista Archimate"@es ;
+    rdfs:label "Vue Archimate"@fr .
+
+m:id-4025
+    a am:View ;
+    am:identifier "id-4025" ;
+    rdfs:label "Service Realization View"@en ;
+    rdfs:label "Servicerealisatieview"@nl ;
+    rdfs:label "Dienstausführungs Ansicht"@de ;
+    rdfs:label "Vista de realización de servicio"@es ;
+    rdfs:label "Vue de réalisation de services"@fr ;
+    am:shows m:id-1196 ;
+    am:shows m:id-1202 ;
+    am:shows m:id-1208 ;
+    am:shows m:id-1214 ;
+    am:shows m:id-1226 ;
+    am:shows m:id-1302 ;
+    am:shows m:id-1311 ;
+    am:shows m:id-521 ;
+    am:shows m:id-556 ;
+    am:shows m:id-596 .
+
+m:id-3999
+    a am:View ;
+    am:identifier "id-3999" ;
+    rdfs:label "Business Product View"@en ;
+    rdfs:label "Bedrijfsproductview"@nl ;
+    rdfs:label "Geschäftsprodukt Ansicht"@de ;
+    rdfs:label "Vista de producto business"@es ;
+    rdfs:label "Vue de produit business"@fr ;
+    am:shows m:id-1196 ;
+    am:shows m:id-1202 ;
+    am:shows m:id-1208 ;
+    am:shows m:id-1214 ;
+    am:shows m:id-1220 ;
+    am:shows m:id-1226 ;
+    am:shows m:id-1239 ;
+    am:shows m:id-1250 ;
+    am:shows m:id-521 .
+
+m:id-3821
+    a am:View ;
+    am:identifier "id-3821" ;
+    rdfs:label "Information Structure View"@en ;
+    rdfs:label "Informatiestructuurview"@nl ;
+    rdfs:label "Informationsstruktur Ansicht"@de ;
+    rdfs:label "Vista de estructura de información"@es ;
+    rdfs:label "Vue de structure d'information"@fr ;
+    am:shows m:id-673 ;
+    am:shows m:id-674 ;
+    am:shows m:id-675 ;
+    am:shows m:id-676 ;
+    am:shows m:id-791 ;
+    am:shows m:id-792 ;
+    am:shows m:id-793 ;
+    am:shows m:id-794 ;
+    am:shows m:id-795 ;
+    am:shows m:id-796 ;
+    am:shows m:id-803 ;
+    am:shows m:id-837 ;
+    am:shows m:id-838 ;
+    am:shows m:id-839 ;
+    am:shows m:id-946 .
+
+m:id-3698
+    a am:View ;
+    am:identifier "id-3698" ;
+    rdfs:label "Organization Structure View"@en ;
+    rdfs:label "Organisatiestructuurview"@nl ;
+    rdfs:label "Organisationsstruktur Ansicht"@de ;
+    rdfs:label "Vista estructura organización"@es ;
+    rdfs:label "Vue structure organisation"@fr ;
+    am:shows m:id-275 ;
+    am:shows m:id-282 ;
+    am:shows m:id-289 ;
+    am:shows m:id-296 ;
+    am:shows m:id-303 ;
+    am:shows m:id-310 ;
+    am:shows m:id-317 ;
+    am:shows m:id-324 ;
+    am:shows m:id-331 ;
+    am:shows m:id-338 ;
+    am:shows m:id-345 ;
+    am:shows m:id-352 .
+
+m:id-3944
+    a am:View ;
+    am:identifier "id-3944" ;
+    rdfs:label "Application Structure View"@en ;
+    rdfs:label "Applicatiestructuurview"@nl ;
+    rdfs:label "Applikationsstruktur Ansicht"@de ;
+    rdfs:label "Vista de estructura de la applicación"@es ;
+    rdfs:label "Vue de la structure de l'application"@fr ;
+    am:shows m:id-837 ;
+    am:shows m:id-838 ;
+    am:shows m:id-839 ;
+    am:shows m:id-843 ;
+    am:shows m:id-849 ;
+    am:shows m:id-855 ;
+    am:shows m:id-861 ;
+    am:shows m:id-867 .
+
+m:id-3722
+    a am:View ;
+    am:identifier "id-3722" ;
+    rdfs:label "Business Function View"@en ;
+    rdfs:label "Bedrijfsfunctieview"@nl ;
+    rdfs:label "Geschäftsfunktion Ansicht"@de ;
+    rdfs:label "Vista de funciónes business"@es ;
+    rdfs:label "Vue de fonctions bunsiness"@fr ;
+    am:shows m:id-471 ;
+    am:shows m:id-477 ;
+    am:shows m:id-483 ;
+    am:shows m:id-489 ;
+    am:shows m:id-495 ;
+    am:shows m:id-501 ;
+    am:shows m:id-507 ;
+    am:shows m:id-514 ;
+    am:shows m:id-521 ;
+    am:shows m:id-528 .
+
+m:id-4056
+    a am:View ;
+    am:identifier "id-4056" ;
+    rdfs:label "Layered View"@en ;
+    rdfs:label "Lagenview"@nl ;
+    rdfs:label "Ebenen Ansicht"@de ;
+    rdfs:label "Vista de capas"@es ;
+    rdfs:label "Vue de couches"@fr ;
+    am:shows m:id-1010 ;
+    am:shows m:id-1016 ;
+    am:shows m:id-1022 ;
+    am:shows m:id-1053 ;
+    am:shows m:id-1059 ;
+    am:shows m:id-1065 ;
+    am:shows m:id-1196 ;
+    am:shows m:id-1202 ;
+    am:shows m:id-1208 ;
+    am:shows m:id-1214 ;
+    am:shows m:id-1220 ;
+    am:shows m:id-1226 ;
+    am:shows m:id-1337 ;
+    am:shows m:id-1368 ;
+    am:shows m:id-1393 ;
+    am:shows m:id-1399 ;
+    am:shows m:id-1407 ;
+    am:shows m:id-1414 ;
+    am:shows m:id-1455 ;
+    am:shows m:id-1462 ;
+    am:shows m:id-275 ;
+    am:shows m:id-514 ;
+    am:shows m:id-556 ;
+    am:shows m:id-564 ;
+    am:shows m:id-572 ;
+    am:shows m:id-580 ;
+    am:shows m:id-588 ;
+    am:shows m:id-861 ;
+    am:shows m:id-986 ;
+    am:shows m:id-992 .
+
+m:id-3865
+    a am:View ;
+    am:identifier "id-3865" ;
+    rdfs:label "Application Behavior View"@en ;
+    rdfs:label "Applicatiegedragview"@nl ;
+    rdfs:label "Applikationsverhalten Ansicht"@de ;
+    rdfs:label "Vista de comportamiento de aplicación"@es ;
+    rdfs:label "Vue de comportement d'application"@fr ;
+    am:shows m:id-837 ;
+    am:shows m:id-838 ;
+    am:shows m:id-843 ;
+    am:shows m:id-885 ;
+    am:shows m:id-891 ;
+    am:shows m:id-897 ;
+    am:shows m:id-903 ;
+    am:shows m:id-909 ;
+    am:shows m:id-935 ;
+    am:shows m:id-946 .
+
+m:id-3662
+    a am:View ;
+    am:identifier "id-3662" ;
+    rdfs:label "Goal and Principle View"@en ;
+    rdfs:label "Principesview"@nl ;
+    rdfs:label "Ziel und Prinzipien Ansicht"@de ;
+    rdfs:label "Vista de objetivo y principio"@es ;
+    rdfs:label "Vue d'objectif et principe"@fr ;
+    am:shows m:id-203 ;
+    am:shows m:id-219 ;
+    am:shows m:id-226 ;
+    am:shows m:id-233 ;
+    am:shows m:id-240 ;
+    am:shows m:id-247 ;
+    am:shows m:id-254 ;
+    am:shows m:id-261 ;
+    am:shows m:id-268 .
+
+m:id-3761
+    a am:View ;
+    am:identifier "id-3761" ;
+    rdfs:label "Business Process View"@en ;
+    rdfs:label "Bedrijfsprocesview"@nl ;
+    rdfs:label "Geschäftsprozessansicht"@de ;
+    rdfs:label "Vista procesos business"@es ;
+    rdfs:label "Vue processus business"@fr ;
+    am:shows m:id-507 ;
+    am:shows m:id-514 ;
+    am:shows m:id-521 ;
+    am:shows m:id-556 ;
+    am:shows m:id-564 ;
+    am:shows m:id-572 ;
+    am:shows m:id-580 ;
+    am:shows m:id-588 ;
+    am:shows m:id-596 ;
+    am:shows m:id-612 ;
+    am:shows m:id-650 ;
+    am:shows m:id-651 ;
+    am:shows m:id-673 ;
+    am:shows m:id-674 ;
+    am:shows m:id-675 ;
+    am:shows m:id-676 ;
+    am:shows m:id-721 ;
+    am:shows m:id-722 ;
+    am:shows m:id-733 ;
+    am:shows m:id-740 .
+
+m:id-3965
+    a am:View ;
+    am:identifier "id-3965" ;
+    rdfs:label "Organization Tree View"@en ;
+    rdfs:label "Organisatiestructuurview"@nl ;
+    rdfs:label "Organisationsstruktur Ansicht"@de ;
+    rdfs:label "Vista estructura organización"@es ;
+    rdfs:label "Vue structure organisation"@fr ;
+    am:shows m:id-282 ;
+    am:shows m:id-289 ;
+    am:shows m:id-303 ;
+    am:shows m:id-310 ;
+    am:shows m:id-317 ;
+    am:shows m:id-331 ;
+    am:shows m:id-338 ;
+    am:shows m:id-345 ;
+    am:shows m:id-352 ;
+    am:shows m:id-402 ;
+    am:shows m:id-409 ;
+    am:shows m:id-416 ;
+    am:shows m:id-423 .
+
+m:id-3893
+    a am:View ;
+    am:identifier "id-3893" ;
+    rdfs:label "Technical Infrastructure View"@en ;
+    rdfs:label "Infrastructuurview"@nl ;
+    rdfs:label "Infrastruktur Ansicht"@de ;
+    rdfs:label "Vista de infraestructura téchnica"@es ;
+    rdfs:label "Vue d'infrastructure technique"@fr ;
+    am:shows m:id-1004 ;
+    am:shows m:id-1010 ;
+    am:shows m:id-1016 ;
+    am:shows m:id-1022 ;
+    am:shows m:id-1053 ;
+    am:shows m:id-1059 ;
+    am:shows m:id-1065 ;
+    am:shows m:id-1071 ;
+    am:shows m:id-1089 ;
+    am:shows m:id-1095 ;
+    am:shows m:id-1101 ;
+    am:shows m:id-1110 ;
+    am:shows m:id-1116 ;
+    am:shows m:id-1128 ;
+    am:shows m:id-986 ;
+    am:shows m:id-992 ;
+    am:shows m:id-998 .
+
+m:id-4318
+    a am:View ;
+    am:identifier "id-4318" ;
+    rdfs:label "Implementation and Installation View"@en ;
+    rdfs:label "Implementatie- en installatieview"@nl ;
+    rdfs:label "Implementierung- und Installations Ansicht"@de ;
+    rdfs:label "Vista de implementación y instalación"@es ;
+    rdfs:label "Vue d'implementation et installation"@fr ;
+    am:shows m:id-1004 ;
+    am:shows m:id-1065 ;
+    am:shows m:id-1089 ;
+    am:shows m:id-1095 ;
+    am:shows m:id-1101 ;
+    am:shows m:id-1399 ;
+    am:shows m:id-1813 ;
+    am:shows m:id-1870 ;
+    am:shows m:id-1882 ;
+    am:shows m:id-992 ;
+    am:shows m:id-998 .
+
+m:id-4279
+    a am:View ;
+    am:identifier "id-4279" ;
+    rdfs:label "Application Cooperation View"@en ;
+    rdfs:label "Applicatiesamenwerkingview"@nl ;
+    rdfs:label "Anwendung Zusammenarbeit Ansicht"@de ;
+    rdfs:label "Vista de colaboración de applicación"@es ;
+    rdfs:label "Vue de collaboration d'application"@fr ;
+    am:shows m:id-1393 ;
+    am:shows m:id-1399 ;
+    am:shows m:id-1793 ;
+    am:shows m:id-1800 ;
+    am:shows m:id-1813 ;
+    am:shows m:id-843 ;
+    am:shows m:id-849 ;
+    am:shows m:id-855 ;
+    am:shows m:id-861 .
+
+m:id-4224
+    a am:View ;
+    am:identifier "id-4224" ;
+    rdfs:label "Business Cooperation View"@en ;
+    rdfs:label "Bedrijfssamenwerkingview"@nl ;
+    rdfs:label "Geschäfts Zusammenarbeit Ansicht"@de ;
+    rdfs:label "Vista de colaboración business"@es ;
+    rdfs:label "Vue de collaboration business"@fr ;
+    am:shows m:id-1196 ;
+    am:shows m:id-1202 ;
+    am:shows m:id-1214 ;
+    am:shows m:id-1226 ;
+    am:shows m:id-1407 ;
+    am:shows m:id-1414 ;
+    am:shows m:id-521 ;
+    am:shows m:id-556 ;
+    am:shows m:id-564 ;
+    am:shows m:id-572 ;
+    am:shows m:id-580 ;
+    am:shows m:id-588 ;
+    am:shows m:id-596 ;
+    am:shows m:id-612 ;
+    am:shows m:id-721 ;
+    am:shows m:id-722 ;
+    am:shows m:id-935 .

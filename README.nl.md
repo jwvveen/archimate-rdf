@@ -26,7 +26,9 @@ Group. De namespace `https://purl.org/archimate#` sluit aan op de bestaande
 | `shacl/archimate-shapes.ttl` | SHACL niveau 1+2: graafintegriteit en metamodelregels buiten de matrix |
 | `shacl/archimate-matrix-shapes.ttl` | SHACL niveau 3: twee generieke SPARQL-constraints die de matrixcellen als data lezen |
 | `example.ttl` | Klein, bewust half fout voorbeeldmodel; levert precies vier meldingen op |
-| `validate.py` | Draait de validatie op het voorbeeldmodel |
+| `archisurance.ttl` | **Gegenereerd**: de ArchiSurance-casus van The Open Group (3.2-exchange-format, `sources/archisurance-3.2.xml`) in canonieke vorm: 122 elementen, 178 relaties, 17 views, labels in vijf talen. Converter: `scripts/exchange_to_rdf.py` |
+| `validate.py` | Draait de volledige SHACL-validatie op het voorbeeldmodel |
+| `scripts/check_matrix.py` | Snelle set-based matrixcheck voor grote modellen (pyshacl's per-node-SPARQL schaalt niet) |
 
 ## Valideren
 
@@ -38,11 +40,23 @@ pip install pyshacl
 python validate.py
 ```
 
+Voor modellen groter dan enkele tientallen relaties:
+
+```
+python scripts/check_matrix.py archisurance.ttl
+```
+
+Op ArchiSurance: 1 overtreding (de Realization vanuit een Representation,
+precies het element dat 4.0 schrapte) en 53 waarschuwingen (in 3.2 direct
+tekenbaar, in de 4.0-matrix alleen afleidbaar). Een net 3.2-model tegen de
+4.0-matrix is daarmee zelf een migratierapport.
+
 ## Hergenereren
 
 ```
 python scripts/generate_matrix_ttl.py
 python scripts/generate_skos_ttl.py
+python scripts/exchange_to_rdf.py sources/archisurance-3.2.xml archisurance.ttl
 ```
 
 ## Licentie
