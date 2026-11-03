@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import sys
 import xml.etree.ElementTree as ET
-from datetime import date
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -52,21 +51,21 @@ def genereer() -> str:
     bron = wortel.attrib.get("bron", "")
 
     regels = [
-        "@prefix am:   <https://purl.org/archimate#> .",
-        "@prefix amm:  <https://purl.org/archimate/matrix#> .",
+        "@prefix am:   <https://w3id.org/archimate#> .",
+        "@prefix amm:  <https://w3id.org/archimate/matrix#> .",
         "@prefix owl:  <http://www.w3.org/2002/07/owl#> .",
         "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .",
         "@prefix dcterms: <http://purl.org/dc/terms/> .",
         "",
         "# GEGENEREERD BESTAND; niet met de hand bewerken.",
         f"# Bron: {XML.name} ({bron})",
-        f"# Generator: scripts/{Path(__file__).name}, {date.today().isoformat()}",
+        f"# Generator: scripts/{Path(__file__).name}",
         "",
-        "<https://purl.org/archimate/matrix>",
+        "<https://w3id.org/archimate/matrix>",
         "    a owl:Ontology ;",
         f'    rdfs:label "ArchiMate {versie} relatiematrix"@nl , "ArchiMate {versie} relationship matrix"@en ;',
         f'    dcterms:source "{bron}" ;',
-        '    owl:versionInfo "0.1.0-concept" .',
+        '    owl:versionInfo "0.3.0-concept" .',
         "",
     ]
 
@@ -90,9 +89,9 @@ def genereer() -> str:
             cellen += 1
             permits += len(alles)
             direct += len(tekenbaar)
-            blok = [f"amm:cell-{s}-{t} a am:MatrixCell ;",
-                    f"    am:sourceType am:{s} ;",
-                    f"    am:targetType am:{t} ;",
+            blok = [f"amm:cell-{s}-{t} a am:MatrixCell",
+                    f"    am:sourceType am:{s}",
+                    f"    am:targetType am:{t}",
                     "    am:permitsRelation " + " , ".join(f"am:{r}" for r in alles)]
             if tekenbaar:
                 blok.append("    am:permitsDirectRelation "

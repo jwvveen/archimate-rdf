@@ -1,4 +1,4 @@
-@prefix am:      <https://purl.org/archimate#> .
+@prefix am:      <https://w3id.org/archimate#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
@@ -15,11 +15,11 @@
 # elementen, met volledige geometrie is hij een tekenbestand.
 #################################################################
 
-<https://purl.org/archimate/views>
+<https://w3id.org/archimate/views>
     a owl:Ontology ;
     rdfs:label "ArchiMate views-module"@nl , "ArchiMate views module"@en ;
-    owl:imports <https://purl.org/archimate> ;
-    owl:versionInfo "0.1.0-concept" .
+    owl:imports <https://w3id.org/archimate> ;
+    owl:versionInfo "0.3.0-concept" .
 
 am:View a owl:Class ;
     rdfs:label "View"@nl , "View"@en ;

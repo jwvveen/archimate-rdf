@@ -18,7 +18,7 @@ from pathlib import Path
 import rdflib
 
 HERE = Path(__file__).resolve().parent.parent
-AM = rdflib.Namespace("https://purl.org/archimate#")
+AM = rdflib.Namespace("https://w3id.org/archimate#")
 
 
 def ancestors(graph: rdflib.Graph, cls: rdflib.URIRef) -> set[rdflib.URIRef]:

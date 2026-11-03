@@ -20,7 +20,6 @@ Draai vanuit de repo-wortel:  python scripts/generate_skos_ttl.py
 
 from __future__ import annotations
 
-from datetime import date
 from pathlib import Path
 
 import rdflib
@@ -30,7 +29,7 @@ BRON = REPO / "sources" / "begrippenxl-archimate.ttl"
 ONT = REPO
 UIT = ONT / "archimate-skos.ttl"
 
-AM = rdflib.Namespace("https://purl.org/archimate#")
+AM = rdflib.Namespace("https://w3id.org/archimate#")
 SKOS = rdflib.Namespace("http://www.w3.org/2004/02/skos/core#")
 FOAF = rdflib.Namespace("http://xmlns.com/foaf/0.1/")
 
@@ -272,7 +271,7 @@ def genereer() -> str:
               if str(s).startswith(str(AM))}
 
     regels = [
-        "@prefix am:   <https://purl.org/archimate#> .",
+        "@prefix am:   <https://w3id.org/archimate#> .",
         "@prefix owl:  <http://www.w3.org/2002/07/owl#> .",
         "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .",
         "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .",
@@ -281,18 +280,18 @@ def genereer() -> str:
         "",
         "# GEGENEREERD BESTAND; niet met de hand bewerken.",
         f"# Bron: sources/{BRON.name} (BegrippenXL-begrippenkader ArchiMate, 2023)",
-        f"# Generator: scripts/{Path(__file__).name}, {date.today().isoformat()}",
+        f"# Generator: scripts/{Path(__file__).name}",
         "#",
         "# SKOS-annotatiemodule. De Nederlandse definities zijn gecureerd in",
         "# de generator (spec-conform); de bron levert de Engelse",
         "# specificatiezinnen, de toelichtingen en de iconen. De zeven",
         "# laag-generieke 4.0-typen komen volledig uit de generator.",
         "",
-        "<https://purl.org/archimate/skos>",
+        "<https://w3id.org/archimate/skos>",
         "    a owl:Ontology ;",
         '    rdfs:label "ArchiMate SKOS-annotaties"@nl , "ArchiMate SKOS annotations"@en ;',
         '    dcterms:source "BegrippenXL-begrippenkader ArchiMate (www.begrippenxl.nl/archimate)" ;',
-        '    owl:versionInfo "0.2.0-concept" .',
+        '    owl:versionInfo "0.3.0-concept" .',
         "",
     ]
 

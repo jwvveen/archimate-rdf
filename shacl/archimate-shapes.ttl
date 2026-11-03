@@ -1,5 +1,5 @@
-@prefix am:   <https://purl.org/archimate#> .
-@prefix amsh: <https://purl.org/archimate/shapes#> .
+@prefix am:   <https://w3id.org/archimate#> .
+@prefix amsh: <https://w3id.org/archimate/shapes#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -24,11 +24,11 @@
 # (niet als losse ont-graph; zie de validatiesectie in de README).
 #################################################################
 
-<https://purl.org/archimate/shapes>
+<https://w3id.org/archimate/shapes>
     a owl:Ontology ;
     rdfs:label "ArchiMate SHACL-kernshapes"@nl , "ArchiMate SHACL core shapes"@en ;
-    owl:versionInfo "0.1.0-concept" ;
-    sh:declare [ sh:prefix "am" ; sh:namespace "https://purl.org/archimate#"^^xsd:anyURI ] ,
+    owl:versionInfo "0.3.0-concept" ;
+    sh:declare [ sh:prefix "am" ; sh:namespace "https://w3id.org/archimate#"^^xsd:anyURI ] ,
                [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] .
 
 # --- Niveau 1: elke relatie is compleet en verwijst naar bestaande
@@ -42,14 +42,14 @@ amsh:RelationshipShape
         sh:minCount 1 ; sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
         sh:class am:Concept ;
-        sh:message "Een relatie heeft precies één bron, en die bron moet een ArchiMate-concept in de graaf zijn (geen los eindpunt)."@nl , "A relationship has exactly one source, and that source must be an ArchiMate concept in the graph (no dangling endpoint)."@en ;
+        sh:message "Een relatie heeft precies één bron, en die bron moet een ArchiMate-concept in de graaf zijn (geen los eindpunt)."@nl , "A relationship has exactly one source, and that source must be an ArchiMate concept in the graph (no dangling endpoint)."@en , "Eine Beziehung hat genau eine Quelle, und diese Quelle muss ein ArchiMate-Konzept im Graphen sein (kein loser Endpunkt)."@de , "Une relation a exactement une source, et cette source doit être un concept ArchiMate du graphe (pas d'extrémité orpheline)."@fr ;
     ] ;
     sh:property [
         sh:path am:target ;
         sh:minCount 1 ; sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
         sh:class am:Concept ;
-        sh:message "Een relatie heeft precies één doel, en dat doel moet een ArchiMate-concept in de graaf zijn (geen los eindpunt)."@nl , "A relationship has exactly one target, and that target must be an ArchiMate concept in the graph (no dangling endpoint)."@en ;
+        sh:message "Een relatie heeft precies één doel, en dat doel moet een ArchiMate-concept in de graaf zijn (geen los eindpunt)."@nl , "A relationship has exactly one target, and that target must be an ArchiMate concept in the graph (no dangling endpoint)."@en , "Eine Beziehung hat genau ein Ziel, und dieses Ziel muss ein ArchiMate-Konzept im Graphen sein (kein loser Endpunkt)."@de , "Une relation a exactement une cible, et cette cible doit être un concept ArchiMate du graphe (pas d'extrémité orpheline)."@fr ;
     ] .
 
 amsh:AccessShape
@@ -59,7 +59,7 @@ amsh:AccessShape
         sh:path am:accessType ;
         sh:maxCount 1 ;
         sh:in ( am:ReadAccess am:WriteAccess am:ReadWriteAccess am:UnspecifiedAccess ) ;
-        sh:message "Toegangstype moet een van de vier gedefinieerde waarden zijn."@nl , "Access type must be one of the four defined values."@en ;
+        sh:message "Toegangstype moet een van de vier gedefinieerde waarden zijn."@nl , "Access type must be one of the four defined values."@en , "Der Zugriffstyp muss einer der vier definierten Werte sein."@de , "Le type d'accès doit être l'une des quatre valeurs définies."@fr ;
     ] .
 
 amsh:InfluenceShape
@@ -69,7 +69,7 @@ amsh:InfluenceShape
         sh:path am:influenceStrength ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
-        sh:message "Beïnvloedingssterkte is één tekstwaarde (bijvoorbeeld +, ++, -, 0..10)."@nl , "Influence strength is a single text value (for example +, ++, -, 0..10)."@en ;
+        sh:message "Beïnvloedingssterkte is één tekstwaarde (bijvoorbeeld +, ++, -, 0..10)."@nl , "Influence strength is a single text value (for example +, ++, -, 0..10)."@en , "Die Einflussstärke ist ein einzelner Textwert (zum Beispiel +, ++, -, 0..10)."@de , "La force d'influence est une seule valeur textuelle (par exemple +, ++, -, 0..10)."@fr ;
     ] .
 
 amsh:AssociationShape
@@ -79,7 +79,7 @@ amsh:AssociationShape
         sh:path am:isDirected ;
         sh:maxCount 1 ;
         sh:datatype xsd:boolean ;
-        sh:message "am:isDirected is een boolean."@nl , "am:isDirected is a boolean."@en ;
+        sh:message "am:isDirected is een boolean."@nl , "am:isDirected is a boolean."@en , "am:isDirected ist ein boolescher Wert."@de , "am:isDirected est un booléen."@fr ;
     ] .
 
 # --- Niveau 2: metamodelregels buiten de matrix ---------------------
@@ -92,8 +92,8 @@ amsh:CompositionUniqueWholeShape
     sh:targetClass am:Concept ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "Dit concept is doel van meer dan één compositie; een element hoort bij precies één geheel."@nl , "This concept is the target of more than one composition; an element belongs to exactly one whole."@en ;
-        sh:prefixes <https://purl.org/archimate/shapes> ;
+        sh:message "Dit concept is doel van meer dan één compositie; een element hoort bij precies één geheel."@nl , "This concept is the target of more than one composition; an element belongs to exactly one whole."@en , "Dieses Konzept ist Ziel von mehr als einer Komposition; ein Element gehört zu genau einem Ganzen."@de , "Ce concept est la cible de plus d'une composition ; un élément appartient à exactement un tout."@fr ;
+        sh:prefixes <https://w3id.org/archimate/shapes> ;
         sh:select """
             SELECT $this WHERE {
                 ?c1 a/rdfs:subClassOf* am:Composition ; am:target $this .
@@ -112,7 +112,7 @@ amsh:ElementLabelShape
     sh:property [
         sh:path rdfs:label ;
         sh:minCount 1 ;
-        sh:message "Element heeft geen rdfs:label; geef minstens één naam, bij voorkeur met taaltag."@nl , "Element has no rdfs:label; provide at least one name, preferably with a language tag."@en ;
+        sh:message "Element heeft geen rdfs:label; geef minstens één naam, bij voorkeur met taaltag."@nl , "Element has no rdfs:label; provide at least one name, preferably with a language tag."@en , "Das Element hat kein rdfs:label; geben Sie mindestens einen Namen an, vorzugsweise mit Sprach-Tag."@de , "L'élément n'a pas de rdfs:label ; indiquez au moins un nom, de préférence avec une étiquette de langue."@fr ;
     ] .
 
 # Meertaligheid (P4): labels zonder taaltag zijn toegestaan maar
@@ -123,8 +123,8 @@ amsh:LabelLanguageShape
     sh:severity sh:Info ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "Label zonder taaltag; voeg @nl, @en, ... toe voor meertalige publicatie."@nl , "Label without a language tag; add @nl, @en, ... for multilingual publication."@en ;
-        sh:prefixes <https://purl.org/archimate/shapes> ;
+        sh:message "Label zonder taaltag; voeg @nl, @en, ... toe voor meertalige publicatie."@nl , "Label without a language tag; add @nl, @en, ... for multilingual publication."@en , "Label ohne Sprach-Tag; fügen Sie @nl, @en, ... für eine mehrsprachige Veröffentlichung hinzu."@de , "Libellé sans étiquette de langue ; ajoutez @nl, @en, ... pour une publication multilingue."@fr ;
+        sh:prefixes <https://w3id.org/archimate/shapes> ;
         sh:select """
             SELECT $this ?value WHERE {
                 $this rdfs:label ?value .
@@ -141,8 +141,8 @@ amsh:OrphanAccessTypeShape
     sh:targetSubjectsOf am:accessType ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "am:accessType op een resource die geen Access-relatie is."@nl , "am:accessType on a resource that is not an Access relationship."@en ;
-        sh:prefixes <https://purl.org/archimate/shapes> ;
+        sh:message "am:accessType op een resource die geen Access-relatie is."@nl , "am:accessType on a resource that is not an Access relationship."@en , "am:accessType an einer Ressource, die keine Access-Beziehung ist."@de , "am:accessType sur une ressource qui n'est pas une relation Access."@fr ;
+        sh:prefixes <https://w3id.org/archimate/shapes> ;
         sh:select """
             SELECT $this WHERE {
                 FILTER NOT EXISTS { $this a/rdfs:subClassOf* am:Access }

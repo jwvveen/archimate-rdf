@@ -8,11 +8,33 @@ blog post explains the reasoning.
 
 *Nederlandse versie: [README.nl.md](README.nl.md).*
 
-Status: **0.2.0-concept**. Everything here is a discussion piece for the
+Status: **0.3.0-concept**. Everything here is a discussion piece for the
 "ArchiMate in RDF" working group, not a standard. ArchiMate is a registered
 trademark of The Open Group; this is not a publication of The Open Group.
-The `https://purl.org/archimate#` namespace connects to the existing 3.2
-ontology in that namespace; shared governance is an open agenda item.
+
+Sibling project: [BPMN 2.0 in RDF](https://github.com/jwvveen/bpmn-rdf), built
+the same way and bridged to this ontology (`bpmn-archimate.ttl` there).
+
+## Namespace
+
+`https://w3id.org/archimate#`, with content negotiation through
+[w3id.org](https://w3id.org/): RDF clients get the Turtle files, browsers this
+repository. Modules live under the same base: `/profile-3.2`, `/views`,
+`/matrix`, `/matrix/plat`, `/skos`, `/alignments`, `/shapes`,
+`/shapes/matrix` and `/shapes/matrix-plat`.
+
+**ArchiMate 4.0 is the main work; 3.2 is a compatibility profile.**
+
+Up to version 0.2.0 these terms lived under `https://purl.org/archimate#`.
+That namespace belongs to the ArchiMate 3.2 ontology by Alberto D. Mendoza
+(`https://purl.org/archimate/owl`). 56 of our terms (the layer-generic 4.0
+types, the relationship as a resource, the matrix vocabulary) did not exist
+there, so they did not resolve, and adding them would have mixed a 4.0 draft
+into a 3.2 ontology. Hence an own namespace, and a bridge instead:
+`archimate-alignments.ttl` maps every term that has a counterpart to
+Mendoza's 3.2 ontology (81 mappings) and to bp4mc2 archimate2rdf (68), only
+to terms that exist in their files. Data published with the old namespace
+needs to be republished.
 
 ## Files
 
@@ -23,11 +45,14 @@ ontology in that namespace; shared governance is an open agenda item.
 | `archimate-views.ttl` | Views module: view, shows, viewpoint; deliberately without geometry |
 | `archimate-matrix.ttl` | **Generated**: the 1,936 matrix cells with `am:permitsRelation` (permitted, including derived) and `am:permitsDirectRelation` (drawable). Source: `sources/relationships-4.0.xml`, generator `scripts/generate_matrix_ttl.py` |
 | `archimate-skos.ttl` | **Generated**: SKOS annotations (English and Dutch definitions, scope notes, icons) for every class, partly from a Dutch concept scheme in `sources/`, curated in `scripts/generate_skos_ttl.py` |
+| `archimate-matrix-plat.ttl` | **Generated**: the same matrix spelled out over the concrete types (7,056 cells), so a check is a plain lookup instead of `rdfs:subClassOf*` paths. A cache, not a second truth. Generator `scripts/generate_matrix_plat.py` |
+| `archimate-alignments.ttl` | **Generated**: `skos:exactMatch` and `skos:closeMatch` to the ArchiMate 3.2 ontology by Alberto D. Mendoza and to bp4mc2 archimate2rdf, sources pinned to a commit. Generator `scripts/generate_alignments.py` |
 | `shacl/archimate-shapes.ttl` | SHACL levels 1+2: graph integrity (complete relationships, no dangling endpoints, value lists) and metamodel rules outside the matrix (composition uniqueness, label rules) |
 | `shacl/archimate-matrix-shapes.ttl` | SHACL level 3: two generic SPARQL constraints that read the matrix cells as data; a matrix change requires no shape regeneration |
+| `shacl/archimate-matrix-plat-shapes.ttl` | The same two constraints against the flattened matrix: the example in about a second, ArchiSurance (178 relationships) in about 20 s, where the generic shapes take minutes to hours. Load either this one or the generic one, not both |
 | `example.ttl` | Small, deliberately half-broken example model; yields exactly four findings |
 | `archisurance.ttl` | **Generated**: the Open Group's ArchiSurance case study (3.2 exchange format, `sources/archisurance-3.2.xml`) converted to the canonical form: 122 elements, 178 relationships, 17 views, labels in five languages. Converter: `scripts/exchange_to_rdf.py` |
-| `validate.py` | Runs the full SHACL validation on the example model |
+| `validate.py` | Runs the full SHACL validation on a model (default: the example); `--fast` uses the flattened matrix |
 | `scripts/check_matrix.py` | Fast set-based matrix check for large models (pyshacl's per-node SPARQL does not scale) |
 
 ## Design choices
@@ -63,8 +88,9 @@ ontology in that namespace; shared governance is an open agenda item.
   what terms mean and is usable without any validation; the SHACL files
   say when a model is sound and load separately.
 
-* **Multilingual from day one.** Every label, definition, comment, and
-  validation message ships in English and Dutch.
+* **Multilingual from day one.** Every label, definition and comment
+  ships in English and Dutch; every validation message in English, Dutch,
+  German and French.
 
 ## Validating
 
@@ -75,7 +101,8 @@ reported as a matrix violation.
 
 ```
 pip install pyshacl
-python validate.py
+python validate.py          # generic matrix
+python validate.py --fast   # flattened matrix, same findings
 ```
 
 Expected findings on `example.ttl`:
@@ -107,11 +134,23 @@ textbook 3.2 model against the 4.0 matrix is itself a migration report.
 ```
 python scripts/generate_matrix_ttl.py
 python scripts/generate_skos_ttl.py
+python scripts/generate_matrix_plat.py
+python scripts/generate_alignments.py
 python scripts/exchange_to_rdf.py sources/archisurance-3.2.xml archisurance.ttl
 ```
 
 The generated files are committed; the scripts are the only way to change
 them.
+
+## Earlier work
+
+* [ArchiMate 3.2 ontology](https://github.com/AlbertoDMendoza/archimate_ontology)
+  by Alberto D. Mendoza (`https://purl.org/archimate#`, Apache-2.0), with
+  SHACL validation and derivation rules. The 3.2 profile here follows the same
+  type names, and `archimate-alignments.ttl` maps to it.
+* [bp4mc2 archimate2rdf](https://github.com/bp4mc2/archimate2rdf)
+  (`http://bp4mc2.org/def/archimate#`), a converter from the exchange format
+  to RDF.
 
 ## Contributing
 

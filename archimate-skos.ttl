@@ -1,4 +1,4 @@
-@prefix am:   <https://purl.org/archimate#> .
+@prefix am:   <https://w3id.org/archimate#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -7,7 +7,7 @@
 
 # GEGENEREERD BESTAND; niet met de hand bewerken.
 # Bron: sources/begrippenxl-archimate.ttl (BegrippenXL-begrippenkader ArchiMate, 2023)
-# Generator: scripts/generate_skos_ttl.py, 2026-08-29
+# Generator: scripts/generate_skos_ttl.py
 # 104 klassen geannoteerd; overgeslagen (geen tegenhanger): ExternalActiveStructureElement, ExternalBehaviorElement, InternalActiveStructureElement, InternalBehaviorElement, StrategyBehaviorElement, StructureElement.
 #
 # SKOS-annotatiemodule. De Nederlandse definities zijn gecureerd in
@@ -15,11 +15,11 @@
 # specificatiezinnen, de toelichtingen en de iconen. De zeven
 # laag-generieke 4.0-typen komen volledig uit de generator.
 
-<https://purl.org/archimate/skos>
+<https://w3id.org/archimate/skos>
     a owl:Ontology ;
     rdfs:label "ArchiMate SKOS-annotaties"@nl , "ArchiMate SKOS annotations"@en ;
     dcterms:source "BegrippenXL-begrippenkader ArchiMate (www.begrippenxl.nl/archimate)" ;
-    owl:versionInfo "0.2.0-concept" .
+    owl:versionInfo "0.3.0-concept" .
 
 am:Access
     skos:definition "De toegangsrelatie drukt uit dat gedrag een passief structuurelement waarneemt of erop inwerkt, bijvoorbeeld lezend of schrijvend."@nl ;

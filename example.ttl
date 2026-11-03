@@ -1,4 +1,4 @@
-@prefix am:   <https://purl.org/archimate#> .
+@prefix am:   <https://w3id.org/archimate#> .
 @prefix ex:   <https://example.org/model/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .

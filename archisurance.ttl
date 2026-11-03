@@ -1,11 +1,11 @@
-@prefix am:   <https://purl.org/archimate#> .
+@prefix am:   <https://w3id.org/archimate#> .
 @prefix m:    <https://example.org/archisurance/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
 # GENERATED FILE; do not edit by hand.
 # Source: archisurance-3.2.xml (ArchiMate Model Exchange Format)
-# Generator: scripts/exchange_to_rdf.py, 2026-08-29
+# Generator: scripts/exchange_to_rdf.py
 # 122 elements, 178 relationships, 17 views.
 
 m:id-261

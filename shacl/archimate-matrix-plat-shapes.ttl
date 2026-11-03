@@ -1,0 +1,106 @@
+@prefix am:   <https://w3id.org/archimate#> .
+@prefix amsh: <https://w3id.org/archimate/shapes#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# SHACL-matrixvalidatie, snelle variant
+#
+# Zelfde regel als archimate-matrix-shapes.ttl, maar tegen de
+# platgeslagen matrix (archimate-matrix-plat.ttl). Daarin staan de
+# cellen al op de concrete typen, dus de drie `rdfs:subClassOf*`-paden
+# uit de generieke variant zijn hier niet nodig. Wat overblijft is een
+# gewone opzoeking.
+#
+# Gemeten met pyshacl op een model van vijftien relaties:
+#
+#     generieke matrix   839,7 s
+#     platte matrix        2,6 s
+#
+# Laad óf deze óf de generieke variant, niet allebei: dan wordt elke
+# overtreding twee keer gemeld.
+#
+# Drie dingen zijn hier bewust anders dan in de generieke variant.
+#
+# 1. De eindpunttypen worden afgebakend tot ArchiMate-concepten
+#    (`?srcType rdfs:subClassOf* am:Concept`). Zonder die afbakening
+#    telt élk rdf:type van een element mee, ook een type uit een andere
+#    vocabulaire, en dan meldt de constraint elke relatie als fout. Dat
+#    gebeurde werkelijk: een graaf waarin een element zowel
+#    `sxlm:ArchiMateElement` als `am:BusinessProcess` is, leverde vijftien
+#    overtredingen op vijftien relaties. Data die naast ArchiMate nog een
+#    eigen vocabulaire draagt is normaal in linked data, dus de shape hoort
+#    daartegen te kunnen.
+#
+# 2. De cel wordt opgezocht op haar IRI (amp:c-<brontype>-<doeltype>,
+#    vastgelegd door scripts/genereer_archimate_matrix_plat.py) en niet
+#    met `?cel a am:MatrixCell ; am:sourceType ...`. rdflib zet dat
+#    typepatroon vooraan en loopt dan per relatie alle 7.056 cellen af:
+#    het voorbeeldmodel kostte zo meer dan acht minuten.
+#    Om dezelfde reden staan de markeringen in FILTER EXISTS: als gewoon
+#    patroon gaan ze voor de relatie uit en kost het voorbeeld 22 s.
+#
+# 3. De vergelijking is exact. Dat mag alleen omdat de platte matrix de
+#    subklassen al heeft uitgeschreven; met de generieke matrix zou dit
+#    fout zijn.
+#################################################################
+
+<https://w3id.org/archimate/shapes/matrix-plat>
+    a owl:Ontology ;
+    rdfs:label "ArchiMate SHACL-matrixshapes, snelle variant"@nl ,
+               "ArchiMate SHACL matrix shapes, fast variant"@en ;
+    owl:versionInfo "0.3.0-concept" ;
+    sh:declare [ sh:prefix "am" ; sh:namespace "https://w3id.org/archimate#"^^xsd:anyURI ] ,
+               [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] .
+
+# Hard fout: de relatie komt in geen enkele toegestane cel voor, ook niet
+# als afgeleide relatie.
+amsh:MatrixPermittedFastShape
+    a sh:NodeShape ;
+    sh:targetClass am:Relationship ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Relatie is volgens Appendix B.5 niet toegestaan tussen deze twee concepttypen, ook niet als afgeleide relatie."@nl , "Relationship is not permitted between these two concept types according to Appendix B.5, not even as a derived relationship."@en , "Die Beziehung ist laut Anhang B.5 zwischen diesen beiden Konzepttypen nicht zulässig, auch nicht als abgeleitete Beziehung."@de , "La relation n'est pas autorisée entre ces deux types de concepts selon l'annexe B.5, pas même comme relation dérivée."@fr ;
+        sh:prefixes <https://w3id.org/archimate/shapes/matrix-plat> ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a ?relType ; am:source ?src ; am:target ?tgt .
+                ?src a ?srcType . ?tgt a ?tgtType .
+                FILTER EXISTS { ?relType am:isRelationshipType true }
+                FILTER EXISTS { ?srcType am:isConceptType true }
+                FILTER EXISTS { ?tgtType am:isConceptType true }
+                BIND (IRI(CONCAT("https://w3id.org/archimate/matrix/plat#c-",
+                                 STRAFTER(STR(?srcType), "#"), "-",
+                                 STRAFTER(STR(?tgtType), "#"))) AS ?cell)
+                FILTER NOT EXISTS { ?cell am:permitsRelation ?relType }
+            }
+        """ ;
+    ] .
+
+# Waarschuwing: toegestaan in de volledige matrix, maar niet direct
+# tekenbaar. Zo'n relatie hoort het resultaat van afleiding te zijn.
+amsh:MatrixDirectFastShape
+    a sh:NodeShape ;
+    sh:targetClass am:Relationship ;
+    sh:severity sh:Warning ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Relatie is wel toegestaan maar niet direct tekenbaar volgens Appendix B.5; dit hoort een afgeleide relatie te zijn."@nl , "Relationship is permitted but not directly drawable according to Appendix B.5; this should be a derived relationship."@en , "Die Beziehung ist laut Anhang B.5 zulässig, aber nicht direkt zeichenbar; sie sollte eine abgeleitete Beziehung sein."@de , "La relation est autorisée mais ne peut pas être dessinée directement selon l'annexe B.5 ; elle devrait être une relation dérivée."@fr ;
+        sh:prefixes <https://w3id.org/archimate/shapes/matrix-plat> ;
+        sh:select """
+            SELECT $this WHERE {
+                $this a ?relType ; am:source ?src ; am:target ?tgt .
+                ?src a ?srcType . ?tgt a ?tgtType .
+                FILTER EXISTS { ?relType am:isRelationshipType true }
+                FILTER EXISTS { ?srcType am:isConceptType true }
+                FILTER EXISTS { ?tgtType am:isConceptType true }
+                BIND (IRI(CONCAT("https://w3id.org/archimate/matrix/plat#c-",
+                                 STRAFTER(STR(?srcType), "#"), "-",
+                                 STRAFTER(STR(?tgtType), "#"))) AS ?cell)
+                ?cell am:permitsRelation ?relType .
+                FILTER NOT EXISTS { ?cell am:permitsDirectRelation ?relType }
+            }
+        """ ;
+    ] .

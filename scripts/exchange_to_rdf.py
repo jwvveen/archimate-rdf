@@ -17,7 +17,6 @@ from __future__ import annotations
 
 import sys
 import xml.etree.ElementTree as ET
-from datetime import date
 from pathlib import Path
 
 NS = "{http://www.opengroup.org/xsd/archimate/3.0/}"
@@ -53,14 +52,14 @@ def convert(source: Path, base: str) -> str:
     root = tree.getroot()
 
     lines = [
-        "@prefix am:   <https://purl.org/archimate#> .",
+        "@prefix am:   <https://w3id.org/archimate#> .",
         f"@prefix m:    <{base}> .",
         "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .",
         "@prefix dcterms: <http://purl.org/dc/terms/> .",
         "",
         "# GENERATED FILE; do not edit by hand.",
         f"# Source: {source.name} (ArchiMate Model Exchange Format)",
-        f"# Generator: scripts/{Path(__file__).name}, {date.today().isoformat()}",
+        f"# Generator: scripts/{Path(__file__).name}",
         "",
     ]
 

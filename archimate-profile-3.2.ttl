@@ -1,4 +1,4 @@
-@prefix am:      <https://purl.org/archimate#> .
+@prefix am:      <https://w3id.org/archimate#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -18,11 +18,11 @@
 # plus een dcterms:isReplacedBy-wenk waar een vervanger bestaat.
 #################################################################
 
-<https://purl.org/archimate/profile-3.2>
+<https://w3id.org/archimate/profile-3.2>
     a owl:Ontology ;
     rdfs:label "ArchiMate 3.2-profiel"@nl , "ArchiMate 3.2 profile"@en ;
-    owl:imports <https://purl.org/archimate> ;
-    owl:versionInfo "0.1.0-concept" .
+    owl:imports <https://w3id.org/archimate> ;
+    owl:versionInfo "0.3.0-concept" .
 
 # --- Bedrijfslaag: opgegaan in laag-generieke typen ---
 

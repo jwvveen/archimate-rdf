@@ -1,5 +1,5 @@
-@prefix am:   <https://purl.org/archimate#> .
-@prefix amsh: <https://purl.org/archimate/shapes#> .
+@prefix am:   <https://w3id.org/archimate#> .
+@prefix amsh: <https://w3id.org/archimate/shapes#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
@@ -26,11 +26,11 @@
 # overtreding gemeld wordt. Zie de validatiesectie in de README.
 #################################################################
 
-<https://purl.org/archimate/shapes/matrix>
+<https://w3id.org/archimate/shapes/matrix>
     a owl:Ontology ;
     rdfs:label "ArchiMate SHACL-matrixshapes"@nl , "ArchiMate SHACL matrix shapes"@en ;
-    owl:versionInfo "0.1.0-concept" ;
-    sh:declare [ sh:prefix "am" ; sh:namespace "https://purl.org/archimate#"^^xsd:anyURI ] ,
+    owl:versionInfo "0.3.0-concept" ;
+    sh:declare [ sh:prefix "am" ; sh:namespace "https://w3id.org/archimate#"^^xsd:anyURI ] ,
                [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] .
 
 # Hard fout: de relatie komt in geen enkele toegestane cel voor,
@@ -40,8 +40,8 @@ amsh:MatrixPermittedShape
     sh:targetClass am:Relationship ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "Relatie is volgens Appendix B.5 niet toegestaan tussen deze twee concepttypen, ook niet als afgeleide relatie."@nl , "Relationship is not permitted between these two concept types according to Appendix B.5, not even as a derived relationship."@en ;
-        sh:prefixes <https://purl.org/archimate/shapes/matrix> ;
+        sh:message "Relatie is volgens Appendix B.5 niet toegestaan tussen deze twee concepttypen, ook niet als afgeleide relatie."@nl , "Relationship is not permitted between these two concept types according to Appendix B.5, not even as a derived relationship."@en , "Die Beziehung ist laut Anhang B.5 zwischen diesen beiden Konzepttypen nicht zulässig, auch nicht als abgeleitete Beziehung."@de , "La relation n'est pas autorisée entre ces deux types de concepts selon l'annexe B.5, pas même comme relation dérivée."@fr ;
+        sh:prefixes <https://w3id.org/archimate/shapes/matrix> ;
         sh:select """
             SELECT $this WHERE {
                 $this a ?relType ; am:source ?src ; am:target ?tgt .
@@ -69,8 +69,8 @@ amsh:MatrixDirectShape
     sh:severity sh:Warning ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "Relatie is wel afleidbaar maar niet direct tekenbaar volgens Appendix B.5; controleer of dit een gematerialiseerde afleiding is en geen tekenfout."@nl , "Relationship is derivable but not directly drawable according to Appendix B.5; check whether this is a materialized derivation rather than a drawing mistake."@en ;
-        sh:prefixes <https://purl.org/archimate/shapes/matrix> ;
+        sh:message "Relatie is wel afleidbaar maar niet direct tekenbaar volgens Appendix B.5; controleer of dit een gematerialiseerde afleiding is en geen tekenfout."@nl , "Relationship is derivable but not directly drawable according to Appendix B.5; check whether this is a materialized derivation rather than a drawing mistake."@en , "Die Beziehung ist laut Anhang B.5 ableitbar, aber nicht direkt zeichenbar; prüfen Sie, ob es eine materialisierte Ableitung und kein Zeichenfehler ist."@de , "La relation est dérivable mais ne peut pas être dessinée directement selon l'annexe B.5 ; vérifiez qu'il s'agit d'une dérivation matérialisée et non d'une erreur de dessin."@fr ;
+        sh:prefixes <https://w3id.org/archimate/shapes/matrix> ;
         sh:select """
             SELECT $this WHERE {
                 $this a ?relType ; am:source ?src ; am:target ?tgt .

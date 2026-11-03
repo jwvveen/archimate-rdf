@@ -1,4 +1,4 @@
-@prefix am:       <https://purl.org/archimate#> .
+@prefix am:       <https://w3id.org/archimate#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,10 +10,13 @@
 # ArchiMate 4.0 kern-ontologie (concept)
 #
 # Conceptversie ter bespreking in de werkgroep "ArchiMate in RDF".
-# De namespace purl.org/archimate is de bestaande basis van
-# de bestaande 3.2-ontologie in die namespace; dit bestand is een 4.0-voorstel
-# daarop, geen
-# claim op die namespace. Governance is een fase-0-onderwerp.
+# Namespace: https://w3id.org/archimate# (w3id, beheer jwvveen).
+# ArchiMate 4.0 is het hoofdwerk; 3.2 is een compatibiliteitsprofiel.
+# Tot SemanticXL 1.338.0 stond deze ontologie onder purl.org/archimate,
+# de namespace van de 3.2-ontologie van Alberto D. Mendoza. Om die niet
+# te vervuilen met 4.0-termen heeft deze ontologie een eigen namespace;
+# archimate-alignments.ttl legt de brug naar zijn 3.2-termen en naar
+# bp4mc2 (skos:exactMatch / skos:closeMatch).
 #
 # Ontwerpprincipes (zie docs/ArchiMate-RDF-Ontologie-Voorstel.md):
 #   P1  De relatie is een eigen resource (am:source / am:target).
@@ -33,13 +36,13 @@
 # Constraint, Representation, Gap, ...) staat in het 3.2-profiel.
 #################################################################
 
-<https://purl.org/archimate>
+<https://w3id.org/archimate>
     a owl:Ontology ;
     rdfs:label "ArchiMate 4.0-ontologie"@nl , "ArchiMate 4.0 ontology"@en ;
     dcterms:description "OWL-representatie van de ArchiMate 4.0-specificatie (The Open Group, C260). Conceptversie, opgesteld als voorstel voor een gezamenlijke open ArchiMate-ontologie."@nl , "OWL representation of the ArchiMate 4.0 Specification (The Open Group, C260). Draft version, written as a proposal for a shared open ArchiMate ontology."@en ;
     dcterms:source "ArchiMate 4 Specification, The Open Group, C260" ;
     dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
-    owl:versionInfo "0.1.0-concept" ;
+    owl:versionInfo "0.3.0-concept" ;
     rdfs:comment "ArchiMate is een geregistreerd merk van The Open Group. Deze ontologie is geen publicatie van The Open Group."@nl , "ArchiMate is a registered trademark of The Open Group. This ontology is not a publication of The Open Group."@en .
 
 #################################################################
