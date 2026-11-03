@@ -21,7 +21,9 @@ dezelfde manier gebouwd en met een brug naar deze ontologie
 
 `https://w3id.org/archimate#`, met content negotiation via
 [w3id.org](https://w3id.org/): een RDF-client krijgt de Turtle-bestanden, een
-browser deze repository. De modules staan onder dezelfde basis:
+browser deze repository (registratie aangevraagd in
+[perma-id/w3id.org#7063](https://github.com/perma-id/w3id.org/pull/7063);
+tot die is samengevoegd, zijn de IRI's nog niet opvraagbaar). De modules staan onder dezelfde basis:
 `/profile-3.2`, `/views`, `/matrix`, `/matrix/plat`, `/skos`, `/alignments`,
 `/shapes`, `/shapes/matrix` en `/shapes/matrix-plat`.
 

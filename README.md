@@ -19,7 +19,9 @@ the same way and bridged to this ontology (`bpmn-archimate.ttl` there).
 
 `https://w3id.org/archimate#`, with content negotiation through
 [w3id.org](https://w3id.org/): RDF clients get the Turtle files, browsers this
-repository. Modules live under the same base: `/profile-3.2`, `/views`,
+repository (registration requested in
+[perma-id/w3id.org#7063](https://github.com/perma-id/w3id.org/pull/7063);
+until it is merged the IRIs do not resolve yet). Modules live under the same base: `/profile-3.2`, `/views`,
 `/matrix`, `/matrix/plat`, `/skos`, `/alignments`, `/shapes`,
 `/shapes/matrix` and `/shapes/matrix-plat`.
 
