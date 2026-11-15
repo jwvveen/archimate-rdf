@@ -134,7 +134,7 @@ def main() -> int:
         "    a owl:Ontology ;",
         '    rdfs:label "ArchiMate-relatiematrix, platgeslagen"@nl ,',
         '               "ArchiMate relationship matrix, flattened"@en ;',
-        '    owl:versionInfo "0.3.0-concept" .',
+        '    owl:versionInfo "0.4.0-concept" .',
         "",
     ]
     # Ook de drie overgebleven paden eruit. `?srcType rdfs:subClassOf* am:Concept`

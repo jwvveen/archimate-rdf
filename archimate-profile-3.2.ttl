@@ -22,7 +22,7 @@
     a owl:Ontology ;
     rdfs:label "ArchiMate 3.2-profiel"@nl , "ArchiMate 3.2 profile"@en ;
     owl:imports <https://w3id.org/archimate> ;
-    owl:versionInfo "0.3.0-concept" .
+    owl:versionInfo "0.4.0-concept" .
 
 # --- Bedrijfslaag: opgegaan in laag-generieke typen ---
 

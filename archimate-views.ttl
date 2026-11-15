@@ -13,13 +13,20 @@
 # Exchange Format; de round-trip (P5) bewaart haar daar.
 # Praktijkles uit SemanticXL: zonder views is een graaf een zak
 # elementen, met volledige geometrie is hij een tekenbestand.
+#
+# Sinds 0.4.0 ook de ordening van een model: het model zelf en
+# zijn mappen (de <organizations> van het Model Exchange Format).
+# Net als views zeggen ze niets over de betekenis van de concepten,
+# maar een brongraaf die een model verliesvrij vasthoudt, kan niet
+# zonder: een map kan leeg zijn, en een graaf kan meer modellen
+# bevatten.
 #################################################################
 
 <https://w3id.org/archimate/views>
     a owl:Ontology ;
     rdfs:label "ArchiMate views-module"@nl , "ArchiMate views module"@en ;
     owl:imports <https://w3id.org/archimate> ;
-    owl:versionInfo "0.3.0-concept" .
+    owl:versionInfo "0.4.0-concept" .
 
 am:View a owl:Class ;
     rdfs:label "View"@nl , "View"@en ;
@@ -35,3 +42,25 @@ am:viewpoint a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "gezichtspunt"@nl , "viewpoint"@en ;
     rdfs:comment "Naam van het gezichtspunt uit de specificatie of een eigen gezichtspunt."@nl , "Name of a viewpoint from the specification or a custom viewpoint."@en .
+
+#################################################################
+# Ordening: model en mappen (0.4.0)
+#################################################################
+
+am:Model a owl:Class ;
+    rdfs:label "Model"@nl , "Model"@en ;
+    rdfs:comment "Een ArchiMate-model: het geheel van concepten, views en mappen dat samen wordt beheerd en uitgewisseld (het element model van het Model Exchange Format)."@nl , "An ArchiMate model: the whole of concepts, views, and folders that is managed and exchanged as one (the model element of the Model Exchange File Format)."@en .
+
+am:Folder a owl:Class ;
+    rdfs:label "Map"@nl , "Folder"@en ;
+    rdfs:comment "Een map in de ordening van een model: een benoemde groep van concepten, views en andere mappen (een item in organizations van het Model Exchange Format). Een map zegt niets over de betekenis van wat erin staat."@nl , "A folder in the organization of a model: a named group of concepts, views, and other folders (an item in the organizations of the Model Exchange File Format). A folder says nothing about the meaning of its contents."@en .
+
+am:inModel a owl:ObjectProperty ;
+    rdfs:range am:Model ;
+    rdfs:label "in model"@nl , "in model"@en ;
+    rdfs:comment "Het model waartoe een concept, view of map behoort."@nl , "The model that a concept, view, or folder belongs to."@en .
+
+am:inFolder a owl:ObjectProperty ;
+    rdfs:range am:Folder ;
+    rdfs:label "in map"@nl , "in folder"@en ;
+    rdfs:comment "De map waarin een concept, view of andere map staat."@nl , "The folder that contains a concept, view, or other folder."@en .

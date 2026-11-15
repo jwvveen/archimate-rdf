@@ -8,7 +8,7 @@
 # GEGENEREERD BESTAND; niet met de hand bewerken.
 # Bron: sources/begrippenxl-archimate.ttl (BegrippenXL-begrippenkader ArchiMate, 2023)
 # Generator: scripts/generate_skos_ttl.py
-# 104 klassen geannoteerd; overgeslagen (geen tegenhanger): ExternalActiveStructureElement, ExternalBehaviorElement, InternalActiveStructureElement, InternalBehaviorElement, StrategyBehaviorElement, StructureElement.
+# 106 klassen geannoteerd; overgeslagen (geen tegenhanger): ExternalActiveStructureElement, ExternalBehaviorElement, InternalActiveStructureElement, InternalBehaviorElement, StrategyBehaviorElement, StructureElement.
 #
 # SKOS-annotatiemodule. De Nederlandse definities zijn gecureerd in
 # de generator (spec-conform); de bron levert de Engelse
@@ -19,7 +19,7 @@
     a owl:Ontology ;
     rdfs:label "ArchiMate SKOS-annotaties"@nl , "ArchiMate SKOS annotations"@en ;
     dcterms:source "BegrippenXL-begrippenkader ArchiMate (www.begrippenxl.nl/archimate)" ;
-    owl:versionInfo "0.3.0-concept" .
+    owl:versionInfo "0.4.0-concept" .
 
 am:Access
     skos:definition "De toegangsrelatie drukt uit dat gedrag een passief structuurelement waarneemt of erop inwerkt, bijvoorbeeld lezend of schrijvend."@nl ;
@@ -616,6 +616,10 @@ am:Event
     skos:definition "Een gebeurtenis is een toestandsverandering."@nl ;
     skos:definition "An event represents a state change."@en .
 
+am:Folder
+    skos:definition "Een map is een benoemde groep van concepten, views en andere mappen in de ordening van een model."@nl ;
+    skos:definition "A folder is a named group of concepts, views, and other folders in the organization of a model."@en .
+
 am:Function
     skos:definition "Een functie is een verzameling samenhangend gedrag, gegroepeerd naar bijvoorbeeld benodigde middelen, kennis of vaardigheden."@nl ;
     skos:definition "A function represents a collection of coherent behavior, grouped by, for example, required resources, knowledge, or skills."@en .
@@ -635,6 +639,10 @@ am:Layer
 am:MatrixCell
     skos:definition "Een matrixcel legt vast welke relatietypen tussen een bron- en doeltype zijn toegestaan en welke daarvan direct tekenbaar zijn."@nl ;
     skos:definition "A matrix cell records which relationship types are permitted between a source and target type, and which of those may be drawn directly."@en .
+
+am:Model
+    skos:definition "Een model is het geheel van concepten, views en mappen dat samen wordt beheerd en uitgewisseld."@nl ;
+    skos:definition "A model is the whole of concepts, views, and folders that is managed and exchanged as one."@en .
 
 am:MotivationLayer
     skos:definition "De motivatielaag beschrijft waarom de architectuur is zoals hij is: belanghebbenden, drijfveren, doelen, principes en vereisten."@nl ;

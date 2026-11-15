@@ -61,8 +61,10 @@ SUIKER = {
     "influences": "influence", "triggers": "triggering", "flowsTo": "flow",
     "specializes": "specialization", "associatedWith": "association",
 }
-# Andere naam, vergelijkbare betekenis.
-DICHTBIJ = {"View": "ArchiMateView", "Viewpoint": "ArchiMateViewpoint"}
+# Andere naam, vergelijkbare betekenis. `Model` heeft dezelfde naam, maar is
+# bij Mendoza een concept (subklasse van archimate:Concept) en bij ons de
+# ordening eromheen (views-module, 0.4.0): dichtbij, niet gelijk.
+DICHTBIJ = {"View": "ArchiMateView", "Viewpoint": "ArchiMateViewpoint", "Model": "Model"}
 
 KLASSE = (OWL.Class, RDFS.Class)
 EIGENSCHAP = (OWL.ObjectProperty, OWL.DatatypeProperty, RDF.Property, OWL.AnnotationProperty)
@@ -119,7 +121,7 @@ def genereer() -> str:
         ' earlier ArchiMate ontologies in RDF."@en ;',
         *[f"    dcterms:references <{b['ontologie']}> ;" for b in BRONNEN.values()],
         "    owl:imports <https://w3id.org/archimate> ;",
-        '    owl:versionInfo "0.3.0-concept" .',
+        '    owl:versionInfo "0.4.0-concept" .',
         "",
     ]
     tellingen = []
@@ -127,7 +129,7 @@ def genereer() -> str:
         hun_k, hun_p = _termen(_bron(sleutel), b["ns"])
         px = b["prefix"]
         paren: list[tuple[str, str, str]] = []
-        paren += [(k, "skos:exactMatch", k) for k in sorted(klassen & hun_k)]
+        paren += [(k, "skos:exactMatch", k) for k in sorted((klassen & hun_k) - set(DICHTBIJ))]
         paren += [(p, "skos:exactMatch", p) for p in sorted(datatype & hun_p)]
         paren += [(o, "skos:closeMatch", h) for o, h in sorted(SUIKER.items())
                   if o in eigenschappen and h in hun_p]

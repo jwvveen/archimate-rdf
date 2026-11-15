@@ -8,7 +8,7 @@ blog post explains the reasoning.
 
 *Nederlandse versie: [README.nl.md](README.nl.md).*
 
-Status: **0.3.0-concept**. Everything here is a discussion piece for the
+Status: **0.4.0-concept**. Everything here is a discussion piece for the
 "ArchiMate in RDF" working group, not a standard. ArchiMate is a registered
 trademark of The Open Group; this is not a publication of The Open Group.
 
@@ -43,7 +43,7 @@ needs to be republished.
 |---|---|
 | `archimate.ttl` | Core ontology: exactly the 42 concepts of Appendix B.5 plus the junction, the 11 relationship types in 4 categories, the aspect and layer axes, properties, the sugar layer, and the matrix vocabulary. All labels and comments in English and Dutch |
 | `archimate-profile-3.2.ttl` | 3.2 compatibility profile: layer-specific types as subclasses (BusinessProcess under Process), plus types removed in 4.0 (Interaction, Representation, Gap) marked `owl:deprecated` |
-| `archimate-views.ttl` | Views module: view, shows, viewpoint; deliberately without geometry |
+| `archimate-views.ttl` | Views module: view, shows, viewpoint; deliberately without geometry. Since 0.4.0 also the organization of a model: `am:Model`, `am:Folder`, `am:inModel`, `am:inFolder` (the `<organizations>` of the exchange format) |
 | `archimate-matrix.ttl` | **Generated**: the 1,936 matrix cells with `am:permitsRelation` (permitted, including derived) and `am:permitsDirectRelation` (drawable). Source: `sources/relationships-4.0.xml`, generator `scripts/generate_matrix_ttl.py` |
 | `archimate-skos.ttl` | **Generated**: SKOS annotations (English and Dutch definitions, scope notes, icons) for every class, partly from a Dutch concept scheme in `sources/`, curated in `scripts/generate_skos_ttl.py` |
 | `archimate-matrix-plat.ttl` | **Generated**: the same matrix spelled out over the concrete types (7,056 cells), so a check is a plain lookup instead of `rdfs:subClassOf*` paths. A cache, not a second truth. Generator `scripts/generate_matrix_plat.py` |
@@ -53,6 +53,7 @@ needs to be republished.
 | `shacl/archimate-matrix-plat-shapes.ttl` | The same two constraints against the flattened matrix: the example in about a second, ArchiSurance (178 relationships) in about 20 s, where the generic shapes take minutes to hours. Load either this one or the generic one, not both |
 | `example.ttl` | Small, deliberately half-broken example model; yields exactly four findings |
 | `archisurance.ttl` | **Generated**: the Open Group's ArchiSurance case study (3.2 exchange format, `sources/archisurance-3.2.xml`) converted to the canonical form: 122 elements, 178 relationships, 17 views, labels in five languages. Converter: `scripts/exchange_to_rdf.py` |
+| `CHANGELOG.md` | What changed per version |
 | `validate.py` | Runs the full SHACL validation on a model (default: the example); `--fast` uses the flattened matrix |
 | `scripts/check_matrix.py` | Fast set-based matrix check for large models (pyshacl's per-node SPARQL does not scale) |
 

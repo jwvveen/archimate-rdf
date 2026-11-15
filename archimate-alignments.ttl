@@ -17,9 +17,9 @@
     dcterms:references <https://purl.org/archimate/owl> ;
     dcterms:references <http://bp4mc2.org/def/archimate> ;
     owl:imports <https://w3id.org/archimate> ;
-    owl:versionInfo "0.3.0-concept" .
+    owl:versionInfo "0.4.0-concept" .
 
-# ArchiMate 3.2 ontology (Alberto D. Mendoza): 81 koppelingen
+# ArchiMate 3.2 ontology (Alberto D. Mendoza): 82 koppelingen
 am:ApplicationCollaboration skos:exactMatch am32:ApplicationCollaboration .
 am:ApplicationComponent skos:exactMatch am32:ApplicationComponent .
 am:ApplicationEvent skos:exactMatch am32:ApplicationEvent .
@@ -100,6 +100,7 @@ am:realizes skos:closeMatch am32:realization .
 am:serves skos:closeMatch am32:serving .
 am:specializes skos:closeMatch am32:specialization .
 am:triggers skos:closeMatch am32:triggering .
+am:Model skos:closeMatch am32:Model .
 am:View skos:closeMatch am32:ArchiMateView .
 
 # bp4mc2 archimate2rdf: 68 koppelingen

@@ -42,7 +42,7 @@
     dcterms:description "OWL-representatie van de ArchiMate 4.0-specificatie (The Open Group, C260). Conceptversie, opgesteld als voorstel voor een gezamenlijke open ArchiMate-ontologie."@nl , "OWL representation of the ArchiMate 4.0 Specification (The Open Group, C260). Draft version, written as a proposal for a shared open ArchiMate ontology."@en ;
     dcterms:source "ArchiMate 4 Specification, The Open Group, C260" ;
     dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
-    owl:versionInfo "0.3.0-concept" ;
+    owl:versionInfo "0.4.0-concept" ;
     rdfs:comment "ArchiMate is een geregistreerd merk van The Open Group. Deze ontologie is geen publicatie van The Open Group."@nl , "ArchiMate is a registered trademark of The Open Group. This ontology is not a publication of The Open Group."@en .
 
 #################################################################

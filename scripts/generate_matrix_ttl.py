@@ -65,7 +65,7 @@ def genereer() -> str:
         "    a owl:Ontology ;",
         f'    rdfs:label "ArchiMate {versie} relatiematrix"@nl , "ArchiMate {versie} relationship matrix"@en ;',
         f'    dcterms:source "{bron}" ;',
-        '    owl:versionInfo "0.3.0-concept" .',
+        '    owl:versionInfo "0.4.0-concept" .',
         "",
     ]
 

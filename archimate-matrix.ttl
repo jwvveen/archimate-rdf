@@ -13,7 +13,7 @@
     a owl:Ontology ;
     rdfs:label "ArchiMate 4.0 relatiematrix"@nl , "ArchiMate 4.0 relationship matrix"@en ;
     dcterms:source "ArchiMate 4 Specification, Appendix B.5 (pagina 139-145)" ;
-    owl:versionInfo "0.3.0-concept" .
+    owl:versionInfo "0.4.0-concept" .
 
 amm:cell-ApplicationComponent-ApplicationComponent a am:MatrixCell ;
     am:sourceType am:ApplicationComponent ;

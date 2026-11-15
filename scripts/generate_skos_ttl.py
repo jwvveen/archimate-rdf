@@ -210,6 +210,12 @@ EXTRA = {
     "View": (
         "Een view is een geselecteerd deel van het model, gericht op een belanghebbende of vraag.",
         "A view is a selected part of the model, addressing a stakeholder or question."),
+    "Model": (
+        "Een model is het geheel van concepten, views en mappen dat samen wordt beheerd en uitgewisseld.",
+        "A model is the whole of concepts, views, and folders that is managed and exchanged as one."),
+    "Folder": (
+        "Een map is een benoemde groep van concepten, views en andere mappen in de ordening van een model.",
+        "A folder is a named group of concepts, views, and other folders in the organization of a model."),
     "Layer": (
         "Een laag is een indeling van het model naar abstractieniveau, van strategie tot implementatie.",
         "A layer partitions the model by level of abstraction, from strategy to implementation."),
@@ -291,7 +297,7 @@ def genereer() -> str:
         "    a owl:Ontology ;",
         '    rdfs:label "ArchiMate SKOS-annotaties"@nl , "ArchiMate SKOS annotations"@en ;',
         '    dcterms:source "BegrippenXL-begrippenkader ArchiMate (www.begrippenxl.nl/archimate)" ;',
-        '    owl:versionInfo "0.3.0-concept" .',
+        '    owl:versionInfo "0.4.0-concept" .',
         "",
     ]
 

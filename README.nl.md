@@ -8,7 +8,7 @@ blogpost legt de afwegingen uit.
 
 *English version: [README.md](README.md).*
 
-Status: **0.3.0-concept**. Alles hier is een discussiestuk voor de
+Status: **0.4.0-concept**. Alles hier is een discussiestuk voor de
 werkgroep "ArchiMate in RDF", geen standaard. ArchiMate is een
 geregistreerd merk van The Open Group; dit is geen publicatie van The Open
 Group.
@@ -45,7 +45,7 @@ namespace zijn gepubliceerd, moeten opnieuw gepubliceerd worden.
 |---|---|
 | `archimate.ttl` | Kernontologie: precies de 42 concepten uit Appendix B.5 plus de junction, de 11 relatietypen in 4 categorieën, aspect- en laag-as, eigenschappen, suikerlaag en matrixvocabulaire. Alle labels en toelichtingen in het Engels en Nederlands |
 | `archimate-profile-3.2.ttl` | 3.2-profiel: laag-specifieke typen als subklassen (BusinessProcess onder Process), plus in 4.0 geschrapte typen (Interaction, Representation, Gap) met `owl:deprecated` |
-| `archimate-views.ttl` | Views-module: view, toont, gezichtspunt; bewust zonder geometrie |
+| `archimate-views.ttl` | Views-module: view, toont, gezichtspunt; bewust zonder geometrie. Sinds 0.4.0 ook de ordening van een model: `am:Model`, `am:Folder`, `am:inModel`, `am:inFolder` (de `<organizations>` van het uitwisselformaat) |
 | `archimate-matrix.ttl` | **Gegenereerd**: de 1.936 matrixcellen met `am:permitsRelation` (toegestaan, incl. afgeleid) en `am:permitsDirectRelation` (tekenbaar). Bron `sources/relationships-4.0.xml`, generator `scripts/generate_matrix_ttl.py` |
 | `archimate-skos.ttl` | **Gegenereerd**: SKOS-annotaties (Engelse en Nederlandse definities, toelichtingen, iconen) voor elke klasse, deels uit een Nederlands begrippenkader in `sources/`, gecureerd in `scripts/generate_skos_ttl.py` |
 | `archimate-matrix-plat.ttl` | **Gegenereerd**: dezelfde matrix uitgeschreven naar de concrete typen (7.056 cellen), zodat een controle een gewone opzoeking is in plaats van `rdfs:subClassOf*`-paden. Een cache, geen tweede waarheid. Generator `scripts/generate_matrix_plat.py` |
@@ -55,6 +55,7 @@ namespace zijn gepubliceerd, moeten opnieuw gepubliceerd worden.
 | `shacl/archimate-matrix-plat-shapes.ttl` | Dezelfde twee constraints tegen de platte matrix: het voorbeeld in ongeveer een seconde, ArchiSurance (178 relaties) in ongeveer 20 s, waar de generieke shapes minuten tot uren nodig hebben. Laad deze óf de generieke, niet allebei |
 | `example.ttl` | Klein, bewust half fout voorbeeldmodel; levert precies vier meldingen op |
 | `archisurance.ttl` | **Gegenereerd**: de ArchiSurance-casus van The Open Group (3.2-exchange-format, `sources/archisurance-3.2.xml`) in canonieke vorm: 122 elementen, 178 relaties, 17 views, labels in vijf talen. Converter: `scripts/exchange_to_rdf.py` |
+| `CHANGELOG.md` | Wat er per versie veranderde (in het Engels) |
 | `validate.py` | Draait de volledige SHACL-validatie op een model (standaard het voorbeeld); `--fast` gebruikt de platte matrix |
 | `scripts/check_matrix.py` | Snelle set-based matrixcheck voor grote modellen (pyshacl's per-node-SPARQL schaalt niet) |
 

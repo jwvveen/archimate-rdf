@@ -51,7 +51,7 @@
     a owl:Ontology ;
     rdfs:label "ArchiMate SHACL-matrixshapes, snelle variant"@nl ,
                "ArchiMate SHACL matrix shapes, fast variant"@en ;
-    owl:versionInfo "0.3.0-concept" ;
+    owl:versionInfo "0.4.0-concept" ;
     sh:declare [ sh:prefix "am" ; sh:namespace "https://w3id.org/archimate#"^^xsd:anyURI ] ,
                [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] .
 
